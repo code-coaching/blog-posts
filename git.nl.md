@@ -2,11 +2,11 @@
 {
   "title": "Git",
   "slug": "git",
-  "tags": ["git", "GitHub"]
+  "tags": ["Git", "GitHub"]
 }
 ```
 
-# Wat is git en wat is GitHub? Uitleg over de basis van git en GitHub!
+# Wat is Git en wat is GitHub? Uitleg over de basis van Git en GitHub!
 
 Git is een versiebeheersysteem (Engels: VCS - Version Control System). Leuk, maar wat betekent versiebeheersysteem? Een systeem om versies te beheren. Ook grappig, maar wat betekent een systeem om versies te beheren? Om dit uit te leggen, is het makkelijker om het uit te proberen!
 
@@ -25,9 +25,9 @@ Misschien is het al geïnstalleerd. Open een terminal (Linux/macOS) of command p
 git --version
 ```
 
-Indien git geïnstalleerd is, dan wordt de versie getoond (de nummers kunnen anders zijn): `git version 2.30.2` of `git version 2.30.0.windows.2`.
+Indien Git geïnstalleerd is, dan wordt de versie getoond (de nummers kunnen anders zijn): `git version 2.30.2` of `git version 2.30.0.windows.2`.
 
-Indien git niet geïnstalleerd is, dan wordt er geen versie getoond. Om git te installeren:
+Indien Git niet geïnstalleerd is, dan wordt er geen versie getoond. Om Git te installeren:
 
 ### [Linux](https://git-scm.com/download/linux)
 
@@ -47,7 +47,7 @@ Installeren van [Homebrew](https://brew.sh/#install).
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-Installeren van git.
+Installeren van Git.
 
 ```sh
 brew install git
@@ -70,7 +70,7 @@ Dit zal onder andere `Git Bash` installeren. Wanneer er verwezen wordt naar `ter
 <details>
   <summary>Klik om de inhoud te zien</summary>
 
-De terminal kan ook gebruikt worden om te navigeren doorheen het bestandsysteem van de computer, het aanmaken van bestanden en het aanmaken van mappen. Dit zal ook gebruikt worden tijdens het aanleren van git. Dankzij Git Bash heeft Windows dezelfde commando's ter beschikking als Linux en macOS.
+De terminal kan ook gebruikt worden om te navigeren doorheen het bestandsysteem van de computer, het aanmaken van bestanden en het aanmaken van mappen. Dit zal ook gebruikt worden tijdens het aanleren van Git. Dankzij Git Bash heeft Windows dezelfde commando's ter beschikking als Linux en macOS.
 
 ### pwd
 
@@ -173,7 +173,7 @@ mkdir git-voorbeeld && cd git-voorbeeld
 
 Door `&&` te gebruiken, worden de twee commando's achter elkaar uitgevoerd. Dus eerst wordt er een nieuwe map aangemaakt `&&` (en) vervolgens wordt de locatie gewijzigd naar de nieuwe map.
 
-### Map omvormen naar een git repo
+### Map omvormen naar een Git repo
 
 Momenteel is `git-voorbeeld/` een gewone map op de computer. Om te zorgen dat het een `git repo` wordt, kan er gebruikgemaakt worden van het commando `git init`. Het woord `repo` verwijst naar `repository` (Nederlands: archief of opslagplaats).
 
@@ -183,7 +183,7 @@ Gebruik `ls -a` om te zien dat de map momenteel leeg is.
 ls -a # Dit heeft als output: ./ ../
 ```
 
-Maak nu een git repo aan door middel van `git init` te typen in de terminal.
+Maak nu een Git repo aan door middel van `git init` te typen in de terminal.
 
 ```sh
 git init # Dit zal "Initialized empty Git repository in [verschillend per gebruiker]/git-voorbeeld/.git/" printen
@@ -201,7 +201,7 @@ Bekijk de inhoud van `.git/`.
 cd .git/ && ls -a
 ```
 
-Dit heeft als output: `./ ../ HEAD config description hooks/ info/ objects/ refs/`. Het is niet nodig om hier manueel iets te wijzigen, het is goed om te weten dat dit is waar git alle wijzingen bijhoudt.
+Dit heeft als output: `./ ../ HEAD config description hooks/ info/ objects/ refs/`. Het is niet nodig om hier manueel iets te wijzigen, het is goed om te weten dat dit is waar Git alle wijzingen bijhoudt.
 
 Ga terug één map omhoog.
 
@@ -219,7 +219,7 @@ Omdat er nog geen commits zijn, wordt er een foutmelding getoond. Hierin wordt v
 
 ### Commit toevoegen aan de git repo
 
-Met `git status` kan de status van de huidige git repo bekeken worden.
+Met `git status` kan de status van de huidige Git repo bekeken worden.
 
 ```sh
 git status
@@ -236,7 +236,7 @@ git status
 
 Het uitvoeren van `git status` geeft aan dat er nog niks is om te `committen`. En dat er nog geen wijzigingen zijn.
 
-Maak een nieuw bestand aan genaamd `README.md`. Een `.md`-bestand is een `Markdown`-bestand Dit is een tekstbestand zoals een `.txt`-bestand, met als voordeel dat er `Markdown`-syntax gebruikt kan worden. In dit voorbeeld zal er geen gebruikgemaakt worden van de syntax, toch is er een reden dat er voor `README.md` gekozen wordt. Dit is het bestand wat automatisch ingeladen wordt bij het bezoeken van een git repo op het internet.
+Maak een nieuw bestand aan genaamd `README.md`. Een `.md`-bestand is een `Markdown`-bestand Dit is een tekstbestand zoals een `.txt`-bestand, met als voordeel dat er `Markdown`-syntax gebruikt kan worden. In dit voorbeeld zal er geen gebruikgemaakt worden van de syntax, toch is er een reden dat er voor `README.md` gekozen wordt. Dit is het bestand wat automatisch ingeladen wordt bij het bezoeken van een Git repo op het internet.
 
 ```sh
 touch README.md
@@ -245,7 +245,7 @@ touch README.md
 
 Met `ls` kan bevestigd worden dat het bestand nu bestaat in de huidige map.
 
-Voer opnieuw `git status` uit. Er staat nog altijd dat we op de master branch zitten `On branch master`. Er staat nog altijd dat er niks gecommit is `No commits yet`. Wat er verschillend is, is dat er nu `untracked files` zijn (Nederlands: niet-getraceerde bestanden). Dit geeft aan dat er een nieuw bestand aanwezig is in de git repo, dat nog niet opgevolgd wordt door git.
+Voer opnieuw `git status` uit. Er staat nog altijd dat we op de master branch zitten `On branch master`. Er staat nog altijd dat er niks gecommit is `No commits yet`. Wat er verschillend is, is dat er nu `untracked files` zijn (Nederlands: niet-getraceerde bestanden). Dit geeft aan dat er een nieuw bestand aanwezig is in de Git repo, dat nog niet opgevolgd wordt door git.
 
 ```sh
 git status
@@ -300,7 +300,7 @@ Wijzig "john@duck.com" door een eigen e-mailadres.
 
 Tip: Indien er al een GitHub-account aangemaakt is, gebruik hetzelfde e-mailadres. Indien er nog geen GitHub-account aangemaakt is, gebruik het e-mailadres dat later gebruikt gaat worden om een GitHub-account aan te maken.
 
-Dit stelt de gebruikersnaam en het e-mailadres in voor specifiek deze git repo. Indien altijd dezelfde naam gebruikt moet worden, kan dit één keer globaal gezet worden. Dan zal het op de computer bijgehouden worden en niet specifiek in deze git repo.
+Dit stelt de gebruikersnaam en het e-mailadres in voor specifiek deze Git repo. Indien altijd dezelfde naam gebruikt moet worden, kan dit één keer globaal gezet worden. Dan zal het op de computer bijgehouden worden en niet specifiek in deze Git repo.
 
 ```sh
 git config --global user.name "John Duck"
@@ -324,7 +324,7 @@ git commit -m "Add README.md"
 
 Opmerking: De `c0aba7a` zal verschillend zijn. Dit is het begin van de de `commit hash`, dit is een unieke identificatiecode.
 
-De `-m` (Engels: message, Nederlands: bericht) is een parameter om een bericht mee te geven aan de commit. Er wordt gekozen voor een Engels bericht omdat de meeste git repos in het Engels zijn, dit is de taal die gebruikt wordt door developers. Het bericht tussen de dubbele quotes kan van alles zijn, het maakt niet uit.
+De `-m` (Engels: message, Nederlands: bericht) is een parameter om een bericht mee te geven aan de commit. Er wordt gekozen voor een Engels bericht omdat de meeste Git repos in het Engels zijn, dit is de taal die gebruikt wordt door developers. Het bericht tussen de dubbele quotes kan van alles zijn, het maakt niet uit.
 
 Er wordt ook een kort overzicht getoond van de wijzigingen `1 file changed, 0 insertions(+), 0 deletions(-)`. Er is één bestand gewijzigd (toegevoegd in dit geval). Er is geen tekst toegevoegd `0 insertions(+)` of verwijderd `0 deletions(-)`.
 
@@ -343,7 +343,7 @@ Dit geeft aan dat er geen nieuwe wijzigingen meer zijn `working tree clean`.
 
 ### Geschiedenis bekijken
 
-Met `git log` kan de geschiedenis bekeken worden. Alle commits die doorheen de tijd gedaan zijn op deze git repo zullen getoond worden.
+Met `git log` kan de geschiedenis bekeken worden. Alle commits die doorheen de tijd gedaan zijn op deze Git repo zullen getoond worden.
 
 ```sh
 git log
@@ -359,7 +359,7 @@ git log
 
 Hierin staat de commit message `Add README.md`. De volledige commit hash (de unieke identificatiecode van deze commit) `c0aba7a9e06057c325719bac3357faff70ec9d2b`. De auteur `Bart Duisters <bartduisters@bartduisters.com>` (dit is de waarde die toegekend is aan `user.name` en `user.email` tijdens de `git config`-stappen). Het tijdstip wanneer de commit gedaan is.
 
-Open het bestand `README.md` in een teksteditor en voeg de tekst `bla bla bla` toe. Bij het bekijken van `git status` kan gezien worden dat git de wijziging ziet (omdat `README.md` al opgevolgd wordt, het is een `tracked file`).
+Open het bestand `README.md` in een teksteditor en voeg de tekst `bla bla bla` toe. Bij het bekijken van `git status` kan gezien worden dat Git de wijziging ziet (omdat `README.md` al opgevolgd wordt, het is een `tracked file`).
 
 ```sh
 git status
@@ -424,13 +424,13 @@ git log
 ###
 ```
 
-De git log toont alle commits die doorheen de tijd zijn gedaan.
+De Git log toont alle commits die doorheen de tijd zijn gedaan.
 
 ### De kracht van git
 
 Tijdreizen is niet mogelijk. Of toch? Via `git checkout` kan er naar een oudere versie van een bestand gekeken worden. Stel dat er 100 commits gedaan over een tijdspanne van één jaar, waarvan de bovenstaande commits de eerste twee commits zijn.
 
-Om te kijken hoe het bestand eruitzag na de eerste commit, doe een `git checkout` op de git hash van de eerste commit.
+Om te kijken hoe het bestand eruitzag na de eerste commit, doe een `git checkout` op de Git hash van de eerste commit.
 
 ```sh
 git checkout c0aba7a9e06057c325719bac3357faff70ec9d2b
@@ -484,13 +484,13 @@ Hieruit kan afgeleid worden dat `bla bla bla` is toegevoegd.
 
 Hieruit kan ook afgeleid worden dat alles dat ooit is toegevoegd aan de geschiedenis van git, altijd nog terug bekeken kan worden. Het is dus belangrijk dat er **nooit geheime informatie toegevoegd wordt** aan de bestanden die gecommit worden. Voor software-ontwikkelaars kan dit betekenen `wachtwoorden`, `API-sleutels`, `omgevingsvariabelen` ...
 
-## GitHub - git online gebruiken
+## GitHub - Git online gebruiken
 
 Tot nu toe worden de commits bijgehouden in de `.git/`-map en zolang de `.git/`-map op de computer staat, kan er altijd naar oudere versies van bestanden gekeken worden. Maar, stel, er zijn twee toestellen aanwezig (een vaste computer en een laptop) en soms wordt er op het ene toestel gewerkt en soms wordt er op het andere toestel gewerkt. Om te zorgen dat alle wijzigingen en alle oude wijzigingen aanwezig zijn, moet de `.git/`-map aanwezig zijn op beide systemen en deze moet continu in sync gehouden worden.
 
-Top, dus de `.git/`-map in `Google Drive`, `OneDrive` of `Dropbox` steken en zo is de `.git/`-map altijd in sync? Nee! Dé cloudopslag om te gebruiken is [MEGAsync](https://mega.nz/pro/aff=xLXv1HsQvUE) (referral, 20 GB gratis). Dat gezegd zijnde, een git repo wordt niet in sync gehouden door het in een map op cloudopslag te zetten.
+Top, dus de `.git/`-map in `Google Drive`, `OneDrive` of `Dropbox` steken en zo is de `.git/`-map altijd in sync? Nee! Dé cloudopslag om te gebruiken is [MEGAsync](https://mega.nz/pro/aff=xLXv1HsQvUE) (referral, 20 GB gratis). Dat gezegd zijnde, een Git repo wordt niet in sync gehouden door het in een map op cloudopslag te zetten.
 
-Wat wordt er dan wél gebruikt om een git repo in sync te houden op verschillende toestellen? Een van de meest gebruikte platformen is GitHub. Een alternatief is [BitBucket](https://bitbucket.org). Om dit artikel mee te volgen, maak een account op [GitHub](https://github.com/signup).
+Wat wordt er dan wél gebruikt om een Git repo in sync te houden op verschillende toestellen? Een van de meest gebruikte platformen is GitHub. Een alternatief is [BitBucket](https://bitbucket.org). Om dit artikel mee te volgen, maak een account op [GitHub](https://github.com/signup).
 
 Eenmaal ingelogd, dan kan er een nieuwe repo aangemaakt worden door op [new](https://github.com/new) te klikken. Vul een `repository name` in, bijvoorbeeld `git-example-remote`. Standaard zal de repository publiek zijn, indien de inhoud van de repo niet door anderen gezien mag worden, klik dan `private` aan.
 
@@ -504,7 +504,7 @@ Vervolgens zijn er drie checkboxes, bij het aanmaken van een nieuwe repo is het 
 
 Klik op `Create repository` (zorg dat er **geen** checkbox is aangevinkt!).
 
-Wat dit achterliggen eigenlijk doet, is een `.git/`-map aanmaken op de server van GitHub. Maar nu is er dus een `.git/`-map op het lokale systeem en een aparte `.git/`-map op het systeem van GitHub (remote systeem). Om onze lokale git repo op de hoogte te brengen dat er ook een remote git repo is, kan er een `remote origin` toegevoegd worden.
+Wat dit achterliggen eigenlijk doet, is een `.git/`-map aanmaken op de server van GitHub. Maar nu is er dus een `.git/`-map op het lokale systeem en een aparte `.git/`-map op het systeem van GitHub (remote systeem). Om onze lokale Git repo op de hoogte te brengen dat er ook een remote Git repo is, kan er een `remote origin` toegevoegd worden.
 
 ```sh
 git remote add origin https://github.com/bartduisters/git-example-remote.git
@@ -518,7 +518,7 @@ git branch -M master
 
 Dit is momenteel niet nodig, maar indien in de toekomst de hoofdtak anders genoemd wordt (`main` wordt tegenwoordig soms gebruikt). Dan wordt het hernoemd naar `master`, zodat de andere stappen blijven werken.
 
-Ondertussen weet de lokale git af van het bestaan van de remote git. Om te zorgen dat de lokale commits ook in de remote git aanwezig zijn, kan er gebruik gemaakt worden van `git push`. Aangezien er nog niet eerder gepusht is, zal de eerste keer aangegeven moeten worden op welke remote branch er gepusht moet worden.
+Ondertussen weet de lokale Git af van het bestaan van de remote git. Om te zorgen dat de lokale commits ook in de remote Git aanwezig zijn, kan er gebruik gemaakt worden van `git push`. Aangezien er nog niet eerder gepusht is, zal de eerste keer aangegeven moeten worden op welke remote branch er gepusht moet worden.
 
 ```sh
 git push -u origin master
@@ -602,7 +602,7 @@ git commit -m "Change README.md, add info.md"
 ###
 ```
 
-Bekijk de git log.
+Bekijk de Git log.
 
 ```sh
 git log
@@ -630,7 +630,7 @@ git log
 
 Nu valt er iets op. Remote zijn er drie commits, waarvan de derde commit `Update README.md` is. Lokaal zijn er drie commits, waarvan de derde commit `Change README.md, add info.md` is.
 
-Ook is er te zien dat de lokale git de informatie heeft van de remote git tot aan de tweede commit (`(origin/master)` achter de tweede commit hash).
+Ook is er te zien dat de lokale Git de informatie heeft van de remote Git tot aan de tweede commit (`(origin/master)` achter de tweede commit hash).
 
 Push de commits.
 
@@ -737,7 +737,7 @@ Hint: Indien er plots een teksteditor geopend wordt in de terminal, dan zal dit 
 </describe>
 ```sh
 
-Bekijk opnieuw de git log.
+Bekijk opnieuw de Git log.
 
 ```sh
 git log
