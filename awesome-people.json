@@ -1,0 +1,14 @@
+[
+  {
+    "language": "en",
+    "name": "Bart Duisters",
+    "feedback": "Satisfaction is what I get from sharing my knowledge through this blog!",
+    "links": ["https://github.com/bartduisters", "https://bartduisters.com", "https://code-coaching.dev"]
+  },
+  {
+    "language": "nl",
+    "name" "Bart Duisters",
+    "feedback": "Voldoening halen doe ik door mijn kennis te delen via dit blog!",
+    "links": ["https://github.com/bartduisters", "https://bartduisters.com", "https://code-coaching.dev"]
+  }
+]
