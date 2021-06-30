@@ -2,7 +2,7 @@
 {
   "title": "Git",
   "slug": "git",
-  "tags": ["Git", "GitHub"]
+  "tags": ["Git", "GitHub"],
 }
 ```
 
@@ -55,10 +55,10 @@ brew install git
 
 ### [Windows](https://gitforwindows.org/)
 
-- Klik ☝.
+- Klik hierboven op Windows.
 - Klik op `Download`.
 - Dubbelklik op het gedownloade bestand.
-- Laat als staan zoals het standaard staat en blijft op `volgende` klikken.
+- Laat alles staan zoals het standaard staat en blijf op `volgende` klikken.
 - Klik vervolgens op `installeren`.
 
 Dit zal onder andere `Git Bash` installeren. Wanneer er verwezen wordt naar `terminal` in onderstaande tekst en er wordt met Windows gewerkt, dan moet het uitgevoerd worden in `Git Bash`.
@@ -91,7 +91,7 @@ Opmerking: Tenzij JohnDuck gekozen is als gebruikersnaam, zal dit verschillend z
 
 ### cd
 
-Om zeker te zijn dat er vanuit de home directory vertrokken wordt, kan er gebruikgemaakt worden ` cd` (Engels: **c**hange **d**irectory, Nederlands: map wijzigen).
+Om zeker te zijn dat er vanuit de home directory vertrokken wordt, kan er gebruikgemaakt worden van `cd` (Engels: **c**hange **d**irectory, Nederlands: map wijzigen).
 
 ```sh
 cd ~
@@ -157,7 +157,7 @@ Dit zal een nieuw bestand aanmaken, genaamd `voorbeeld.txt`.
 
 ## Git lokaal gebruiken
 
-Git is software zonder GUI (Engels: Graphical User Interface) er is dus geen icoontje waarop geklikt kan worden om een programma tevoorschijn te toveren. Git is namelijk een programma dat werkt in de terminal. Begin dus met het openen van een terminal.
+Git is software zonder GUI (Engels: Graphical User Interface, Nederlands: Grafische Gebruikersinterface), er is dus geen icoontje waarop geklikt kan worden om een programma tevoorschijn te toveren. Git is namelijk een programma dat gebruikt moet worden in de terminal. Begin dus met het openen van een terminal.
 
 Maak een nieuwe map aan genaamd `git-voorbeeld` in de home directory en wijzig de locatie van de terminal naar de nieuwe map.
 
@@ -209,7 +209,7 @@ Ga terug één map omhoog.
 cd ..
 ```
 
-Veranderingen worden `commits` (Nederlands: vastleggen) genoemd. Om te weten welke wijzigingen er al gedaan zijn, kan er gebruikgemaakt worden van `git log`.
+Wijzigingen worden vastgelegd in `commits` (Nederlands: vastleggen). Om te weten welke wijzigingen er al gedaan zijn, kan er gebruikgemaakt worden van `git log`.
 
 ```sh
 git log # Dit heeft als output: fatal: your current branch 'master' does not have any commits yet
@@ -236,7 +236,7 @@ git status
 
 Het uitvoeren van `git status` geeft aan dat er nog niks is om te `committen`. En dat er nog geen wijzigingen zijn.
 
-Maak een nieuw bestand aan genaamd `README.md`. Een `.md`-bestand is een `Markdown`-bestand Dit is een tekstbestand zoals een `.txt`-bestand, met als voordeel dat er `Markdown`-syntax gebruikt kan worden. In dit voorbeeld zal er geen gebruikgemaakt worden van de syntax, toch is er een reden dat er voor `README.md` gekozen wordt. Dit is het bestand wat automatisch ingeladen wordt bij het bezoeken van een Git repo op het internet.
+Maak een nieuw bestand aan genaamd `README.md`. Een `.md`-bestand is een `Markdown`-bestand. Dit is een tekstbestand zoals een `.txt`-bestand, met als voordeel dat er `Markdown`-syntax gebruikt kan worden. In dit voorbeeld zal er geen gebruikgemaakt worden van de syntax, toch is er een reden dat er voor `README.md` gekozen wordt. Dit is het bestand wat automatisch ingeladen wordt bij het bezoeken van een Git repo op het internet.
 
 ```sh
 touch README.md
@@ -245,7 +245,7 @@ touch README.md
 
 Met `ls` kan bevestigd worden dat het bestand nu bestaat in de huidige map.
 
-Voer opnieuw `git status` uit. Er staat nog altijd dat we op de master branch zitten `On branch master`. Er staat nog altijd dat er niks gecommit is `No commits yet`. Wat er verschillend is, is dat er nu `untracked files` zijn (Nederlands: niet-getraceerde bestanden). Dit geeft aan dat er een nieuw bestand aanwezig is in de Git repo, dat nog niet opgevolgd wordt door git.
+Voer opnieuw `git status` uit. Er staat nog altijd dat we op de master branch zitten `On branch master`. Er staat nog altijd dat er niks gecommit is `No commits yet`. Wat er verschillend is, is dat er nu `untracked files` zijn (Nederlands: niet-getraceerde bestanden). Dit geeft aan dat er een nieuw bestand aanwezig is in de Git repo, dat nog niet opgevolgd wordt door Git.
 
 ```sh
 git status
@@ -263,7 +263,7 @@ git status
 ###
 ```
 
-Om dit bestand vanaf nu wél te volgen met git, kan het bestand toegevoegd worden aan git.
+Om dit bestand vanaf nu wél te volgen met Git, kan het bestand toegevoegd worden aan Git.
 
 ```sh
 git add README.md
@@ -279,12 +279,12 @@ git add README.md
 ###
 ```
 
-Voer opnieuw `git status` uit. Er staat nog altijd dat we op de master branch zitten `On branch master`. Er staat nog altijd dat er niks gecommit is `No commits yet`. Dit is correct want er is nog altijd niks gecommit, maar er wordt wel een nieuw bestand opgevolgd door git.
+Voer opnieuw `git status` uit. Er staat nog altijd dat we op de master branch zitten `On branch master`. Er staat nog altijd dat er niks gecommit is `No commits yet`. Dit is correct want er is nog altijd niks gecommit, maar er wordt wel een nieuw bestand opgevolgd door Git.
 
-Om het aanmaken van dit bestand permanent als wijziging bij te houden in git, kan er een `git commit` gedaan worden.
+Om het aanmaken van dit bestand permanent als wijziging bij te houden in Git, kan er een `git commit` gedaan worden.
 
 <details>
-  <summary>Doe dit vóór de eerste commit</summary>
+  <summary>Doe dit eenmalig vóór de eerste commit</summary>
 
 ```sh
 git config user.name "John Duck"
@@ -324,7 +324,7 @@ git commit -m "Add README.md"
 
 Opmerking: De `c0aba7a` zal verschillend zijn. Dit is het begin van de de `commit hash`, dit is een unieke identificatiecode.
 
-De `-m` (Engels: message, Nederlands: bericht) is een parameter om een bericht mee te geven aan de commit. Er wordt gekozen voor een Engels bericht omdat de meeste Git repos in het Engels zijn, dit is de taal die gebruikt wordt door developers. Het bericht tussen de dubbele quotes kan van alles zijn, het maakt niet uit.
+De `-m` (Engels: message, Nederlands: bericht) is een parameter om een bericht mee te geven aan de commit. Er wordt vaak gekozen voor een Engels bericht omdat de meeste Git repos in het Engels zijn, dit is de taal die gebruikt wordt door developers. Het bericht tussen de dubbele quotes kan van alles zijn, het beschrijft best de wijzigingen die aanwezig zijn in de commit.
 
 Er wordt ook een kort overzicht getoond van de wijzigingen `1 file changed, 0 insertions(+), 0 deletions(-)`. Er is één bestand gewijzigd (toegevoegd in dit geval). Er is geen tekst toegevoegd `0 insertions(+)` of verwijderd `0 deletions(-)`.
 
@@ -339,7 +339,7 @@ git status
 ###
 ```
 
-Dit geeft aan dat er geen nieuwe wijzigingen meer zijn `working tree clean`.
+Dit geeft aan dat er geen nieuwe wijzigingen meer zijn: `working tree clean`.
 
 ### Geschiedenis bekijken
 
@@ -357,7 +357,7 @@ git log
 ###
 ```
 
-Hierin staat de commit message `Add README.md`. De volledige commit hash (de unieke identificatiecode van deze commit) `c0aba7a9e06057c325719bac3357faff70ec9d2b`. De auteur `Bart Duisters <bartduisters@bartduisters.com>` (dit is de waarde die toegekend is aan `user.name` en `user.email` tijdens de `git config`-stappen). Het tijdstip wanneer de commit gedaan is.
+Hierin staat de commit message `Add README.md`. De volledige commit hash (de unieke identificatiecode van deze commit) `c0aba7a9e06057c325719bac3357faff70ec9d2b`. De auteur `Bart Duisters <bartduisters@bartduisters.com>` (dit is de waarde die toegekend is aan `user.name` en `user.email` tijdens de `git config`-stappen). Het tijdstip wanneer de commit gedaan is `Thu Jun 24 22:25:20 2021 +0200`.
 
 Open het bestand `README.md` in een teksteditor en voeg de tekst `bla bla bla` toe. Bij het bekijken van `git status` kan gezien worden dat Git de wijziging ziet (omdat `README.md` al opgevolgd wordt, het is een `tracked file`).
 
@@ -402,6 +402,7 @@ Bij het uitvoeren van een `git add` van een bestand waarin lijnen zijn gewijzigd
 
 Unix-besturingssystemen (zoals Linux en macOS) gebruik een LF (Line Feed, ook wel weergegeven als `\n`) om het einde van een lijn aan te geven. Op Windows is dit CRLF (Carriage Return en Line Feed, ook wel weergegeven als `\r\n`). Line Feed en Carriage Return zijn termen gebaseerd op de acties die gedaan moesten worden op een typmachine. Line Feed, een nieuwe regel werd bekomen door het blad fysiek één lijn hoger te positioneren. Carriage Return, het gedeelte dat het blad vastklemt fysiek terug naar het begin bewegen.
 
+Om te zorgen dat de code uniform is wanneer het naar de server overgezet wordt, worden de CRLF naar LF gewijzigd op het moment dat een `git add` wordt uitgevoerd. Wanneer een repo lokaal wordt binnengehaald, zal elke LF omgezet worden in een CRLF.
 </details>
 
 Er wordt een nieuwe commit aangemaakt `[master 81f48fc] Add text to README.md` waarbij te zien is dat er één bestand is gewijzigd, waarin één lijn is toegevoegd `1 file changed, 1 insertion(+)`.
@@ -482,7 +483,7 @@ git diff c0aba7a9e06057c325719bac3357faff70ec9d2b 81f48fc07e47f264d5912b56104c20
 
 Hieruit kan afgeleid worden dat `bla bla bla` is toegevoegd.
 
-Hieruit kan ook afgeleid worden dat alles dat ooit is toegevoegd aan de geschiedenis van git, altijd nog terug bekeken kan worden. Het is dus belangrijk dat er **nooit geheime informatie toegevoegd wordt** aan de bestanden die gecommit worden. Voor software-ontwikkelaars kan dit betekenen `wachtwoorden`, `API-sleutels`, `omgevingsvariabelen` ...
+Hieruit kan ook afgeleid worden dat alles dat ooit is toegevoegd aan de geschiedenis van Git, altijd nog terug bekeken kan worden. Het is dus belangrijk dat er **nooit geheime informatie toegevoegd wordt** aan de bestanden die gecommit worden. Voor software-ontwikkelaars kan dit betekenen `wachtwoorden`, `API-sleutels`, `omgevingsvariabelen` ...
 
 ## GitHub - Git online gebruiken
 
@@ -518,7 +519,7 @@ git branch -M master
 
 Dit is momenteel niet nodig, maar indien in de toekomst de hoofdtak anders genoemd wordt (`main` wordt tegenwoordig soms gebruikt). Dan wordt het hernoemd naar `master`, zodat de andere stappen blijven werken.
 
-Ondertussen weet de lokale Git af van het bestaan van de remote git. Om te zorgen dat de lokale commits ook in de remote Git aanwezig zijn, kan er gebruik gemaakt worden van `git push`. Aangezien er nog niet eerder gepusht is, zal de eerste keer aangegeven moeten worden op welke remote branch er gepusht moet worden.
+Ondertussen weet de lokale Git af van het bestaan van de remote Git. Om te zorgen dat de lokale commits ook in de remote Git aanwezig zijn, kan er gebruik gemaakt worden van `git push`. Aangezien er nog niet eerder gepusht is, zal de eerste keer aangegeven moeten worden op welke remote branch er gepusht moet worden.
 
 ```sh
 git push -u origin master
@@ -540,11 +541,11 @@ Alle toekomstige commits van deze repo kunnen gepusht worden door enkel `git pus
 
 Ga naar de remote repo op GitHub en ververs de pagina. Hier is de README.md te zien.
 
-Het is ook mogelijk om snelle veranderingen online te doen:
+Het is ook mogelijk om snelle wijzigingen online te doen:
 
 - Klik op README.md.
 - Klik op het bewerkicoontje (rechtsboven 'Edit this file).
-- Wijzig `bla bla bla` naar `bla John Duck`.
+- Wijzig `bla bla bla` door `bla John Duck`.
 - Scroll naar onder en klik op `Commit changes`.
   - Standaard wordt `Update README.md` gebruikt als commit-bericht.
   - Dit is hetzelfde als `git commit -m "Update README.md"`.
@@ -666,7 +667,7 @@ git pull
 ###
 ```
 
-Godverd... Een merge conflict! Dit kan voorkomen als er remote veranderingen gedaan zijn in een bestand op eenzelfde lijn. Er staat `Merge conflict in README.md`.
+Godverd... Een merge conflict! Dit kan voorkomen als er remote wijzigingen gedaan zijn in een bestand op eenzelfde lijn. Er staat `Merge conflict in README.md`.
 
 Bij het bekijken van `git status` is meer informatie terug te vinden.
 
@@ -726,15 +727,15 @@ Normaal moet er een commit-bericht toegevoegd worden aan een `git commit`-comman
 
 Hint: Indien er plots een teksteditor geopend wordt in de terminal, dan zal dit waarschijnlijk `Nano` of `Vim` zijn.
 
-<describe>
+<details>
   <summary>Nano: Indien er onderaan `^X` en `^R` te zien zijn ... Klik hier!</summary>
-  De terminal teksteditor Nano heeft zich geopend. `^` staat voor `CTRL` en `X` staat voor de toest `x`. Klik CTRL + X om Nano af te sluiten. Indien er nog een vraag gesteld wordt, type `y` en klik op enter.
-</describe>
+  De terminal teksteditor Nano heeft zich geopend. `^` staat voor `CTRL` en `X` staat voor de toest `x`. Klik CTRL + X om Nano af te sluiten. Indien er nog een vraag gesteld wordt, typ `y` en klik op enter.
+</details>
 
-<describe>
+<details>
   <summary>Vim: Indien er onderaan géén `^X` en `^R` te zien zijn ... Klik hier!</summary>
   De terminal teksteditor Vim heeft zich geopend. Dit is een teksteditor met verschillende modi. Indien er per ongeluk van modus is gewijzigd, klik op `Escape`. Om uit Vim te geraken typ `:w!` en klik op enter.
-</describe>
+</details>
 ```sh
 
 Bekijk opnieuw de Git log.
