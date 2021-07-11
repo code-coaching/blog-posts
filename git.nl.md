@@ -1,10 +1,8 @@
-```json
-{
-  "title": "Git",
-  "slug": "git",
-  "tags": ["Git", "GitHub"]
-}
-```
+---
+  title: Git
+  slug: git
+  keywords: ["Git", "GitHub"]
+---
 
 # Wat is Git en wat is GitHub? Uitleg over de basis van Git en GitHub!
 
