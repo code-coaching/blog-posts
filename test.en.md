@@ -1,10 +1,8 @@
-```json
-{
-  "title": "Test",
-  "slug": "test",
-  "tags": ["html", "js"]
-}
-```
+---
+  title: Test
+  slug: test
+  tags: ["html", "js"]
+---
 
 # This is a test
 
