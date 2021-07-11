@@ -1,7 +1,7 @@
 ---
   title: Test
   slug: test
-  tags: ["html", "js"]
+  keywords: ["html", "js"]
 ---
 
 # This is a test
