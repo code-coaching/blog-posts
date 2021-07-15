@@ -285,27 +285,27 @@ Om het aanmaken van dit bestand permanent als wijziging bij te houden in Git, ka
   <summary>Doe dit eenmalig vóór de eerste commit</summary>
 
 ```sh
-git config user.name "John Duck"
+git config user.name "Bart Duisters"
 ```
 
-Wijzig "John Duck" naar de naam die getoond moet worden bij het toevoegen van wijzigingen.
+Wijzig "Bart Duisters" naar de naam die getoond moet worden bij het toevoegen van wijzigingen.
 
 ```sh
-git config user.email "john@duck.com"
+git config user.email "bartduisters@bartduisters.com"
 ```
 
-Wijzig "john@duck.com" door een eigen e-mailadres.
+Wijzig "bartduisters@bartduisters.com" door een eigen e-mailadres.
 
 Tip: Indien er al een GitHub-account aangemaakt is, gebruik hetzelfde e-mailadres. Indien er nog geen GitHub-account aangemaakt is, gebruik het e-mailadres dat later gebruikt gaat worden om een GitHub-account aan te maken.
 
 Dit stelt de gebruikersnaam en het e-mailadres in voor specifiek deze Git repo. Indien altijd dezelfde naam gebruikt moet worden, kan dit één keer globaal gezet worden. Dan zal het op de computer bijgehouden worden en niet specifiek in deze Git repo.
 
 ```sh
-git config --global user.name "John Duck"
+git config --global user.name "Bart Duisters"
 ```
 
 ```sh
-git config --global user.email "john@duck.com"
+git config --global user.email "bartduisters@bartduisters.com"
 ```
 
 </details>
@@ -401,6 +401,7 @@ Bij het uitvoeren van een `git add` van een bestand waarin lijnen zijn gewijzigd
 Unix-besturingssystemen (zoals Linux en macOS) gebruik een LF (Line Feed, ook wel weergegeven als `\n`) om het einde van een lijn aan te geven. Op Windows is dit CRLF (Carriage Return en Line Feed, ook wel weergegeven als `\r\n`). Line Feed en Carriage Return zijn termen gebaseerd op de acties die gedaan moesten worden op een typmachine. Line Feed, een nieuwe regel werd bekomen door het blad fysiek één lijn hoger te positioneren. Carriage Return, het gedeelte dat het blad vastklemt fysiek terug naar het begin bewegen.
 
 Om te zorgen dat de code uniform is wanneer het naar de server overgezet wordt, worden de CRLF naar LF gewijzigd op het moment dat een `git add` wordt uitgevoerd. Wanneer een repo lokaal wordt binnengehaald, zal elke LF omgezet worden in een CRLF.
+
 </details>
 
 Er wordt een nieuwe commit aangemaakt `[master 81f48fc] Add text to README.md` waarbij te zien is dat er één bestand is gewijzigd, waarin één lijn is toegevoegd `1 file changed, 1 insertion(+)`.
@@ -485,37 +486,39 @@ Hieruit kan ook afgeleid worden dat alles dat ooit is toegevoegd aan de geschied
 
 ## GitHub - Git online gebruiken
 
-Tot nu toe worden de commits bijgehouden in de `.git/`-map en zolang de `.git/`-map op de computer staat, kan er altijd naar oudere versies van bestanden gekeken worden. Maar, stel, er zijn twee toestellen aanwezig (een vaste computer en een laptop) en soms wordt er op het ene toestel gewerkt en soms wordt er op het andere toestel gewerkt. Om te zorgen dat alle wijzigingen en alle oude wijzigingen aanwezig zijn, moet de `.git/`-map aanwezig zijn op beide systemen en deze moet continu in sync gehouden worden.
+### Remote repo koppelen aan bestaande lokale repo
+
+Tot nu toe worden de commits bijgehouden in de `.git/`-map en zolang de `.git/`-map op de computer staat, kan er altijd naar oudere versies van bestanden gekeken worden. Maar, stel, er zijn twee toestellen aanwezig (een vaste computer en een laptop) en soms wordt er op het ene toestel gewerkt en soms wordt er op het andere toestel gewerkt. Om te zorgen dat alle wijzigingen en alle oude wijzigingen aanwezig zijn, moet de `.git/`-map aanwezig zijn op beide systemen en deze moet continu in sync gehouden worden. Hetzelfde geldt als er met meerdere samengewerkt wordt op één repo, de `.git/`-map op alle toestellen moet continu in sync gehouden worden.
 
 Top, dus de `.git/`-map in `Google Drive`, `OneDrive` of `Dropbox` steken en zo is de `.git/`-map altijd in sync? Nee! Dé cloudopslag om te gebruiken is [MEGAsync](https://mega.nz/pro/aff=xLXv1HsQvUE) (referral, 20 GB gratis). Dat gezegd zijnde, een Git repo wordt niet in sync gehouden door het in een map op cloudopslag te zetten.
 
-Wat wordt er dan wél gebruikt om een Git repo in sync te houden op verschillende toestellen? Een van de meest gebruikte platformen is GitHub. Een alternatief is [BitBucket](https://bitbucket.org). Om dit artikel mee te volgen, maak een account op [GitHub](https://github.com/signup).
+Wat wordt er dan wél gebruikt om een Git repo in sync te houden op verschillende toestellen? Online platformen waar extra functionaliteit voorzien wordt, zoals het aanmaken van `releases`. Een van de meest gebruikte platformen is GitHub. Één van de mogelijke alternatieven is [BitBucket](https://bitbucket.org). Om dit artikel mee te volgen, maak een account op [GitHub](https://github.com/signup).
 
-Eenmaal ingelogd, dan kan er een nieuwe repo aangemaakt worden door op [new](https://github.com/new) te klikken. Vul een `repository name` in, bijvoorbeeld `git-example-remote`. Standaard zal de repository publiek zijn, indien de inhoud van de repo niet door anderen gezien mag worden, klik dan `private` aan.
+Eenmaal ingelogd, dan kan er een nieuwe repo aangemaakt worden door op [new](https://github.com/new) te klikken. Vul een `repository name` in, bijvoorbeeld `git-example-remote`. Standaard zal de repo publiek zijn, dit houdt in dat de inhoud van de repo door iedereen bekeken kan worden (ook door mensen zonder account). Indien de inhoud van de repo niet door anderen gezien mag worden, klik dan `private` aan.
 
-Vervolgens zijn er drie checkboxes, bij het aanmaken van een nieuwe repo is het handig om ze alledrie aan te vinken. Aangezien er lokaal al een repo is, laat ze **alledrie afgevinkt**.
+Vervolgens zijn er drie checkboxes. Bij het aanmaken van een nieuwe repo die aan een bestaande lokale repo gekoppeld moet worden, is het handig om ze alledrie aan te vinken. Aangezien er lokaal al een repo is, laat ze **alledrie afgevinkt**:
 
-`Add a README file`, dit kan aangevinkt worden om automatisch een `README.md` aan te maken bij het aanmaken van een repo.
+- `Add a README file`, dit kan aangevinkt worden om automatisch een `README.md` aan te maken bij het aanmaken van een repo.
 
-`Add .gitignore`, dit zal in dit artikel handmatig toegevoegd worden.
+- `Add .gitignore`, dit zal in dit artikel handmatig toegevoegd worden.
 
-`Choose a license`, standaard is de code **niet** opensource. Dus ook al staat de repo publiek, als er geen LICENSE-bestand aanwezig is, is de code **niet** opensource. Als de code bedoelt is om door anderen gebruikt te worden, is het belangrijk om een opensourcelicentie toe te voegen.
+- `Choose a license`, standaard is de code **niet** opensource. Dus ook al staat de repo publiek, als er geen LICENSE-bestand aanwezig is, is de code **niet** opensource. Als de code bedoelt is om door anderen gebruikt te worden, is het belangrijk om een opensourcelicentie toe te voegen.
 
-Klik op `Create repository` (zorg dat er **geen** checkbox is aangevinkt!).
+Klik op `Create repository`. Zorg bij het volgen van dit artikel dat er **geen** checkbox is aangevinkt!
 
-Wat dit achterliggen eigenlijk doet, is een `.git/`-map aanmaken op de server van GitHub. Maar nu is er dus een `.git/`-map op het lokale systeem en een aparte `.git/`-map op het systeem van GitHub (remote systeem). Om onze lokale Git repo op de hoogte te brengen dat er ook een remote Git repo is, kan er een `remote origin` toegevoegd worden.
+Wat dit achterliggend eigenlijk doet, is een `.git/`-map aanmaken op de server van GitHub. Maar nu is er dus een `.git/`-map op het lokale systeem en een aparte `.git/`-map op het systeem van GitHub (remote systeem). Om de lokale Git repo op de hoogte te brengen dat er ook een remote Git repo is, kan er een `remote origin` toegevoegd worden. Dit wordt gedaan vanuit de lokale map in de terminal.
 
 ```sh
 git remote add origin https://github.com/bartduisters/git-example-remote.git
 ```
 
-Opmerking: Indien dezelfde naam gebruikt is `git-example-remote`, dan moet enkel `bartduisters` uitgewisseld worden door de eigen GitHub-gebruikersnaam. Dit is ook de URL die teruggevonden kan worden in de adresbalk van de browser.
+Opmerking: Indien tijdens het aanmaken van de repo dezelfde naam gebruikt is `git-example-remote`, dan moet enkel `bartduisters` uitgewisseld worden door de eigen GitHub-gebruikersnaam. Dit is ook de URL die teruggevonden kan worden in de adresbalk van de browser.
 
 ```sh
 git branch -M master
 ```
 
-Dit is momenteel niet nodig, maar indien in de toekomst de hoofdtak anders genoemd wordt (`main` wordt tegenwoordig soms gebruikt). Dan wordt het hernoemd naar `master`, zodat de andere stappen blijven werken.
+ Git werkt met `branches` (Nederlands: takken), in dit artikel wordt er met één `branch` gewerkt. Deze stap is momenteel niet nodig, maar indien in de toekomst de hoofdtak anders genoemd wordt (`main` wordt tegenwoordig soms gebruikt). Dan wordt het hernoemd naar `master` zodat de andere stappen in dit artikel blijven werken.
 
 Ondertussen weet de lokale Git af van het bestaan van de remote Git. Om te zorgen dat de lokale commits ook in de remote Git aanwezig zijn, kan er gebruik gemaakt worden van `git push`. Aangezien er nog niet eerder gepusht is, zal de eerste keer aangegeven moeten worden op welke remote branch er gepusht moet worden.
 
@@ -647,7 +650,7 @@ git push
 # hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 ```
 
-Dit geeft een **dikke vette error**. Er wordt gezegd dat de push gefaald is, dat er werk is op de remote repo die niet aanwezig zijn in de lokale repo. En dit is correct, `Change README.md, add info.md` is wél aanwezig op de remote repo en niet op de lokale repo. Ook wordt er gezegd dat er een `git pull` uitgevoerd kan worden om de remote commits lokaal te krijgen.
+Dit geeft een **dikke vette error**. Er wordt gezegd dat de push gefaald is, dat er werk is op de remote repo die niet aanwezig is in de lokale repo. En dit is correct, `Change README.md, add info.md` is wél aanwezig op de remote repo en niet op de lokale repo. Ook wordt er gezegd dat er een `git pull` uitgevoerd kan worden om de remote commits lokaal te krijgen.
 
 ```sh
 git pull
@@ -665,7 +668,7 @@ git pull
 ###
 ```
 
-Godverd... Een merge conflict! Dit kan voorkomen als er remote wijzigingen gedaan zijn in een bestand op eenzelfde lijn. Er staat `Merge conflict in README.md`.
+Godverd... Een merge conflict! Git kan veel wijzigingen zelf samenvoegen. Een merge conflict kan voorkomen als er remote wijzigingen gedaan zijn in een bestand op eenzelfde lijn waar lokaal ook wijzigingen zijn gedaan. Er staat `Merge conflict in README.md`.
 
 Bij het bekijken van `git status` is meer informatie terug te vinden.
 
@@ -727,14 +730,13 @@ Hint: Indien er plots een teksteditor geopend wordt in de terminal, dan zal dit 
 
 <details>
   <summary>Nano: Indien er onderaan `^X` en `^R` te zien zijn ... Klik hier!</summary>
-  De terminal teksteditor Nano heeft zich geopend. `^` staat voor `CTRL` en `X` staat voor de toest `x`. Klik CTRL + X om Nano af te sluiten. Indien er nog een vraag gesteld wordt, typ `y` en klik op enter.
+  De terminal teksteditor Nano heeft zich geopend. `^` staat voor `CTRL` en `X` staat voor de toets `x`. Klik CTRL + X om Nano af te sluiten. Indien er nog een vraag gesteld wordt, typ `y` en klik op enter.
 </details>
 
 <details>
   <summary>Vim: Indien er onderaan géén `^X` en `^R` te zien zijn ... Klik hier!</summary>
   De terminal teksteditor Vim heeft zich geopend. Dit is een teksteditor met verschillende modi. Indien er per ongeluk van modus is gewijzigd, klik op `Escape`. Om uit Vim te geraken typ `:w!` en klik op enter.
 </details>
-```sh
 
 Bekijk opnieuw de Git log.
 
@@ -770,7 +772,7 @@ git log
 # commit c0aba7a9e06057c325719bac3357faff70ec9d2b
 # Author: Bart Duisters <bartduisters@bartduisters.com>
 # Date:   Thu Jun 24 22:25:20 2021 +0200
-# 
+#
 #    Add README.md
 ###
 ```
@@ -787,6 +789,7 @@ git status
 #
 # nothing to commit, working tree clean
 ```
+
 Er is te lezen `Your branch is ahead of 'origin/master' by 2 commits.`. Het is al gekend wat er gedaan kan worden om commits van een lokale repo naar een remote repo te krijgen, namelijk `git push`.
 
 ```sh
