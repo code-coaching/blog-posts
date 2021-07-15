@@ -1,10 +1,8 @@
-```json
-{
-  "title": "Voorbeeldbericht",
-  "slug": "voorbeeldbericht",
-  "tags": ["voorbeeld"]
-}
-```
+---
+  title: Voorbeeldbericht
+  slug: voorbeeldbericht
+  keywords: ["voorbeeld"]
+---
 
 # Dit is een voorbeeldbericht
 

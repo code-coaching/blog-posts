@@ -1,10 +1,8 @@
-```json
-{
-  "title": "Example post",
-  "slug": "example-post",
-  "tags": ["example"]
-}
-```
+---
+  title: Example post
+  slug: example-post
+  keywords: ["example"]
+---
 
 # This is an example post
 
