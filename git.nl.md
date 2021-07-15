@@ -1,6 +1,5 @@
 ---
   title: Wat is Git en wat is GitHub? Uitleg over de basis van Git en GitHub!
-  slug: git
   keywords: ["Git", "GitHub"]
 ---
 
