@@ -369,7 +369,7 @@ HTML-elementen hebben standaard een `display`-waarde. Er zijn twee mogelijke waa
 
 Het plaatsen van twee block-elementen onder elkaar of naast elkaar in het .html-bestand heeft niks te maken met hoe het getoond wordt in de browser. Ze worden onder elkaar getoond in de browser.
 
-Het plaatsen van twee inline-elementen onder elkaar of naast elkaar in het .html-bestand heeft niks te maken met hoe het getoond wordt in de browser. Ze worden naast elkaar getoond in de browser.3
+Het plaatsen van twee inline-elementen onder elkaar of naast elkaar in het .html-bestand heeft niks te maken met hoe het getoond wordt in de browser. Ze worden naast elkaar getoond in de browser.
 
 ### Block
 
