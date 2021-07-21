@@ -1,7 +1,7 @@
 ---
   title: Databases
-  keywords: ["Leren Programmeren"]
-  modules: ["Leren Programmeren"]
+  keywords: ["Databases"]
+  modules: ["Databases"]
 ---
 
 Databases zijn georganiseerde verzamelingen van data. Databasebeheersystemen, zijn systemen om met de data in een database te werken. Paradigma's/modellen beschrijven hoe data in een database wordt bijgehouden.
