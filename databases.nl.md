@@ -62,21 +62,21 @@ Een rij in een tabel, wordt een record genoemd.
 
 ### SQL
 
-SQL (Structured Query Language) is een taal gemaakt om data op te vragen. Een voorbeeld om alle voor- en achternamen op te vragen van alle personen die achttien of ouder zijn: `SELECT voornaam, achternaam FROM personen WHERE leeftijd >= 18`. De basis van SQL wordt behandeld in deze cursus.
+SQL (Structured Query Language) is een taal gemaakt om data op te vragen. Een voorbeeld om alle voor- en achternamen op te vragen van alle personen die achttien of ouder zijn: `SELECT voornaam, achternaam FROM personen WHERE leeftijd >= 18`.
 
 ### Datanormalisatie
 
-Om te weten welke tabellen er gemaakt moeten worden, wordt datanormalisatie toegepast. Normalisatie zorgt ervoor dat data in de simpelste vorm mogelijk wordt opgeslagen, zonder dat er data dubbel opgeslagen wordt. In deze cursus wordt normalisatie niet stap per stap uitgelegd, het is belangrijk om te weten dat dit proces voorafgaat om de te bepalen welke tabellen er gemaakt moeten worden.
+Om te weten welke tabellen er gemaakt moeten worden, wordt datanormalisatie toegepast. Normalisatie zorgt ervoor dat data in de simpelste vorm mogelijk wordt opgeslagen, zonder dat er data dubbel opgeslagen wordt. In dit blogbericht wordt normalisatie niet stap per stap uitgelegd, het is belangrijk om te weten dat dit proces voorafgaat om de te bepalen welke tabellen er gemaakt moeten worden.
 
-In een bedrijf wordt dit meestal gedaan door een software-architect of een backendontwikkelaar. Dit wordt niet behandeld in de cursus.
+In een bedrijf wordt dit meestal gedaan door een software-architect of een backendontwikkelaar.
 
 ### ERD
 
-Een ERD (Entity Relationship Diagram) is een diagram met alle relaties tussen verschillende entiteiten/tabellen. Als frontendontwikkelaar is het belangrijk dat een ERD correct geïnterpreteerd kan worden. Het maken van een ERD wordt niet behandeld in de cursus, het begrijpen van een ERD wordt wel behandeld in de cursus.
+Een ERD (Entity Relationship Diagram) is een diagram met alle relaties tussen verschillende entiteiten/tabellen. Als frontendontwikkelaar is het belangrijk dat een ERD correct geïnterpreteerd kan worden. Het maken van een ERD wordt niet behandeld in dit blogbericht, het begrijpen van een ERD is wel belangrijk.
 
 ## ERD
 
-Een ERD (Entity Relationship Diagram) geeft de verschillende relaties aan tussen verschillende entiteiten/tabellen. Het weergeven van de relaties kan met behulp van verschillende technieken. In deze cursus wordt gebruik gemaakt van de kraaienpootnotatie.
+Een ERD (Entity Relationship Diagram) geeft de verschillende relaties aan tussen verschillende entiteiten/tabellen. Het weergeven van de relaties kan met behulp van verschillende technieken. In dit blogbericht wordt gebruik gemaakt van de kraaienpootnotatie.
 
 Nul of één
 
