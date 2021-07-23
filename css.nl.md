@@ -29,7 +29,7 @@ te komen.
 <div style="font-size: 28px; font-weight: 700;">Hoofding 1 met CSS</div>
 ```
 
-![h1-element namaken met CSS](/img/html-CSS-duplicate.nl.jpeg)
+![h1-element namaken met CSS](/img/html-css-duplicate.nl.jpeg)
 
 ## CSS koppelen
 
