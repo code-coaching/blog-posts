@@ -1,7 +1,7 @@
 ---
   title: CSS
   keywords: ["CSS"]
-  modules: ["CSS"]
+  modules: ["CSS", "Jaar 1"]
 ---
 
 HTML bevat de structuur van een pagina. CSS bevat de styling van een pagina.

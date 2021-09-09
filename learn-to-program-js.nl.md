@@ -1,7 +1,7 @@
 ---
   title: Basis programmeren - Syntax
   keywords: ["Leren Programmeren"]
-  modules: ["Leren Programmeren"]
+  modules: ["Leren Programmeren", "Jaar 1"]
 ---
 
 Om in een programmeertaal een werkend programma te coderen, moet de `syntax` van de programmeertaal gevolgd worden. Dit zijn alle regeltjes die gevolgd moeten worden om een werkend programma te schrijven.

@@ -1,7 +1,7 @@
 ---
   title: JavaScript - Praktijk
   keywords: ["JavaScript - Praktijk"]
-  modules: ["JavaScript - Praktijk"]
+  modules: ["JavaScript - Praktijk", "Jaar 1"]
 ---
 
 Het is essentieel om alle kennis te beheersen van:
