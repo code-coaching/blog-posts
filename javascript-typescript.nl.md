@@ -300,4 +300,4 @@ Bij het compileren zijn er geen errors meer.
 
 ## Conclusie
 
-Alle JavaScript i
+Alle JavaScript is geldige TypeScript. TypeScript voegt extra functionaliteit toe om het developers makkelijker te maken, vergissingen zoals het doorgeven van verkeerde types worden tijdens het compileren al opgemerkt. Aangezien browsers alleen met JavaScript kunnen werken, zal TypeScript dus gecompileerd/omgezet worden naar JavaScript.
