@@ -196,7 +196,7 @@ Wagens
 
 Een voorbeeld:
 
-![één op veel voorbeeld](/img/one-to-many-example.png)
+![één op veel voorbeeld](/img/one-to-many-example.nl.png)
 
 Het ERD kan gelezen worden als:
 
@@ -253,7 +253,6 @@ Personen
 | 100 | Sylvia   | Duisters   | 28       | vrouw    |
 | ... | ...      | ...        | ...      | ...      |
 
-REpresentational State Transfer
 Wagens
 
 | id  | merk    | type      |
