@@ -6,14 +6,11 @@
 
 Git is een versiebeheersysteem (Engels: VCS - Version Control System). Leuk, maar wat betekent versiebeheersysteem? Een systeem om versies te beheren. Ook grappig, maar wat betekent een systeem om versies te beheren? Om dit uit te leggen, is het makkelijker om het uit te proberen!
 
-_Wanneer er verwezen wordt naar `terminal` in onderstaande tekst en er wordt met Windows gewerkt, dan moet het uitgevoerd worden in `Git Bash`._
+*Wanneer er verwezen wordt naar `terminal` in onderstaande tekst en er wordt met Windows gewerkt, dan moet het uitgevoerd worden in `Git Bash`.*
 
-_Indien CTRL+V niet werkt om gekopieerde inhoud te plakken in de terminal, probeer SHIFT+INSERT._
+*Indien CTRL+V niet werkt om gekopieerde inhoud te plakken in de terminal, probeer SHIFT+INSERT.*
 
 ## Git installeren
-
-<details>
-  <summary>Klik om de inhoud te zien</summary>
 
 Misschien is het al geïnstalleerd. Open een terminal (Linux/macOS) of command prompt (Windows). Type `git --version` en klik op `Enter`.
 
@@ -59,12 +56,7 @@ brew install git
 
 Dit zal onder andere `Git Bash` installeren. Wanneer er verwezen wordt naar `terminal` in onderstaande tekst en er wordt met Windows gewerkt, dan moet het uitgevoerd worden in `Git Bash`.
 
-</details>
-
 ## Werken met de terminal
-
-<details>
-  <summary>Klik om de inhoud te zien</summary>
 
 De terminal kan ook gebruikt worden om te navigeren doorheen het bestandsysteem van de computer, het aanmaken van bestanden en het aanmaken van mappen. Dit zal ook gebruikt worden tijdens het aanleren van Git. Dankzij Git Bash heeft Windows dezelfde commando's ter beschikking als Linux en macOS.
 
@@ -148,8 +140,6 @@ touch voorbeeld.txt
 ```
 
 Dit zal een nieuw bestand aanmaken, genaamd `voorbeeld.txt`.
-
-</details>
 
 ## Git lokaal gebruiken
 
