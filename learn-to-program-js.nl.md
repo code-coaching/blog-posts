@@ -393,7 +393,7 @@ const let = 3;
 // een variabelenaam kan geen gereserveerd keyword zijn, dit resulteert in een error
 ```
 
-# Conditionele statements
+## Conditionele statements
 
 Met conditionele statements is het mogelijk om verschillende code uit te voeren, afhankelijk van de `condities` die voldaan zijn. Een synoniem voor `conditie`, is `voorwaarde`. Er wordt gesproken over conditionele statements en voorwaardelijke statements, dit betekent hetzelfde.
 
@@ -403,7 +403,7 @@ JavaScript kent vier verschillende conditionele statements.
 
 Het wordt duidelijk met voorbeelden.
 
-## if
+### if
 
 ```js
 const x = 4;
@@ -421,7 +421,7 @@ if (x > y) {
 
 Een `if`-statement bestaat uit het keyword `if`, een conditie die geëvalueerd wordt `(conditie)` (in het voorbeeld wordt de conditie `x > y` geëvalueerd) en een codeblok met code die uitgevoerd moet worden indien de conditie evalueert naar `true`.
 
-## else
+### else
 
 Een `else`-statement gaat altijd gekoppeld met een `if`-statement. Wanneer de voorwaarde van de `if`-statement evalueert naar `false` en er is een `else`-statement gedefineerd, dan wordt de code in het codeblok van de `else`-statement uitgevoerd.
 
@@ -439,7 +439,7 @@ if (x > y) {
 }
 ```
 
-## else if
+### else if
 
 Een `else if`-statement gaat altijd gekoppeld met een `if`-statement. Dit maakt het mogelijk om een nieuwe voorwaarde te evalueren indien de eerste voorwaarde naar `false` evalueert.
 
@@ -458,7 +458,7 @@ if (x <= 10) {
 }
 ```
 
-## switch
+### switch
 
 Een `switch`-statement wordt gebruikt om een codeblok uit te voeren indien een van de mogelijke opties overeenkomt met de geëvalueerde expressie.
 
@@ -531,7 +531,7 @@ switch (vandaag) {
 }
 ```
 
-# Iteratieve statements
+## Iteratieve statements
 
 Iteratie is een synoniem van herhaling. Met een iteratieve statement kan code
 herhaald worden uitgevoerd.
@@ -543,7 +543,7 @@ Dit worden ook wel lussen genoemd. In het Engels `loops`.
 
 We bekijken de `for loop`, `while loop` en `do while loop`.
 
-## while
+### while
 
 In het Nederlands `zolang als` of `terwijl`. De code in het codeblok zal
 uitgevoerd worden zolang als de expressie naar `true` evalueert.
@@ -568,7 +568,7 @@ while (i < 3) {
 // met het uitvoeren van de while loop.
 ```
 
-## do while
+### do while
 
 In het Nederlands `doe ... zolang als` of `doe ... terwijl`. De code in het
 codeblok zal uitgevoerd worden, na de eerste iteratie wordt de eerste evaluatie
@@ -621,7 +621,7 @@ i is nu: 3
 */
 ```
 
-## for
+### for
 
 In het Nederlands `voor`. Voor zolang de expresie geldig is, voer het codeblok uit.
 
