@@ -492,7 +492,6 @@ const naam = "Mark";
 switch (naam) {
   case "Sylvia":
     console.log("De naam is Sylvia");
-    console.log("De naam is Bart");
     break;
   case "Barry":
     console.log("De naam is Barry");
@@ -502,7 +501,6 @@ switch (naam) {
     console.log("De naam komt niet voor");
     break;
 }
-// naar HIER*
 ```
 
 <br/>
