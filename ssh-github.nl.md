@@ -4,9 +4,7 @@
   modules: ['Jaar 1', 'Jaar 2']
 ---
 
-*Wanneer er verwezen wordt naar `terminal` in onderstaande tekst en er wordt met Windows gewerkt, dan moet het uitgevoerd worden in `Git Bash`.*
-
-*Indien CTRL+V niet werkt om gekopieerde inhoud te plakken in de terminal, probeer SHIFT+INSERT.*
+Wanneer er verwezen wordt naar `terminal` in onderstaande tekst en er wordt met Windows gewerkt, dan moet het uitgevoerd worden in `Git Bash`. Indien CTRL+V niet werkt om gekopieerde inhoud te plakken in de terminal, probeer SHIFT+INSERT.
 
 ## Wat is SSH?
 
@@ -27,7 +25,7 @@ Om met SSH te werken moet er een sleutelpaar gegenereerd worden:
 ssh-keygen -t ed25519 -C "john@duck.com"
 ```
 
-Opmerking: wijzig `"john@duck.com"` door het e-mailadres dat gebruikt is om de GitHub-account aan te maken!
+Opmerking: Wijzig `"john@duck.com"` door het e-mailadres dat gebruikt is om de GitHub-account aan te maken!
 
 Er zal een melding verschijnen om een locatie te kiezen om de sleutels op te slaan, klik hier simpelweg op `Enter` om de standaardlocatie te gebruiken.
 Er zal een melding komen om een `passphrase` (Nederlands: wachtwoord) in te geven. Geef het wachtwoord in (de ingetypte letters verschijnen niet op het scherm, maar worden wel ingevoerd).
