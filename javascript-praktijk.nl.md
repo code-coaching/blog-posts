@@ -6,9 +6,9 @@
 
 Het is essentieel om alle kennis te beheersen van:
 
-- `JavaScript - Basis`
-- `HTML`
-- `CSS`
+- [JavaScript - Basis](/blog/nl/javascript-basis/)
+- [HTML](/blog/nl/html/)
+- [CSS](/blog/nl/css/)
 
 ## JavaScript koppelen
 
@@ -259,3 +259,4 @@ function afhandelenKlik() {
   divEl.innerText = "Er is op de header geklikt!";
 }
 ```
+
