@@ -6,9 +6,7 @@
 
 Git is een versiebeheersysteem (Engels: VCS - Version Control System). Leuk, maar wat betekent versiebeheersysteem? Een systeem om versies te beheren. Ook grappig, maar wat betekent een systeem om versies te beheren? Om dit uit te leggen, is het makkelijker om het uit te proberen!
 
-*Wanneer er verwezen wordt naar `terminal` in onderstaande tekst en er wordt met Windows gewerkt, dan moet het uitgevoerd worden in `Git Bash`.*
-
-*Indien CTRL+V niet werkt om gekopieerde inhoud te plakken in de terminal, probeer SHIFT+INSERT.*
+Wanneer er verwezen wordt naar `terminal` in onderstaande tekst en er wordt met Windows gewerkt, dan moet het uitgevoerd worden in `Git Bash`. Indien CTRL+V niet werkt om gekopieerde inhoud te plakken in de terminal, probeer SHIFT+INSERT.
 
 ## Git installeren
 
@@ -473,6 +471,8 @@ Hieruit kan afgeleid worden dat `bla bla bla` is toegevoegd.
 Hieruit kan ook afgeleid worden dat alles dat ooit is toegevoegd aan de geschiedenis van Git, altijd nog terug bekeken kan worden. Het is dus belangrijk dat er **nooit geheime informatie toegevoegd wordt** aan de bestanden die gecommit worden. Voor software-ontwikkelaars kan dit betekenen `wachtwoorden`, `API-sleutels`, `omgevingsvariabelen` ...
 
 ## GitHub - Git online gebruiken
+
+Sinds 13 augustus 2021 is het niet langer mogelijk om met een gebruikersnaam en wachtwoord een repo te pullen en pushen. De makkelijkste manier is om `ssh` te gebruiken. Na het aanmaken van de account, kan dit [blog](/blog/nl/ssh-gebruiken-om-te-werken-met-github/) gevolgd worden om SSH te gebruiken met GitHub.
 
 ### Remote repo koppelen aan bestaande lokale repo
 
