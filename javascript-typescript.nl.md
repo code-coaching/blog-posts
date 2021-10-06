@@ -1,17 +1,15 @@
 ---
   title: Van JavaScript naar TypeScript
-  keywords: ["TypeScript"]
+  keywords: ["TypeScript", "JavaScript"]
   modules: ['Jaar 2']
 ---
 
-_Wanneer er verwezen wordt naar `terminal` in onderstaande tekst en er wordt met Windows gewerkt, dan moet het uitgevoerd worden in `Git Bash`._
-
-_Indien CTRL+V niet werkt om gekopieerde inhoud te plakken in de terminal, probeer SHIFT+INSERT._
-
 Vereisten om dit blog optimaal te volgen:
 
-- [basiskennis JavaScript](/nl/bericht/javascript-basis/), de kennis bouwt verder op JavaScript
-- basiskennis [NodeJS](https://nodejs.org/en/download/), kunnen uitvoeren van `npm`-commando's
+- [basiskennis JavaScript](blog/nl/javascript-basis/), de kennis bouwt verder op JavaScript
+- basiskennis [NodeJS](https://nodejs.org/en/), kunnen uitvoeren van `npm`-commando's)
+
+Wanneer er verwezen wordt naar `terminal` in onderstaande tekst en er wordt met Windows gewerkt, dan moet het uitgevoerd worden in `Git Bash`. Indien CTRL+V niet werkt om gekopieerde inhoud te plakken in de terminal, probeer SHIFT+INSERT.
 
 ## Wat is TypeScript?
 
@@ -48,14 +46,14 @@ const resultaat = zegHallo(volledigeNaam, 30);
 console.log(resultaat);
 ```
 
-Er zijn twee verschillen tussen TypeScript en JavaScript:
+Er zijn twee verschillen tussen TypeScript en JavaScript.
 
-Er zijn types toegekene:
+1. Er zijn types toegekend:
 
 - `: string` achter de variabele `volledigeNaam`, de parameter `naam` en de functie `zegHallo`.
 - `: number` achter de parameter `leeftijd`.
 
-De bestandsnaam eindigt in `.ts` in plaats van `.js`.
+2. De bestandsnaam eindigt in `.ts` in plaats van `.js`.
 
 ## Maar webbrowsers werken toch enkel met HTML, CSS en JavaScript?
 
