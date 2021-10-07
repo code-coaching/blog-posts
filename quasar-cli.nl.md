@@ -297,3 +297,19 @@ Hier zien we een rare syntax `<%= productName %>`, dit is de syntax van een `tem
 ```
 
 Dit is het element waar VueJS in zal werken. Vandaar ook de commentaar erbij `<!-- DO NOT touch the following DIV -->` (Raak onderstaande div NIET aan).
+
+## Quasar-project opstarten
+
+Zoals in de `README.md` terug te vinden is, kunnen alle `dependencies` (de afhankelijke software van dit project) geïnstalleerd worden via:
+
+```sh
+npm install
+```
+
+En kan het project opgestart worden via:
+
+```sh
+quasar dev
+```
+
+Dit zal het project opstarten. De browser zal automatisch geopend worden. Standaard op `http://localhost:8080`.
