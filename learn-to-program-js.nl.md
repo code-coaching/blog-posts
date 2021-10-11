@@ -755,7 +755,7 @@ const persoon = {
 };
 
 console.log(persoon.fibonacciReeks[4]);
-// Dit print de waarde 5
+// Dit print de waarde 3
 ```
 
 Een `function` is ook een type. Het is dus ook mogelijk om een
