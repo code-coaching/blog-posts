@@ -1,7 +1,7 @@
 ---
   title: FeathersJS CLI - een nieuw FeathersJS-project aanmaken
   keywords: ["FeathersJS", "TypeScript"]
-  modules: [""]
+  modules: ["Backend"]
 ---
 
 Vereisten om dit blog optimaal te volgen:
