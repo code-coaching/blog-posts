@@ -1,5 +1,5 @@
 ---
-  title: Quasar CLI - een nieuw Quasar-fproject aanmaken
+  title: Quasar CLI - een nieuw Quasar-project aanmaken
   keywords: ["Quasar", "VueJS"]
   modules: ["Jaar 2"]
 ---
@@ -7,7 +7,7 @@
 Vereisten om dit blog optimaal te volgen:
 
 - [basiskennis JavaScript](blog/nl/javascript-basis/), de kennis bouwt verder op JavaScript
-- basiskennis [NodeJS](https://nodejs.org/en/), kunnen uitvoeren van `npm`-commando's)
+- basiskennis [NodeJS](https://nodejs.org/en/), kunnen uitvoeren van `npm`-commando's
 
 Wanneer er verwezen wordt naar `terminal` in onderstaande tekst en er wordt met Windows gewerkt, dan moet het uitgevoerd worden in `Git Bash`. Indien CTRL+V niet werkt om gekopieerde inhoud te plakken in de terminal, probeer SHIFT+INSERT.
 
@@ -71,7 +71,7 @@ Dit zal in de terminal enkele vragen stellen.
 
 Klik vijf keer op `Enter`.
 
-```
+```sh
 ? Generate project in current directory? Yes
 ? Project name (internal usage for dev) mijn-eerste-quasar-project
 ? Project product name (must start with letter if building mobile apps) Quasar A
@@ -82,7 +82,7 @@ pp
 
 Kies voor `Sass with SCSS syntax` door op `Enter` te klikken.
 
-```
+```sh
 ? Pick your CSS preprocessor: (Use arrow keys)
 ❯ Sass with SCSS syntax
   Sass with indented syntax
@@ -91,7 +91,7 @@ Kies voor `Sass with SCSS syntax` door op `Enter` te klikken.
 
 Gebruik de pijltoetsen om naar `TypeScript` te gaan en klik op `spatie` om dit te selecteren. Dit resulteert in zowel `ESLint` als `TypeScript` met een ingekleurd bolletje. Klik op `Enter`.
 
-```
+```sh
 ? Check the features needed for your project:
  ◉ ESLint (recommended)
 ❯◉ TypeScript
@@ -102,7 +102,7 @@ Gebruik de pijltoetsen om naar `TypeScript` te gaan en klik op `spatie` om dit t
 
 Kies voor `Composition API` door op `Enter` te klikken.
 
-```
+```sh
 ? Pick a component style: (Use arrow keys)
 ❯ Composition API (recommended) (https://github.com/vuejs/composition-api)
   Class-based (https://github.com/vuejs/vue-class-component & https://github.com/kaorun343/vue-
@@ -112,7 +112,7 @@ property-decorator)
 
 Kies voor `Prettier` door op `Enter te klikken.
 
-```
+```sh
 ? Pick an ESLint preset: (Use arrow keys)
 ❯ Prettier (https://github.com/prettier/prettier)
   Standard (https://github.com/standard/standard)
@@ -121,7 +121,7 @@ Kies voor `Prettier` door op `Enter te klikken.
 
 Gebruik de pijltoetsen om te navigeren naar `Yes, use NPM` en klik op `Enter`.
 
-```
+```sh
 ? Continue to install project dependencies after the project has been created? (recommended)
   Yes, use Yarn (recommended)
 ❯ Yes, use NPM
@@ -130,7 +130,7 @@ Gebruik de pijltoetsen om te navigeren naar `Yes, use NPM` en klik op `Enter`.
 
 Quasar zal nu beginnen met een project aan te maken. De volledige output in de terminal is:
 
-```
+```sh
   ___
  / _ \ _   _  __ _ ___  __ _ _ __
 | | | | | | |/ _` / __|/ _` | '__|
@@ -153,7 +153,7 @@ Quasar zal nu beginnen met een project aan te maken. De volledige output in de t
 
 ## Projectstructuur van een Quasar-project
 
-```
+```sh
 .vscode/
 node_modules/
 public/
@@ -176,7 +176,7 @@ Van al deze bestanden en mappen, zijn er veel configuratiebestanden voor technol
 
 Alle configuratiebestanden:
 
-```
+```sh
 .editorconfig
 .eslintignore
 .eslintrc.js
@@ -190,7 +190,7 @@ tsconfig.json
 
 Wat er nog overblijft:
 
-```
+```sh
 node_modules/
 public/
 src/
@@ -201,7 +201,7 @@ README.md
 
 Hiervan behoren twee bestanden en een map toe tot `npm`/`node`. Namelijk:
 
-```
+```sh
 node_modules/
 package-lock.json
 package.json
@@ -217,7 +217,7 @@ De map `node_modules/` wordt toegevoegd door `npm install`, hierin zit alle beno
 
 Wat er nog overblijft:
 
-```
+```sh
 public/
 src/
 README.md
@@ -233,7 +233,7 @@ De `README.md` is een bestand dat teruggevonden wordt in bijna alle projecten. D
 
 De `src`-map wordt verder besproken.
 
-```
+```sh
 assets/
 boot/
 components/
