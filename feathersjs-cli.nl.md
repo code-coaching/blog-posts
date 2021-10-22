@@ -75,10 +75,10 @@ cd mijn-eerste-feathers-project
 In deze map gaat er gebruikgemaakt worden van de Feathers CLI om een nieuw Feathers-project aan te maken.
 
 ```sh
-feathers create .
+feathers generate app
 ```
 
-Opmerking: Het punt betekent `in deze map`. `Feathers create .` kan gelezen worden als `maak een nieuw Feathers project in de huidige map`.
+Opmerking: `feathers generate app` kan gelezen worden als `maak een nieuw Feathers project in de huidige map`.
 
 Dit zal in de terminal enkele vragen stellen.
 
