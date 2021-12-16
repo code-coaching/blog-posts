@@ -47,7 +47,7 @@ Choose the default option for everything. Except for the last one, pick `Yes, us
 
 In `src/css/quasar.variables.scss` there are a couple of variables defined.
 
-```scss
+```css
 $primary: #1976d2;
 $secondary: #26a69a;
 $accent: #9c27b0;
@@ -96,7 +96,7 @@ When using a dark theme, the class `body--dark` is placed on the body tag.
 
 In `src/css/pages/Index.vue`, use the plugin to see the `body--light` and `body--dark` functionality at work.
 
-```vue
+```html
 <template>
   <q-page class="flex flex-center">
     Dark active: {{ $q.dark.isActive }}
@@ -104,21 +104,21 @@ In `src/css/pages/Index.vue`, use the plugin to see the `body--light` and `body-
 </template>
 
 <script>
-import { defineComponent } from "vue";
-import { useQuasar } from "quasar";
+  import { defineComponent } from "vue";
+  import { useQuasar } from "quasar";
 
-export default defineComponent({
-  name: "PageIndex",
-  setup() {
-    const $q = useQuasar();
+  export default defineComponent({
+    name: "PageIndex",
+    setup() {
+      const $q = useQuasar();
 
-    $q.dark.set(false);
+      $q.dark.set(false);
 
-    return {
-      $q,
-    };
-  },
-});
+      return {
+        $q,
+      };
+    },
+  });
 </script>
 ```
 
@@ -136,7 +136,7 @@ As an example `setCssVar("primary", "#FF0000");` would create a variable called 
 
 ## Creating a theme switcher
 
-```vue
+```html
 <template>
   <q-page class="flex flex-center">
     <q-btn-dropdown
@@ -162,93 +162,93 @@ As an example `setCssVar("primary", "#FF0000");` would create a variable called 
 </template>
 
 <script>
-import { defineComponent, ref } from "vue";
-import { useQuasar, setCssVar } from "quasar";
+  import { defineComponent, ref } from "vue";
+  import { useQuasar, setCssVar } from "quasar";
 
-export default defineComponent({
-  name: "PageIndex",
-  setup() {
-    const $q = useQuasar();
+  export default defineComponent({
+    name: "PageIndex",
+    setup() {
+      const $q = useQuasar();
 
-    const themes = [
-      {
-        isDark: false,
-        name: "Quasar",
+      const themes = [
+        {
+          isDark: false,
+          name: "Quasar",
 
-        primary: "#1976d2",
-        secondary: "#26a69a",
-        accent: "#9c27b0",
+          primary: "#1976d2",
+          secondary: "#26a69a",
+          accent: "#9c27b0",
 
-        positive: "#21ba45",
-        negative: "#c10015",
-        info: "#31ccec",
-        warning: "#f2c037",
+          positive: "#21ba45",
+          negative: "#c10015",
+          info: "#31ccec",
+          warning: "#f2c037",
 
-        background: "#fff",
-      },
-      {
-        isDark: true,
-        name: "Quasar Dark",
+          background: "#fff",
+        },
+        {
+          isDark: true,
+          name: "Quasar Dark",
 
-        primary: "#6d6d6d",
-        secondary: "#5d5d5d",
-        accent: "#4d4d4d",
+          primary: "#6d6d6d",
+          secondary: "#5d5d5d",
+          accent: "#4d4d4d",
 
-        positive: "#20615b",
-        negative: "#a21232",
-        info: "#3e35a8",
-        warning: "#c1a54d",
+          positive: "#20615b",
+          negative: "#a21232",
+          info: "#3e35a8",
+          warning: "#c1a54d",
 
-        background: "#2c2c2c",
-      },
-      {
-        isDark: true,
-        name: "Synthwave",
+          background: "#2c2c2c",
+        },
+        {
+          isDark: true,
+          name: "Synthwave",
 
-        primary: "#ff7edb",
-        secondary: "#b893ce8f",
-        accent: "#9c27b0",
+          primary: "#ff7edb",
+          secondary: "#b893ce8f",
+          accent: "#9c27b0",
 
-        positive: "#20615b",
-        negative: "#a21232",
-        info: "#3e35a8",
-        warning: "#c1a54d",
+          positive: "#20615b",
+          negative: "#a21232",
+          info: "#3e35a8",
+          warning: "#c1a54d",
 
-        background: "#262335",
-      },
-    ];
+          background: "#262335",
+        },
+      ];
 
-    const selectedTheme = ref();
+      const selectedTheme = ref();
 
-    const applyTheme = (theme) => {
-      $q.dark.set(theme.isDark);
+      const applyTheme = (theme) => {
+        $q.dark.set(theme.isDark);
 
-      setCssVar("primary", "primary"); // theme["primary"] is the same as theme.primary
-      setCssVar("secondary", theme["secondary"]);
-      setCssVar("accent", theme["accent"]);
+        setCssVar("primary", "primary"); // theme["primary"] is the same as theme.primary
+        setCssVar("secondary", theme["secondary"]);
+        setCssVar("accent", theme["accent"]);
 
-      setCssVar("positive", theme["positive"]);
-      setCssVar("negative", theme["negative"]);
-      setCssVar("info", theme["info"]);
-      setCssVar("warning", theme["warning"]);
+        setCssVar("positive", theme["positive"]);
+        setCssVar("negative", theme["negative"]);
+        setCssVar("info", theme["info"]);
+        setCssVar("warning", theme["warning"]);
 
-      setCssVar("background", theme["background"]);
+        setCssVar("background", theme["background"]);
 
-      setCssVar("dark", theme["background"]);
-      setCssVar("dark-page", theme["background"]);
+        setCssVar("dark", theme["background"]);
+        setCssVar("dark-page", theme["background"]);
 
-      selectedTheme.value = theme;
-    };
+        selectedTheme.value = theme;
+      };
 
-    applyTheme(themes[0]);
+      applyTheme(themes[0]);
 
-    return {
-      themes,
-      selectedTheme,
-      applyTheme,
-    };
-  },
-});
+      return {
+        themes,
+        selectedTheme,
+        applyTheme,
+      };
+    },
+  });
 </script>
 ```
 
