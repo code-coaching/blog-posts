@@ -36,7 +36,7 @@ Om dit voorbeeld als webapagina te zien:
 - kopieer bovenstaande HTML en plak het als inhoud van het aangemaakte HTML-bestand
 - sla het bestand op en open het in een webbrowser
 
-![basisstructuur](/img/basic-structure.nl.png)
+![basisstructuur](/img/blog/basic-structure.nl.png)
 
 ## DOCTYPE
 
@@ -147,7 +147,7 @@ Om verschillende groottes van titels te tonen, kan er gebruik gemaakt worden van
 <h6>Hoofding 6</h6>
 ```
 
-![hoofdingen](/img/headings.nl.jpeg)
+![hoofdingen](/img/blog/headings.nl.jpeg)
 
 ### Paragrafen
 
@@ -163,7 +163,7 @@ De tweede regel omschrijft voor de browser dat hetgeen getoond wordt, in de
 context van een paragraaf is. De eerste regel toont gewoon een regel tekst.
 De browser heeft geen informatie over wat de tekst voorstelt.
 
-![2020-10-25-1603647352_screenshot_653x69](/img/paragraphs.nl.jpeg)
+![2020-10-25-1603647352_screenshot_653x69](/img/blog/paragraphs.nl.jpeg)
 
 ### Links
 
@@ -177,8 +177,8 @@ volledige andere pagina's.
 Merk op dat een link die nog niet bezocht is, blauw is. En zodra de link
 bezocht is, wordt deze paars. Dit wordt automatisch afgehandeld.
 
-![link](/img/link.nl.jpeg)
-![bezochte link](/img/link-visited.nl.jpeg)
+![link](/img/blog/link.nl.jpeg)
+![bezochte link](/img/blog/link-visited.nl.jpeg)
 
 ### Afbeeldingen
 
@@ -297,7 +297,7 @@ bekeken.
 </table>
 ```
 
-![tabel](/img/table.nl.jpeg)
+![tabel](/img/blog/table.nl.jpeg)
 
 ```html
 <table>
@@ -317,7 +317,7 @@ bekeken.
 </table>
 ```
 
-![tabel met colspan en rowspan](/img/table-span.nl.jpeg)
+![tabel met colspan en rowspan](/img/blog/table-span.nl.jpeg)
 
 De attributen 'colspan' en 'rowspan', geven aan hoeveel kolommen en rijen
 gebruikt zullen worden door de data.
@@ -359,7 +359,7 @@ sub <sub> subscript</sub> & sup <sup>superscript</sup>
 <ins>ins - insert / onderstreept</ins>
 ```
 
-![tekstopmaak](/img/text-formatting.nl.jpeg)
+![tekstopmaak](/img/blog/text-formatting.nl.jpeg)
 
 ## Elementen: block & inline
 
@@ -382,7 +382,7 @@ Een voorbeeld is het `<div>`-element.
 <div>Tweede element</div>
 ```
 
-![div](/img/div.nl.png)
+![div](/img/blog/div.nl.png)
 
 Alle elementen met als `display`-waarde `block`:
 
@@ -426,7 +426,7 @@ Een voorbeeld is het `span`-element.
 <span>Eerste element</span> <span>Tweede element</span>
 ```
 
-![span](/img/span.nl.png)
+![span](/img/blog/span.nl.png)
 
 Alle elementen met als `display`-waarde `inline`:
 

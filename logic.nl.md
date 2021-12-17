@@ -77,7 +77,7 @@ Een bewering is een zin die waar of onwaar kan zijn.
 - "Alle mensen zijn zoogdieren", is een bewering die feitelijk waar is.
 - "Alle mensen zijn vissen", is een bewering die feitelijk onwaar is.
 
-Let op: Bij de formele logica wordt ervan uitgegaan dat alle beweringen waar zijn, ook al zijn ze feitelijk onwaar. Dus ook 'alle mensen zijn vissen' wordt als waar gezien. 
+Let op: Bij de formele logica wordt ervan uitgegaan dat alle beweringen waar zijn, ook al zijn ze feitelijk onwaar. Dus ook 'alle mensen zijn vissen' wordt als waar gezien.
 
 ### Voorbeelden
 
@@ -191,7 +191,7 @@ Elke categorie kan voorgesteld worden door een cirkel. Een Venn-diagram is een g
 
 Een Venn-diagram met twee categorieën.
 
-![Venn-diagram-2](/img/venn-diagram-2.png)
+![Venn-diagram-2](/img/blog/venn-diagram-2.png)
 
 - De roze categorie zijn alle honden.
 - De gele categorie zijn alle huisdieren.
@@ -199,7 +199,7 @@ Een Venn-diagram met twee categorieën.
 
 Een Venn-diagram met drie categorieën.
 
-![Venn-diagram-3](/img/venn-diagram-3.png)
+![Venn-diagram-3](/img/blog/venn-diagram-3.png)
 
 - De roze categorie zijn alle honden.
 - De gele categorie zijn alle huisdieren.

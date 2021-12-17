@@ -28,9 +28,9 @@ JavaScript kan gekoppeld worden in een HTML-pagina. JavaScript **kan** ingeladen
   </head>
   <body>
     <!-- Hier alle HTML-elementen -->
-    <h1 class='titel'>Voorbeeld</h1>
-    <h1 class='titel'>Voorbeeld</h1>
-    <h1 id='speciaal'>Voorbeeld</h1>
+    <h1 class="titel">Voorbeeld</h1>
+    <h1 class="titel">Voorbeeld</h1>
+    <h1 id="speciaal">Voorbeeld</h1>
 
     <!-- Interne JavaScript koppelen met script-tag onderaan in de body-tag -->
     <script>
@@ -54,7 +54,7 @@ console.log(
 
 In de browser kan aangetoond worden dat de JavaScript correct wordt ingeladen:
 
-![js](/img/js.nl.jpeg)
+![js](/img/blog/js.nl.jpeg)
 
 ### defer
 
@@ -76,9 +76,9 @@ Er is een manier om de JavaScript toch in de head-tag in te laden. Met het attri
   </head>
   <body>
     <!-- Hier alle HTML-elementen -->
-    <h1 class='titel'>Voorbeeld</h1>
-    <h1 class='titel'>Voorbeeld</h1>
-    <h1 id='speciaal'>Voorbeeld</h1>
+    <h1 class="titel">Voorbeeld</h1>
+    <h1 class="titel">Voorbeeld</h1>
+    <h1 id="speciaal">Voorbeeld</h1>
   </body>
 </html>
 ```
@@ -97,7 +97,7 @@ Er is een globaal object aanwezig in JavaScript waarin alle informatie van de HT
 
 In Firefox, wanneer in de console `document` getypt wordt, kunnen alle properties en methodes die bestaan op het object bekeken worden.
 
-![document](/img/document.jpeg)
+![document](/img/blog/document.jpeg)
 
 Op dit object zijn er methodes aanwezig om de elementen van de DOM op te vragen. Twee van de methodes zijn `document.querySelector()` en `document.querySelectorAll()`.
 
@@ -116,28 +116,28 @@ Dit geeft het eerste element terug dat overeenkomt met de selector die meegegeve
   </head>
   <body>
     <!-- Hier alle HTML-elementen -->
-    <h1 class='titel'>Titel een</h1>
-    <h1 class='titel'>Titel twee</h1>
-    <h1 id='speciaal'>Titel drie</h1>
+    <h1 class="titel">Titel een</h1>
+    <h1 class="titel">Titel twee</h1>
+    <h1 id="speciaal">Titel drie</h1>
 
     <!-- In het voorbeeld wordt gebruik gemaakt van interne JavaScript, deze code kan ook in externe JavaScript staan. -->
     <script>
-      const a = document.querySelector('h1');
+      const a = document.querySelector("h1");
       // Variabele a bevat één element, de h1-tag met als tekst 'Titel een'
 
-      const b = document.querySelector('.titel');
+      const b = document.querySelector(".titel");
       // Variabele b bevat één element, de h1-tag met als tekst 'Titel een'
 
-      const c = document.querySelector('#speciaal');
+      const c = document.querySelector("#speciaal");
       // Variabele c bevat één element, de h1-tag met als tekst 'Titel drie'
 
-      const d = document.querySelectorAll('h1');
+      const d = document.querySelectorAll("h1");
       // Variabele d bevat een NodeList (soort array) met drie elementen, alle h1-tags
 
-      const e = document.querySelectorAll('.titel');
+      const e = document.querySelectorAll(".titel");
       // Variabele e bevat een NodeList (soort array) met twee elementen, alle h1-tags met als class 'titel' (de eerste twee h1-tags)
-      
-      const f = document.querySelectorAll('#speciaal');
+
+      const f = document.querySelectorAll("#speciaal");
       // Variabele f bevat een NodeList (soort array) met één element, alle h1-tags met als identifier 'speciaal' (de derde h1-tag)
     </script>
   </body>
@@ -146,17 +146,17 @@ Dit geeft het eerste element terug dat overeenkomt met de selector die meegegeve
 
 De waarde van variabele `a` en `d` geprint in de console.
 
-![querySelector-querySelectorAll](/img/querySelector-querySelectorAll.nl.png)
+![querySelector-querySelectorAll](/img/blog/querySelector-querySelectorAll.nl.png)
 
 In Firefox is het mogelijk om te zien welke properties/methodes er bestaan op een opgevraagd element.
 
-![querySelector-h1](/img/querySelector-h1.nl.jpeg)
+![querySelector-h1](/img/blog/querySelector-h1.nl.jpeg)
 
 ## classList
 
 Een van de bestaande properties op een element, is `classList`. Deze property is opnieuw een object waarop methodes bestaand om classes toe te voegen en te verwijderen.
 
-![classList](/img/classList.nl.jpeg)
+![classList](/img/blog/classList.nl.jpeg)
 
 Via de methode `add` kan een class worden toegevoegd.
 Via de methode `remove` kan een class worden verwijderd.
@@ -180,19 +180,19 @@ Via de methode `remove` kan een class worden verwijderd.
   </head>
   <body>
     <!-- Hier alle HTML-elementen -->
-    <h1 class='titel'>Voorbeeld</h1>
-    <h1 class='titel'>Voorbeeld</h1>
-    <h1 id='speciaal'>Voorbeeld</h1>
+    <h1 class="titel">Voorbeeld</h1>
+    <h1 class="titel">Voorbeeld</h1>
+    <h1 id="speciaal">Voorbeeld</h1>
 
     <script>
-      const specialeH1 = document.querySelector('#speciaal');
-      specialeH1.classList.add('toegevoegd'); // Hier wordt de class '.toegevoegd', toegevoegd aan het class-attribuut van het element in de variabele 'specialeH1'
+      const specialeH1 = document.querySelector("#speciaal");
+      specialeH1.classList.add("toegevoegd"); // Hier wordt de class '.toegevoegd', toegevoegd aan het class-attribuut van het element in de variabele 'specialeH1'
     </script>
   </body>
 </html>
 ```
 
-![class-toegevoegd](/img/class-added.nl.jpeg)
+![class-toegevoegd](/img/blog/class-added.nl.jpeg)
 
 De `class="toegevoegd"` is aan de DOM toegevoegd op het moment dat de JavaScript-code is uitgevoerd.
 
@@ -212,19 +212,19 @@ Via `removeAttribute` kunnen er attributen verwijderd worden van een element.
   </head>
   <body>
     <!-- Hier alle HTML-elementen -->
-    <h1 class='titel'>Voorbeeld</h1>
-    <h1 class='titel'>Voorbeeld</h1>
-    <h1 id='speciaal'>Voorbeeld</h1>
+    <h1 class="titel">Voorbeeld</h1>
+    <h1 class="titel">Voorbeeld</h1>
+    <h1 id="speciaal">Voorbeeld</h1>
 
     <script>
-      const specialeH1 = document.querySelector('#speciaal');
-      specialeH1.setAttribute('hidden', '');
+      const specialeH1 = document.querySelector("#speciaal");
+      specialeH1.setAttribute("hidden", "");
     </script>
   </body>
 </html>
 ```
 
-![hidden](/img/hidden.jpeg)
+![hidden](/img/blog/hidden.jpeg)
 Doordat via JavaScript het attribuut 'hidden' wordt toegevoegd, wordt het element niet getoond in de browser.
 
 ### event handler
@@ -234,6 +234,7 @@ Via event handlers (Nederlands: afhandelen van events) kan er JavaScript uitgevo
 Een voorbeeld is het aanroepen van een JavaScript-functie wanneer er geklikt wordt op een element.
 
 index.html
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -246,17 +247,17 @@ index.html
     <script defer src="index.js"></script>
   </head>
   <body>
-    <h1 onclick='afhandelenKlik()'>Voorbeeld</h1>
+    <h1 onclick="afhandelenKlik()">Voorbeeld</h1>
     <div></div>
   </body>
 </html>
 ```
 
 index.js
+
 ```js
 function afhandelenKlik() {
   const divEl = document.querySelector("div");
   divEl.innerText = "Er is op de header geklikt!";
 }
 ```
-

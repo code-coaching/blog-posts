@@ -18,15 +18,15 @@ Tijdens de installatie zal er gevraagd worden naar een url die wijst naar een da
 
 Zorg dat er een een database aangemaakt is (gratis optie is voldoende).
 
-![database](/img/mongodb-database.png)
+![database](/img/blog/mongodb-database.png)
 
 Klik vervolgens op `Connect`. En kies voor `Connect to application`.
 
-![database-popup](/img/mongodb-connect-your-application.png)
+![database-popup](/img/blog/mongodb-connect-your-application.png)
 
 De connectiestring die hier getoond wordt, is de connectiestring die tijdens het aanmaken van het project nodig is.
 
-![database-connection-string](/img/mongodb-connection-string.png)
+![database-connection-string](/img/blog/mongodb-connection-string.png)
 
 ## Wat is FeathersJS
 
@@ -367,7 +367,7 @@ Om te zorgen dat dit wijst naar de online database, moet `config/default.json` g
 
 Vervang `GEBRUIKERSNAAM` met de naam van de gebruiker, terug te vinden in de connectiestring.
 
-![database-connection-string](/img/mongodb-connection-string.png)
+![database-connection-string](/img/blog/mongodb-connection-string.png)
 
 In bovenstaande afbeelding is de gebruikersnaam `barrybot_dev_user`.
 
@@ -375,7 +375,7 @@ In bovenstaande afbeelding is de gebruikersnaam `barrybot_dev_user`.
 
 Vervang `WACHTWOORD` door het wachtwoord van de gebruiker. Dit is het wachtwoord van de gebruiker die terug te vinden is onder `database access`.
 
-![database-connection-string](/img/mongodb-database-access.png)
+![database-connection-string](/img/blog/mongodb-database-access.png)
 
 #### Databasenaam
 
@@ -413,7 +413,7 @@ In dit geval [http://localhost:3030](http://localhost:3030).
 
 In de online MongoDB kan de aangemaakte database/collectie nu teruggevonden worden door op `Browse Collections` te klikken.
 
-![mongodb-browse-collections](/img/mongodb-browse-collections.png)
+![mongodb-browse-collections](/img/blog/mongodb-browse-collections.png)
 
 De aangemaakte end point `users` kan bezocht worden op `/users`. [http://localhost:3030/users](http://localhost:3030/users). Dit zal een `Unauthorized` tonen.
 
@@ -441,7 +441,7 @@ Om te zorgen dat de `.env`-bestanden ingeladen worden. Moet er iets toegevoegd w
 ...
  import configuration from "@feathersjs/configuration";
  import express from "@feathersjs/express";
- 
+
 +import dotenv from "dotenv";
 +dotenv.config();
 +
@@ -490,3 +490,9 @@ Start nu het project opnieuw op om te bevestigen dat het `.env`-bestand gebruikt
 ```sh
 npm run dev
 ```
+
+## Code
+
+De volledige code kan van dit blog kan [hier](https://github.com/bartduisters/feathers-ts-template/releases/tag/first-blog) gedownload worden.
+
+Opmerking: Bij bovenstaande link is er tijdens de configuratie niet voor gekozen om de `real-time`-optie uit te zetten. Dit heeft als gevolg dat bijvoorbeeld `@feathersjs/socketio` voorkomt in `package.json` en dat deze dependency ingekoppeld wordt in `app.ts`.

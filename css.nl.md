@@ -29,7 +29,7 @@ te komen.
 <div style="font-size: 28px; font-weight: 700;">Hoofding 1 met CSS</div>
 ```
 
-![h1-element namaken met CSS](/img/html-css-duplicate.nl.jpeg)
+![h1-element namaken met CSS](/img/blog/html-css-duplicate.nl.jpeg)
 
 ## CSS koppelen
 
@@ -104,7 +104,7 @@ Er zijn drie manieren om CSS te koppelen aan een .html-bestand: `inline` (Nederl
 
 Resultaat:
 
-![CSS Cascading](/img/css-cascading.nl.png)
+![CSS Cascading](/img/blog/css-cascading.nl.png)
 
 ## Selectors
 
@@ -153,7 +153,7 @@ Het is mogelijk elementen te selecteren op basis van de naam van een element. He
 </html>
 ```
 
-![CSS selector element](/img/css-selector-element.nl.png)
+![CSS selector element](/img/blog/css-selector-element.nl.png)
 
 ### class
 
@@ -185,7 +185,7 @@ Het is mogelijk om elementen te selecteren op basis van de naam van een class.
 </html>
 ```
 
-![CSS selector class](/img/css-selector-class.nl.png)
+![CSS selector class](/img/blog/css-selector-class.nl.png)
 
 ### id
 
@@ -195,8 +195,8 @@ Het is mogelijk om elementen te selecteren op basis van de naam van een id.
 <!DOCTYPE html>
 <html lang="nl">
   <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
       /* 
@@ -228,10 +228,10 @@ Het is mogelijk om elementen te selecteren op basis van de naam van een id.
     zowel bij ".element" en "#element-2" gedefinieerd is,
     zal de onderste waarden de bovenste waarden overschrijven.
     -->
-    <div class="element" id='element-2'>Tweede element</div>
+    <div class="element" id="element-2">Tweede element</div>
     <div class="element">Derde element</div>
   </body>
 </html>
 ```
 
-![CSS selector id](/img/css-selector-id.nl.png)
+![CSS selector id](/img/blog/css-selector-id.nl.png)

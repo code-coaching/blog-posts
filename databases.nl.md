@@ -80,27 +80,27 @@ Een ERD (Entity Relationship Diagram) geeft de verschillende relaties aan tussen
 
 Nul of één
 
-![nul of één](/img/zero-or-one.png)
+![nul of één](/img/blog/zero-or-one.png)
 
 Exact één
 
-![exact één](/img/exactly-one.png)
+![exact één](/img/blog/exactly-one.png)
 
 Veel
 
-![veel](/img/many.png)
+![veel](/img/blog/many.png)
 
 Één of veel
 
-![een of veel](/img/one-or-many.png)
+![een of veel](/img/blog/one-or-many.png)
 
 Nul, één of veel
 
-![nul, een of veel](/img/zero-one-or-many.png)
+![nul, een of veel](/img/blog/zero-one-or-many.png)
 
 ### Opbouw van een ERD
 
-![qownnotes-media-JM5579](/img/erd-creation.nl.png)
+![qownnotes-media-JM5579](/img/blog/erd-creation.nl.png)
 
 Elke tabel uit een database wordt in een ERD voorgesteld aan de hand van een tabel met één kolom. De koptekst (het donkergrijze gedeelte in de afbeelding) van de tabel (in het ERD) is de verzamelnaam voor hetgeen dat opgeslagen wordt in de tabel (in de database). Elke kolom uit de tabel van de database, krijgt een rij in de tabel van het ERD.
 
@@ -121,7 +121,7 @@ In deze tabel worden personen opgeslagen. Elke persoon heeft "id" waarmee hij/zi
 
 Dit wordt in een ERD weergegeven als:
 
-![personentabel](/img/relation-example.nl.png)
+![personentabel](/img/blog/relation-example.nl.png)
 
 <br/>
 
@@ -131,7 +131,7 @@ Een voorbeeld met exact één:
 
 <br/>
 
-![exact één voorbeeld](/img/exactly-one-example.nl.png)
+![exact één voorbeeld](/img/blog/exactly-one-example.nl.png)
 
 Het ERD kan gelezen worden als:
 
@@ -163,7 +163,7 @@ Een voorbeeld met nul of één:
 
 <br/>
 
-![nul of één voorbeeld](/img/zero-or-one-example.nl.png)
+![nul of één voorbeeld](/img/blog/zero-or-one-example.nl.png)
 
 Het ERD kan gelezen worden als:
 
@@ -196,7 +196,7 @@ Wagens
 
 Een voorbeeld:
 
-![één op veel voorbeeld](/img/one-to-many-example.nl.png)
+![één op veel voorbeeld](/img/blog/one-to-many-example.nl.png)
 
 Het ERD kan gelezen worden als:
 
@@ -232,7 +232,7 @@ In het geval dat een persoon meerdere wagens kan hebben en dat een wagen ook kan
 
 Een voorbeeld:
 
-![veel op veel voorbeeld](/img/many-to-many-example.nl.png)
+![veel op veel voorbeeld](/img/blog/many-to-many-example.nl.png)
 
 Het ERD kan gelezen worden als:
 
