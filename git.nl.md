@@ -472,7 +472,7 @@ Hieruit kan ook afgeleid worden dat alles dat ooit is toegevoegd aan de geschied
 
 ## GitHub - Git online gebruiken
 
-Sinds 13 augustus 2021 is het niet langer mogelijk om met een gebruikersnaam en wachtwoord een repo te pullen en pushen. De makkelijkste manier is om `ssh` te gebruiken. Na het aanmaken van de account, kan dit [blog](/blog/nl/ssh-gebruiken-om-te-werken-met-github/) gevolgd worden om SSH te gebruiken met GitHub.
+Sinds 13 augustus 2021 is het niet langer mogelijk om met een gebruikersnaam en wachtwoord een repo te pullen en pushen. De makkelijkste manier is om `ssh` te gebruiken. Er is een artikel op dit blog dat gevolgd kan worden om SSH te gebruiken met GitHub.
 
 ### Remote repo koppelen aan bestaande lokale repo
 

@@ -4,12 +4,6 @@
   modules: ["JavaScript - Praktijk", "Jaar 1"]
 ---
 
-Het is essentieel om alle kennis te beheersen van:
-
-- [JavaScript - Basis](/blog/nl/javascript-basis/)
-- [HTML](/blog/nl/html/)
-- [CSS](/blog/nl/css/)
-
 ## JavaScript koppelen
 
 JavaScript kan gekoppeld worden in een HTML-pagina. JavaScript **kan** ingeladen worden in de head-tag. Maar om in de JavaScript-bestanden aan de HTML-elementen te kunnen, moet de JavaScript ingeladen worden **na** alle HTML-elementen, onderaan in de body-tag.

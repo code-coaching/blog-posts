@@ -4,10 +4,6 @@
   modules: ['']
 ---
 
-Code can be found on [GitHub](https://github.com/code-coaching/blog-posts-examples/tree/quasar-themes)!
-
-At the end of this blog it is possible to apply multiple themes to a Quasar project through a theme switcher.
-
 ## Generate a new Quasar project
 
 In the directory where the project should be generated, execute:
@@ -340,3 +336,5 @@ Note: The variables in `src/css/quasar.variables.scss` are no longer used, since
 ## Conclusion
 
 Quasar already has some utilities in place for light and dark themes. Quasar also has some predefined CSS variables. It is possible to leverage these utilities (Dark plugin, setCssVar) and the knowledge about Quasar to create a theme switcher that handles both light and dark themes.
+
+Code can be found on [GitHub](https://github.com/code-coaching/blog-posts-examples/tree/quasar-themes)!

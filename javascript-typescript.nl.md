@@ -4,11 +4,6 @@
   modules: ['Jaar 2']
 ---
 
-Vereisten om dit blog optimaal te volgen:
-
-- [basiskennis JavaScript](blog/nl/javascript-basis/), de kennis bouwt verder op JavaScript
-- basiskennis [NodeJS](https://nodejs.org/en/), kunnen uitvoeren van `npm`-commando's)
-
 Wanneer er verwezen wordt naar `terminal` in onderstaande tekst en er wordt met Windows gewerkt, dan moet het uitgevoerd worden in `Git Bash`. Indien CTRL+V niet werkt om gekopieerde inhoud te plakken in de terminal, probeer SHIFT+INSERT.
 
 ## Wat is TypeScript?

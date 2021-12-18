@@ -3,15 +3,6 @@
   keywords: ["Quasar", "Vue", "Thema", "SCSS", "CSS"]
   modules: ['']
 ---
-
-Code terug te vinden op [GitHub](https://github.com/code-coaching/blog-posts-examples/tree/quasar-themes)!
-
-Vereisten om dit blog optimaal te volgen:
-
-- [Weten hoe een Quasar-project opgezet en opgestart kan worden](/blog/nl/quasar-cli-een-nieuw-quasar-project-aanmaken/)
-
-Op het einde van dit blog is het mogelijk om meerdere themas toe te passen op een Quasar-project door middel van een themaswitcher.
-
 ## Nieuw Quasar-project genereren
 
 Voer onderstaande uit in de map waar het project gegenereerd moet worden:
@@ -344,3 +335,5 @@ Opmerking: De variabelen in `src/css/quasar.variables.scss` worden niet meer geb
 ## Conclusie
 
 Quasar biedt al wat functionaliteit aan om met lichte en donkere themas te werken. Quasar heeft ook al voorgedefinieerde CSS-variabelen. Het is mogelijk om met de functionaliteit (Dark plugin, setCssVar) en kennis over hoe Quasar werkt een themaswitcher te maken die overweg kan met zowel lichte als donkere themas.
+
+Code terug te vinden op [GitHub](https://github.com/code-coaching/blog-posts-examples/tree/quasar-themes)!

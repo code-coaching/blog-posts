@@ -4,12 +4,6 @@
   modules: ['Jaar 2']
 ---
 
-Code terug te vinden op [GitHub](https://github.com/code-coaching/blog-posts-examples/tree/quasar-vue-router)!
-
-Vereisten om dit blog optimaal te volgen:
-
-- [Weten hoe een Quasar-project opgezet en opgestart kan worden](/blog/nl/quasar-cli-een-nieuw-quasar-project-aanmaken/)
-
 Zet een nieuw Quasar-project op om stap voor stap mee te volgen.
 
 ## Wat is Vue Router
@@ -407,3 +401,5 @@ Bekijk de wijzigingen op [GitHub](https://github.com/code-coaching/blog-posts-ex
 Vue Router voorziet functionaliteit om verschillende paden/routes te voorzien in een Vue-applicatie. Met de `<router-view />`-tag is het mogelijk om een locatie te voorzien waarin andere componenten getoond kunnen worden. Dit is mogelijk door in `src/router/routes.ts` `children` toe te voegen voegen aan een bestaande route.
 
 Quasar voorziet een projectstructuur om componenten die een layout voorstellen te plaatsen in de map `src/layouts` en om componenten die een pagina voorstellen te plaatsen in de map `src/pages`.
+
+Code terug te vinden op [GitHub](https://github.com/code-coaching/blog-posts-examples/tree/quasar-vue-router)!
