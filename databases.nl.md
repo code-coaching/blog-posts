@@ -1,7 +1,10 @@
 ---
   title: Databases
-  keywords: ["Databases"]
-  modules: ["Databases", "Jaar 1"]
+  keywords: 
+  - Databases
+  modules: 
+  - Databases
+  - Jaar 1
 ---
 
 Databases zijn georganiseerde verzamelingen van data. Databasebeheersystemen, zijn systemen om met de data in een database te werken. Paradigma's/modellen beschrijven hoe data in een database wordt bijgehouden.

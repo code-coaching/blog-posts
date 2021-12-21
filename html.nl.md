@@ -1,7 +1,10 @@
 ---
   title: HTML
-  keywords: ["HTML"]
-  modules: ["HTML", "Jaar 1"]
+  keywords: 
+  - HTML
+  modules: 
+  - HTML
+  - Jaar 1
 ---
 
 ## Basisstructuur

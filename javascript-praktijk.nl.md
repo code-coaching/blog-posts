@@ -1,7 +1,10 @@
 ---
   title: JavaScript - Praktijk
-  keywords: ["JavaScript - Praktijk"]
-  modules: ["JavaScript - Praktijk", "Jaar 1"]
+  keywords: 
+  - JavaScript - Praktijk
+  modules: 
+  - JavaScript - Praktijk
+  - Jaar 1
 ---
 
 ## JavaScript koppelen

@@ -1,7 +1,11 @@
 ---
   title: Wat is Git en wat is GitHub? Uitleg over de basis van Git en GitHub!
-  keywords: ["Git", "GitHub"]
-  modules: ['Jaar 1', 'Jaar 2']
+  keywords: 
+  - Git
+  - GitHub
+  modules: 
+  - Jaar 1
+  - Jaar 2
 ---
 
 Git is een versiebeheersysteem (Engels: VCS - Version Control System). Leuk, maar wat betekent versiebeheersysteem? Een systeem om versies te beheren. Ook grappig, maar wat betekent een systeem om versies te beheren? Om dit uit te leggen, is het makkelijker om het uit te proberen!
@@ -506,7 +510,7 @@ Opmerking: Indien tijdens het aanmaken van de repo dezelfde naam gebruikt is `gi
 git branch -M master
 ```
 
- Git werkt met `branches` (Nederlands: takken), in dit artikel wordt er met één `branch` gewerkt. Deze stap is momenteel niet nodig, maar indien in de toekomst de hoofdtak anders genoemd wordt (`main` wordt tegenwoordig soms gebruikt). Dan wordt het hernoemd naar `master` zodat de andere stappen in dit artikel blijven werken.
+Git werkt met `branches` (Nederlands: takken), in dit artikel wordt er met één `branch` gewerkt. Deze stap is momenteel niet nodig, maar indien in de toekomst de hoofdtak anders genoemd wordt (`main` wordt tegenwoordig soms gebruikt). Dan wordt het hernoemd naar `master` zodat de andere stappen in dit artikel blijven werken.
 
 Ondertussen weet de lokale Git af van het bestaan van de remote Git. Om te zorgen dat de lokale commits ook in de remote Git aanwezig zijn, kan er gebruik gemaakt worden van `git push`. Aangezien er nog niet eerder gepusht is, zal de eerste keer aangegeven moeten worden op welke remote branch er gepusht moet worden.
 

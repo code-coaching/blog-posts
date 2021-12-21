@@ -1,7 +1,10 @@
 ---
   title: Logica
-  keywords: ["Leren Programmeren"]
-  modules: ["Leren Programmeren", "Jaar 1"]
+  keywords: 
+  - Leren Programmeren
+  modules: 
+  - Leren Programmeren
+  - Jaar 1
 ---
 
 ## Bits en bytes

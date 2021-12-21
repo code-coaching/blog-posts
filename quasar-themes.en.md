@@ -1,7 +1,12 @@
 ---
   title: Quasar Themes
-  keywords: ["Quasar", "Vue", "Theme", "SCSS", "CSS"]
-  modules: ['']
+  keywords: 
+  - Quasar
+  - Vue
+  - Theme
+  - SCSS
+  - CSS
+  modules: 
 ---
 
 ## Generate a new Quasar project

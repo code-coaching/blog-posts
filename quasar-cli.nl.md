@@ -1,7 +1,10 @@
 ---
   title: Quasar CLI - een nieuw Quasar-project aanmaken
-  keywords: ["Quasar", "VueJS"]
-  modules: ["Jaar 2"]
+  keywords: 
+  - Quasar
+  - VueJS
+  modules: 
+  - Jaar 2
 ---
 
 Wanneer er verwezen wordt naar `terminal` in onderstaande tekst en er wordt met Windows gewerkt, dan moet het uitgevoerd worden in `Git Bash`. Indien CTRL+V niet werkt om gekopieerde inhoud te plakken in de terminal, probeer SHIFT+INSERT.

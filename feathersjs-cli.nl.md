@@ -1,7 +1,10 @@
 ---
   title: FeathersJS CLI - een nieuw FeathersJS-project aanmaken
-  keywords: ["FeathersJS", "TypeScript"]
-  modules: ["Backend"]
+  keywords: 
+  - FeathersJS
+  - TypeScript
+  modules: 
+  - Backend
 ---
 
 Wanneer er verwezen wordt naar `terminal` in onderstaande tekst en er wordt met Windows gewerkt, dan moet het uitgevoerd worden in `Git Bash`. Indien CTRL+V niet werkt om gekopieerde inhoud te plakken in de terminal, probeer SHIFT+INSERT.

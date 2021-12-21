@@ -1,7 +1,10 @@
 ---
   title: JavaScript - Basis
-  keywords: ["JavaScript - Basis"]
-  modules: ["JavaScript - Basis", "Jaar 1"]
+  keywords: 
+  - JavaScript - Basis
+  modules: 
+  - JavaScript - Basis
+  - Jaar 1
 ---
 
 Het is essentieel om alle kennis uit `Leren Programmeren` te beheersen.
