@@ -1,5 +1,6 @@
 ---
 title: JavaScript - Praktijk
+slug: javascript-praktijk
 keywords:
   - JavaScript - Praktijk
 modules:

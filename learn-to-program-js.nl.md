@@ -1,5 +1,6 @@
 ---
 title: Basis programmeren - Syntax
+slug: basis-programmeren-syntax
 keywords:
   - Leren Programmeren
 modules:

@@ -1,5 +1,6 @@
 ---
 title: SSH gebruiken om te werken met GitHub
+slug: ssh-gebruiken-om-te-werken-met-github
 keywords:
   - SSH
   - GitHub

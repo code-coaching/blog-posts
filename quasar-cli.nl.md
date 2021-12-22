@@ -1,5 +1,6 @@
 ---
 title: Quasar CLI - een nieuw Quasar-project aanmaken
+slug: quasar-cli-een-nieuw-quasar-project-aanmaken
 keywords:
   - Quasar
   - VueJS

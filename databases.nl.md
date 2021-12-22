@@ -1,5 +1,6 @@
 ---
 title: Databases
+slug: databases
 keywords:
   - Databases
 modules:

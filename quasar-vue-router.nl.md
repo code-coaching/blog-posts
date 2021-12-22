@@ -1,5 +1,6 @@
 ---
 title: Quasar layouts - Quasar-pagina - Vue Router
+slug: quasar-layouts-quasar-pagina-vue-router
 keywords:
   - Quasar
   - Vue

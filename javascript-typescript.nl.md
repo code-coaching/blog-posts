@@ -1,5 +1,6 @@
 ---
 title: Van JavaScript naar TypeScript
+slug: van-javascript-naar-typescript
 keywords:
   - TypeScript
   - JavaScript

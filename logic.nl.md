@@ -1,5 +1,6 @@
 ---
 title: Logica
+slug: logica
 keywords:
   - Leren Programmeren
 modules:

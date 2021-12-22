@@ -1,5 +1,6 @@
 ---
 title: JavaScript - Basis
+slug: javascript-basis
 keywords:
   - JavaScript - Basis
 modules:

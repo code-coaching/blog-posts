@@ -1,5 +1,6 @@
 ---
 title: Quasar Themes
+slug: quasar-themes
 keywords:
   - Quasar
   - Vue

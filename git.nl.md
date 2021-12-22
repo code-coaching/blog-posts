@@ -1,5 +1,6 @@
 ---
 title: Wat is Git en wat is GitHub? Uitleg over de basis van Git en GitHub!
+slug: wat-is-git-en-wat-is-github-uitleg-over-de-basis-van-git-en-github
 keywords:
   - Git
   - GitHub
@@ -109,7 +110,7 @@ Tip: Begin met typen en klik de `tab`-knop, dit zal de naam automatisch aanvulle
 
 ### ls
 
-Om te weten welke mappen en bestanden er zijn op deze locatie, kan er gebruikgemaakt worden van `ls` (Engels: **l**i**s**t, Nederlands: lijst).
+Om te weten welke mappen en bestanden er zijn op deze locatie, kan er gebruikgemaakt worden van `ls` (Engels: **l**ist **s**ystem, Nederlands: lijst van systeem).
 
 ```sh
 ls
@@ -205,7 +206,7 @@ git log # Dit heeft als output: fatal: your current branch 'master' does not hav
 
 Omdat er nog geen commits zijn, wordt er een foutmelding getoond. Hierin wordt verwezen naar `branch` (Nederlands: tak), voorlopig gaat er gewerkt worden met één branch (genaamd `master`).
 
-### Commit toevoegen aan de git repo
+### Commit toevoegen aan de Git repo
 
 Met `git status` kan de status van de huidige Git repo bekeken worden.
 

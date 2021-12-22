@@ -1,5 +1,6 @@
 ---
   title: CSS
+  slug: css
   keywords: 
   - CSS
   modules: 

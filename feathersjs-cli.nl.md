@@ -1,5 +1,6 @@
 ---
 title: FeathersJS CLI - een nieuw FeathersJS-project aanmaken
+slug: feathersjs-cli-een-nieuw-feathersjs-project-aanmaken
 keywords:
   - FeathersJS
   - TypeScript

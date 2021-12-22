@@ -1,5 +1,6 @@
 ---
 title: HTML
+slug: html
 keywords:
   - HTML
 modules:
