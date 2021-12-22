@@ -1,9 +1,9 @@
 ---
-  title: SSH gebruiken om te werken met GitHub
-  keywords: 
+title: SSH gebruiken om te werken met GitHub
+keywords:
   - SSH
   - GitHub
-  modules:
+modules:
   - Jaar 1
   - Jaar 2
 ---

@@ -1,8 +1,8 @@
 ---
-  title: JavaScript - Basis
-  keywords: 
+title: JavaScript - Basis
+keywords:
   - JavaScript - Basis
-  modules: 
+modules:
   - JavaScript - Basis
   - Jaar 1
 ---
@@ -653,7 +653,7 @@ console.log(persoon.wachtwoord); // Dit zou niks printen, wachtwoord is private
 
 console.log(persoon.getPin()); // Dit zou niks printen, getPin() is private
 console.log(persoon.getPinCode()); // 1111
-/* 
+/*
 * De property pinCode is private, en dus enkel beschikbaar binnen het codeblok van de class Persoon.
 * De methode getPinCode() is public, deze kan dus aangeroepen worden op de instantie.
 * Omdat getPinCode() binnen het codeblok van de class staat, kan deze aan de private properties/methodes.
@@ -685,7 +685,7 @@ class Persoon {
   }
 }
 
-const persoon = new Persoon(1111, 1234, 'John Duck', 29);
+const persoon = new Persoon(1111, 1234, "John Duck", 29);
 console.log(persoon.naam); // "John Duck"
 console.log(persoon.leeftijd); // 29
 console.log(persoon.pinCode); // 1111
@@ -724,7 +724,7 @@ class Persoon {
   }
 }
 
-const persoon = new Persoon(1111, 1234, 'John Duck', 29);
+const persoon = new Persoon(1111, 1234, "John Duck", 29);
 console.log(persoon.naam); // "John Duck"
 console.log(persoon.leeftijd); // 29
 console.log(persoon._pinCode); // 1111
@@ -744,6 +744,7 @@ Het keyword `get` en het keyword `set` kunnen gebruikt worden om `getters` en `s
 Dit zijn methodes die net iets anders werken.
 
 Stel dat er een class is Cursist:
+
 ```js
 class Cursist {
   _voornaam;

@@ -1,8 +1,8 @@
 ---
-  title: JavaScript - Praktijk
-  keywords: 
+title: JavaScript - Praktijk
+keywords:
   - JavaScript - Praktijk
-  modules: 
+modules:
   - JavaScript - Praktijk
   - Jaar 1
 ---

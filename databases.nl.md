@@ -1,8 +1,8 @@
 ---
-  title: Databases
-  keywords: 
+title: Databases
+keywords:
   - Databases
-  modules: 
+modules:
   - Databases
   - Jaar 1
 ---

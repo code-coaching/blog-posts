@@ -1,9 +1,9 @@
 ---
-  title: Wat is Git en wat is GitHub? Uitleg over de basis van Git en GitHub!
-  keywords: 
+title: Wat is Git en wat is GitHub? Uitleg over de basis van Git en GitHub!
+keywords:
   - Git
   - GitHub
-  modules: 
+modules:
   - Jaar 1
   - Jaar 2
 ---

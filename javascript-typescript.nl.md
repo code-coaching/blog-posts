@@ -1,9 +1,9 @@
 ---
-  title: Van JavaScript naar TypeScript
-  keywords: 
+title: Van JavaScript naar TypeScript
+keywords:
   - TypeScript
   - JavaScript
-  modules: 
+modules:
   - Jaar 2
 ---
 

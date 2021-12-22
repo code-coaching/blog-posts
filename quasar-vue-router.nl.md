@@ -1,11 +1,11 @@
 ---
-  title: Quasar layouts - Quasar-pagina - Vue Router
-  keywords: 
+title: Quasar layouts - Quasar-pagina - Vue Router
+keywords:
   - Quasar
   - Vue
   - Vue Router
   - Vue 3
-  modules: 
+modules:
   - Jaar 2
 ---
 

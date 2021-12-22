@@ -1,8 +1,8 @@
 ---
-  title: Logica
-  keywords: 
+title: Logica
+keywords:
   - Leren Programmeren
-  modules: 
+modules:
   - Leren Programmeren
   - Jaar 1
 ---

@@ -1,8 +1,8 @@
 ---
-  title: Basis programmeren - Syntax
-  keywords: 
+title: Basis programmeren - Syntax
+keywords:
   - Leren Programmeren
-  modules: 
+modules:
   - Leren Programmeren
   - Jaar 1
 ---

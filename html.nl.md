@@ -1,8 +1,8 @@
 ---
-  title: HTML
-  keywords: 
+title: HTML
+keywords:
   - HTML
-  modules: 
+modules:
   - HTML
   - Jaar 1
 ---

@@ -1,13 +1,14 @@
 ---
-  title: Quasar Themas
-  keywords: 
+title: Quasar Themas
+keywords:
   - Quasar
   - Vue
   - Thema
   - SCSS
   - CSS
-  modules: 
+modules:
 ---
+
 ## Nieuw Quasar-project genereren
 
 Voer onderstaande uit in de map waar het project gegenereerd moet worden:
