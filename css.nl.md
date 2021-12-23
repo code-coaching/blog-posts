@@ -1,9 +1,9 @@
 ---
-  title: CSS
-  slug: css
-  tags: 
+title: CSS
+slug: css
+tags:
   - CSS
-  categories: 
+categories:
   - Frontend
 ---
 
