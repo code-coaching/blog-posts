@@ -1,13 +1,14 @@
 ---
 title: Quasar Themas
 slug: quasar-themas
-keywords:
+tags:
   - Quasar
   - Vue
   - Thema
   - SCSS
   - CSS
-modules:
+categories:
+  - Frontend
 ---
 
 ## Nieuw Quasar-project genereren

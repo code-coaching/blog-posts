@@ -1,11 +1,12 @@
 ---
 title: Basis programmeren - Syntax
 slug: basis-programmeren-syntax
-keywords:
+tags:
   - Leren Programmeren
-modules:
-  - Leren Programmeren
-  - Jaar 1
+  - JavaScript
+  - JS
+categories:
+  - Frontend
 ---
 
 Om in een programmeertaal een werkend programma te coderen, moet de `syntax` van de programmeertaal gevolgd worden. Dit zijn alle regeltjes die gevolgd moeten worden om een werkend programma te schrijven.

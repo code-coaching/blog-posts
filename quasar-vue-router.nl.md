@@ -1,13 +1,12 @@
 ---
 title: Quasar layouts - Quasar-pagina - Vue Router
 slug: quasar-layouts-quasar-pagina-vue-router
-keywords:
+tags:
   - Quasar
   - Vue
   - Vue Router
-  - Vue 3
-modules:
-  - Jaar 2
+categories:
+  - Frontend
 ---
 
 Zet een nieuw Quasar-project op om stap voor stap mee te volgen.

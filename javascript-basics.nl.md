@@ -1,11 +1,11 @@
 ---
 title: JavaScript - Basis
 slug: javascript-basis
-keywords:
-  - JavaScript - Basis
-modules:
-  - JavaScript - Basis
-  - Jaar 1
+tags:
+  - JavaScript
+  - JS
+categories:
+  - Frontend
 ---
 
 Het is essentieel om alle kennis uit `Leren Programmeren` te beheersen.

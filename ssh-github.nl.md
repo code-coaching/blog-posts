@@ -1,12 +1,10 @@
 ---
 title: SSH gebruiken om te werken met GitHub
 slug: ssh-gebruiken-om-te-werken-met-github
-keywords:
+tags:
   - SSH
   - GitHub
-modules:
-  - Jaar 1
-  - Jaar 2
+categories:
 ---
 
 Wanneer er verwezen wordt naar `terminal` in onderstaande tekst en er wordt met Windows gewerkt, dan moet het uitgevoerd worden in `Git Bash`. Indien CTRL+V niet werkt om gekopieerde inhoud te plakken in de terminal, probeer SHIFT+INSERT.

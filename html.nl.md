@@ -1,11 +1,10 @@
 ---
 title: HTML
 slug: html
-keywords:
+tags:
   - HTML
-modules:
-  - HTML
-  - Jaar 1
+categories:
+  - Frontend
 ---
 
 ## Basisstructuur

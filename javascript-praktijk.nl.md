@@ -1,11 +1,11 @@
 ---
 title: JavaScript - Praktijk
 slug: javascript-praktijk
-keywords:
-  - JavaScript - Praktijk
-modules:
-  - JavaScript - Praktijk
-  - Jaar 1
+tags:
+  - JavaScript
+  - JS
+categories:
+  - Frontend
 ---
 
 ## JavaScript koppelen

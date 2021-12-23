@@ -1,11 +1,10 @@
 ---
   title: CSS
   slug: css
-  keywords: 
+  tags: 
   - CSS
-  modules: 
-  - CSS
-  - Jaar 1
+  categories: 
+  - Frontend
 ---
 
 HTML bevat de structuur van een pagina. CSS bevat de styling van een pagina.

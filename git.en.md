@@ -1,31 +1,32 @@
 ---
-title: Wat is Git en wat is GitHub? Uitleg over de basis van Git en GitHub!
-slug: wat-is-git-en-wat-is-github-uitleg-over-de-basis-van-git-en-github
+title: What is Git and what is GitHub? Explaining the basics of Git and GitHub!
+slug: what-is-git-and-what-is-github-explaining-the-basics-of-git-and-github
 tags:
   - Git
   - GitHub
 categories:
+draft: true
 ---
 
-Git is een versiebeheersysteem (Engels: VCS - Version Control System). Leuk, maar wat betekent versiebeheersysteem? Een systeem om versies te beheren. Ook grappig, maar wat betekent een systeem om versies te beheren? Om dit uit te leggen, is het makkelijker om het uit te proberen!
+Git is a version control system. Nice, but what does that mean? A system to control versions. Also nice, but what does it mean to control versions? To explain this, it is easier to look at an example!
 
-Wanneer er verwezen wordt naar `terminal` in onderstaande tekst en er wordt met Windows gewerkt, dan moet het uitgevoerd worden in `Git Bash`. Indien CTRL+V niet werkt om gekopieerde inhoud te plakken in de terminal, probeer SHIFT+INSERT.
+When there is a reference to `terminal` in the text below and Windows is used as an operating system, it means that the command needs to be executed in `Git Bash`. If CTRL+V does not work to paste the copied content in the terminal, try SHIFT+INSERT.
 
-## Git installeren
+## Installing Git
 
-Misschien is het al geïnstalleerd. Open een terminal (Linux/macOS) of command prompt (Windows). Type `git --version` en klik op `Enter`.
+Perhaps it is already installed. Open a terminal (Linux/macOS) or command prompt (Windows). Type `git --version` and press `Enter`.
 
 ```sh
 git --version
 ```
 
-Indien Git geïnstalleerd is, dan wordt de versie getoond (de nummers kunnen anders zijn): `git version 2.30.2` of `git version 2.30.0.windows.2`.
+If Git is installed, you should see something like this (numbers can differ): `git version 2.30.2` or `git version 2.30.0.windows.2`.
 
-Indien Git niet geïnstalleerd is, dan wordt er geen versie getoond. Om Git te installeren:
+If Git is not installed, no version will be shown. To install Git:
 
 ### [Linux](https://git-scm.com/download/linux)
 
-Voer onderstaand commando uit in een terminal (Ubuntu).
+Execute the following command in a terminal (Ubuntu):
 
 ```sh
 sudo apt install git
@@ -33,15 +34,15 @@ sudo apt install git
 
 ### [macOS](https://git-scm.com/download/mac)
 
-Voer onderstaande commando's uit in een terminal.
+Execute the following command in a terminal (macOS):
 
-Installeren van [Homebrew](https://brew.sh/#install).
+Installing [Homebrew](https://brew.sh/#install).
 
 ```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-Installeren van Git.
+Installing Git.
 
 ```sh
 brew install git
@@ -49,170 +50,172 @@ brew install git
 
 ### [Windows](https://gitforwindows.org/)
 
-- Klik hierboven op Windows.
-- Klik op `Download`.
-- Dubbelklik op het gedownloade bestand.
-- Laat alles staan zoals het standaard staat en blijf op `volgende` klikken.
-- Klik vervolgens op `installeren`.
+- Click on Windows above.
+- Click on `Download`.
+- Double-click on the downloaded file.
+- Keep everything default and keep hitting `Next`.
+- Click on `Install`.
 
-Dit zal onder andere `Git Bash` installeren. Wanneer er verwezen wordt naar `terminal` in onderstaande tekst en er wordt met Windows gewerkt, dan moet het uitgevoerd worden in `Git Bash`.
+This will also install `Git Bash`. When there is a reference to `terminal` in the text below and Windows is used as an operating system, it means that the command needs to be executed in `Git Bash`.
 
-## Werken met de terminal
+## Working with the terminal
 
-De terminal kan ook gebruikt worden om te navigeren doorheen het bestandsysteem van de computer, het aanmaken van bestanden en het aanmaken van mappen. Dit zal ook gebruikt worden tijdens het aanleren van Git. Dankzij Git Bash heeft Windows dezelfde commando's ter beschikking als Linux en macOS.
+The terminal can also be used to navigate the file system of the computer, creating new files and creating new folders. This will also be used to learn how to use Git. Thanks to Git Bash it is possible to use the same commands on Windows as on Linux and macOS.
 
 ### pwd
 
-Na het openen van de terminal, zal er waarschijnlijk gestart worden vanuit de thuismap (Engels: home directory). Dit wordt vaak aangetoond met een tilde `~`. Om te weten waar deze map zich bevindt, kan er `pwd` (Engels: **p**rint **w**orking **d**irectory, Nederlands: huidige locatie printen) getypt worden.
+After opening a terminal, it will probably start at the home directory. This is often symbolised by `~`. To know where this directory is, type `pwd` (**p**rint **w**orking **d**irectory) and press `Enter`.
 
 ```sh
 pwd
 ```
 
-De output van het commando:
+The output of the command:
 
 - Linux: `/home/JohnDuck`
 - macOS: `/Gebruikers/JohnDuck`
 - Windows: `/c/Gebruikers/JohnDuck`
-  - Dit is hetzelfde als `C:/Gebruikers/JohnDuck`
+  - This is equal to: `C:/Gebruikers/JohnDuck`
 
-Opmerking: Tenzij JohnDuck gekozen is als gebruikersnaam, zal dit verschillend zijn op het eigen systeem.
+Note: Unless JohnDuck is chosen as a user name, this will differ on the local system.
 
 ### cd
 
-Om zeker te zijn dat er vanuit de home directory vertrokken wordt, kan er gebruikgemaakt worden van `cd` (Engels: **c**hange **d**irectory, Nederlands: map wijzigen).
+To be certain that the working directory is the home directory, `cd` (**c**hange **d**irectory) can be used.
 
 ```sh
 cd ~
 ```
 
-Opmerking: `~` is de thuismap (Engels: home directory).
+Note: `~` is the home directory.
 
-Stel dat er op de huidige locatie een map bestaat met de naam `projecten`, dan kan hierheen gewisseld worden met `cd projecten`.
-
-```sh
-cd projecten
-```
-
-Opmerking: Indien er een spatie aanwezig is in de naam, dan moeten er ofwel quotes rondgeplaatst worden `cd 'Map Met Spaties In De Naam"` ofwel moet er een ontsnappingsteken (Engels: escape character) voor de spatie geplaatst worden.
+Image there is a folder called `projects`. To go to this folder, type `cd projects` and press `Enter`.
 
 ```sh
-cd 'Map Met Spaties In De Naam'
+cd projects
+```
+
+Note: If there are spaces in the name of the folder, either use quotes or use `\` to escape the spaces.
+
+```sh
+cd 'Folder With Spaces In The Name'
 ```
 
 ```sh
-cd Map\ Met\ Spaties\ In\ De\ Naam
+cd Folder\ With\ Spaces\ In\ The\ Name
 ```
 
-Tip: Begin met typen en klik de `tab`-knop, dit zal de naam automatisch aanvullen.
+Tip: Start typing and press `tab`, this will autocomplete the folder name.
 
 ### ls
 
-Om te weten welke mappen en bestanden er zijn op deze locatie, kan er gebruikgemaakt worden van `ls` (Engels: **l**ist **s**ystem, Nederlands: lijst van systeem).
+To know which files and folders are in the current directory, type `ls` (**l**ist **s**ystem) and press `Enter`.
 
 ```sh
 ls
 ```
 
-Er kunnen extra parameters meegegeven worden.
+It also accepts arguments.
 
 ```sh
 ls -a
 ```
 
-De "-a" staat voor "all" (Nederlands: alles), dit toont ook alle mappen en bestanden met een punt voor (verborgen mappen en bestanden). Het toont ook `./` en `../`. Één punt `.` verwijst altijd naar `de huidige locatie`. Twee punten `..` verwijst altijd naar `één niveau hoger dan de huidige directory`.
+The "-a" stands for "all" argument will show hidden files and folders (files and folders that start with a dot `.`). This will also show `./` and `../`. One dot refers to the current directory. Two dots refer to the parent directory (one directory above the current directory).
 
 ### mkdir
 
-Om een nieuwe map aan te maken, kan er gebruikgemaakt worden van `mkdir` (Engels: **m**a**k**e **dir**ectory, Nederlands: map aanmaken).
+To create a new folder, type `mkdir` (**m**ake **d**irectory) and press `Enter`.
 
 ```sh
-mkdir projecten
+mkdir projects
 ```
 
-Dit zal een nieuwe map aanmaken op de huidige locatie.
+This will create a folder called `projects` in the current directory.
 
 ### touch
 
-Om een nieuw bestand aan te maken, kan er gebruikgemaakt worden van `touch` (Nederlands: aanraken).
+To create a new file, type `touch`, followed by the name of the file, and press `Enter`.
 
 ```sh
-touch voorbeeld.txt
+touch example.txt
 ```
 
-Dit zal een nieuw bestand aanmaken, genaamd `voorbeeld.txt`.
+This will create a new file called `example.txt` in the current directory.
 
-## Git lokaal gebruiken
+## Using Git locally
 
-Git is software zonder GUI (Engels: Graphical User Interface, Nederlands: Grafische Gebruikersinterface), er is dus geen icoontje waarop geklikt kan worden om een programma tevoorschijn te toveren. Git is namelijk een programma dat gebruikt moet worden in de terminal. Begin dus met het openen van een terminal.
+Git is software without a GUI (Graphical User Interface). There is no icon that can be clicked to start the program. Git is a command line interface, which means that it can be used from the command line/terminal. Start by opening a terminal.
 
-Maak een nieuwe map aan genaamd `git-voorbeeld` in de home directory en wijzig de locatie van de terminal naar de nieuwe map.
+Create a new folder called `git-example` in the home directory and change the location to this folder.
 
 ```sh
 cd ~
 ```
 
-Dit wijzigt de locatie naar de home directory.
+This will change the location to the home directory.
 
 ```sh
-mkdir git-voorbeeld && cd git-voorbeeld
+mkdir git-example && cd git-example
 ```
 
-Door `&&` te gebruiken, worden de twee commando's achter elkaar uitgevoerd. Dus eerst wordt er een nieuwe map aangemaakt `&&` (en) vervolgens wordt de locatie gewijzigd naar de nieuwe map.
+By using `&&` it is possible to execute multiple commands in one command. This will create a new folder called `git-example` and change the location to this folder.
 
-### Map omvormen naar een Git repo
+### Making a folder into a Git repo
 
-Momenteel is `git-voorbeeld/` een gewone map op de computer. Om te zorgen dat het een `git repo` wordt, kan er gebruikgemaakt worden van het commando `git init`. Het woord `repo` verwijst naar `repository` (Nederlands: archief of opslagplaats).
+The word `repo` refers to `repository`. A repository is a folder that contains all the files that are part of a project.
 
-Gebruik `ls -a` om te zien dat de map momenteel leeg is.
+Currently the folder `git-sexample/` is not a Git repo, it is an ordinary folder.
+
+Use `ls -a` to see the files and folders in the current directory, it will not show anything, since the directory is empty.
 
 ```sh
-ls -a # Dit heeft als output: ./ ../
+ls -a # The output is: ./ ../
 ```
 
-Maak nu een Git repo aan door middel van `git init` te typen in de terminal.
+Create a Git repo by using `git init`.
 
 ```sh
-git init # Dit zal "Initialized empty Git repository in [verschillend per gebruiker]/git-voorbeeld/.git/" printen
+git init #  This will output "Initialized empty Git repository in [this part differs per user]/git-example/.git"
 ```
 
-Gebruik `ls -a` om te zien dat er een extra map is gemaakt, genaamd `.git`.
+Use `ls -a`, it will now show the folder `.git`.
 
 ```sh
 ls -a # Dit heeft als output: ./ ../ .git/
 ```
 
-Bekijk de inhoud van `.git/`.
+Look at the folder `.git/` and see what is inside.
 
 ```sh
 cd .git/ && ls -a
 ```
 
-Dit heeft als output: `./ ../ HEAD config description hooks/ info/ objects/ refs/`. Het is niet nodig om hier manueel iets te wijzigen, het is goed om te weten dat dit is waar Git alle wijzingen bijhoudt.
+This will have the output: `./ ../ HEAD config description hooks/ info/ objects/ refs/`. It is not necessary to change anything here, it is enough to know that this is the location where Git keeps track of all the changes.
 
-Ga terug één map omhoog.
+Go up one directory.
 
 ```sh
 cd ..
 ```
 
-Wijzigingen worden vastgelegd in `commits` (Nederlands: vastleggen). Om te weten welke wijzigingen er al gedaan zijn, kan er gebruikgemaakt worden van `git log`.
+Changes are recorded in `commits`. A commit is a snapshot of the current state of the repository. To know which changes already happened, `git log` can be used.
 
 ```sh
-git log # Dit heeft als output: fatal: your current branch 'master' does not have any commits yet
+git log # The output: fatal: your current branch 'master' does not have any commits yet
 ```
 
-Omdat er nog geen commits zijn, wordt er een foutmelding getoond. Hierin wordt verwezen naar `branch` (Nederlands: tak), voorlopig gaat er gewerkt worden met één branch (genaamd `master`).
+Because there are not commits yet, an error message is shown. There is a reference to `branch` in the error message, currently there will only be worked with one branch, named `master`.
 
-### Commit toevoegen aan de Git repo
+### Adding a commit to the Git repo
 
-Met `git status` kan de status van de huidige Git repo bekeken worden.
+With `git status` the current status of the Git repo can be checked.
 
 ```sh
 git status
 
 ###
-# Dit heeft als output:
+# The output:
 # On branch master
 #
 # No commits yet
@@ -221,18 +224,18 @@ git status
 ###
 ```
 
-Het uitvoeren van `git status` geeft aan dat er nog niks is om te `committen`. En dat er nog geen wijzigingen zijn.
+Executing `git status` tells us that there are no changes yet, there is nothing to `commit` yet.
 
-Maak een nieuw bestand aan genaamd `README.md`. Een `.md`-bestand is een `Markdown`-bestand. Dit is een tekstbestand zoals een `.txt`-bestand, met als voordeel dat er `Markdown`-syntax gebruikt kan worden. In dit voorbeeld zal er geen gebruikgemaakt worden van de syntax, toch is er een reden dat er voor `README.md` gekozen wordt. Dit is het bestand wat automatisch ingeladen wordt bij het bezoeken van een Git repo op het internet.
+Create a new file called `README.md`. A `.md` file is a Markdown file. Dit is a text file like a .txt file, but with an added benefit that `Markdown` syntax can be used. In this example the Markdown syntax will not be used, but still there is a reason that this file is called `README.md`. This is the file that will automatically be loaded when visiting a Git repo on the internet.
 
 ```sh
 touch README.md
 
 ```
 
-Met `ls` kan bevestigd worden dat het bestand nu bestaat in de huidige map.
+With `ls` it can be checked that the file now exists in the current directory.
 
-Voer opnieuw `git status` uit. Er staat nog altijd dat we op de master branch zitten `On branch master`. Er staat nog altijd dat er niks gecommit is `No commits yet`. Wat er verschillend is, is dat er nu `untracked files` zijn (Nederlands: niet-getraceerde bestanden). Dit geeft aan dat er een nieuw bestand aanwezig is in de Git repo, dat nog niet opgevolgd wordt door Git.
+Execute `git status` again. It will still say that we currently are on the master branch `On branch master`. It will still say there is nothing committed yet `No commits yet`. What is different now, is the `untracked files`. This means that there are new files that are not tracked by Git.
 
 ```sh
 git status
@@ -250,7 +253,7 @@ git status
 ###
 ```
 
-Om dit bestand vanaf nu wél te volgen met Git, kan het bestand toegevoegd worden aan Git.
+To track this file with Git from this point onwards, it is necessary to add it to the Git repo. This is done by using `git add`.
 
 ```sh
 git add README.md
@@ -265,6 +268,8 @@ git add README.md
 #        new file:   README.md
 ###
 ```
+
+Execute `git status` again. // HIER
 
 Voer opnieuw `git status` uit. Er staat nog altijd dat we op de master branch zitten `On branch master`. Er staat nog altijd dat er niks gecommit is `No commits yet`. Dit is correct want er is nog altijd niks gecommit, maar er wordt wel een nieuw bestand opgevolgd door Git.
 

@@ -1,11 +1,10 @@
 ---
 title: Logica
 slug: logica
-keywords:
+tags:
   - Leren Programmeren
-modules:
-  - Leren Programmeren
-  - Jaar 1
+categories:
+  - Frontend
 ---
 
 ## Bits en bytes
