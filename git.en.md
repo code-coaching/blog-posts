@@ -269,30 +269,28 @@ git add README.md
 ###
 ```
 
-Execute `git status` again. // HIER
+Execute `git status` again. It still says we are on the master branch `On branch master`. It still says there is nothing committed yet `No commits yet`. This is indeed the case, since nothing has been committed yet, but there is a new file being tracked by Git.
 
-Voer opnieuw `git status` uit. Er staat nog altijd dat we op de master branch zitten `On branch master`. Er staat nog altijd dat er niks gecommit is `No commits yet`. Dit is correct want er is nog altijd niks gecommit, maar er wordt wel een nieuw bestand opgevolgd door Git.
-
-Om het aanmaken van dit bestand permanent als wijziging bij te houden in Git, kan er een `git commit` gedaan worden.
+To permanently add this file to the Git repo, it is necessary to `commit` the changes. This is done by using `git commit`.
 
 <details>
-  <summary>Doe dit eenmalig vóór de eerste commit</summary>
+  <summary>Do this once before the first commit</summary>
 
 ```sh
 git config user.name "Bart Duisters"
 ```
 
-Wijzig "Bart Duisters" naar de naam die getoond moet worden bij het toevoegen van wijzigingen.
+Change "Bart Duisters" to the name that should be shown when adding changes.
 
 ```sh
 git config user.email "bartduisters@bartduisters.com"
 ```
 
-Wijzig "bartduisters@bartduisters.com" door een eigen e-mailadres.
+Change "bartduisters@bartduisters.com" to a personal email address.
 
-Tip: Indien er al een GitHub-account aangemaakt is, gebruik hetzelfde e-mailadres. Indien er nog geen GitHub-account aangemaakt is, gebruik het e-mailadres dat later gebruikt gaat worden om een GitHub-account aan te maken.
+Tip: In case a GitHub account has already been created, use the email address that is associated with the GitHub account. In case no GitHub account has been created yet, use a personal email address that later will be associated with the GitHub account.
 
-Dit stelt de gebruikersnaam en het e-mailadres in voor specifiek deze Git repo. Indien altijd dezelfde naam gebruikt moet worden, kan dit één keer globaal gezet worden. Dan zal het op de computer bijgehouden worden en niet specifiek in deze Git repo.
+This will configure the username and email address for this specific Git repo. In case all the Git repos will use the same username and email address, it is not necessary to configure this for each Git repo. Instead, it can be configured globally.
 
 ```sh
 git config --global user.name "Bart Duisters"
@@ -314,13 +312,13 @@ git commit -m "Add README.md"
 ###
 ```
 
-Opmerking: De `c0aba7a` zal verschillend zijn. Dit is het begin van de de `commit hash`, dit is een unieke identificatiecode.
+Note: The `c0aba7a` will differ. This is the beginning of the `commit hash`, which is a unique identifier for the commit.
 
-De `-m` (Engels: message, Nederlands: bericht) is een parameter om een bericht mee te geven aan de commit. Er wordt vaak gekozen voor een Engels bericht omdat de meeste Git repos in het Engels zijn, dit is de taal die gebruikt wordt door developers. Het bericht tussen de dubbele quotes kan van alles zijn, het beschrijft best de wijzigingen die aanwezig zijn in de commit.
+The `-m` (message) is a parameter that is used to describe the changes that are being committed. The message between the double quotes can be anything, it describes the changes that are being committed.
 
-Er wordt ook een kort overzicht getoond van de wijzigingen `1 file changed, 0 insertions(+), 0 deletions(-)`. Er is één bestand gewijzigd (toegevoegd in dit geval). Er is geen tekst toegevoegd `0 insertions(+)` of verwijderd `0 deletions(-)`.
+An overview about the changes is shown `1 file changed, 0 insertions(+), 0 deletions(-)`. It shows that there is one file that has been changed (added in this case), and that there are no insertions or deletions.
 
-Voer opnieuw `git status` uit.
+Execute `git status` again.
 
 ```sh
 git status
@@ -331,11 +329,11 @@ git status
 ###
 ```
 
-Dit geeft aan dat er geen nieuwe wijzigingen meer zijn: `working tree clean`.
+This shows that there are no changes to commit, and that the working tree is clean `working tree clean`.
 
-### Geschiedenis bekijken
+### Viewing history
 
-Met `git log` kan de geschiedenis bekeken worden. Alle commits die doorheen de tijd gedaan zijn op deze Git repo zullen getoond worden.
+Using `git log` it is possible to see the history of the Git repo. All commits done throughout the history of the Git repo can be seen.
 
 ```sh
 git log
@@ -349,9 +347,9 @@ git log
 ###
 ```
 
-Hierin staat de commit message `Add README.md`. De volledige commit hash (de unieke identificatiecode van deze commit) `c0aba7a9e06057c325719bac3357faff70ec9d2b`. De auteur `Bart Duisters <bartduisters@bartduisters.com>` (dit is de waarde die toegekend is aan `user.name` en `user.email` tijdens de `git config`-stappen). Het tijdstip wanneer de commit gedaan is `Thu Jun 24 22:25:20 2021 +0200`.
+This shows the commit message `Add README.md`. The full commit hash (unique identifier of this commit) `c0aba7a9e06057c325719bac3357faff70ec9d2b`. The author `Bart Duisters <bartduisters@bartduisters.com>` (this is the value assigned to `user.name` and `user.email`). The date of the commit `Thu Jun 24 22:25:20 2021 +0200`.
 
-Open het bestand `README.md` in een teksteditor en voeg de tekst `bla bla bla` toe. Bij het bekijken van `git status` kan gezien worden dat Git de wijziging ziet (omdat `README.md` al opgevolgd wordt, het is een `tracked file`).
+Open the file `README.md` in a text editor and add the text `bla bla bla`. Looking at `git status` it is now clear that there are changes to commit. Git already knows that there are changes to commit (because `README.md` is already tracked by Git, it is a `tracked file`).
 
 ```sh
 git status
@@ -367,9 +365,9 @@ git status
 ###
 ```
 
-Er worden hints gegeven wat er gedaan kan worden. Met `git add README.md` kan de wijziging klaargezet worden om uiteindelijk gecommit te worden. Met `git restore README.md` kan de wijziging ongedaan gemaakt worden.
+Hints are shown about what can be done next. With `git add README.md` the change can be staged to eventually be committed. With `git restore README.md` the change can be discarded.
 
-Voeg de wijziging toe. Commit de wijziging en bekijk opnieuw de geschiedenis.
+Add the changes. Commit the changes and look at the history again.
 
 ```sh
 git add README.md
@@ -381,9 +379,9 @@ git commit -m "Add text to README.md"
 ```
 
 <details>
-  <summary>Windows-gebruikers, klik hier!</summary>
+  <summary>Windows users, click here!</summary>
 
-Bij het uitvoeren van een `git add` van een bestand waarin lijnen zijn gewijzigd. Zal er een extra bericht getoond worden.
+When executing `git add` on a file that has changed lines, an extra message will be shown.
 
 ```sh
 ###
@@ -392,13 +390,13 @@ Bij het uitvoeren van een `git add` van een bestand waarin lijnen zijn gewijzigd
 ###
 ```
 
-Unix-besturingssystemen (zoals Linux en macOS) gebruik een LF (Line Feed, ook wel weergegeven als `\n`) om het einde van een lijn aan te geven. Op Windows is dit CRLF (Carriage Return en Line Feed, ook wel weergegeven als `\r\n`). Line Feed en Carriage Return zijn termen gebaseerd op de acties die gedaan moesten worden op een typmachine. Line Feed, een nieuwe regel werd bekomen door het blad fysiek één lijn hoger te positioneren. Carriage Return, het gedeelte dat het blad vastklemt fysiek terug naar het begin bewegen.
+Unix operating systems (like Linux and macOS) use a LF (Line Feed, also visualized as `\n`) line ending. On Windows this is a CRLF (Carriage Return and Line Feed, also visualized as `\r\n`). Line Feed and Carriage Return are terms based on the actions that had to be performed on a typewriter. Line Feed, a new line was achieved by physically moving the sheet one line up. Carriage Return, the part of the typewriter that is used to move the sheet back to the left margin.
 
-Om te zorgen dat de code uniform is wanneer het naar de server overgezet wordt, worden de CRLF naar LF gewijzigd op het moment dat een `git add` wordt uitgevoerd. Wanneer een repo lokaal wordt binnengehaald, zal elke LF omgezet worden in een CRLF.
+To make sure the code is compatible with both operating systems, Git will replace the CRLF line endings with LF line endings when doing a `git add`. When a repo is pulled from a remote repo, Git will replace the CRLR line endings with LF line endings.
 
 </details>
 
-Er wordt een nieuwe commit aangemaakt `[master 81f48fc] Add text to README.md` waarbij te zien is dat er één bestand is gewijzigd, waarin één lijn is toegevoegd `1 file changed, 1 insertion(+)`.
+A new commit is created `[master 81f48fc] Add text to README.md` which shows that one file has been changed, and that there is one insertion `1 file changed, 1 insertion(+)`.
 
 ```sh
 git log
@@ -418,13 +416,13 @@ git log
 ###
 ```
 
-De Git log toont alle commits die doorheen de tijd zijn gedaan.
+The Git log shows all commits done throughout the history of the Git repo.
 
-### De kracht van git
+### The power of Git
 
-Tijdreizen is niet mogelijk. Of toch? Via `git checkout` kan er naar een oudere versie van een bestand gekeken worden. Stel dat er 100 commits gedaan over een tijdspanne van één jaar, waarvan de bovenstaande commits de eerste twee commits zijn.
+Time travel is not possible. Or isit? Through `git checkout` it is possible to revert to a previous commit. Imagine 100 commits being done over the course of a year of which the commits above are the first two commits.
 
-Om te kijken hoe het bestand eruitzag na de eerste commit, doe een `git checkout` op de Git hash van de eerste commit.
+To see how this file looked after the first commit, execute `git checkout` on the Git hash of the first commit.
 
 ```sh
 git checkout c0aba7a9e06057c325719bac3357faff70ec9d2b
@@ -451,15 +449,15 @@ git checkout c0aba7a9e06057c325719bac3357faff70ec9d2b
 ###
 ```
 
-Dit geeft veel informatie, voorlopig wordt hier niet op ingegaan. Bekijk `README.md` in de teksteditor en merk op dat de `bla bla bla` niet meer aanwezig is. Dit klopt, aangezien na de eerste commit het bestand wel was aangemaakt, maar er was nog geen tekst aan toegevoegd.
+This provides a lot of information, this will not be explained in detail here. Take a look at `README.md` in the text editor and notice that `bla bla bla` is no longer present. This is correct, because after the first commit the file was added, but no text was added to it.
 
-Gebruik `git switch -` om niet langer de eerste commit te bekijken.
+Use `git switch -` to no longer watch the first commit.
 
 ```sh
 git switch -
 ```
 
-Om te weten wat het verschil is tussen twee commits, kan `git diff <oude commit> <nieuwe commit>` gebruikt worden. Wijzig `<oude commit>` door de commit hash van de oudste commit van de twee, wijzig `<nieuwe commit>` door de commit hash van de nieuwste commit van de twee.
+To know the difference between two commits, use `git diff`. This will show the changes between the two commits `git diff <old commit> <new commit>`, where `<old commit>` is the commit hash of the oldest commit between the two and `<new commit>` is the commit hash of the newest commit between the two.
 
 ```sh
 git diff c0aba7a9e06057c325719bac3357faff70ec9d2b 81f48fc07e47f264d5912b56104c20852b819e1d
@@ -474,49 +472,53 @@ git diff c0aba7a9e06057c325719bac3357faff70ec9d2b 81f48fc07e47f264d5912b56104c20
 ###
 ```
 
-Hieruit kan afgeleid worden dat `bla bla bla` is toegevoegd.
+This shows that `bla bla bla` was added.
 
-Hieruit kan ook afgeleid worden dat alles dat ooit is toegevoegd aan de geschiedenis van Git, altijd nog terug bekeken kan worden. Het is dus belangrijk dat er **nooit geheime informatie toegevoegd wordt** aan de bestanden die gecommit worden. Voor software-ontwikkelaars kan dit betekenen `wachtwoorden`, `API-sleutels`, `omgevingsvariabelen` ...
+This also shows that everything that was ever added to the history of Git, can always be seen in the history. It is very important to **never add secrets** to the files that will be committed. For software developers this could mean `passwords`, `API keys`, `environment variables` ...
 
-## GitHub - Git online gebruiken
+## GitHub - using Git online
 
-Sinds 13 augustus 2021 is het niet langer mogelijk om met een gebruikersnaam en wachtwoord een repo te pullen en pushen. De makkelijkste manier is om `ssh` te gebruiken. Er is een artikel op dit blog dat gevolgd kan worden om SSH te gebruiken met GitHub.
+Since the 13th of august 2021 it is no longer possible to use a username and password to pull and push to GitHub. The easiest way to now use GitHub is to use `ssh`. There is an article on this blog that can be followed to setup SSH to use with GitHub.
 
-### Remote repo koppelen aan bestaande lokale repo
+### Coupling a remote repo to an existing local repo
 
-Tot nu toe worden de commits bijgehouden in de `.git/`-map en zolang de `.git/`-map op de computer staat, kan er altijd naar oudere versies van bestanden gekeken worden. Maar, stel, er zijn twee toestellen aanwezig (een vaste computer en een laptop) en soms wordt er op het ene toestel gewerkt en soms wordt er op het andere toestel gewerkt. Om te zorgen dat alle wijzigingen en alle oude wijzigingen aanwezig zijn, moet de `.git/`-map aanwezig zijn op beide systemen en deze moet continu in sync gehouden worden. Hetzelfde geldt als er met meerdere samengewerkt wordt op één repo, de `.git/`-map op alle toestellen moet continu in sync gehouden worden.
+Until now all the commits were tracked in the local `.git` folder and as long as the `.git` folder is present, it is possible to see the history of the repo. But, imagine, there are two devices present (a desktop and a laptop) and sometimes the desktop is used and sometimes the laptop is used. To make sure all commits are present on both devices, the `.git` folder must be present on both devices and these must be kept in sync. The same is true if multiple people are working on the same repo, the `.git` folder must be present on all devices and these must be kept in sync.
 
-Top, dus de `.git/`-map in `Google Drive`, `OneDrive` of `Dropbox` steken en zo is de `.git/`-map altijd in sync? Nee! Dé cloudopslag om te gebruiken is [MEGAsync](https://mega.nz/pro/aff=xLXv1HsQvUE) (referral, 20 GB gratis). Dat gezegd zijnde, een Git repo wordt niet in sync gehouden door het in een map op cloudopslag te zetten.
+Nice, so the `.git` folder can be put in `Google Drive`, `OneDrive` or `Dropbox`, this way the `.git` folder is always in Sync? No! The cloud storage to use is [MEGAsync](https://mega.nz/pro/aff=xLXv1HsQvUE) (referral, 20 GB free storage). That being said, a Git repo is not kept in sync by placing it in a cloud storage.
 
-Wat wordt er dan wél gebruikt om een Git repo in sync te houden op verschillende toestellen? Online platformen waar extra functionaliteit voorzien wordt, zoals het aanmaken van `releases`. Een van de meest gebruikte platformen is GitHub. Één van de mogelijke alternatieven is [BitBucket](https://bitbucket.org). Om dit artikel mee te volgen, maak een account op [GitHub](https://github.com/signup).
+Wat is used to keep a repo in sync on multiple devices? Online platforms that provide extra functionality around the `.git` folder, such as creating `releases`. One of the most used platforms is GitHub. One of the possible alternatives is [Bitbucket](https://bitbucket.org/). To follow allong with this article, sign up for [GitHub](https://github.com/signup).
 
-Eenmaal ingelogd, dan kan er een nieuwe repo aangemaakt worden door op [new](https://github.com/new) te klikken. Vul een `repository name` in, bijvoorbeeld `git-example-remote`. Standaard zal de repo publiek zijn, dit houdt in dat de inhoud van de repo door iedereen bekeken kan worden (ook door mensen zonder account). Indien de inhoud van de repo niet door anderen gezien mag worden, klik dan `private` aan.
+After logging in, it is possible to create a new repo by clicking on [new](https://github.com/new). Enter a `repository name`, e.g. `git-example-remote`. By default this repo will be public, this means that anyone can see the repo (also by people without a GitHub account). In case the content of the repo should not be viewable by the public, the repo can be made private by clicking on `private`.
 
-Vervolgens zijn er drie checkboxes. Bij het aanmaken van een nieuwe repo die aan een bestaande lokale repo gekoppeld moet worden, is het handig om ze alledrie aan te vinken. Aangezien er lokaal al een repo is, laat ze **alledrie afgevinkt**:
+Next there are three checkboxes. When creating a new repo that does not need to be connected to an existing local repo, it is handy to check all three of the checkboxes. Since there already is a local repo, **leave them all unchecked**.
 
-- `Add a README file`, dit kan aangevinkt worden om automatisch een `README.md` aan te maken bij het aanmaken van een repo.
+- `Add a README file`, this can be check to automatically generate a `README.md` when creating a repo.
 
-- `Add .gitignore`, dit zal in dit artikel handmatig toegevoegd worden.
+- `Add .gitignore`, this will be added manually in this article.
 
-- `Choose a license`, standaard is de code **niet** opensource. Dus ook al staat de repo publiek, als er geen LICENSE-bestand aanwezig is, is de code **niet** opensource. Als de code bedoelt is om door anderen gebruikt te worden, is het belangrijk om een opensourcelicentie toe te voegen.
+- `Choose a license`, by default the code is **not** opensource. So even if the repo is public, if it does not contain a LICENSE file, the code is **not** opensource. If the code is meant to be used by others, it is important to add an opensource license.
 
-Klik op `Create repository`. Zorg bij het volgen van dit artikel dat er **geen** checkbox is aangevinkt!
+Click on `Create repository`. Make sure that **no checkbox is checked** while following this article.
 
-Wat dit achterliggend eigenlijk doet, is een `.git/`-map aanmaken op de server van GitHub. Maar nu is er dus een `.git/`-map op het lokale systeem en een aparte `.git/`-map op het systeem van GitHub (remote systeem). Om de lokale Git repo op de hoogte te brengen dat er ook een remote Git repo is, kan er een `remote origin` toegevoegd worden. Dit wordt gedaan vanuit de lokale map in de terminal.
+What this does behind the scenes, is creating a `.git` folder on the server of GitHub. This means that there is now a `.git` folder on the local system and a separate `.git` folder on the system of GitHub (remote system). To sync the remote Git repo with the local Git repo, a `remote origin` can be added to the local repo. This is done from the local repo in the terminal.
 
 ```sh
-git remote add origin https://github.com/bartduisters/git-example-remote.git
+git remote add origin git@github.com:bartduisters/git-example-remote.git
 ```
 
-Opmerking: Indien tijdens het aanmaken van de repo dezelfde naam gebruikt is `git-example-remote`, dan moet enkel `bartduisters` uitgewisseld worden door de eigen GitHub-gebruikersnaam. Dit is ook de URL die teruggevonden kan worden in de adresbalk van de browser.
+Note: In case the same name `git-example-remote` was used during the creation of the remote repo, then only `bartduisters` needs to be swapped out for your own GitHub username.
+
+The origin can be found by clicking on the `clone` button on the GitHub page of the repo and then selecting the `SSH` tab.
+
+![SSH tab](/img/blog/git-ssh.png)
 
 ```sh
 git branch -M master
 ```
 
-Git werkt met `branches` (Nederlands: takken), in dit artikel wordt er met één `branch` gewerkt. Deze stap is momenteel niet nodig, maar indien in de toekomst de hoofdtak anders genoemd wordt (`main` wordt tegenwoordig soms gebruikt). Dan wordt het hernoemd naar `master` zodat de andere stappen in dit artikel blijven werken.
+Git works with `branches`, in this article only one `branch` will be used. This step is not necessary at this moment, but in case in the future the primary branch is called difference (`main` is used more and more), then this will rename it to `master`, such that all next steps in this article will keep working.
 
-Ondertussen weet de lokale Git af van het bestaan van de remote Git. Om te zorgen dat de lokale commits ook in de remote Git aanwezig zijn, kan er gebruik gemaakt worden van `git push`. Aangezien er nog niet eerder gepusht is, zal de eerste keer aangegeven moeten worden op welke remote branch er gepusht moet worden.
+By now the local Git knows about the existence of the remote Git. To make sure the local commits are also present on the remote Git, the `git push` command can be used. Since this is the first push, we need to specify to which remote branch we want to push.
 
 ```sh
 git push -u origin master
@@ -534,22 +536,22 @@ git push -u origin master
 ###
 ```
 
-Alle toekomstige commits van deze repo kunnen gepusht worden door enkel `git push` uit te voeren.
+All future commits of this repo can be pushed by using `git push`.
 
-Ga naar de remote repo op GitHub en ververs de pagina. Hier is de README.md te zien.
+Go to the remote repo on GitHub and refresh the page. This will now show the `README.md` file.
 
-Het is ook mogelijk om snelle wijzigingen online te doen:
+It is also possible to do quick edits online:
 
-- Klik op README.md.
-- Klik op het bewerkicoontje (rechtsboven 'Edit this file).
-- Wijzig `bla bla bla` door `bla John Duck`.
-- Scroll naar onder en klik op `Commit changes`.
-  - Standaard wordt `Update README.md` gebruikt als commit-bericht.
-  - Dit is hetzelfde als `git commit -m "Update README.md"`.
+- Click on README.md.
+- Click on the edit icon (top right `Edit this page`).
+- Change `bla bla bla` to `bla John Duck`.
+- Scroll down and click on `Commit changes`.
+  - By default the commit message is `Update README.md`.
+  - This is the same as `git commit -m "Update README.md"`.
 
-Ga terug naar de hoofdpagina van de repo en klik op `3 commits` (onder de groene knop met `Code`). Hier zijn de eerste twee commits te zien die lokaal gedaan zijn `Add README.md` en `Add text to README.md` en ook de commit die online gedaan is `Update README.md`.
+Return to the home page of the repo and click on `3 commits` (below the green button with `Code`). This will show the first two commits done on the local repo `Add README.md` and `Add text to README.md` and also the commit done online `Update README.md`.
 
-In de lokale terminal, doe een `git log`.
+In the local terminal, execute `git log`.
 
 ```sh
 git log
@@ -569,27 +571,27 @@ git log
 ###
 ```
 
-Hier is de remote commit `Update README.md` niet te zien.
+The remote commit `Update README.md` is not shown in the local log.
 
-Open `README.md` in een teksteditor en wijzig `bla bla bla` naar `John Duck lala`. Maak ook een nieuw bestand aan.
+Open `README.md` in a text editor and change `bla bla bla` to `John Duck lala`. Also create a new file.
 
 ```sh
 touch info.md
 ```
 
-Voeg beide bestanden toe aan de lijst om uiteindelijk te committen.
+Add both files to the list to be added to the commit.
 
 ```sh
 git add README.md info.md
 ```
 
-Een alternatieve manier om alle bestanden toe te voegen met wijzigingen in de huidige directory is door gebruik te maken van `.`.
+An alternative way to add all files with changes in the current directory is to use `git add .`.
 
 ```sh
 git add .
 ```
 
-Commit deze change lokaal.
+Commit these changes locally.
 
 ```sh
 git commit -m "Change README.md, add info.md"
@@ -600,7 +602,7 @@ git commit -m "Change README.md, add info.md"
 ###
 ```
 
-Bekijk de Git log.
+Look at the Git log.
 
 ```sh
 git log
@@ -626,11 +628,11 @@ git log
 ###
 ```
 
-Nu valt er iets op. Remote zijn er drie commits, waarvan de derde commit `Update README.md` is. Lokaal zijn er drie commits, waarvan de derde commit `Change README.md, add info.md` is.
+In the remote there now are three commits, of which the third commit is `Update README.md`. Locally there are also three commits, of which the third commit is `Change README.md, add info.md`.
 
-Ook is er te zien dat de lokale Git de informatie heeft van de remote Git tot aan de tweede commit (`(origin/master)` achter de tweede commit hash).
+Also note that the local Git repo has information about the remote Git repo up to the second commit (`(origin/master)` behind the second commit hash).
 
-Push de commits.
+Push the commits.
 
 ```sh
 git push
@@ -646,7 +648,7 @@ git push
 # hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 ```
 
-Dit geeft een **dikke vette error**. Er wordt gezegd dat de push gefaald is, dat er werk is op de remote repo die niet aanwezig is in de lokale repo. En dit is correct, `Change README.md, add info.md` is wél aanwezig op de remote repo en niet op de lokale repo. Ook wordt er gezegd dat er een `git pull` uitgevoerd kan worden om de remote commits lokaal te krijgen.
+This will show a **big fat error**. It tells us the push has failed because there is work on the remote repo that is not yet present in the local repo. And this is correct, `Change README.md, add info.md` is present in the remote repo and not in the local repo. It also says that `git pull` can be executed to get the changes from the remote repo.
 
 ```sh
 git pull
@@ -664,9 +666,9 @@ git pull
 ###
 ```
 
-Godverd... Een merge conflict! Git kan veel wijzigingen zelf samenvoegen. Een merge conflict kan voorkomen als er remote wijzigingen gedaan zijn in een bestand op eenzelfde lijn waar lokaal ook wijzigingen zijn gedaan. Er staat `Merge conflict in README.md`.
+God dang it! A merg conflict! Git can merge a lot of changes automatically, but not everything. A merge conflict occurs when two commits have changes on a same line in the same file. It shows `Merge conflict in README.md`.
 
-Bij het bekijken van `git status` is meer informatie terug te vinden.
+Take a look at `git status`, this will show extra information.
 
 ```sh
 git status
@@ -689,9 +691,9 @@ git status
 ###
 ```
 
-Aangezien er nog meer commits gaan komen in de toekomst is `git merge --abort` geen oplossing. Maar `fix conflicts and run "git commit"` is wel een optie.
+Since more commits will occur in the future it is not a solution to use `git merge --abort`. But `fix conflicts and run "git commit"` is a solution.
 
-Open het bestand `README.md` waarin het conflict zich bevindt. Hier is plots totale chaos terug te vinden.
+Open the file `README.md` in which the conflict occurs. This shows total chaos.
 
 ```text
 <<<<<< HEAD
@@ -701,40 +703,39 @@ bla John Duck
 >>>>>> db5955a1a7bb936c7fee06a365203177e721d254
 ```
 
-Opmerking: Normaal staat er één `<` en één `>` extra.
+Note: Normally it will show one extra `<` and `>`.
 
-Alles tussen `<<<<<<< HEAD` en `=======` is de lokale verandering.
-Alles tussen `=======` en `>>>>>>> [git hash]` is de remote verandering.
+Everything between `<<<<<<< HEAD` and `=======` is the local change.
+Everything between `=======` and `>>>>>>> [git hash]` is the remote change.
 
-Het is aan de developer om te beslissen wat moet blijven. Indien `John Duck lala` het enige is dat moet blijven, dan moet `<<<<<<< HEAD`, `=======`, `bla John Duck` en `>>>>>>> [git hash]` verwijderd worden.
+It is the task of the developer to decide what should stay. In case `John Duck lala` should stay, then `<<<<<<< HEAD`, `=======`, `bla John Duck` and `>>>>>>> [git hash]` should be deleted.
 
-Resultaat na het oplossen van het merge conflict.
+The result after solving the conflict.
 
 ```
 John Duck lala
 ```
 
-Aangezien er een verandering is gedaan, moet deze verandering worden toegevoegd aan de lijst van gewijzigde bestanden om op een later moment te kunnen committen.
+Since a change is made, this change must be added to the list of files to be added to the commit.
 
 ```sh
 git add README.md
 ```
 
-Normaal moet er een commit-bericht toegevoegd worden aan een `git commit`-commando. Maar doordat de repo door een moeilijke periode in zijn leven gaat (merge conflict), is het voldoende om enkel `git commit` te typen. Dit zal automatisch de standaard teksteditor openen. Het voegt standaard een commit-bericht toe. Het is voldoende om het bestand te sluiten in de teksteditor en de commit zal toegevoegd worden.
+Normallly a commit message should be add to the `git commit` command. But since the repo is going through a difficult period in its life (merge conflict), it is sufficient to just type `git commit`. This will automatically open the default text editor. It will automatically add a commit message. It is sufficient to close the file in the text editor and the commit will be added.
 
-Hint: Indien er plots een teksteditor geopend wordt in de terminal, dan zal dit waarschijnlijk `Nano` of `Vim` zijn.
-
-<details>
-  <summary>Nano: Indien er onderaan `^X` en `^R` te zien zijn ... Klik hier!</summary>
-  De terminal teksteditor Nano heeft zich geopend. `^` staat voor `CTRL` en `X` staat voor de toets `x`. Klik CTRL + X om Nano af te sluiten. Indien er nog een vraag gesteld wordt, typ `y` en klik op enter.
-</details>
+Tip: In case a text editor is opened in the terminal, this will probably be `Nano` or `Vim`.
 
 <details>
-  <summary>Vim: Indien er onderaan géén `^X` en `^R` te zien zijn ... Klik hier!</summary>
-  De terminal teksteditor Vim heeft zich geopend. Dit is een teksteditor met verschillende modi. Indien er per ongeluk van modus is gewijzigd, klik op `Escape`. Om uit Vim te geraken typ `:w!` en klik op enter.
+  <summary>Nano: In case a `^X` and `^R` are shown at the bottom ... Click here!</summary>
+  The terminal text editor Nano has opened itself. `^` stand for `CTRL` and `X` stands for the button `x`. Click CTRL + X to close Nano. In case another question is asked, type `y` and click on enter.
+<details>
+
+<summary>Vim: In case no `^X` and `^R` are shown at the bottom ... Click here!</summary>
+  The terminal text editor Vim has opened itself. This is a modal text editor. In case the mode is changed by accident, click `Escape`. To exit Vim, type `:w!` and click on enter.
 </details>
 
-Bekijk opnieuw de Git log.
+Take a look at `Git log`.
 
 ```sh
 git log
@@ -773,9 +774,9 @@ git log
 ###
 ```
 
-Er zijn **vijf** commits te zien. De twee eerste, de derde is de remote commit, de vierde is de lokale commit en tenslotte de vijde is de merge commit. Ook is te zien dat `(origin/master)` niet langer achter de tweede commit staat, maar wel achter de derde. De gewone `master` staat op de vijfde commit. Hieruit is af te leiden dat de lokale repo twee commits voorligt op de remote repo.
+It shows **five** commits. De first two, the third is a remote commit, the fourth is a local commit and finally the fifth one is a merge commit. Also note that `(origin/master)` is no longer behind the second commit, but it is now behind the third commit. The local `master` is placed on the fifth commit. This is because the local `master` is ahead of the remote `master` by two commits.
 
-Het uitvoeren van `git status` bevestigt dit.
+Executing `git status` will confirm this.
 
 ```sh
 git status
@@ -786,7 +787,7 @@ git status
 # nothing to commit, working tree clean
 ```
 
-Er is te lezen `Your branch is ahead of 'origin/master' by 2 commits.`. Het is al gekend wat er gedaan kan worden om commits van een lokale repo naar een remote repo te krijgen, namelijk `git push`.
+It shows `Your branch is ahead of 'origin/master' by 2 commits.`. We already know what to do to sync local commits to the remote repo.
 
 ```sh
 git push

@@ -387,7 +387,7 @@ Bij het uitvoeren van een `git add` van een bestand waarin lijnen zijn gewijzigd
 ###
 ```
 
-Unix-besturingssystemen (zoals Linux en macOS) gebruik een LF (Line Feed, ook wel weergegeven als `\n`) om het einde van een lijn aan te geven. Op Windows is dit CRLF (Carriage Return en Line Feed, ook wel weergegeven als `\r\n`). Line Feed en Carriage Return zijn termen gebaseerd op de acties die gedaan moesten worden op een typmachine. Line Feed, een nieuwe regel werd bekomen door het blad fysiek één lijn hoger te positioneren. Carriage Return, het gedeelte dat het blad vastklemt fysiek terug naar het begin bewegen.
+Unix-besturingssystemen (zoals Linux en macOS) gebruiken een LF (Line Feed, ook wel weergegeven als `\n`) om het einde van een lijn aan te geven. Op Windows is dit CRLF (Carriage Return en Line Feed, ook wel weergegeven als `\r\n`). Line Feed en Carriage Return zijn termen gebaseerd op de acties die gedaan moesten worden op een typmachine. Line Feed, een nieuwe regel werd bekomen door het blad fysiek één lijn hoger te positioneren. Carriage Return, het gedeelte dat het blad vastklemt fysiek terug naar het begin bewegen.
 
 Om te zorgen dat de code uniform is wanneer het naar de server overgezet wordt, worden de CRLF naar LF gewijzigd op het moment dat een `git add` wordt uitgevoerd. Wanneer een repo lokaal wordt binnengehaald, zal elke LF omgezet worden in een CRLF.
 
@@ -487,7 +487,7 @@ Wat wordt er dan wél gebruikt om een Git repo in sync te houden op verschillend
 
 Eenmaal ingelogd, dan kan er een nieuwe repo aangemaakt worden door op [new](https://github.com/new) te klikken. Vul een `repository name` in, bijvoorbeeld `git-example-remote`. Standaard zal de repo publiek zijn, dit houdt in dat de inhoud van de repo door iedereen bekeken kan worden (ook door mensen zonder account). Indien de inhoud van de repo niet door anderen gezien mag worden, klik dan `private` aan.
 
-Vervolgens zijn er drie checkboxes. Bij het aanmaken van een nieuwe repo die aan een bestaande lokale repo gekoppeld moet worden, is het handig om ze alledrie aan te vinken. Aangezien er lokaal al een repo is, laat ze **alledrie afgevinkt**:
+Vervolgens zijn er drie checkboxes. Bij het aanmaken van een nieuwe repo die niet aan een bestaande lokale repo gekoppeld moet worden, is het handig om ze alledrie aan te vinken. Aangezien er lokaal al een repo is, laat ze **alledrie afgevinkt**:
 
 - `Add a README file`, dit kan aangevinkt worden om automatisch een `README.md` aan te maken bij het aanmaken van een repo.
 
@@ -500,16 +500,18 @@ Klik op `Create repository`. Zorg bij het volgen van dit artikel dat er **geen**
 Wat dit achterliggend eigenlijk doet, is een `.git/`-map aanmaken op de server van GitHub. Maar nu is er dus een `.git/`-map op het lokale systeem en een aparte `.git/`-map op het systeem van GitHub (remote systeem). Om de lokale Git repo op de hoogte te brengen dat er ook een remote Git repo is, kan er een `remote origin` toegevoegd worden. Dit wordt gedaan vanuit de lokale map in de terminal.
 
 ```sh
-git remote add origin https://github.com/bartduisters/git-example-remote.git
+git remote add origin git@github.com:bartduisters/git-example-remote.git
 ```
 
-Opmerking: Indien tijdens het aanmaken van de repo dezelfde naam gebruikt is `git-example-remote`, dan moet enkel `bartduisters` uitgewisseld worden door de eigen GitHub-gebruikersnaam. Dit is ook de URL die teruggevonden kan worden in de adresbalk van de browser.
+Opmerking: Indien tijdens het aanmaken van de repo dezelfde naam gebruikt is `git-example-remote`, dan moet enkel `bartduisters` uitgewisseld worden door de eigen GitHub-gebruikersnaam. 
+
+![SSH tab](/img/blog/git-ssh.png)
 
 ```sh
 git branch -M master
 ```
 
-Git werkt met `branches` (Nederlands: takken), in dit artikel wordt er met één `branch` gewerkt. Deze stap is momenteel niet nodig, maar indien in de toekomst de hoofdtak anders genoemd wordt (`main` wordt tegenwoordig soms gebruikt). Dan wordt het hernoemd naar `master` zodat de andere stappen in dit artikel blijven werken.
+Git werkt met `branches` (Nederlands: takken), in dit artikel wordt er met één `branch` gewerkt. Deze stap is momenteel niet nodig, maar indien in de toekomst de hoofdtak anders genoemd wordt (`main` wordt tegenwoordig soms gebruikt), dan wordt het hernoemd naar `master` zodat de andere stappen in dit artikel blijven werken.
 
 Ondertussen weet de lokale Git af van het bestaan van de remote Git. Om te zorgen dat de lokale commits ook in de remote Git aanwezig zijn, kan er gebruik gemaakt worden van `git push`. Aangezien er nog niet eerder gepusht is, zal de eerste keer aangegeven moeten worden op welke remote branch er gepusht moet worden.
 
@@ -536,7 +538,7 @@ Ga naar de remote repo op GitHub en ververs de pagina. Hier is de README.md te z
 Het is ook mogelijk om snelle wijzigingen online te doen:
 
 - Klik op README.md.
-- Klik op het bewerkicoontje (rechtsboven 'Edit this file).
+- Klik op het bewerkicoontje (rechtsboven `Edit this file`).
 - Wijzig `bla bla bla` door `bla John Duck`.
 - Scroll naar onder en klik op `Commit changes`.
   - Standaard wordt `Update README.md` gebruikt als commit-bericht.
@@ -717,7 +719,7 @@ git add README.md
 
 Normaal moet er een commit-bericht toegevoegd worden aan een `git commit`-commando. Maar doordat de repo door een moeilijke periode in zijn leven gaat (merge conflict), is het voldoende om enkel `git commit` te typen. Dit zal automatisch de standaard teksteditor openen. Het voegt standaard een commit-bericht toe. Het is voldoende om het bestand te sluiten in de teksteditor en de commit zal toegevoegd worden.
 
-Hint: Indien er plots een teksteditor geopend wordt in de terminal, dan zal dit waarschijnlijk `Nano` of `Vim` zijn.
+Tip: Indien er plots een teksteditor geopend wordt in de terminal, dan zal dit waarschijnlijk `Nano` of `Vim` zijn.
 
 <details>
   <summary>Nano: Indien er onderaan `^X` en `^R` te zien zijn ... Klik hier!</summary>
