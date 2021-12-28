@@ -5,7 +5,6 @@ tags:
   - Git
   - GitHub
 categories:
-draft: true
 ---
 
 Git is a version control system. Nice, but what does that mean? A system to control versions. Also nice, but what does it mean to control versions? To explain this, it is easier to look at an example!
