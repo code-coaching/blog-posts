@@ -3,6 +3,7 @@ title: Logica
 slug: logica
 tags:
   - Leren Programmeren
+  - Logica
 categories:
   - Frontend
 ---
@@ -11,7 +12,7 @@ categories:
 
 Om beter te begrijpen hoe computers werken, wordt er gekeken naar de simpelste versie van een computer: een Turing-machine. Een Turing-machine, ondanks de naam, is geen machine. Het is een model om te omschrijven wat een computer doet.
 
-Turing verwijst naar Alan Turing, een computerwetenschapper die realiseerde dat alle rekenproblemen voorgesteld kunnen worden in een digitale taal: 0 en 1. Een Turing-machine kan gemaakt worden uit alles wat in twee toestanden geplaatst kan worden: 'aan' en 'uit', 'ja' en 'nee ...
+Turing verwijst naar Alan Turing, een computerwetenschapper die realiseerde dat alle rekenproblemen voorgesteld kunnen worden in een digitale taal: 0 en 1. Een Turing-machine kan gemaakt worden uit alles wat in twee toestanden geplaatst kan worden: 'aan' en 'uit', 'ja' en 'nee' ...
 
 ### Bit
 
