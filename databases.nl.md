@@ -11,7 +11,9 @@ Databases zijn georganiseerde verzamelingen van data. Databasebeheersystemen, zi
 
 ## NoSQL databases
 
-NoSQL is een term voor alle databasemodellen die verschillen van het relationele model. Een voorbeeld van een NoSQL-database is een documentdatabase. Een persoon met twee wagens zou op onderstaande manier opgeslagen kunnen worden.
+NoSQL is een term voor alle databasemodellen die verschillen van het relationele model. Een voorbeeld van een NoSQL-database is een documentdatabase.
+
+Een persoon met twee wagens zou op onderstaande manier opgeslagen kunnen worden.
 
 ```text
 {
@@ -69,7 +71,7 @@ SQL (Structured Query Language) is een taal gemaakt om data op te vragen. Een vo
 
 ### Datanormalisatie
 
-Om te weten welke tabellen er gemaakt moeten worden, wordt datanormalisatie toegepast. Normalisatie zorgt ervoor dat data in de simpelste vorm mogelijk wordt opgeslagen, zonder dat er data dubbel opgeslagen wordt. In dit blogbericht wordt normalisatie niet stap per stap uitgelegd, het is belangrijk om te weten dat dit proces voorafgaat om de te bepalen welke tabellen er gemaakt moeten worden.
+Om te weten welke tabellen er gemaakt moeten worden, wordt datanormalisatie toegepast. Normalisatie zorgt ervoor dat data in de simpelste vorm mogelijk wordt opgeslagen, zonder dat er data dubbel opgeslagen wordt. In dit blogbericht wordt normalisatie niet stap per stap uitgelegd, het is belangrijk om te weten dat dit proces voorafgaat aan het bepalen van welke tabellen er gemaakt moeten worden.
 
 In een bedrijf wordt dit meestal gedaan door een software-architect of een backendontwikkelaar.
 
@@ -103,7 +105,7 @@ Nul, één of veel
 
 ### Opbouw van een ERD
 
-![qownnotes-media-JM5579](/img/blog/erd-creation.nl.png)
+![opbouw ERD](/img/blog/erd-creation.nl.png)
 
 Elke tabel uit een database wordt in een ERD voorgesteld aan de hand van een tabel met één kolom. De koptekst (het donkergrijze gedeelte in de afbeelding) van de tabel (in het ERD) is de verzamelnaam voor hetgeen dat opgeslagen wordt in de tabel (in de database). Elke kolom uit de tabel van de database, krijgt een rij in de tabel van het ERD.
 
@@ -120,7 +122,7 @@ Personen
 | 100 | Sylvia   | Duisters   | 28       | vrouw    |
 | ... | ...      | ...        | ...      | ...      |
 
-In deze tabel worden personen opgeslagen. Elke persoon heeft "id" waarmee hij/zij uniek geïdentificeerd kan worden, een voornaam, een achternaam, een leeftijd en een geslacht.
+In deze tabel worden personen opgeslagen. Elke persoon heeft een "id" waarmee hij/zij uniek geïdentificeerd kan worden, een voornaam, een achternaam, een leeftijd en een geslacht.
 
 Dit wordt in een ERD weergegeven als:
 
@@ -231,7 +233,7 @@ Wagens
 
 ### Veel-op-veel-relatie
 
-In het geval dat een persoon meerdere wagens kan hebben en dat een wagen ook kan toebehoren tot meerdere eigenaren, is er een extra tabel nodig om deze relatie mogelijk te maken. Een verbindingstabel.
+In het geval dat een persoon meerdere wagens kan hebben en dat een wagen ook kan toebehoren tot meerdere eigenaren, is er een extra tabel nodig om deze relatie mogelijk te maken. Een tussentabel.
 
 Een voorbeeld:
 
@@ -300,39 +302,27 @@ leerstof.
 
 ## API
 
-API staat voor Application Programming Interface, dit is een manier om applicaties
-met elkaar te laten communiceren. Het meest voorkomende type API bij het
-ontwikkelen van webapplicaties is een RESTful API.
-Een ander type dat meer en meer voorkomt tegenwoordig, is een GraphQL API.
+API stands for Application Programming Interface, this is a way for applications to communicate with each other. The most common type of API when developing web applications is a RESTful API.
+Another type that is becoming more and more common these days is a GraphQL API.
 
-### Protocollen
+### Protocols
 
 Gebruikte termen:
 
-- `client`: Een toestel (computer, smartphone, tablet ...) dat gebruikt wordt
-  door een gebruiker.
-- `server`: Een toestel dat altijd aanstaat waarop bestanden staan die via
-  een protocol (bv. HTTP) opgehaald kunnen worden.
+- `client`: Een toestel (computer, smartphone, tablet ...) dat gebruikt wordt door een gebruiker.
+- `server`: Een toestel dat altijd aanstaat waarop bestanden staan die via een protocol (bv. HTTP) opgehaald kunnen worden.
 - `request`: Een verzoek dat gedaan wordt vanuit de client naar de server.
 - `response`: Een antwoord dat gestuurd wordt vanuit de server naar de client.
 
 #### HTTP/HTTPS
 
-HTTP staat voor *H*yper*t*ext *T*ransfer *P*rotocol.
-De `S` in HTTP*S* staat voor *S*ecure.
+HTTP staat voor *H*yper*t*ext *T*ransfer *P*rotocol. De `S` in HTTP*S* staat voor *S*ecure.
 
-Het verschil tussen HTTP en HTTPS is dat wanneer een wachtwoord verstuurd wordt
-via HTTP, dit in plain text is. Indien deze communicatie onderschept wordt, kan
-het wachtwoord gewoon gelezen worden door de tussenpersoon. Bij HTTPS wordt het
-wachtwoord geëncrypteerd/versleuteld verstuurd. Indien deze communicatie
-onderschept wordt, ziet de tussenpersoon het versleutelde wachtwoord.
+Het verschil tussen HTTP en HTTPS is dat wanneer een wachtwoord verstuurd wordt via HTTP, dit in plain text is. Indien deze communicatie onderschept wordt, kan het wachtwoord gewoon gelezen worden door de tussenpersoon. Bij HTTPS wordt het wachtwoord geëncrypteerd/versleuteld verstuurd. Indien deze communicatie onderschept wordt, ziet de tussenpersoon het versleutelde wachtwoord.
 
-HTTP(S) is een request/response protocol. Er wordt een request (verzoek)
-uitgestuurd vanuit een client naar een server. De server verwerkt dit verzoek
-en stuurd een response (antwoord) terug.
+HTTP(S) is een request/response protocol. Er wordt een request (verzoek) uitgestuurd vanuit een client naar een server. De server verwerkt dit verzoek en stuurd een response (antwoord) terug.
 
-HTTP(S) is unidirectioneel, dit betekent dat de communicatie maar langs één kant
-loopt. Een client zal altijd een request uitsturen, een server zal altijd antwoorden.
+HTTP(S) is unidirectioneel, dit betekent dat de communicatie maar langs één kant loopt. Een client zal altijd een request uitsturen, een server zal altijd antwoorden.
 
 ##### POST/GET/PUT/DELETE & CRUD
 
@@ -342,8 +332,7 @@ Een GET geeft aan dat er een item gelezen (Read) moet worden.
 Een PUT geeft aan dat er een item gewijzigd (Update) moet worden.
 Een DELETE geeft aan dat er een item verwijderd (Delete) moet worden.
 
-Een term die vaker terug gaat komen is `CRUD`. Deze term betekent dat er
-*C*reate, *R*ead, *U*pdate en *D*elete uitgevoerd kan worden.
+Een term die vaker terug gaat komen is `CRUD`. Deze term betekent dat er *C*reate, *R*ead, *U*pdate en *D*elete uitgevoerd kan worden.
 
 #### WS/WSS
 
@@ -359,11 +348,9 @@ Een voorbeeld waarvoor dit gebruikt kan worden is Instant Messaging.
 
 ### RESTful
 
-REST staat voor **RE**presentational **S**tate **T**ransfer. Dit is een
-architectuur die gevolgd kan worden om een API op te bouwen.
+REST staat voor **RE**presentational **S**tate **T**ransfer. Dit is een architectuur die gevolgd kan worden om een API op te bouwen.
 
-Stel dat er een domein (bv. https://ditisnietecht.com) is. Op de server waar
-dit domein naar wijst, staat een API om alle cursisten op te vragen.
+Stel dat er een domein (bv. https://ditisnietecht.com) is. Op de server waar dit domein naar wijst, staat een API om alle cursisten op te vragen.
 
 Dan zou dat in een RESTful API als volgt zijn:
 
@@ -371,17 +358,11 @@ Dan zou dat in een RESTful API als volgt zijn:
 HTTP GET https://ditisnietecht.com/api/cursisten
 ```
 
-HTTP geeft aan dat het over het HTTP-protocol gaat, GET geeft het type van de
-request aan. De domeinnaam wijst naar de server en `/api/cursisten` is een
-`end point` van de API. In dit geval zal een GET request naar `/api/cursisten`
-een response geven waarin alle cursisten zitten.
+HTTP geeft aan dat het over het HTTP-protocol gaat, GET geeft het type van de request aan. De domeinnaam wijst naar de server en `/api/cursisten` is een `end point` van de API. In dit geval zal een GET request naar `/api/cursisten` een response geven waarin alle cursisten zitten.
 
-Achterliggend zal de server de request afhandelen. Één van de mogelijke opties
-is dat de server een `SELECT * FROM cursisten` doet en het resultaat van deze
-query terugstuurd.
+Achterliggend zal de server de request afhandelen. Één van de mogelijke opties is dat de server een `SELECT * FROM cursisten` doet en het resultaat van deze query terugstuurd.
 
-Een RESTful API werkt met POST/GET/PUT/DELETE requests om CRUD-operaties uit te
-voeren.
+Een RESTful API werkt met POST/GET/PUT/DELETE requests om CRUD-operaties uit te voeren.
 
 ### GraphQL
 
