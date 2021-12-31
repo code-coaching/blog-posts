@@ -9,13 +9,11 @@ categories:
 
 ## Basisstructuur
 
-HTML staat voor Hyper Text Markup Language. Het beschrijft de structuur van een
-webpagina aan de hand van elementen.
+HTML staat voor Hyper Text Markup Language. Het beschrijft de structuur van een webpagina aan de hand van elementen.
 
 Elementen bestaan uit een begin- en eindtag.
 
-Een voorbeeld van een element is `<title>Voorbeeld 1</title>`, met `<title>` als
-begintag en `</title>` als eindtag. `Voorbeeld 1` is de inhoud van het element.
+Een voorbeeld van een element is `<title>Voorbeeld 1</title>`, met `<title>` als begintag en `</title>` als eindtag. `Voorbeeld 1` is de inhoud van het element.
 
 ```html
 <!DOCTYPE html>
@@ -50,9 +48,7 @@ Om dit voorbeeld als webapagina te zien:
 
 Alles tussen `<!-- -->` wordt gezien als commentaar in HTML.
 
-Het DOCTYPE geeft aan dat het documenttype `html` is, hierdoor weet de webbrowser
-hoe deze pagina weergegeven moet worden. Dit komt één keer voor,
-bovenaan het document. `<!DOCTYPE html>` is de declaratie voor `HTML5`.
+Het DOCTYPE geeft aan dat het documenttype `html` is, hierdoor weet de webbrowser hoe deze pagina weergegeven moet worden. Dit komt één keer voor, bovenaan het document. `<!DOCTYPE html>` is de declaratie voor `HTML5`.
 
 Oudere declaraties zien er iets ingewikkelder uit:
 
@@ -64,11 +60,9 @@ Oudere declaraties zien er iets ingewikkelder uit:
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 ```
 
-Dit komt omdat de oudere declaraties moeten verwijzen naar een DTD
-(Document Type Definition).
+Dit komt omdat de oudere declaraties moeten verwijzen naar een DTD (Document Type Definition).
 
-Aangezien HTML5 de standaard is tegenwoordig, is het voldoende om enkel
-`<!DOCTYPE html>` te onthouden.
+Aangezien HTML5 de standaard is tegenwoordig, is het voldoende om enkel `<!DOCTYPE html>` te onthouden.
 
 ## Elementen
 
@@ -90,8 +84,7 @@ Er zijn ook elementen zonder eindtag. Dit noemt men een leeg element.
 
 De `<br>`-tag zal een lege lijn toevoegen.
 
-Een leeg element kan ook als een "self closing element"
-(Nederlands: element dat zichzelf afsluit) geschreven worden.
+Een leeg element kan ook als een "self closing element" (Nederlands: element dat zichzelf afsluit) geschreven worden.
 
 `<br />`
 
@@ -112,11 +105,8 @@ het element `title` terug te vinden, met daarin de inhoud `Voorbeeld 1`.
 
 Hierin kunnen ook nog andere elementen geplaatst worden:
 
-- `<style>`-tags om te verwijzen naar CSS-bestanden, om de stijling van de
-  website anders te maken (bijvoorbeeld een roze achtergrond i.p.v. een witte).
-  Dit komt terug in het onderdeel CSS binnen deze module.
-- `<script>`-tags om te verwijzen naar JavaScript-bestanden. Dit komt in de
-  module JavaScript terug.
+- `<style>`-tags om te verwijzen naar CSS-bestanden, om de stijling van de website anders te maken (bijvoorbeeld een roze achtergrond i.p.v. een witte). Dit wordt verwerkt in een apart blogbericht over CSS.
+- `<script>`-tags om te verwijzen naar JavaScript-bestanden. Dit wordt verwerkt in een apart blogbericht over JavaScript.
 - `<meta>`-tags om extra informatie over de webpagina te geven.
 
 Enkele voorbeelden van `<meta>`-tags:
@@ -130,16 +120,13 @@ Enkele voorbeelden van `<meta>`-tags:
 <!-- ... -->
 ```
 
-De `charset` duidt aan welke `character encoding` gebruikt wordt. `UTF-8` is
-een van de meestgebruikte karaktersets.
+De `charset` duidt aan welke `character encoding` gebruikt wordt. `UTF-8` is een van de meestgebruikte karaktersets.
 
-De `viewport` bepaalt hoe de inhoud getoond moet worden, het gebruikte voorbeeld
-is om de inhoud duidelijk te tonen op mobiele toestellen.
+De `viewport` bepaalt hoe de inhoud getoond moet worden, het gebruikte voorbeeld is om de inhoud duidelijk te tonen op mobiele toestellen.
 
 ### Hoofdingen
 
-Om verschillende groottes van titels te tonen, kan er gebruik gemaakt worden van
-`<h1>` t.e.m. `<h6>`.
+Om verschillende groottes van titels te tonen, kan er gebruik gemaakt worden van `<h1>` t.e.m. `<h6>`.
 
 ```html
 <h1>Hoofding 1</h1>
@@ -154,31 +141,26 @@ Om verschillende groottes van titels te tonen, kan er gebruik gemaakt worden van
 
 ### Paragrafen
 
-Een paragraaf toont aan dat alle tekst binnen de begin- en eindtag van de
-paragraaf, bij elkaar hoort.
+Een paragraaf toont aan dat alle tekst binnen de begin- en eindtag van de paragraaf, bij elkaar hoort.
 
 ```html
 Deze twee regels lijken hetzelfde in de browser, toch is er een verschil!
 <p>Deze twee regels lijken hetzelfde in de browser, toch is er een verschil!</p>
 ```
 
-De tweede regel omschrijft voor de browser dat hetgeen getoond wordt, in de
-context van een paragraaf is. De eerste regel toont gewoon een regel tekst.
-De browser heeft geen informatie over wat de tekst voorstelt.
+De tweede regel omschrijft voor de browser dat hetgeen getoond wordt, in de context van een paragraaf is. De eerste regel toont gewoon een regel tekst. De browser heeft geen informatie over wat de tekst voorstelt.
 
-![2020-10-25-1603647352_screenshot_653x69](/img/blog/paragraphs.nl.jpeg)
+![paragrafen](/img/blog/paragraphs.nl.jpeg)
 
 ### Links
 
-Via links, hyperlinks, kan verwezen worden naar andere elementen of
-volledige andere pagina's.
+Via links, hyperlinks, kan verwezen worden naar andere elementen of volledige andere pagina's.
 
 ```html
 <a href="https://9gag.com/gag/a9W9WyL">Dit is de getoonde tekst.</a>
 ```
 
-Merk op dat een link die nog niet bezocht is, blauw is. En zodra de link
-bezocht is, wordt deze paars. Dit wordt automatisch afgehandeld.
+Merk op dat een link die nog niet bezocht is, blauw is. En zodra de link bezocht is, wordt deze paars. Dit wordt automatisch afgehandeld.
 
 ![link](/img/blog/link.nl.jpeg)
 ![bezochte link](/img/blog/link-visited.nl.jpeg)
@@ -192,19 +174,15 @@ bezocht is, wordt deze paars. Dit wordt automatisch afgehandeld.
 />
 ```
 
-De `<img>`-tag is een leeg element. In het voorbeeld wordt geopteerd voor de
-`self closing` variant.
+De `<img>`-tag is een leeg element. In het voorbeeld wordt geopteerd voor de `self closing` variant.
 
-`src` geeft de `source` (Nederlands: bron) aan waar de afbeelding gevonden kan
-worden.
+`src` geeft de `source` (Nederlands: bron) aan waar de afbeelding gevonden kan worden.
 
-`alt` geeft de **alt**ernatieve tekst aan die getoond moet worden indien de
-afbeelding te traag wordt ingeladen.
+`alt` geeft de **alt**ernatieve tekst aan die getoond moet worden indien de afbeelding te traag wordt ingeladen.
 
 ## Attributen
 
-Elementen kunnen attributen bevatten. In de bovenstaande voorbeelden is dit
-terug te vinden bij:
+Elementen kunnen attributen bevatten. In de bovenstaande voorbeelden is dit terug te vinden bij:
 
 ```html
 <meta charset="UTF-8" />
@@ -236,11 +214,9 @@ Er zijn twee soorten lijsten:
 - Lijsten met ordering (Engels: ordered list)
 - Lijsten zonder ordering (Engels: unordered list)
 
-**O**rdered **L**ist, `<ol>`-element wordt gebruikt om een lijst met nummers
-te tonen.
+**O**rdered **L**ist, `<ol>`-element wordt gebruikt om een lijst met nummers te tonen.
 
-**U**nordered **L**ist, `<ul>`-element wordt gebruikt om een lijst zonder
-nummers te tonen.
+**U**nordered **L**ist, `<ul>`-element wordt gebruikt om een lijst zonder nummers te tonen.
 
 In beide gevallen kan een item toegevoegd worden, een **L**ist **I**tem: `<li>`.
 
@@ -266,19 +242,14 @@ In beide gevallen kan een item toegevoegd worden, een **L**ist **I**tem: `<li>`.
 
 Een tabel is een samenstelling uit verschillende elementen.
 
-`<table>`: tussen de begin- en eindtag van het `table`-element, staan de andere
-element.
+`<table>`: tussen de begin- en eindtag van het `table`-element, staan de andere element.
 `<tr>`: **t**able **r**ow, dit geeft aan dat het om één rij van de tabel gaat.
 `<th>`: **t**able **h**eader, dit geeft aan dat het om een hoofdingelement gaat.
-`<td>`: **t**able **d**ata, dit geeft aan dat het om een gewone cel in de tabel
-gaat.
+`<td>`: **t**able **d**ata, dit geeft aan dat het om een gewone cel in de tabel gaat.
 
-De elementen `<th>` en `<td>` zijn beide één cel in de tabel. Maar het
-`<th>`-element zal de inhoud vetgedrukt maken en centreren. Het `<td>`-element
-zal de inhoud links centreren.
+De elementen `<th>` en `<td>` zijn beide één cel in de tabel. Maar het `<th>`-element zal de inhoud vetgedrukt maken en centreren. Het `<td>`-element zal de inhoud links uitlijnen.
 
-De randen van de tabel kunnen zichtbaar gemaakt worden met CSS, dit wordt later
-bekeken.
+De randen van de tabel kunnen zichtbaar gemaakt worden met CSS, dit wordt niet behandeld in dit blogbericht.
 
 ```html
 <table>
@@ -328,7 +299,7 @@ gebruikt zullen worden door de data.
 ## Tekstopmaak
 
 Het is mogelijk om de tekstopmaak te wijzigen met HTML-elementen.
-Het is ook mogelijk om de tekstopmaak te wijzigen via CSS (module CSS).
+Het is ook mogelijk om de tekstopmaak te wijzigen via CSS (niet behandeld in dit blogbericht).
 
 ```html
 <b>b - bold / vetgedrukt</b>
@@ -366,9 +337,7 @@ sub <sub> subscript</sub> & sup <sup>superscript</sup>
 
 ## Elementen: block & inline
 
-Het is belangrijk om te begrijpen dat het plaatsen van HTML-elementen in een .html-bestand, niet aangeeft hoe de elementen getoond worden in de pagina die getoond wordt in de browser.
-
-HTML-elementen hebben standaard een `display`-waarde. Er zijn twee mogelijke waarden: `block` en `inline`.
+Het is belangrijk om te begrijpen dat het plaatsen van HTML-elementen in een .html-bestand, niet aangeeft hoe de elementen getoond worden in de pagina die getoond wordt in de browser. HTML-elementen hebben standaard een `display`-waarde. Er zijn twee mogelijke waarden: `block` en `inline`.
 
 Het plaatsen van twee block-elementen onder elkaar of naast elkaar in het .html-bestand heeft niks te maken met hoe het getoond wordt in de browser. Ze worden onder elkaar getoond in de browser.
 
@@ -572,7 +541,6 @@ Vergelijk onderstaande HTML, bekijk specifiek de elementen in het `<body>`-eleme
 ```
 
 Beide voorbeelden zijn geldige HTML. Het verschil is dat bij het eerste voorbeeld allemaal `<div>`-elementen gebruikt worden.
-Bij het tweede voorbeeld worden allemaal `semantische` elementen gebruikt. `Semantisch element` betekent dat de naam van
-een element, omschrijft wat het doel van het element is.
+Bij het tweede voorbeeld worden allemaal `semantische` elementen gebruikt. `Semantisch element` betekent dat de naam van een element, omschrijft wat het doel van het element is.
 
 Semantische elementen zijn makkelijker te indexeren door zoekmachines. Potentieel zorgt dit voor betere SEO (Search Engine Optimization, Nederlands: zoekmachineoptimalisatie).
