@@ -9,22 +9,15 @@ categories:
 
 HTML bevat de structuur van een pagina. CSS bevat de styling van een pagina.
 
-CSS is een afkorting voor **C**ascading **S**tyle **S**heets. `Cascading` is wat
-een waterval doet, het vloeit van een hoger gedeelte naar een lager gedeelte.
+CSS is een afkorting voor **C**ascading **S**tyle **S**heets. `Cascading` is wat een waterval doet, het vloeit van een hoger gedeelte naar een lager gedeelte.
 
-HTML verzorgt de elementen op een webpagina. CSS verzorgt hoe elementen getoond
-worden.
+HTML verzorgt de elementen op een webpagina. CSS verzorgt hoe elementen getoond worden.
 
-Dit is beter te begrijpen met een voorbeeld, bekijk deze
-[demo](https://www.w3schools.com/CSS/CSS_intro.asp). In de demo zijn vijf
-variaties te zien van dezelfde HTML, met verschillende CSS.
+Dit is beter te begrijpen met een voorbeeld, bekijk deze [demo](https://www.w3schools.com/CSS/CSS_intro.asp). In de demo zijn vijf variaties te zien van dezelfde HTML, met verschillende CSS.
 
 ## HTML-elementen
 
-Sommige HTML-elementen voegen zelf styling toe. Om aan te tonen dat een
-HTML-element nagebouwd kan worden, wordt er vertrokken vanuit een element
-zonder styling en daarop wordt CSS toegepast om tot een gelijkaardig resultaat
-te komen.
+Sommige HTML-elementen voegen zelf styling toe. Om aan te tonen dat een HTML-element nagebouwd kan worden, wordt er vertrokken vanuit een element zonder styling en daarop wordt CSS toegepast om tot een gelijkaardig resultaat te komen.
 
 ```html
 <h1>Hoofding 1 met h1 element</h1>
@@ -47,7 +40,7 @@ Er zijn drie manieren om CSS te koppelen aan een .html-bestand: `inline` (Nederl
     <title>Document</title>
 
     <!-- Externe CSS -->
-    <!-- Inoud van external.CSS
+    <!-- Inhoud van external CSS
     .blauw {
         font-size: 28px;
         color: blue;
@@ -91,12 +84,10 @@ Er zijn drie manieren om CSS te koppelen aan een .html-bestand: `inline` (Nederl
 
     <!--
         - Externe CSS wordt bekeken (omdat deze eerst wordt ingeladen in <head>)
-            - Externe CSS heeft een overeenkomende selector: .blauw 
-              (komt overeen met class='blauw')
+            - Externe CSS heeft een overeenkomende selector: .blauw (komt overeen met class='blauw')
             - De styling `font-size: 28px;` en `color: blue;` wordt toegepast
         - Interne CSS wordt bekeken (omdat deze als tweede wordt ingeladen in <head>)
-            - De styling wordt NIET overschreven, een class-selector is specifieker 
-              dan een element-selector
+            - De styling wordt NIET overschreven, een class-selector is specifieker dan een element-selector
         - Inline CSS wordt toegepast (altijd als 'laatste')
             - Element bevat geen inline CSS, er wordt niks toegepast
     -->
@@ -113,8 +104,7 @@ Resultaat:
 
 Bij inline CSS wordt de CSS direct toegepast op het element waar het style-attribuut op geplaatst wordt.
 
-Bij internal en external CSS moet gebruikgemaakt worden van 'selectors' om te zorgen dat de CSS-regels
-worden toegepast op bepaalde elementen.
+Bij internal en external CSS moet gebruikgemaakt worden van 'selectors' om te zorgen dat de CSS-regels worden toegepast op bepaalde elementen.
 
 ### Element
 
@@ -223,13 +213,7 @@ Het is mogelijk om elementen te selecteren op basis van de naam van een id.
   <body>
     <div class="element">Eerste element</div>
     <!-- 
-    Merk op: de tweede div heeft zowel de class "element"
-    als de id "element-2". Doordat CSS alle styling van
-    boven naar onder toepast, zal eerst de styling van
-    ".element" toegepast worden. Daarna wordt de styling
-    van "#element-2" toegepast. Doordat background-color
-    zowel bij ".element" en "#element-2" gedefinieerd is,
-    zal de onderste waarden de bovenste waarden overschrijven.
+      Merk op: de tweede div heeft zowel de class "element" als de id "element-2". Doordat CSS alle styling van boven naar onder toepast, zal eerst de styling van ".element" toegepast worden. Daarna wordt de styling van "#element-2" toegepast. Doordat background-color zowel bij ".element" en "#element-2" gedefinieerd is, zal de onderste waarden de bovenste waarden overschrijven.
     -->
     <div class="element" id="element-2">Tweede element</div>
     <div class="element">Derde element</div>
