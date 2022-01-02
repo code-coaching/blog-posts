@@ -8,8 +8,6 @@ categories:
   - Frontend
 ---
 
-Wanneer er verwezen wordt naar `terminal` in onderstaande tekst en er wordt met Windows gewerkt, dan moet het uitgevoerd worden in `Git Bash`. Indien CTRL+V niet werkt om gekopieerde inhoud te plakken in de terminal, probeer SHIFT+INSERT.
-
 ## Wat is Quasar
 
 Quasar is een framework gebaseerd op VueJS waarmee het mogelijk is om applicaties te bouwen voor verschillende platformen met één code base. Het is dus mogelijk om met webtechnologie code te schrijven die werkt op alle platformen:
@@ -19,6 +17,8 @@ Quasar is een framework gebaseerd op VueJS waarmee het mogelijk is om applicatie
 - Smartphones: Android / iOS
 
 ## Quasar CLI
+
+Wanneer er verwezen wordt naar `terminal` in onderstaande tekst en er wordt met Windows gewerkt, dan moet het uitgevoerd worden in `Git Bash`. Indien CTRL+V niet werkt om gekopieerde inhoud te plakken in de terminal, probeer SHIFT+INSERT.
 
 Quasar voorziet een `CLI` (**C**ommand **L**ine **I**nterface). Dit is software die werkt in een terminal. Om de Quasar CLI te kunnen gebruiken, moet deze op het systeem geïnstalleerd worden.
 
@@ -38,7 +38,7 @@ Indien dit een nummer uitprint (bv. `1.2.1`), is het installeren gelukt.
 
 ## Een nieuw Quasar project aanmaken
 
-We werken in dit blog vanuit de `home directory`. Hier kan heen genavigeerd worden via onderstaand commando.
+In dit blog wordt er vanuit de `home directory`. Hier kan heen genavigeerd worden via onderstaand commando.
 
 ```sh
 cd ~
@@ -257,7 +257,7 @@ In de mappen `components`, `layouts` en `pages` zitten allemaal `.vue`-bestanden
 
 De map `css` bevat globale styling.
 
-De map `router` bevat bestanden gerelateerd aan `vue-router`. Dit zorgt ervoor dat er verschillende pagina's ingeladen kunnen worden op verschillend `routes`. Bijvoorbeeld `https://code-coaching.dev/` voor de hoofdpagina en `https://code-coaching.dev/contact` voor de contactpagina.
+De map `router` bevat bestanden gerelateerd aan `vue-router`. Dit zorgt ervoor dat er verschillende pagina's ingeladen kunnen worden op verschillend `routes`. Bijvoorbeeld `https://code-coaching.dev/#/` voor de hoofdpagina en `https://code-coaching.dev/#/blog` voor de blogpagina.
 
 Dan blijft er nog het `App.vue`-bestand over en het `index.template.html`-bestand. Het `App.vue`-bestand is de hoofdcomponent.
 
