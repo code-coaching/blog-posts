@@ -51,7 +51,7 @@ export default route(function () {
 });
 ```
 
-Het is niet nodig om iets te wijzigen in dit bestand, Wat belangrijk is om te begrijpen, is dat de Vue Router hier wordt aangemaakt:
+Het is niet nodig om iets te wijzigen in dit bestand. Wat belangrijk is om te begrijpen, is dat de Vue Router hier wordt aangemaakt:
 
 ```ts
 // ...
@@ -66,7 +66,7 @@ const Router = createRouter({
 // ...
 ```
 
-De Router wordt aangemaakt, met als `routes` de routes die geïmporteerd worden vanuit `src/router/router.ts`.
+De router wordt aangemaakt, met als `routes` de routes die geïmporteerd worden vanuit `src/router/router.ts`.
 
 src/router/router.ts
 
@@ -207,8 +207,8 @@ Bekijk de wijzigingen op [GitHub](https://github.com/code-coaching/blog-posts-ex
 
 Het resultaat lijkt veel op wat er eerst stond. Maar dit keer zonder hulp-classes (bv. `fullscreen`, `q-pa-md`) van Quasar te gebruiken en zonder custom componenten (bv. `<q-btn />`) van Quasar te gebruiken.
 
-Quasar voorziet custom componenten die gebruikt kunnen worden, dit wordt behandeld in een ander artikel.
-Quasar voorziet hulp-classes die gebruikt kunnen worden, dit wordt behandeld in een ander artikel.
+Quasar voorziet custom componenten die gebruikt kunnen worden, dit wordt niet behandeld in dit artikel.
+Quasar voorziet hulp-classes die gebruikt kunnen worden, dit wordt niet behandeld in dit artikel.
 
 Het is geen verplichting om de componenten of hulp-classes te gebruiken, het is perfect mogelijk om met de kennis van HTML in de `<template>`-tag te werken en met de kennis van CSS in de `<style>`-tag te werken.
 
@@ -236,7 +236,7 @@ src/pages/First.vue
 </script>
 ```
 
-In de `<script>`-tag wordt een nieuwe component gedefinieerd met de functie `defineComponent()`. Deze functie accepteert een configuratie-object. In dit configuratie-object wordt gebruikgemaakt van de functie `setup() {}`.
+In de `<script>`-tag wordt een nieuwe component gedefinieerd met de functie `defineComponent()`. Deze functie accepteert een configuratie-object als parameter. In dit configuratie-object wordt gebruikgemaakt van de functie `setup() {}`, die aangeroepen zal worden wanneer de component geladen wordt.
 
 Wanneer de component getoond wordt in de browsr, zal de `setup`-functie uitgevoerd worden. In dit voorbeeld zal er iets in de console geprint worden. Vervolgens zal de inhoud van de `<template>`-tag getoond worden in de browser.
 
