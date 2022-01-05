@@ -1,6 +1,6 @@
 ---
-title: Basis programmeren - Syntax
-slug: basis-programmeren-syntax
+title: Leren programmeren - JavaScript
+slug: leren-programmeren-javascript
 tags:
   - Leren Programmeren
   - JavaScript
@@ -17,7 +17,7 @@ In JavaScript zijn er gereserveerde sleutelwoorden (Engels: keywords). Enkele vo
 
 ```js
 const let = 3;
-// een variabelenaam kan geen gereserveerd keyword zijn, dit resulteert in een error
+// Een variabelenaam kan geen gereserveerd keyword zijn, dit resulteert in een error.
 ```
 
 ## Statements
@@ -221,7 +221,7 @@ getal = 14; // Dit geeft een error, er kan niet opnieuw een waarde toegekend wor
 
 ### Vergelijking
 
-| Operator | Omschrijving                           |
+| operator | omschrijving                           |
 | :------- | :------------------------------------- |
 | ==       | gelijk aan                             |
 | ===      | gelijke waarde en hetzelfde type       |
@@ -231,13 +231,13 @@ getal = 14; // Dit geeft een error, er kan niet opnieuw een waarde toegekend wor
 | <        | kleiner dan                            |
 | >=       | groter of gelijk aan                   |
 | <=       | kleiner dan of gelijk aan              |
-| ?        | ternaire operator                      |
+| ? :      | ternaire operator                      |
 
 <br/>
 
 ## Datatypes
 
-Datatypes zorgen ervoor dat programmeertalen weten wat er moet gebeuren de uitdrukkingen.
+Datatypes zorgen ervoor dat programmeertalen weten wat er moet gebeuren met de uitdrukkingen.
 
 ### Primitieve datatypes
 
@@ -284,12 +284,12 @@ typeof null; // object
 typeof function som() {}; // function
 ```
 
-In JavaScript zijn de datatypes dynamisch, een variabele kan meerdere types van data toegekend krijgen.
+In JavaScript zijn de datatypes van een variabele dynamisch, een variabele kan meerdere types van data toegekend krijgen.
 
 ```js
 let x; // x heeft het type undefined
-x = 69; // x heeft het type Number
-x = "Sylvia"; // x heeft het type String
+x = 69; // x heeft het type number
+x = "Sylvia"; // x heeft het type string
 ```
 
 Wanneer `+` gebruikt wordt bij twee `numbers`, dan worden de nummers bij elkaar opgeteld.
@@ -321,7 +321,7 @@ function functienaam(parameter1, paramater2) {
 }
 ```
 
-Een functie wordt gedefinieerd door het woord keyword `function`, gevolgd door een functienaam (bestaande uit `letters`, `getallen`, `_` en `$`). Tussen de `(` en `)` worden de `parameters`/`argumenten` geplaatst. Dit zijn de waarden die doorgegeven worden aan de functie op het moment dat de functie aangeroepen wordt. De `parameters` worden behandeld als lokale variabelen tussen `{` en `}`. Alles tussen `{` en `}` wordt de `body` van de functie genoemd.
+Een functie wordt gedefinieerd door het woord keyword `function`, gevolgd door een functienaam. Tussen de `(` en `)` worden de `parameters`/`argumenten` geplaatst. Dit zijn de waarden die doorgegeven worden aan de functie op het moment dat de functie aangeroepen wordt. De `parameters` worden behandeld als lokale variabelen tussen `{` en `}`. Alles tussen `{` en `}` wordt de `body` van de functie genoemd.
 
 ### Aanroepen
 
@@ -349,7 +349,7 @@ function sum(a, b) {
 }
 ```
 
-Wanneer JavaScript uitgevoerd wordt en een `return` wordt geëvalueerd, dan zal JavaScript stoppen met het uitvoeren van de functie.
+Wanneer JavaScript uitgevoerd wordt en een `return` wordt geëvalueerd, dan zal JavaScript stoppen met het uitvoeren van de functie en de waarde teruggeven.
 
 Deze kan aangeroepen worden met:
 
@@ -536,8 +536,7 @@ switch (vandaag) {
 
 ## Iteratieve statements
 
-Iteratie is een synoniem van herhaling. Met een iteratieve statement kan code
-herhaald worden uitgevoerd.
+Iteratie is een synoniem van herhaling. Met een iteratieve statement kan code herhaald worden uitgevoerd.
 
 JavaScript heeft vijf iteratieve statements:
 `for`, `for in`, `for of`, `while` en `do while`
@@ -548,8 +547,7 @@ We bekijken de `for loop`, `while loop` en `do while loop`.
 
 ### while
 
-In het Nederlands `zolang als` of `terwijl`. De code in het codeblok zal
-uitgevoerd worden zolang als de expressie naar `true` evalueert.
+In het Nederlands `zolang als` of `terwijl`. De code in het codeblok zal uitgevoerd worden zolang als de expressie naar `true` evalueert.
 
 ```js
 let i = 0;
@@ -567,15 +565,12 @@ while (i < 3) {
   // ** Tweede iteratie wordt 1 opgehoogd naar 2, vervolgens wordt 2 < 3 geëvalueerd
   // ** Derde iteratie wordt 2 opgehoogd naar 3, vervolgens wordt 3 < 3 geëvalueerd
 }
-// Na de derde iteratie wordt 3 < 3 geëvalueerd, dit is false, JavaScript stopt
-// met het uitvoeren van de while loop.
+// Na de derde iteratie wordt 3 < 3 geëvalueerd, dit is false, JavaScript stopt met het uitvoeren van de while loop.
 ```
 
 ### do while
 
-In het Nederlands `doe ... zolang als` of `doe ... terwijl`. De code in het
-codeblok zal uitgevoerd worden, na de eerste iteratie wordt de eerste evaluatie
-van de expressie in de while gedaan.
+In het Nederlands `doe ... zolang als` of `doe ... terwijl`. De code in het codeblok zal uitgevoerd worden, na de eerste iteratie wordt de eerste evaluatie van de expressie in de while gedaan.
 
 ```js
 let i = 0;
@@ -595,8 +590,7 @@ do {
 // met het uitvoeren van de do while loop
 ```
 
-Bovenstaande code geeft hetzelfde resultaat als het voorbeeld van de while loop.
-Toch is er een belangrijk verschil. Dit wordt duidelijk met onderstaande voorbeelden.
+Bovenstaande code geeft hetzelfde resultaat als het voorbeeld van de while loop. Toch is er een belangrijk verschil. Dit wordt duidelijk met onderstaande voorbeelden.
 
 ```js
 let i = 2;
@@ -649,20 +643,13 @@ Een array is een manier om een lijst van gegevens bij te houden.
 const fibonacciReeks = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34];
 ```
 
-De Fibonacci-nummers is een reeks van nummers. Om het volgende nummer in de reeks
-te bepalen wordt de som van de vorige twee getallen genomen.
+De Fibonacci-nummers is een reeks van nummers. Om het volgende nummer in de reeks te bepalen wordt de som van de vorige twee getallen genomen.
 
-Het eerste getal is 0, het tweede getal is 1, het derde getal is de som van
-het eerste getal met het tweede getal en bijgevolg dus 1.
-Het vierde getal is de som van het tweede getal (1) en het derde getal (1) en
-bijgevolg dus 2.
+Het eerste getal is 0, het tweede getal is 1, het derde getal is de som van het eerste getal met het tweede getal en bijgevolg dus 1. Het vierde getal is de som van het tweede getal (1) en het derde getal (1) en bijgevolg dus 2.
 
-De variabele `fibonacciReeks` bevat de eerste tien getallen van de
-Fibonacci-nummers.
+De variabele `fibonacciReeks` bevat de eerste tien getallen van de Fibonacci-nummers.
 
-De waarden van een array kunnen opgevraagd worden via de `index`. Een index
-begint bij 0. Het eerste getal heeft index 0, het vijfde getal heeft index 4 en
-het tiende getal heeft index 9.
+De waarden van een array kunnen opgevraagd worden via de `index`. Een index begint bij 0. Het eerste getal heeft index 0, het vijfde getal heeft index 4 en het tiende getal heeft index 9.
 
 Om te weten wat de waarde van het zesde getal is:
 
@@ -670,30 +657,24 @@ Om te weten wat de waarde van het zesde getal is:
 console.log(fibonacciReeks[5]); // Dit zal het getal 5 loggen
 ```
 
-Een waarde toekennen aan een array kan door aan te geven in welke index de
-waarde moet komen. Het elfde getal toevoegen:
+Een waarde toekennen aan een array kan door aan te geven in welke index de waarde moet komen. Het elfde getal toevoegen:
 
 ```js
 const fibonacciReeks = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34];
 fibonacciReeks[10] = 55;
 ```
 
-Merk op dat de array wordt gewijzigd, ook al is het een variabele gedeclareerd
-met het keyword `const`. Dit komt in een latere module in detail terug.
+Merk op dat de array wordt gewijzigd, ook al is het een variabele gedeclareerd met het keyword `const`.
 
 Voor nu is het voldoende om te onthouden dat:
 
-- Een variabele gedeclareerd met het keyword `const` kan niet opnieuw een
-  waarde toegekend krijgen.
+- Een variabele gedeclareerd met het keyword `const` kan niet opnieuw een waarde toegekend krijgen.
 - De array op zich is de waarde. Er zal geen nieuwe array toegekend kunnen worden.
-- De waarden in de array, veranderen de array, maar het is nog altijd dezelfde
-  array die toegekend is aan de variabele.
+- De waarden in de array, veranderen de array, maar het is nog altijd dezelfde array die toegekend is aan de variabele.
 
 ## Object
 
-Een object is een manier om complexe data bij te houden. Bijvoorbeeld een wagen,
-een wagen bestaat uit verchillende onderdelen en heeft verschillende
-eigenschappen.
+Een object is een manier om complexe data bij te houden. Bijvoorbeeld een wagen, een wagen bestaat uit verchillende onderdelen en heeft verschillende eigenschappen.
 
 Een object dat een wagen voorstelt.
 
@@ -717,11 +698,7 @@ Een object dat een persoon voorstelt.
 }
 ```
 
-Een object kan, net als een array, gezien worden als een waarde die toegekend
-kan worden aan een variabele. Net als een array, het object op zich is de waarde
-die toegekend wordt aan een variabele. Het wijzigen van de properties en
-waarden van de properties, wijzigt het object, maar het is nog altijd hetzelfde
-object dat toegekend is aan de variabele.
+Een object kan, net als een array, gezien worden als een waarde die toegekend kan worden aan een variabele. Net als een array, het object op zich is de waarde die toegekend wordt aan een variabele. Het wijzigen van de properties en waarden van de properties, wijzigt het object, maar het is nog altijd hetzelfde object dat toegekend is aan de variabele.
 
 ```js
 const persoon = {
@@ -748,8 +725,7 @@ Het object, met de wijzigingen, ziet er nu als volgt uit:
 }
 ```
 
-Aangezien JavaScript een dynamische taal is, kunnen we alle types toekennen
-als variabele.
+Aangezien JavaScript een dynamische taal is, kunnen we alle types toekennen als waarde van een eigenschap.
 
 ```js
 const persoon = {
@@ -763,8 +739,7 @@ console.log(persoon.fibonacciReeks[4]);
 // Dit print de waarde 3
 ```
 
-Een `function` is ook een type. Het is dus ook mogelijk om een
-functie toe te kennen als waarde van een property in een object.
+Een `function` is ook een type. Het is dus ook mogelijk om een functie toe te kennen als waarde van een property in een object.
 
 ```js
 const persoon = {
@@ -794,5 +769,4 @@ const persoon = {
 Nieuwe termen:
 
 - `Anonieme functie`: een functie zonder functienaam.
-- `Arrow notation`: een `=>` achter de functiehaakjes i.p.v. het keyword
-  `function` voor de functiehaakjes.
+- `Arrow notation`: een `=>` achter de functiehaakjes i.p.v. het keyword `function` voor de functiehaakjes.
