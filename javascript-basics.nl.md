@@ -235,19 +235,13 @@ const persoon = {
 
 Een class kan gezien worden als een template/sjabloon om een object aan te maken.
 
-Neem onderstaand voorbeeld, waar er drie objecten worden aangemaakt.
-Elk object stelt een persoon voor. Elk object heeft twee properties,
-namelijk `voornaam` en `achternaam`. Elk object heeft één methode,
-namelijk `volledigeNaam`.
+Neem onderstaand voorbeeld, waar er drie objecten worden aangemaakt. Elk object stelt een persoon voor. Elk object heeft twee properties, namelijk `voornaam` en `achternaam`. Elk object heeft één methode, namelijk `volledigeNaam`.
 
-Voor elke nieuwe persoon, moet elke property opnieuw getypt worden
-en elke methode moet opnieuw volledig uitgetypt worden.
+Voor elke nieuwe persoon, moet elke property opnieuw getypt worden en elke methode moet opnieuw volledig uitgetypt worden.
 
-Stel dat elke persoon een nieuwe property krijgt, genaamd `bijnaam`.
-Dan zal in elk object apart de nieuwe property toegevoegd moeten worden.
+Stel dat elke persoon een nieuwe property krijgt, genaamd `bijnaam`. Dan zal in elk object apart de nieuwe property toegevoegd moeten worden.
 
-Indien er tien objecten gemaakt zijn die een persoon voorstellen, betekent
-dit dat er tien keer een property toegevoegd moet worden.
+Indien er tien objecten gemaakt zijn die een persoon voorstellen, betekent dit dat er tien keer een property toegevoegd moet worden.
 
 ```js
 const persoon = {
@@ -360,8 +354,7 @@ console.log(persoon.volledigeNaam()); // Bart Duisters
 ### static
 
 Soms is het interessant om geen instantie te moeten maken van een class en
-toch de methodes aan te kunnen roepen. Hiervoor wordt gebruikgemaakt van een
-voorbeeld met een class genaamd 'Utils' (van het Engels 'utilities', Nederlands 'gereedschap').
+toch de methodes aan te kunnen roepen. Hiervoor wordt gebruikgemaakt van een voorbeeld met een class genaamd 'Utils' (van het Engels 'utilities', Nederlands 'gereedschap').
 
 ```js
 let a = 3;
@@ -408,15 +401,9 @@ b = 5;
 console.log(`Het grootste getal is: ${grootsteGetal(a, b)}`);
 ```
 
-Op dit moment is er maar één JavaScript-bestand. Maar stel dat er in een nieuw
-bestand opnieuw logica moet zijn om te bepalen wat het grootste getal is,
-dan zou er opnieuw dezelfde functie geschreven moeten worden.
+Op dit moment is er maar één JavaScript-bestand. Maar stel dat er in een nieuw bestand opnieuw logica moet zijn om te bepalen wat het grootste getal is, dan zou er opnieuw dezelfde functie geschreven moeten worden.
 
-In plaats van altijd code/logica te schrijven op het moment dat er gekend
-moet zijn welk nummer groter is, kan dit in een class gestoken worden als method.
-Omdat dit vaak gebruikt moet worden, is het interessant om dit als static method
-toe te voegen. Dit zorgt ervoor dat er geen instantie van de class gemaakt
-moet worden om gebruik te maken van de methode.
+In plaats van altijd code/logica te schrijven op het moment dat er gekend moet zijn welk nummer groter is, kan dit in een class gestoken worden als method. Omdat dit vaak gebruikt moet worden, is het interessant om dit als static method toe te voegen. Dit zorgt ervoor dat er geen instantie van de class gemaakt moet worden om gebruik te maken van de methode.
 
 ```js
 // Gebruik even de verbeelding, Utils staat in een apart JavaScript-bestand.
@@ -444,8 +431,7 @@ console.log(`Het grootste getal is: ${Utils.grootsteGetal(x, y)}`);
 
 ### extends & super
 
-Stel dat er code is waarin verschillende classes voorzien zijn om verschillende
-dieren aan te maken.
+Stel dat er code is waarin verschillende classes voorzien zijn om verschillende dieren aan te maken.
 
 ```js
 class Leeuw {
@@ -532,16 +518,13 @@ Elke class heeft twee properties die gelijkend zijn: `naam` en `leeftijd`.
 
 Elke class heeft twee functies die gelijkend zijn: `eet()` en `slaap()`.
 
-Als developer is het niet leuk om voor elke class opnieuw dezelfde property te moeten typen
-en om opnieuw dezelfde functie te moeten typen.
+Als developer is het niet leuk om voor elke class opnieuw dezelfde property te moeten typen en om opnieuw dezelfde functie te moeten typen.
 
-Er is iets voorzien waardoor het maar één keer getypt moet worden, het keyword `extends`
-en het gebruik van `super`.
+Er is iets voorzien waardoor het maar één keer getypt moet worden, het keyword `extends` en het gebruik van `super`.
 
 Nieuwe termen: `super class` en `sub class`.
 
-Een class die van een andere class `extends`, is een sub class (ook wel `child` genoemd).
-De class waarvan `extends` wordt, is een super class (ook wel `parent` genoemd).
+Een class die van een andere class `extends`, is een sub class (ook wel `child` genoemd). De class waarvan `extends` wordt, is een super class (ook wel `parent` genoemd).
 
 In het Nederlands kan `extends` verwoord worden door `overerving`.
 
@@ -615,8 +598,7 @@ console.log(olifant.slaap()); // Dumbo is aan het slapen.
 
 In andere programmeertalen is het mogelijk om gebruik te maken van `access modifiers` (Nederlands: toegangsmodifier). Met andere woorden, het is mogelijk om de toegang tot bepaalde properties en methoden te beperken.
 
-Meestal is er een keyword `public` en een keyword `private` dat gebruikt wordt om te bepalen of een property/methode
-overal (public) of enkel binnen een instantie van de class (private) beschikbaar is.
+Meestal is er een keyword `public` en een keyword `private` dat gebruikt wordt om te bepalen of een property/methode overal (public) of enkel binnen een instantie van de class (private) beschikbaar is.
 
 Stel dat deze keywords zouden bestaan in JavaScript, dan zou het er zo uitzien:
 
@@ -642,8 +624,6 @@ class Persoon {
   public getPinCode() {
     return this.pinCode;
   }
-
-  public getWachtwoord()
 }
 
 const persoon = new Persoon(1111, 1234, 'John Duck', 29);
@@ -698,9 +678,7 @@ console.log(persoon.getPinCode()); // 1111
 
 Alles is standaard `public`, alle properties en methodes kunnen aangeroepen worden op de instantie van een class.
 
-Er is echter een conventie die gebruikt wordt bij developers om toch aan te geven dat iets eigenlijk `private` is.
-Door middel van een `_` (underscore) toe te voegen vooraan de naam van de property/methode, wordt aangegeven dat
-een property/methode eigenlijk `private` is.
+Er is echter een conventie die gebruikt wordt bij developers om toch aan te geven dat iets eigenlijk `private` is. Door middel van een `_` (underscore) toe te voegen vooraan de naam van de property/methode, wordt aangegeven dat een property/methode eigenlijk `private` is.
 
 ```js
 class Persoon {
@@ -736,13 +714,11 @@ console.log(persoon.getPinCode()); // 1111
 ```
 
 De properties/methodes met een underscore voor zijn even goed public, dus deze kunnen aangeroepen worden.
-Maar, als developer weet je dat dit eigenlijk niet de bedoeling is. Op deze manier is het toch mogelijk
-om een soort van `access modifiers` te hebben binnen JavaScript.
+Maar, als developer weet je dat dit eigenlijk niet de bedoeling is. Op deze manier is het toch mogelijk om een soort van `access modifiers` te hebben binnen JavaScript.
 
 ### get & set
 
-Het keyword `get` en het keyword `set` kunnen gebruikt worden om `getters` en `setters` te maken.
-Dit zijn methodes die net iets anders werken.
+Het keyword `get` en het keyword `set` kunnen gebruikt worden om `getters` en `setters` te maken. Dit zijn methodes die net iets anders werken.
 
 Stel dat er een class is Cursist:
 
@@ -791,8 +767,7 @@ cursist.setVoornaam("Jane");
 console.log(cursist.getNaam()); // "Jane Duck"
 ```
 
-Dit zou werken en het is perfect geldige JavaScript. Maar het zou fijn zijn als de
-voornaam, achternaam en volledig naam opgevraagd kunnen worden als property.
+Dit zou werken en het is perfect geldige JavaScript. Maar het zou fijn zijn als de voornaam, achternaam en volledig naam opgevraagd kunnen worden als property.
 
 Hiervoor kan er gebruikgemaakt worden van `get` en `set`.
 
@@ -841,19 +816,12 @@ cursist.voornaam = "Jane";
 console.log(cursist.naam); // "Jane Duck"
 ```
 
-Het voordeel van het gebruiken van `getters` en `setters`, is dat het gebruikt kan worden
-alsof het properties zijn. Maar in feite zijn het methodes, waardoor er dus extra logica
-uitgevoerd kan worden. Een voorbeeld hier van is `get naam()`. Op de instantie wordt
-het opgeroepen alsof het een property is `cursist.naam`, maar achterliggend wordt
-het codeblok van de `getter methode` uitgevoerd.
+Het voordeel van het gebruiken van `getters` en `setters`, is dat het gebruikt kan worden alsof het properties zijn. Maar in feite zijn het methodes, waardoor er dus extra logica uitgevoerd kan worden. Een voorbeeld hier van is `get naam()`. Op de instantie wordt het opgeroepen alsof het een property is `cursist.naam`, maar achterliggend wordt het codeblok van de `getter methode` uitgevoerd.
 
 ## Ingebouwde objecten
 
 Er zijn veel verschillende ingebouwde objecten. Deze objecten maken achterliggend gebruik van een class.
 
-Het is niet nodig om letterlijk elke functie en elke property van buiten te kennen.
-Om te weten wat er mogelijk is met een object dat globaal aanwezig is binnen JavaScript, kan er documentatie
-geraadpleegd worden.
+Het is niet nodig om letterlijk elke functie en elke property van buiten te kennen. Om te weten wat er mogelijk is met een object dat globaal aanwezig is binnen JavaScript, kan er documentatie geraadpleegd worden.
 
-Een voorbeeld is de Array class. De [documentatie](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) kan teruggevonden worden op een website onderhouden door Mozilla
-(de makers van Firefox en Thunderbird).
+Een voorbeeld is de Array class. De [documentatie](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) kan teruggevonden worden op een website onderhouden door Mozilla (de makers van Firefox en Thunderbird).
