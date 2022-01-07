@@ -1,6 +1,6 @@
 ---
-title: JavaScript - Basis
-slug: javascript-basis
+title: JavaScript - Basics
+slug: javascript-basics
 tags:
   - JavaScript
   - JS
@@ -8,28 +8,28 @@ categories:
   - Frontend
 ---
 
-De belangrijkste concepten uit `Leren Programmeren - JavaScript` worden herhaald.
+The key concepts from `Learn To Program - JavaScript` are repeated.
 
-## Variabelen
+## Variables
 
-- `var`: Sleutelwoord om een variabele aan te maken, verouderd.
-- `let`: Sleutelwoord om een variabele aan te maken, deze kan op een later moment een nieuwe waarde toegekend krijgen.
-- `const`: Sleutelwoord om een variabele aan te maken, de variabele moet meteen een waarde toegekend krijgen en kan daarna niet opnieuw een waarde toegekend krijgen.
+- `var`: Keyword to create a variable, obsolete.
+- `let`: Keyword to create a variable, it can be assigned a new value at a later time.
+- `const`: Keyword to create a variable, the variable must be assigned a value immediately and cannot be assigned a value again afterwards.
 
-## Datatypes
+## Data types
 
-### Primitieve datatypes
+### Primitive data types
 
 - `string`
-  - bv. `"Dit is een string."`, `'Dit is ook een string.'`
+  - e.g. `"This is a string."`, `"This is also a string."`
 - `number`
-  - bv. `69`, `3.141592653`
+  - e.g. `69`, `3.141592653`
 - `boolean`
-  - bv. `true`, `false`
+  - e.g. `true`, `false`
 - `undefined`
-  - Wanneer een variabele nog geen waarde toegekend heeft gekregen, is het type `undefined`.
+  - When a variable has not yet been assigned a value, the type is `undefined`.
 
-### Complexe datatypes
+### Complex data types
 
 - `object`
 - `function`
@@ -37,29 +37,29 @@ De belangrijkste concepten uit `Leren Programmeren - JavaScript` worden herhaald
 ## Function
 
 ```js
-/* Functie aanmaken */
-function zegHallo(naam) {
-  // Codeblok van de functie tussen { en }
-  console.log("Hallo " + naam + "!");
-  console.log(`Hallo ${naam}!`);
+/* Create function */
+function sayHallo(name) {
+  // Code block of the function between { and }
+  console.log("Hello " + name + "!");
+  console.log(`Hello ${name}!`);
 }
 
 /*
- * Anonieme functie toekennen aan een variabele.
- * Gebruik maken van 'arrow notation'.
+ * Assign anonymous function to a variable.
+ * Using 'arrow notation'.
  */
-const zegDoei = (naam) => {
-  console.log(`Doei ${naam}!`);
+const sayBye = (name) => {
+  console.log(`Bye ${name}!`);
 };
 
-/* Functie aanroepen met een parameter */
-zegHallo("Bart"); // Print 'Hallo Bart!'
+/* Calling function with a parameter */
+sayHello("Bart"); // Print 'Hello Bart!'
 
-/* Functie aanroepen met een parameter */
-zegDoei("Bart"); // Print 'Doei Bart!'
+/* Function called with a parameter */
+sayBye("Bart"); // Print 'Bye Bart!'
 ```
 
-## Conditionele statements
+## Conditional statements
 
 Depending on whether a certain `condition` is met, code is executed.
 
