@@ -81,7 +81,7 @@ npm init
 
 Op alle vragen die er komen, klik `Enter`.
 
-Er is een package.json aanwezig, dit betekent dat het een `npm`-project is en er kunnen vervolgens dependencies geïnstalleerd worden. Dependencies is software gemaakt door andere mensen, beschikbaar op [npm](https://www.npmjs.com).
+Er is een `package.json` aanwezig, dit betekent dat het een `npm`-project is en er kunnen vervolgens dependencies geïnstalleerd worden. Dependencies is software gemaakt door andere mensen, beschikbaar op [npm](https://www.npmjs.com).
 
 Om TypeScript te kunnen gebruiken in het project, moet dit geïnstalleerd worden.
 
