@@ -17,7 +17,6 @@ JavaScript kan gekoppeld worden in een HTML-pagina. JavaScript **kan** ingeladen
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
@@ -63,7 +62,6 @@ Er is een manier om de JavaScript toch in de head-tag in te laden. Met het attri
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
@@ -83,7 +81,7 @@ Er is een manier om de JavaScript toch in de head-tag in te laden. Met het attri
 
 Het is beter om een JavaScript met `defer` in te laden in de head-tag, dan JavaScript inladen onderaan de body-tag.
 
-Het verschil is dat bij het inladen van JavaScript in de body-tag, de JavaScript wordt ingeladen en vervolgens wordt uitgevoerd tijdens het verwerken van de HTML. Bij het inladen van JavaScript in de head-tag met het attribuut `defer`, wordt de JavaScript ingeladen tijdens het verwerken van de HTML en vervolgens wordt **na** het verwerken van de HTML de JavaScript uitgevoerd.
+Het verschil is dat bij het inladen van JavaScript in de body-tag, de JavaScript wordt ingeladen **na** het verwerken van de HTML en vervolgens wordt het uitgevoerd **na** het verwerken van de HTML. Bij het inladen van JavaScript in de head-tag met het attribuut `defer`, wordt de JavaScript ingeladen **tijdens** het verwerken van de HTML en vervolgens wordt **na** het verwerken van de HTML de JavaScript uitgevoerd.
 
 ## DOM-manipulatie
 
@@ -101,14 +99,16 @@ Op dit object zijn er methodes aanwezig om de elementen van de DOM op te vragen.
 
 ## querySelector & querySelectorAll
 
-Dit geeft het eerste element terug dat overeenkomt met de selector die meegegeven wordt als parameter. De selectors die meegegeven worden, zijn dezelfde selectors zoals gebruikt worden in CSS.
+`document.querySelector()` geeft het eerste element terug dat voldoet aan de opgegeven selector.
+`document.querySelectorAll()` geeft alle elementen terug die voldoen aan de opgegeven selector.
+
+De selectors zijn dezelfde selectors die gebruikt worden in CSS.
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
@@ -164,12 +164,11 @@ Via de methode `remove` kan een class worden verwijderd.
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
     <style>
-      /* De class wordt hier aangemaakt */
+      /* Het element met deze class wordt gestyled */
       .toegevoegd {
         color: green;
         font-size: 20px;
@@ -204,7 +203,6 @@ Via `removeAttribute` kunnen er attributen verwijderd worden van een element.
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
@@ -222,7 +220,7 @@ Via `removeAttribute` kunnen er attributen verwijderd worden van een element.
 </html>
 ```
 
-![hidden](/img/blog/hidden.jpeg)
+![hidden](/img/blog/hidden.nl.jpeg)
 Doordat via JavaScript het attribuut 'hidden' wordt toegevoegd, wordt het element niet getoond in de browser.
 
 ### event handler
@@ -238,7 +236,6 @@ index.html
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
@@ -259,3 +256,7 @@ function afhandelenKlik() {
   divEl.innerText = "Er is op de header geklikt!";
 }
 ```
+
+## Conclusie
+
+JavaScript stelt ontwikkelaars in staat om de inhoud van het DOM dynamisch te veranderen. Deze post heeft een paar voorbeelden van hoe dit werkt. In werkelijkheid zal documentatie worden gebruikt om uit te vinden welke methoden beschikbaar zijn op verschillende elementen.
