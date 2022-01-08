@@ -1,4 +1,5 @@
 ---
+postUuid: 5a3d9f54-4f7c-45ed-bbd9-1bb3cb93a74b
 title: JavaScript - Praktijk
 slug: javascript-praktijk
 tags:

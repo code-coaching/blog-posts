@@ -1,4 +1,5 @@
 ---
+postUuid: d4aefaf5-3611-4585-b460-6e09abcdc247
 title: From JavaScript to TypeScript
 slug: from-javascript-to-typescript
 tags:

@@ -1,4 +1,5 @@
 ---
+postUuid: 5db2c650-7474-4bc6-8cad-839ad24fcd23
 title: Logica
 slug: logica
 tags:

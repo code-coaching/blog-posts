@@ -1,4 +1,5 @@
 ---
+postUuid: 92881067-da98-4ed7-bb50-4e098160d103
 title: Wat is Git en wat is GitHub? Uitleg over de basis van Git en GitHub!
 slug: wat-is-git-en-wat-is-github-uitleg-over-de-basis-van-git-en-github
 tags:
@@ -503,7 +504,7 @@ Wat dit achterliggend eigenlijk doet, is een `.git/`-map aanmaken op de server v
 git remote add origin git@github.com:bartduisters/git-example-remote.git
 ```
 
-Opmerking: Indien tijdens het aanmaken van de repo dezelfde naam gebruikt is `git-example-remote`, dan moet enkel `bartduisters` uitgewisseld worden door de eigen GitHub-gebruikersnaam. 
+Opmerking: Indien tijdens het aanmaken van de repo dezelfde naam gebruikt is `git-example-remote`, dan moet enkel `bartduisters` uitgewisseld worden door de eigen GitHub-gebruikersnaam.
 
 ![SSH tab](/img/blog/git-ssh.png)
 

@@ -1,4 +1,5 @@
 ---
+postUuid: b01db0b2-ec19-4650-8ac8-cbdab35ad7e3
 title: Quasar CLI - een nieuw Quasar-project aanmaken
 slug: quasar-cli-een-nieuw-quasar-project-aanmaken
 tags:

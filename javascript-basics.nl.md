@@ -1,4 +1,5 @@
 ---
+postUuid: d5d6946f-f224-4c74-b435-7a23d8587357
 title: JavaScript - Basis
 slug: javascript-basis
 tags:

@@ -1,4 +1,5 @@
 ---
+postUuid: efa86eb4-7174-4578-a563-f324ad9c9d1b
 title: Quasar layouts - Quasar-pagina - Vue Router
 slug: quasar-layouts-quasar-pagina-vue-router
 tags:
