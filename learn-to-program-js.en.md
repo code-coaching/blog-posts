@@ -34,7 +34,7 @@ solution = x + y; // Statement 4
 
 ## Semicolon
 
-A semicolon is used in a lot of programming languages to separate statements. In JavaScript, this is optional.
+A semicolon is used in a lot of programming languages to separate statements. In JavaScript, this is optional (unless there are multiple statements on the same line).
 
 ```js
 var x, y, solution;
@@ -42,8 +42,6 @@ x = 6;
 y = 9;
 solution = x + y;
 ```
-
-In JavaScript the use of a semicolon is optional, unless there are multiple statements on the same line.
 
 ## White space
 
@@ -232,7 +230,6 @@ num = 14; // This results in an error, because the variable cannot be reassigned
 | <        | smaller than                      |
 | >=       | greater than or equal to          |
 | <=       | smaller than or equal to          |
-| ? :      | ternary operator                  |
 
 <br/>
 
@@ -555,14 +552,14 @@ let i = 0;
 // Because i has the value 0, the condition evaluates to true.
 // The code block of the while loop is executed.
 while (i < 3) {
-  console.log("Loop: ", i); // *
-  // * First iteration will print "Loop: 0"
-  // * Second iteration will print "Loop: 1"
-  // * Third iteration will print "Loop: 2"
-  i++; // **
-  // ** First iteration will increment i to 1, then 1 < 3 will be evaluated
-  // ** Second iteration will increment i to 2, then 2 < 3 will be evaluated
-  // ** Third iteration will increment i to 3, then 3 < 3 will be evaluated
+  console.log("Loop: ", i); // (1)
+  // (1) First iteration will print "Loop: 0"
+  // (1) Second iteration will print "Loop: 1"
+  // (1) Third iteration will print "Loop: 2"
+  i++; // (2)
+  // (2) First iteration will increment i to 1, then 1 < 3 will be evaluated
+  // (2) Second iteration will increment i to 2, then 2 < 3 will be evaluated
+  // (2) Third iteration will increment i to 3, then 3 < 3 will be evaluated
 }
 // After the third iteration, the code block is not executed anymore, because 3 < 3 evaluates to false. JavaScript will stop executing the while loop.
 ```
@@ -576,14 +573,14 @@ let i = 0;
 
 // The code block of the do while loop is executed.
 do {
-  console.log("Loop: ", i); // *
-  // * First iteration will print "Loop: 0"
-  // * Second iteration will print "Loop: 1"
-  // * Third iteration will print "Loop: 2"
-  i++; // **
-  // ** First iteration will increment i to 1, then 1 < 3 will be evaluated
-  // ** Second iteration will increment i to 2, then 2 < 3 will be evaluated
-  // ** Third iteration will increment i to 3, then 3 < 3 will be evaluated
+  console.log("Loop: ", i); // (1)
+  // (1) First iteration will print "Loop: 0"
+  // (1) Second iteration will print "Loop: 1"
+  // (1) Third iteration will print "Loop: 2"
+  i++; // (2)
+  // (2) First iteration will increment i to 1, then 1 < 3 will be evaluated
+  // (2) Second iteration will increment i to 2, then 2 < 3 will be evaluated
+  // (2) Third iteration will increment i to 3, then 3 < 3 will be evaluated
 } while (i < 3);
 // After the third iteration, the code block is not executed anymore, because 3 < 3 evaluates to false. JavaScript will stop executing the do while loop.
 ```

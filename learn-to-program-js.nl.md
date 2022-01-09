@@ -34,7 +34,7 @@ uitkomst = x + y; // Statement 4
 
 ## Semicolon
 
-Een semicolon (Nederlands: puntkomma) wordt in veel programmeertalen gebruikt om een statement af te sluiten. Dit is optioneel in JavaScript.
+Een semicolon (Nederlands: puntkomma) wordt in veel programmeertalen gebruikt om een statement af te sluiten. Dit is optioneel in JavaScript (tenzij er meerdere statements op één lijn staan).
 
 ```js
 var x, y, uitkomst;
@@ -42,8 +42,6 @@ x = 6;
 y = 9;
 uitkomst = x + y;
 ```
-
-In JavaScript is het gebruik van semicolons optioneel (tenzij er meerdere statements op één lijn staan).
 
 ## Witruimte
 
@@ -191,7 +189,7 @@ console.log(getal); // 14
 
 ```js
 const getal = 13; // Declareren van variabele getal, toekennen van waarde 13
-const getal; // Dit geeft een error, getal kan niet opnieuw gedeclareerd worden
+const getal; // Dit geeft een error, de variabele getal kan niet opnieuw gedeclareerd worden
 ```
 
 ```js
@@ -230,9 +228,8 @@ getal = 14; // Dit geeft een error, er kan niet opnieuw een waarde toegekend wor
 | !==      | niet gelijk aan of niet hetzelfde type |
 | >        | groter dan                             |
 | <        | kleiner dan                            |
-| >=       | groter of gelijk aan                   |
+| >=       | groter dan of gelijk aan               |
 | <=       | kleiner dan of gelijk aan              |
-| ? :      | ternaire operator                      |
 
 <br/>
 
@@ -557,14 +554,14 @@ let i = 0;
 // Aangezien i de waarde 0 heeft, evalueert (0 < 3) naar true.
 // Het codeblok van de while wordt uitgevoerd.
 while (i < 3) {
-  console.log("Loop: ", i); // *
-  // * Eerste iteratie wordt geprint "Loop: 0"
-  // * Tweede iteratie wordt geprint "Loop: 1"
-  // * Derde iteratie wordt geprint "Loop: 2"
-  i++; // **
-  // ** Eerste iteratie wordt 0 opgehoogd naar 1, vervolgens wordt 1 < 3 geëvalueerd
-  // ** Tweede iteratie wordt 1 opgehoogd naar 2, vervolgens wordt 2 < 3 geëvalueerd
-  // ** Derde iteratie wordt 2 opgehoogd naar 3, vervolgens wordt 3 < 3 geëvalueerd
+  console.log("Loop: ", i); // (1)
+  // (1) Eerste iteratie wordt geprint "Loop: 0"
+  // (1) Tweede iteratie wordt geprint "Loop: 1"
+  // (1) Derde iteratie wordt geprint "Loop: 2"
+  i++; // (2)
+  // (2) Eerste iteratie wordt 0 opgehoogd naar 1, vervolgens wordt 1 < 3 geëvalueerd
+  // (2) Tweede iteratie wordt 1 opgehoogd naar 2, vervolgens wordt 2 < 3 geëvalueerd
+  // (2) Derde iteratie wordt 2 opgehoogd naar 3, vervolgens wordt 3 < 3 geëvalueerd
 }
 // Na de derde iteratie wordt 3 < 3 geëvalueerd, dit is false, JavaScript stopt met het uitvoeren van de while loop.
 ```
@@ -578,14 +575,14 @@ let i = 0;
 
 // Het codeblok van de do while wordt uitgevoerd.
 do {
-  console.log("Loop: ", i); // *
-  // * Eerste iteratie wordt geprint "Loop: 0"
-  // * Tweede iteratie wordt geprint "Loop: 1"
-  // * Derde iteratie wordt geprint "Loop: 2"
-  i++; // **
-  // ** Eerste iteratie wordt 0 opgehoogd naar 1, vervolgens wordt 1 < 3 geëvalueerd
-  // ** Tweede iteratie wordt 1 opgehoogd naar 2, vervolgens wordt 2 < 3 geëvalueerd
-  // ** Derde iteratie wordt 2 opgehoogd naar 3, vervolgens wordt 3 < 3 geëvalueerd
+  console.log("Loop: ", i); // (1)
+  // (1) Eerste iteratie wordt geprint "Loop: 0"
+  // (1) Tweede iteratie wordt geprint "Loop: 1"
+  // (1) Derde iteratie wordt geprint "Loop: 2"
+  i++; // (2)
+  // (2) Eerste iteratie wordt 0 opgehoogd naar 1, vervolgens wordt 1 < 3 geëvalueerd
+  // (2) Tweede iteratie wordt 1 opgehoogd naar 2, vervolgens wordt 2 < 3 geëvalueerd
+  // (2) Derde iteratie wordt 2 opgehoogd naar 3, vervolgens wordt 3 < 3 geëvalueerd
 } while (i < 3);
 // Na de derde iteratie wordt 3 < 3 geëvalueerd, dit is false, JavaScript stopt
 // met het uitvoeren van de do while loop
