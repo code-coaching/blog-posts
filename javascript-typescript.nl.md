@@ -1,5 +1,5 @@
 ---
-postUuid: d4aefaf5-3611-4585-b460-6e09abcdc247
+postUuid: 514c12ba-cf6a-4f62-a788-aab101621070
 title: Van JavaScript naar TypeScript
 slug: van-javascript-naar-typescript
 tags:
