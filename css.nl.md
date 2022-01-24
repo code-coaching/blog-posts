@@ -223,3 +223,33 @@ Het is mogelijk om elementen te selecteren op basis van de naam van een id.
 ```
 
 ![CSS selector id](/img/blog/css-selector-id.nl.png)
+
+## Box model
+
+Box model is de term die gebruikt wordt om de `content`, `padding`, `border` en `margin` te beschrijven.
+
+Bij het bekijken van de `inspector` van de browser, kan de box model bekeken worden. De `inspector` wordt geopend door rechtermuisknop te klikken in de browser en vervolgens op `inspect` (Nederlands: `inspecteren`) te klikken.
+
+Wanneer er een element aangeklikt wordt in het DOM, wordt de box model getoond in de browser. De kleuren komen overeen met het box model dat te zien is rechtsonder. De kleuren zijn:
+- `content`: de blauwe kleur
+- `padding`: de paarse kleur
+- `border`: de donkergrijze kleur
+- `margin`: de gele kleur
+
+![Box model](/img/blog/box-model.png)
+
+Er kan in de browser wijzigingen toegevoegd worden aan het geselecteerde element.
+
+```css
+element {
+  /* Voeg hier CSS toe */
+}
+```
+
+Om het box model beter te illustreren kan er CSS toegevoegd worden aan het geselecteerde element.
+
+![Box model custom](/img/blog/box-model-custom.png)
+
+De padding is nu 20 pixels.
+De border heeft nu een rode kleur en is 1px groot.
+De maring is nu 40 pixels.

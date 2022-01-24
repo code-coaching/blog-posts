@@ -223,3 +223,36 @@ It is possible to select elements based on the id of an element.
 ```
 
 ![CSS selector id](/img/blog/css-selector-id.en.png)
+
+## Box model
+
+Box model is the term used to describe the `content`, `padding`, `border` and `margin`.
+
+When viewing the `inspector` of the browser, the box model can be viewed. The `inspector` is opened by right-clicking in the browser and then clicking `inspect`.
+
+When an element is clicked in the DOM, the box model is shown in the browser. The colors correspond to the box model that can be seen at the bottom right. The colors are:
+
+- `content`: the blue color
+- `padding`: the purple color
+- `border`: the dark gray color
+- `margin`: the yellow color
+
+![Box model](/img/blog/box-model.png)
+
+Changes can be added to the selected element in the browser.
+
+```css
+element {
+  /* Add CSS here */
+}
+```
+
+To better illustrate the box model, CSS can be added to the selected element.
+
+![Box model custom](/img/blog/box-model-custom.png)
+
+The padding is now 20 pixels.
+The border now has a red color and is 1px in size.
+The mapping is now 40 pixels.
+
+Translated with www.DeepL.com/Translator (free version)
