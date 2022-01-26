@@ -267,7 +267,7 @@ $q.dark.set(theme.isDark);
 It will set all the necessary variables that Quasar uses by default in all of the components:
 
 ```js
-setCssVar("primary", "#FF0000");
+setCssVar("primary", theme["primary"]);
 setCssVar("secondary", theme["secondary"]);
 setCssVar("accent", theme["accent"]);
 
@@ -327,13 +327,13 @@ This can be replace by:
 ```js
 const applyTheme = (theme) => {
   $q.dark.set(theme.isDark);
+  selectedTheme.value = theme;
 
+  delete theme.isDark; // setCssVar expects a string, not a boolean
   Object.keys(theme).forEach((key) => setCssVar(key, theme[key]));
 
   setCssVar("dark", theme["background"]);
   setCssVar("dark-page", theme["background"]);
-
-  selectedTheme.value = theme;
 };
 ```
 

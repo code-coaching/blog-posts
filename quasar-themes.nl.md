@@ -267,7 +267,7 @@ $q.dark.set(theme.isDark);
 Het zal ook alle nodige variabelen aanmaken die Quasar standaard gebruikt in alle componenten:
 
 ```js
-setCssVar("primary", "#FF0000");
+setCssVar("primary", theme["primary"]);
 setCssVar("secondary", theme["secondary"]);
 setCssVar("accent", theme["accent"]);
 
@@ -304,7 +304,7 @@ Natuurlijk is dit code die geschreven is door een krankzinnig persoon:
 const applyTheme = (theme) => {
   $q.dark.set(theme.isDark);
 
-  setCssVar("primary", theme["primary"]); // theme["primary"] is the same as theme.primary
+  setCssVar("primary", theme["primary"]); // theme["primary"] is hetzelfde als theme.primary
   setCssVar("secondary", theme["secondary"]);
   setCssVar("accent", theme["accent"]);
 
@@ -327,13 +327,13 @@ Het kan vervangen worden door:
 ```js
 const applyTheme = (theme) => {
   $q.dark.set(theme.isDark);
+  selectedTheme.value = theme;
 
+  delete theme.isDark; // setCssVar verwacht een string, niet een boolean
   Object.keys(theme).forEach((key) => setCssVar(key, theme[key]));
 
   setCssVar("dark", theme["background"]);
   setCssVar("dark-page", theme["background"]);
-
-  selectedTheme.value = theme;
 };
 ```
 
