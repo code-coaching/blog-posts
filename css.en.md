@@ -6,8 +6,6 @@ tags:
   - CSS
 categories:
   - Frontend
-youtubeIds:
-  - aOEGiozzcBw
 ---
 
 HTML contains the structure of a page. CSS contains the styling of a page.

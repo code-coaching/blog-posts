@@ -6,6 +6,10 @@ tags:
   - HTML
 categories:
   - Frontend
+youtubeIds:
+  - oKhzUa9L8Xk
+  - 3WsAU1Zg1RY
+  - 8vJwqJurCuE
 ---
 
 ## Basisstructuur
