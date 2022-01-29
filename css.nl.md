@@ -6,6 +6,9 @@ tags:
   - CSS
 categories:
   - Frontend
+youtubeIds:
+  - W5W02B7aAqc
+  - B0LUjvDbVR0
 ---
 
 HTML bevat de structuur van een pagina. CSS bevat de styling van een pagina.
