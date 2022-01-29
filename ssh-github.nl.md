@@ -6,6 +6,8 @@ tags:
   - SSH
   - GitHub
 categories:
+youtubeIds:
+  - kMyiY70nzRg
 ---
 
 Wanneer er verwezen wordt naar `terminal` in onderstaande tekst en er wordt met Windows gewerkt, dan moet het uitgevoerd worden in `Git Bash`. Indien CTRL+V niet werkt om gekopieerde inhoud te plakken in de terminal, probeer SHIFT+INSERT.
