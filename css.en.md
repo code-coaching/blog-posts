@@ -253,4 +253,4 @@ To better illustrate the box model, CSS can be added to the selected element.
 
 The padding is now 20 pixels.
 The border now has a red color and is 1px in size.
-The mapping is now 40 pixels.
+The margin is now 40 pixels.
