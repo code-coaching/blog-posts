@@ -256,4 +256,4 @@ Om het box model beter te illustreren kan er CSS toegevoegd worden aan het gesel
 
 De padding is nu 20 pixels.
 De border heeft nu een rode kleur en is 1px groot.
-De maring is nu 40 pixels.
+De margin is nu 40 pixels.
