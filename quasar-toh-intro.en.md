@@ -17,9 +17,9 @@ Expected Prior Knowledge:
 - Node / NPM
 - Git
 
-This module is about the Quasar Framework and thus Vue. More specifically Vue3. In many cases, a to-do list is created as the first application to showcase the functionality of a framework. We are **not** going to do this! So what's going to happen? That is briefly explained here.
+This module is about the Quasar Framework and thus Vue. More specifically Vue3. In many cases, a to-do list is created as the first application to showcase the functionality of a framework. We are **not** going to do this! So what's going to happen? A choice is made for an extended application to showcase not just the basic functionality of the framework, but also some concepts.
 
-Angular, one of the other modern frameworks, has a very good tutorial to show the functionality of the framework and to teach basic concepts. This tutorial takes the [Tour of Heroes](https://angular.io/tutorial/) as the basis with Quasar as the framework. Then the tutorial will be extended to also show the functionalities of a production-ready Vue3 application.
+Angular, one of the other modern frameworks, has a very good tutorial named Tour of Heroes to show the functionality of the framework and to teach basic concepts. This tutorial takes the [Tour of Heroes](https://angular.io/tutorial/) as the basis with Quasar as the framework. Then the tutorial will be extended to also show the functionalities of a production-ready Vue3 application.
 
 The basic concepts are:
 - routing (the navigation)

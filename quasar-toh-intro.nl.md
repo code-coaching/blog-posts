@@ -17,9 +17,9 @@ Verwachte voorkennis:
 - Node / NPM
 - Git
 
-Deze module gaat over het Quasar Framework en dus Vue. Meer specifiek Vue3. In veel gevallen wordt er een todo-lijst gemaakt als eerste applicatie die de functionaliteit van een framework toont. Dit gaan we **niet** doen! Wat gaat er dan gebeuren? Dat wordt hier kort uitgelegd.
+Deze module gaat over het Quasar Framework en dus Vue. Meer specifiek Vue3. In veel gevallen wordt er een todo-lijst gemaakt als eerste applicatie die de functionaliteit van een framework toont. Dit gaan we **niet** doen! Wat gaat er dan gebeuren? Er wordt gekozen voor een iets uitgebreidere applicatie om buiten de basisfunctionaliteiten, ook enkele concepten uit te kunnen leggen.
 
-Angular, een van de andere moderne frameworks, heeft een zeer goede tutorial om de functionaliteiten van het framework te tonen en om basisconcepten aan te leren. Deze tutorial neemt de [Tour of Heroes](https://angular.io/tutorial/) als basis met Quasar als framework. Vervolgens zal de tutorial uitgebreid worden om ook de functionaliteiten van een productiewaardige Vue3-applicatie te tonen.
+Angular, een van de andere moderne frameworks, heeft een zeer goede tutorial genaamd Tour of Heroes om de functionaliteiten van het framework te tonen en om basisconcepten aan te leren. Deze tutorial neemt de [Tour of Heroes](https://angular.io/tutorial/) als basis met Quasar als framework. Vervolgens zal de tutorial uitgebreid worden om ook de functionaliteiten van een productiewaardige Vue3-applicatie te tonen.
 
 De basisconcepten zijn:
 - routing (de navigatie)
