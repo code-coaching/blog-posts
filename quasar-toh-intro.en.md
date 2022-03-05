@@ -40,5 +40,3 @@ The base that will be built first, will look like this:
 ![Tour of Heroes basic](https://angular.io/generated/images/guide/toh/toh-anim.gif)
 
 The module consists of separate parts. Each part can be followed separately if certain knowledge is already present. It is recommended to follow these parts in the order they are built.
-
-Translated with www.DeepL.com/Translator (free version)
