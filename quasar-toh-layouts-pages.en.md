@@ -583,7 +583,7 @@ return {
 
 All changes: [GitHub](https://github.com/code-coaching/quasar-tour-of-heroes/compare/56d3d044f64340a52dc24f8c3c817a9e56c6ede7..e4c7e2534940826a43dd00b5aee2373659fcb8c7)
 
-## Conclusie
+## Conclusion
 
 It is okay to get code working and then refactor it to make it easier to maintain in the future. An example from this article is choosing `named routes` instead of `paths`.
 
