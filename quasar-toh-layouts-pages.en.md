@@ -56,8 +56,6 @@ The content of this file is:
   <div>Tour of Heroes</div>
   <button>Dashboard</button>
   <button>Heroes</button>
-
-  <router-view></router-view>
 </template>
 ```
 
@@ -162,6 +160,8 @@ What?! The content of the pages is not shown! This can be fixed by adding one mo
 `<router-view></router-view>` is new. This is a slot in the layout where the linked component of the router is loaded.
 
 Again, visit the three different routes in the address bar. Now the contents of the pages are shown!
+
+Alle changes: [GitHub](https://github.com/code-coaching/quasar-tour-of-heroes/compare/Begin..f6ae59d0205576193f14158ca7c06ffa59a963f1)
 
 ## Add navigation
 
@@ -268,6 +268,8 @@ Step 4: Make the function usable in the template by adding it to the return stat
 
 ![Routing demo](img/blog/quasar-toh-routing.gif)
 
+All changes: [GitHub](https://github.com/code-coaching/quasar-tour-of-heroes/compare/f6ae59d0205576193f14158ca7c06ffa59a963f1..4303123bee83bf6c5371d17d1edfade769cbd6f5)
+
 ## Add styling
 
 Comparing the application in the browser with the navigation diagram, it can be seen that the styling of the title and buttons do not yet match.
@@ -348,6 +350,8 @@ Add a style tag to `src/layouts/MainLayout.vue` and link the CSS to the HTML ele
 This already looks more like the navigation diagram!
 
 ![Styled routing demo](/img/blog/quasar-toh-styling.gif)
+
+All changes: [GitHub](https://github.com/code-coaching/quasar-tour-of-heroes/compare/4303123bee83bf6c5371d17d1edfade769cbd6f5..56d3d044f64340a52dc24f8c3c817a9e56c6ede7)
 
 ## Refactor for easier maintenance
 
@@ -576,6 +580,8 @@ return {
   ROUTE_NAMES: ROUTE_NAMES,
 };
 ```
+
+All changes: [GitHub](https://github.com/code-coaching/quasar-tour-of-heroes/compare/56d3d044f64340a52dc24f8c3c817a9e56c6ede7..e4c7e2534940826a43dd00b5aee2373659fcb8c7)
 
 ## Conclusie
 

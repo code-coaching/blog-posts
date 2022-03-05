@@ -56,8 +56,6 @@ De inhoud van dit bestand is:
   <div>Tour of Heroes</div>
   <button>Dashboard</button>
   <button>Heroes</button>
-
-  <router-view></router-view>
 </template>
 ```
 
@@ -162,6 +160,8 @@ Wat valt er op? De inhoud van de pagina's wordt niet getoond! Dit kan opgelost w
 `<router-view></router-view>` is nieuw. Dit is een slot in de layout waarin de gekoppelde component van de router ingeladen wordt.
 
 Bezoek opnieuw de drie verschillende routes in de adresbalk. Nu is de inhoud van de pagina's wel te zien!
+
+Alle wijzigingen: [GitHub](https://github.com/code-coaching/quasar-tour-of-heroes/compare/Begin..f6ae59d0205576193f14158ca7c06ffa59a963f1)
 
 ## Navigatie toevoegen
 
@@ -268,6 +268,8 @@ Stap 4: Maak de functie bruikbaar in de template door het toe te voegen aan de r
 
 ![Routing demo](img/blog/quasar-toh-routing.gif)
 
+Alle wijzigingen: [GitHub](https://github.com/code-coaching/quasar-tour-of-heroes/compare/f6ae59d0205576193f14158ca7c06ffa59a963f1..4303123bee83bf6c5371d17d1edfade769cbd6f5)
+
 ## Styling toevoegen
 
 Als de applicatie in de browser vergeleken wordt met het navigatiediagram, is te zien dat de styling van de titel en de knoppen nog niet overeenkomen.
@@ -348,6 +350,8 @@ Voeg een style tag toe aan `src/layouts/MainLayout.vue` en koppel de CSS aan de 
 Dit lijkt al meer op het navigatiediagram!
 
 ![Styled routing demo](/img/blog/quasar-toh-styling.gif)
+
+Alle wijzigingen: [GitHub](https://github.com/code-coaching/quasar-tour-of-heroes/compare/4303123bee83bf6c5371d17d1edfade769cbd6f5..56d3d044f64340a52dc24f8c3c817a9e56c6ede7)
 
 ## Refactoren voor makkelijker onderhoud
 
@@ -576,6 +580,8 @@ return {
   ROUTE_NAMES: ROUTE_NAMES,
 };
 ```
+
+Alle wijzigingen: [GitHub](https://github.com/code-coaching/quasar-tour-of-heroes/compare/56d3d044f64340a52dc24f8c3c817a9e56c6ede7..e4c7e2534940826a43dd00b5aee2373659fcb8c7)
 
 ## Conclusie
 
