@@ -66,7 +66,7 @@ De inhoud van dit bestand is:
 In het navigatiediagram is te zien dat er drie verschillende pagina's zijn.
 
 1. `Dashboard`, met de `Top Heroes`.
-1. `Heroes`, met `My Heroes` waar een lijst van details te zien is.
+1. `Heroes`, met `My Heroes` waar een lijst van heros te zien is.
 1. `Details`, met de details van een `Hero`.
 
 Om te zorgen dat deze pagina's gekoppeld kunnen worden aan de router, moeten deze eerst aangemaakt worden. In de map `src/pages` worden de pagina's toegevoegd. Voeg ze manueel toe of gebruik het onderstaande commando in de root van het project om de pagina's te maken.
@@ -100,7 +100,7 @@ De inhoud van `src/pages/HeroDetails.vue` is:
 </template>
 ```
 
-Om te zorgen dat de pagina's bekeken kunnen worden, moeten deze gekoppeld worden aan de router. In de `src/router/routes.ts` wordt de router geconfigureerd. Dit is een lijst van routes. Een route is een url die bezocht kan worden en bepaalt welke component/pagina getoond wordt.
+Om te zorgen dat de pagina's bekeken kunnen worden, moeten deze gekoppeld worden aan de router. In de `src/router/routes.ts` wordt de router geconfigureerd. Dit is een lijst van routes. Een route is een URL die bezocht kan worden en bepaalt welke component/pagina getoond wordt.
 
 Inhoud van `src/router/routes.ts`:
 
@@ -139,9 +139,9 @@ Start de applicatie op om te weten hoe het resultaat eruitziet:
 npm run dev
 ```
 
-In de console wordt de url getoond waar de applicatie op draait. Standaard is de url `http://localhost:8080`.
+In de console wordt de URL getoond waar de applicatie op draait. Standaard is de URL `http://localhost:8080`.
 
-Bezoek de volgende routes door de url in de adresbalk te wijzigen:
+Bezoek de volgende routes door de URL in de adresbalk te wijzigen:
 
 - `http://localhost:8080/` (Dashboard)
 - `http://localhost:8080/heroes` (HeroList)
@@ -165,7 +165,7 @@ Bezoek opnieuw de drie verschillende routes in de adresbalk. Nu is de inhoud van
 
 ## Navigatie toevoegen
 
-Het is niet de bedoeling om altijd manueel de url in de adresbalk in te typen om de pagina's te bekijken. Het zou handig zijn als er op de knoppen geklikt kan worden om te navigeren tussen de verschillende pagina's.
+Het is niet de bedoeling om altijd manueel de URL in de adresbalk in te typen om de pagina's te bekijken. Het zou handig zijn als er op de knoppen geklikt kan worden om te navigeren tussen de verschillende pagina's.
 
 Stap 1: Voeg een script tag toe aan `src/layouts/MainLayout.vue`. Er wordt gebruikgemaakt van de Composition API en TypeScript.
 
@@ -539,7 +539,7 @@ Wijzig de referenties naar de `named routes` in `src/layouts/MainLayout.vue`:
 
 Opnieuw is er functioneel niks gewijzigd. De applicatie doet nog steeds exact hetzelfde. Dit kan geverifieerd worden door de applicatie opnieuw uit te testen in de browser.
 
-Nog één kleine wijziging. De functie `navigate` heeft een parameter genaamd `path`, maar wat er eigenlijk de parameter genaamd `path` komt, is de `name` van de route. Omdat omschrijvende variabelen en functies zorgen voor makkelijker te begrijpen code, wordt `path` gewijzigd naar `name`.
+Nog één kleine wijziging. De functie `navigate` heeft een parameter genaamd `path`, maar wat er eigenlijk in de parameter genaamd `path` komt, is de `name` van de route. Omdat omschrijvende variabelen en functies zorgen voor makkelijker te begrijpen code, wordt `path` gewijzigd naar `name`.
 
 ```js
 const navigate = (name: string) => {
