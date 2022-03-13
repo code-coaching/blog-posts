@@ -1,7 +1,7 @@
 ---
 postUuid: b01db0b2-ec19-4650-8ac8-cbdab35ad7e3
-title: Quasar CLI - creating a new Quasar project
-slug: quasar-cli-creating-a-new-quasar-project
+title: Quasar CLI 1.3.0 - creating a new Quasar project
+slug: quasar-cli-1-3-0-a-new-quasar-project
 tags:
   - Quasar
   - Vue
@@ -35,11 +35,9 @@ Confirm the installation was successful:
 quasar -v
 ```
 
-In case it prints a number (e.g. `1.2.1`), it means the installation was successful.
+In case it prints a number (e.g. `1.3.0`), it means the installation was successful.
 
-Note: If the number is `1.3.0` or higher, take a look at the blog post `Quasar CLI 1.3.0 - creating a new Quasar project`.
-
-## Creating a new Quasar project
+## Een nieuw Quasar project aanmaken
 
 In this blog post the working directory is the `home directory`. To navigate to the home directory, the following command can be used.
 
@@ -64,19 +62,22 @@ In this directory the Quasar CLI will be used to create a new Quasar project.
 Import for Windows users: There is a bug in `git bash` that prevents the command to be executed. To fix this, use the normal `Command Prompt` (**not** PowerShell) to execute the command.
 
 ```sh
-quasar create .
+npm init quasar
 ```
 
-Note: The dot `.` means `in this directory`. `quasar create .` can be read as `create a new Quasar project in the current directory`.
-
-Note: In case the command has the output seen below, then take a look at `Quasar CLI 1.3.0 - creating a new Quasar project`.
-
-Output of the command if Quasar CLI is v1.3.0 or higher.
-If this is not the output, then the version is lower than 1.3.0 and then the current blog post can be continued. However, it is recommended to use the new version.
+The first time this command is run, you will be asked to install additional software. Click `Enter`.
 
 ```sh
+Need to install the following packages:
+  create-quasar
+Ok to proceed? (y)
+```
 
+This will ask some questions in the terminal.
 
+Click `Enter` three times to continue.
+
+```sh
  .d88888b.
 d88P" "Y88b
 888     888
@@ -87,98 +88,53 @@ Y88b.Y8b88P Y88b 888 888  888      X88 888  888 888
  "Y888888"   "Y88888 "Y888888  88888P' "Y888888 888
        Y8b
 
- This command is now reserved only for scaffolding
- with CUSTOM starter kits or legacy v0.x projects.
-
- For scaffolding an official Quasar project please use this instead:
-
-   yarn create quasar
-   # or
-   npm init quasar
+✔ What would you like to build? › App with Quasar CLI, let's go!
+✔ Project folder: … quasar-project
+✔ Pick Quasar version: › Quasar v2 (Vue 3 | latest and greatest)
 ```
 
-This will show a couple of questions in the terminal.
-
-Press five times `Enter` to continue.
+Use the arrow keys to select TypeScript. Click `Enter`.
 
 ```sh
-? Generate project in current directory? Yes
-? Project name (internal usage for dev) my-first-quasar-project
-? Project product name (must start with letter if building mobile apps) Quasar A
-pp
-? Project description A Quasar Framework app
-? Author Bart Duisters <bartduisters@bartduisters.com>
+? Pick script type: › - Use arrow-keys. Return to submit.
+    Javascript
+❯   Typescript
 ```
 
-Pick `Sass with SCSS syntax` by hitting `Enter`.
+If the project is **not** for production, the faster variant using `Vite` can be used. If it is out of `BETA stage` and also marked as `stable`, then it is also okay to choose this option if it is for production.
 
 ```sh
-? Pick your CSS preprocessor: (Use arrow keys)
-❯ Sass with SCSS syntax
-  Sass with indented syntax
-  None (the others will still be available)
+? Pick Quasar App CLI variant: › - Use arrow-keys. Return to submit.
+    Quasar App CLI with Webpack (stable)
+❯   Quasar App CLI with Vite (BETA stage)
 ```
 
-Use the arrow keys to navigate to `TypeScript` and hit `space` to select this option. This results in both `ESlint` and `TypeScript` being enabled. Hit `Enter`.
+Choose all default choices in the following questions.
 
 ```sh
-? Check the features needed for your project:
- ◉ ESLint (recommended)
-❯◉ TypeScript
- ◯ Vuex
- ◯ Axios
- ◯ Vue-i18n
-```
+ .d88888b.
+d88P" "Y88b
+888     888
+888     888 888  888  8888b.  .d8888b   8888b.  888d888
+888     888 888  888     "88b 88K          "88b 888P"
+888 Y8b 888 888  888 .d888888 "Y8888b. .d888888 888
+Y88b.Y8b88P Y88b 888 888  888      X88 888  888 888
+ "Y888888"   "Y88888 "Y888888  88888P' "Y888888 888
+       Y8b
 
-Opt for `Composition API` by hitting `Enter`.
-
-```sh
-? Pick a component style: (Use arrow keys)
-❯ Composition API (recommended) (https://github.com/vuejs/composition-api)
-  Class-based (https://github.com/vuejs/vue-class-component & https://github.com/kaorun343/vue-
-property-decorator)
-  Options API
-```
-
-Opt for `Prettier` by hitting `Enter`.
-
-```sh
-? Pick an ESLint preset: (Use arrow keys)
-❯ Prettier (https://github.com/prettier/prettier)
-  Standard (https://github.com/standard/standard)
-  Airbnb (https://github.com/airbnb/javascript)
-```
-
-Use the arrow keys to navigate to `Yes, use NPM` and hit `Enter`.
-
-```sh
-? Continue to install project dependencies after the project has been created? (recommended)
-  Yes, use Yarn (recommended)
-❯ Yes, use NPM
-  No, I will handle that myself
-```
-
-Quasar will start creating a project. The following is the output:
-
-```sh
-  ___
- / _ \ _   _  __ _ ___  __ _ _ __
-| | | | | | |/ _` / __|/ _` | '__|
-| |_| | |_| | (_| \__ \ (_| | |
- \__\_\\__,_|\__,_|___/\__,_|_|
-
-
-
-? Generate project in current directory? Yes
-? Project name (internal usage for dev) my-first-quasar-project
-? Project product name (must start with letter if building mobile apps) Quasar App
-? Project description A Quasar Framework app
-? Author Bart Duisters <bartduisters@bartduisters.com>
-? Pick your CSS preprocessor: SCSS
-? Check the features needed for your project: ESLint (recommended), TypeScript
-? Pick a component style: Composition
-? Pick an ESLint preset: Prettier
-? Continue to install project dependencies after the project has been created? (recommended) NPM
+✔ What would you like to build? › App with Quasar CLI, let's go!
+✔ Project folder: … quasar-project
+✔ Pick Quasar version: › Quasar v2 (Vue 3 | latest and greatest)
+✔ Pick script type: › Typescript
+✔ Pick Quasar App CLI variant: › Quasar App CLI with Vite (BETA stage)
+✔ Package name: … quasar-project
+✔ Project product name: (must start with letter if building mobile apps) … Quasar App
+✔ Project description: … A Quasar Project
+✔ Author: … Bart Duisters <bartduisters@bartduisters.com>
+✔ Pick a Vue component style: › Composition API
+✔ Pick your CSS preprocessor: › Sass with SCSS syntax
+✔ Check the features needed for your project: › ESLint
+✔ Pick an ESLint preset: › Prettier
 ```
 
 ## Project structure of a Quasar project
@@ -192,14 +148,15 @@ src/
 .eslintignore
 .eslintrc.js
 .gitignore
-.postcssrc.js
 .prettierrc
-babel.config.js
+index.html
 package-lock.json
 package.json
-quasar.conf.js
+postcssrc.config.js
+quasar.config.js
 README.md
 tsconfig.json
+tsconfig.node.json
 ```
 
 of all these files and directories, there are quite some configuration files for technologies used by Quasar. Nothing has to be changed about these files. These can be looked at, but it is not necessary.
@@ -211,11 +168,11 @@ All configuration files:
 .eslintignore
 .eslintrc.js
 .gitignore
-.postcssrc.js
 .prettierrc
-babel.config.js
-quasar.conf.js
+postcssrc.config.js
+quasar.config.js
 tsconfig.json
+tsconfig.node.json
 ```
 
 What is left:
@@ -224,6 +181,7 @@ What is left:
 node_modules/
 public/
 src/
+index.html
 package-lock.json
 package.json
 README.md
@@ -250,6 +208,7 @@ What is left:
 ```sh
 public/
 src/
+index.html
 README.md
 ```
 
@@ -259,40 +218,9 @@ The `README.md` file is a file that can be found in most projects. The extension
 
 `src/` stands for `source`, this contains the source code of the Quasar project. This is the directory that will contain all self-written code.
 
-### src
+`index.html` is het bestand waarin de Vue-applicatie toegevoegd zal worden.
 
-The `src` directory will be further discussed.
-
-```sh
-assets/
-boot/
-components/
-css/
-layouts/
-pages/
-router/
-App.vue
-env.d.ts
-index.template.html
-quasar.d.ts
-shims-vue.d.ts
-```
-
-All files with the exentension `.d.ts` are TypeScript definitions. These files are used to define the types of the code.
-
-The `assets` can contain images and other files to be used in the project.
-
-The `boot` directory is a Quasar specific directory. This will contain dependencies that should be linked before vue is loaded.
-
-The directories `components`, `layouts` and `pages` all contain `.vue` files. Every `.vue` file is a `component`.
-
-The directory `css` contains global styling.
-
-The directory `router` contains files related to `vue-router`. This makes it such that different pages can be loaded on different `routes`. E.g. `https://code-coaching.dev/#/` will load the home page and `https://code-coaching.dev/#/blog` will load the blog page.
-
-All that is left, is the `App.vue` file. and the `index.template.html` file. The `App.vue` file is the main component.
-
-The content of `index.template.html` is:
+De content of `index.html` is:
 
 ```html
 <!DOCTYPE html>
@@ -336,20 +264,46 @@ The content of `index.template.html` is:
     <link rel="icon" type="image/ico" href="favicon.ico" />
   </head>
   <body>
-    <!-- DO NOT touch the following DIV -->
-    <div id="q-app"></div>
+    <!-- quasar:entry-point -->
   </body>
 </html>
 ```
 
-This shows some odd syntax `<%= productName %>`, this is the syntax of a `templating language`. This can be replace by normal hard coded information. But it can also stay the way it is. The most important part of this file is the element with id `q-app`.
+This shows some odd syntax `<%= productName %>`, this is the syntax of a `templating language`. This can be replace by normal hard coded information. But it can also stay the way it is.
 
-```html
-<!-- DO NOT touch the following DIV -->
-<div id="q-app"></div>
+The Quasar Framework will add several things to this file behind the scenes. One of these things being added is `<div id="q-app"></div>`, which is added to the body. This will host the Vue application.
+
+### src
+
+The `src` directory will be further discussed.
+
+```sh
+assets/
+boot/
+components/
+css/
+layouts/
+pages/
+router/
+App.vue
+env.d.ts
+quasar.d.ts
+shims-vue.d.ts
 ```
 
-This is the element on which VueJS will do its magic. This explains the comment `<!-- DO NOT touch the following DIV -->`.
+All files with the exentension `.d.ts` are TypeScript definitions. These files are used to define the types of the code.
+
+The `assets` can contain images and other files to be used in the project.
+
+The `boot` directory is a Quasar specific directory. This will contain dependencies that should be linked before vue is loaded.
+
+The directories `components`, `layouts` and `pages` all contain `.vue` files. Every `.vue` file is a `component`.
+
+The directory `css` contains global styling.
+
+The directory `router` contains files related to `vue-router`. This makes it such that different pages can be loaded on different `routes`. E.g. `https://code-coaching.dev/#/` will load the home page and `https://code-coaching.dev/#/blog` will load the blog page.
+
+That leaves the `App.vue` file. This is the main component of the application, where `Vue router` is linked to load all the other components.
 
 ## Running a Quasar project
 
@@ -366,3 +320,10 @@ quasar dev
 ```
 
 The browser will automatically open and the project will be loaded. By default this is on `http://localhost:8080`.
+
+The project works without any problems. However, in `src/pages/Index.vue` something is underlined in red. This is not a problem, it works. If the red line is disturbing, it can be solved by using a `relative path`:
+
+```ts
+// import { Todo, Meta } from 'components/models';
+import { Todo, Meta } from "../components/models";
+```

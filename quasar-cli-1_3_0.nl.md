@@ -1,7 +1,7 @@
 ---
 postUuid: b01db0b2-ec19-4650-8ac8-cbdab35ad7e3
-title: Quasar CLI - een nieuw Quasar-project aanmaken
-slug: quasar-cli-een-nieuw-quasar-project-aanmaken
+title: Quasar CLI 1.3.0 - een nieuw Quasar-project aanmaken
+slug: quasar-cli-1-3-0-een-nieuw-quasar-project-aanmaken
 tags:
   - Quasar
   - Vue
@@ -23,6 +23,8 @@ Wanneer er verwezen wordt naar `terminal` in onderstaande tekst en er wordt met 
 
 Quasar voorziet een `CLI` (**C**ommand **L**ine **I**nterface). Dit is software die werkt in een terminal. Om de Quasar CLI te kunnen gebruiken, moet deze op het systeem geïnstalleerd worden.
 
+Opmerking: Dit commando is ook het commando dat gebruikt wordt om de Quasar CLI te updaten naar de laatste versie.
+
 ```sh
 npm install -g @quasar/cli
 ```
@@ -35,9 +37,7 @@ Bevestig dat het installeren gelukt is.
 quasar -v
 ```
 
-Indien dit een nummer uitprint (bv. `1.2.1`), is het installeren gelukt.
-
-Opmerking: Indien het nummer `1.3.0` of hoger is, bekijk dan de blogpost `Quasar CLI 1.3.0 - een nieuw Quasar-project aanmaken`.
+Indien dit een nummer uitprint (bv. `1.3.0`), is het installeren gelukt.
 
 ## Een nieuw Quasar project aanmaken
 
@@ -64,19 +64,22 @@ In deze map gaat er gebruikgemaakt worden van de Quasar CLI om een nieuw Quasar-
 Belangrijk voor Windows-gebruikers: Er is een bug in `git bash` waardoor onderstaand commando niet werkt. Gebruik een gewone `Command Prompt` (**niet** PowerShell) om dit commando uit te voeren.
 
 ```sh
-quasar create .
+npm init quasar
 ```
 
-Opmerking: Het punt betekent `in deze map`. `quasar create .` kan gelezen worden als `maak een nieuw Quasar project in de huidige map`.
-
-Opmerking: Indien dit commando onderstaande uitprint, bekijk dan de blogpost `Quasar CLI 1.3.0 - een nieuw Quasar-project aanmaken`.
-
-Output van het commando indien Quasar CLI v1.3.0 of hoger is.
-Indien dit niet de output is, dan is de versie lager dan 1.3.0 en dan kan de huidige blogpost verder afgewerkt worden. Het is echter aangeraden om de nieuwe versie te gebruiken.
+De eerste keer dat dit commando uitgevoerd wordt, zal er gevraagd worden om extra software te installeren. Klik op `Enter`.
 
 ```sh
+Need to install the following packages:
+  create-quasar
+Ok to proceed? (y)
+```
 
+Dit zal in de terminal enkele vragen stellen.
 
+Klik drie keer op `Enter` om door te gaan.
+
+```sh
  .d88888b.
 d88P" "Y88b
 888     888
@@ -87,98 +90,53 @@ Y88b.Y8b88P Y88b 888 888  888      X88 888  888 888
  "Y888888"   "Y88888 "Y888888  88888P' "Y888888 888
        Y8b
 
- This command is now reserved only for scaffolding
- with CUSTOM starter kits or legacy v0.x projects.
-
- For scaffolding an official Quasar project please use this instead:
-
-   yarn create quasar
-   # or
-   npm init quasar
+✔ What would you like to build? › App with Quasar CLI, let's go!
+✔ Project folder: … quasar-project
+✔ Pick Quasar version: › Quasar v2 (Vue 3 | latest and greatest)
 ```
 
-Dit zal in de terminal enkele vragen stellen.
-
-Klik vijf keer op `Enter`.
+Gebruik de pijltoetsen om TypeScript te kiezen. Klik op `Enter`.
 
 ```sh
-? Generate project in current directory? Yes
-? Project name (internal usage for dev) mijn-eerste-quasar-project
-? Project product name (must start with letter if building mobile apps) Quasar A
-pp
-? Project description A Quasar Framework app
-? Author Bart Duisters <bartduisters@bartduisters.com>
+? Pick script type: › - Use arrow-keys. Return to submit.
+    Javascript
+❯   Typescript
 ```
 
-Kies voor `Sass with SCSS syntax` door op `Enter` te klikken.
+Indien het project **niet** voor productie dient, kan gebruikgemaakt worden van de snellere variant die gebruiktmaakt van `Vite`. Indien deze uit `BETA stage` is en ook aangeduid staat als `stable`, dan is het ook oké om deze optie te kiezen indien het wél voor productie is.
 
 ```sh
-? Pick your CSS preprocessor: (Use arrow keys)
-❯ Sass with SCSS syntax
-  Sass with indented syntax
-  None (the others will still be available)
+? Pick Quasar App CLI variant: › - Use arrow-keys. Return to submit.
+    Quasar App CLI with Webpack (stable)
+❯   Quasar App CLI with Vite (BETA stage)
 ```
 
-Gebruik de pijltoetsen om naar `TypeScript` te gaan en klik op `spatie` om dit te selecteren. Dit resulteert in zowel `ESLint` als `TypeScript` met een ingekleurd bolletje. Klik op `Enter`.
+Kies alle standaard keuzes bij de volgende vragen.
 
 ```sh
-? Check the features needed for your project:
- ◉ ESLint (recommended)
-❯◉ TypeScript
- ◯ Vuex
- ◯ Axios
- ◯ Vue-i18n
-```
+ .d88888b.
+d88P" "Y88b
+888     888
+888     888 888  888  8888b.  .d8888b   8888b.  888d888
+888     888 888  888     "88b 88K          "88b 888P"
+888 Y8b 888 888  888 .d888888 "Y8888b. .d888888 888
+Y88b.Y8b88P Y88b 888 888  888      X88 888  888 888
+ "Y888888"   "Y88888 "Y888888  88888P' "Y888888 888
+       Y8b
 
-Kies voor `Composition API` door op `Enter` te klikken.
-
-```sh
-? Pick a component style: (Use arrow keys)
-❯ Composition API (recommended) (https://github.com/vuejs/composition-api)
-  Class-based (https://github.com/vuejs/vue-class-component & https://github.com/kaorun343/vue-
-property-decorator)
-  Options API
-```
-
-Kies voor `Prettier` door op `Enter te klikken.
-
-```sh
-? Pick an ESLint preset: (Use arrow keys)
-❯ Prettier (https://github.com/prettier/prettier)
-  Standard (https://github.com/standard/standard)
-  Airbnb (https://github.com/airbnb/javascript)
-```
-
-Gebruik de pijltoetsen om te navigeren naar `Yes, use NPM` en klik op `Enter`.
-
-```sh
-? Continue to install project dependencies after the project has been created? (recommended)
-  Yes, use Yarn (recommended)
-❯ Yes, use NPM
-  No, I will handle that myself
-```
-
-Quasar zal nu beginnen met een project aan te maken. De volledige output in de terminal is:
-
-```sh
-  ___
- / _ \ _   _  __ _ ___  __ _ _ __
-| | | | | | |/ _` / __|/ _` | '__|
-| |_| | |_| | (_| \__ \ (_| | |
- \__\_\\__,_|\__,_|___/\__,_|_|
-
-
-
-? Generate project in current directory? Yes
-? Project name (internal usage for dev) mijn-eerste-quasar-project
-? Project product name (must start with letter if building mobile apps) Quasar App
-? Project description A Quasar Framework app
-? Author Bart Duisters <bartduisters@bartduisters.com>
-? Pick your CSS preprocessor: SCSS
-? Check the features needed for your project: ESLint (recommended), TypeScript
-? Pick a component style: Composition
-? Pick an ESLint preset: Prettier
-? Continue to install project dependencies after the project has been created? (recommended) NPM
+✔ What would you like to build? › App with Quasar CLI, let's go!
+✔ Project folder: … quasar-project
+✔ Pick Quasar version: › Quasar v2 (Vue 3 | latest and greatest)
+✔ Pick script type: › Typescript
+✔ Pick Quasar App CLI variant: › Quasar App CLI with Vite (BETA stage)
+✔ Package name: … quasar-project
+✔ Project product name: (must start with letter if building mobile apps) … Quasar App
+✔ Project description: … A Quasar Project
+✔ Author: … Bart Duisters <bartduisters@bartduisters.com>
+✔ Pick a Vue component style: › Composition API
+✔ Pick your CSS preprocessor: › Sass with SCSS syntax
+✔ Check the features needed for your project: › ESLint
+✔ Pick an ESLint preset: › Prettier
 ```
 
 ## Projectstructuur van een Quasar-project
@@ -192,14 +150,15 @@ src/
 .eslintignore
 .eslintrc.js
 .gitignore
-.postcssrc.js
 .prettierrc
-babel.config.js
+index.html
 package-lock.json
 package.json
-quasar.conf.js
+postcssrc.config.js
+quasar.config.js
 README.md
 tsconfig.json
+tsconfig.node.json
 ```
 
 Van al deze bestanden en mappen, zijn er veel configuratiebestanden voor technologieën die gebruikt worden door Quasar. Hier hoeft niks aan gewijzigd te worden. Deze kunnen eens bekeken worden, maar zelfs dit is niet nodig.
@@ -211,11 +170,11 @@ Alle configuratiebestanden:
 .eslintignore
 .eslintrc.js
 .gitignore
-.postcssrc.js
 .prettierrc
-babel.config.js
-quasar.conf.js
+postcssrc.config.js
+quasar.config.js
 tsconfig.json
+tsconfig.node.json
 ```
 
 Wat er nog overblijft:
@@ -224,6 +183,7 @@ Wat er nog overblijft:
 node_modules/
 public/
 src/
+index.html
 package-lock.json
 package.json
 README.md
@@ -250,6 +210,7 @@ Wat er nog overblijft:
 ```sh
 public/
 src/
+index.html
 README.md
 ```
 
@@ -259,40 +220,9 @@ De `README.md` is een bestand dat teruggevonden wordt in bijna alle projecten. D
 
 `src/` staat voor `source` (Nederlands: bron), hierin is de broncode van het Quasar-project terug te vinden. Dit is de map waarin alle zelfgeschreven code toegevoegd zal worden.
 
-### src
+`index.html` is het bestand waarin de Vue-applicatie toegevoegd zal worden.
 
-De `src`-map wordt verder besproken.
-
-```sh
-assets/
-boot/
-components/
-css/
-layouts/
-pages/
-router/
-App.vue
-env.d.ts
-index.template.html
-quasar.d.ts
-shims-vue.d.ts
-```
-
-Alle bestanden met de extensie `.d.ts` zijn er omdat er gekozen is voor `TypeScript`, dit bevat informatie over de types die gebruikt worden.
-
-De map `assets` kan afbeeldingen en andere bestanden bevatten die gebruikt worden in het project.
-
-De map `boot` is Quasar-specifiek, hierin komen dependencies die gekoppeld moeten worden voordat Vue opgestart is.
-
-In de mappen `components`, `layouts` en `pages` zitten allemaal `.vue`-bestanden. Elk `.vue`-bestand is een `component`.
-
-De map `css` bevat globale styling.
-
-De map `router` bevat bestanden gerelateerd aan `vue-router`. Dit zorgt ervoor dat er verschillende pagina's ingeladen kunnen worden op verschillend `routes`. Bijvoorbeeld `https://code-coaching.dev/#/` voor de hoofdpagina en `https://code-coaching.dev/#/blog` voor de blogpagina.
-
-Dan blijft er nog het `App.vue`-bestand over en het `index.template.html`-bestand. Het `App.vue`-bestand is de hoofdcomponent.
-
-De inhoud van `index.template.html` is:
+De inhoud van `index.html` is:
 
 ```html
 <!DOCTYPE html>
@@ -336,20 +266,46 @@ De inhoud van `index.template.html` is:
     <link rel="icon" type="image/ico" href="favicon.ico" />
   </head>
   <body>
-    <!-- DO NOT touch the following DIV -->
-    <div id="q-app"></div>
+    <!-- quasar:entry-point -->
   </body>
 </html>
 ```
 
-Hier zien we een rare syntax `<%= productName %>`, dit is de syntax van een `templating language` (Nederlands: sjabloontaal). Dit kan vervangen worden door gewone hard coded informatie. Maar het mag ook gewoon zo blijven staan. Het belangrijkste in dit bestand is het element met de id `q-app`.
+Hier zien we een rare syntax `<%= productName %>`, dit is de syntax van een `templating language` (Nederlands: sjabloontaal). Dit kan vervangen worden door gewone hard coded informatie. Maar het mag ook gewoon zo blijven staan.
 
-```html
-<!-- DO NOT touch the following DIV -->
-<div id="q-app"></div>
+Het Quasar Framework zal verschillende dingen toevoegen aan dit bestand achter de schermen. Een van deze dingen is `<div id="q-app"></div>` dat toegevoegd zal worden in de body. Hierin zal de Vue-applicatie worden geplaatst.
+
+### src
+
+De `src`-map wordt verder besproken.
+
+```sh
+assets/
+boot/
+components/
+css/
+layouts/
+pages/
+router/
+App.vue
+env.d.ts
+quasar.d.ts
+shims-vue.d.ts
 ```
 
-Dit is het element waar VueJS in zal werken. Vandaar ook de commentaar erbij `<!-- DO NOT touch the following DIV -->` (Raak onderstaande div NIET aan).
+Alle bestanden met de extensie `.d.ts` zijn er omdat er gekozen is voor `TypeScript`, dit bevat informatie over de types die gebruikt worden.
+
+De map `assets` kan afbeeldingen en andere bestanden bevatten die gebruikt worden in het project.
+
+De map `boot` is Quasar-specifiek, hierin komen dependencies die gekoppeld moeten worden voordat Vue opgestart is.
+
+In de mappen `components`, `layouts` en `pages` zitten allemaal `.vue`-bestanden. Elk `.vue`-bestand is een `component`.
+
+De map `css` bevat globale styling.
+
+De map `router` bevat bestanden gerelateerd aan `vue-router`. Dit zorgt ervoor dat er verschillende pagina's ingeladen kunnen worden op verschillend `routes`. Bijvoorbeeld `https://code-coaching.dev/#/` voor de hoofdpagina en `https://code-coaching.dev/#/blog` voor de blogpagina.
+
+Dan blijft er nog het `App.vue`-bestand over. Dit is het hoofdcomponent van de applicatie, waarin `Vue router` gekoppeld zit om alle andere componenten in te laden.
 
 ## Quasar-project opstarten
 
@@ -366,3 +322,10 @@ quasar dev
 ```
 
 Dit zal het project opstarten. De browser zal automatisch geopend worden. Standaard op `http://localhost:8080`.
+
+Het project werkt zonder problemen. Echter wordt in `src/pages/Index.vue` iets rood onderstreept. Dit is geen probleem, het werkt. Indien de rode lijn storend is, kan dit opgelost worden door een `relatief pad` te gebruiken:
+
+```ts
+// import { Todo, Meta } from 'components/models';
+import { Todo, Meta } from "../components/models";
+```
