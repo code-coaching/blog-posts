@@ -7,6 +7,10 @@ tags:
   - JS
 categories:
   - Frontend
+youtubeIds:
+  - tTVZ7GdWfyM
+  - VeHV_8gexIo
+  - zPeGubEKhVM
 ---
 
 Het is essentieel om alle kennis uit `Leren Programmeren` te beheersen.
