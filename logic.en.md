@@ -51,7 +51,7 @@ A byte exists of 8 bits. This gives 256 possible states, which results in a tabl
 |   0   |   1   |   1   |   0   |   0   |   0   |   1   |   0   |    b     |
 |  ...  |  ...  |  ...  |  ...  |  ...  |  ...  |  ...  |  ...  |   ...    |
 
-One kilobyte (KB) is 1024 bytes. One kilogram is a 1000 grams. One kilcalorie is a 1000 calories. Why on earth is one kilbyte 1024 bytes? The reason is that the capacity of memory is always based on powers of 2.
+One kilobyte (KB) is 1024 bytes. One kilogram is a 1000 grams. One kilcalorie is a 1000 calories. Why on earth is one kilobyte 1024 bytes? The reason is that the capacity of memory is always based on powers of 2.
 1024 is the closest number to 1000 that is a power of 2. 2<sup>10</sup> = 2 \* 2 \* 2 \* 2 \* 2 \* 2 \* 2 \* 2 \* 2 \* 2 = 1024
 
 One megabyte (MB) is 1024 kilobytes. Or 1 048 576 bytes. This is equal 1 048 576 tables of 8 columns and 256 rows, of which each cell can be 0 or 1 to get unique states.
