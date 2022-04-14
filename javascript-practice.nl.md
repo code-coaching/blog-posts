@@ -7,6 +7,8 @@ tags:
   - JS
 categories:
   - Frontend
+youtubeIds:
+  - za63BYvldIA
 ---
 
 ## JavaScript koppelen
