@@ -227,7 +227,7 @@ As an example `setCssVar("primary", "#FF0000");` would create a variable called 
       const applyTheme = (theme) => {
         $q.dark.set(theme.isDark);
 
-        setCssVar("primary", "primary"); // theme["primary"] is the same as theme.primary
+        setCssVar("primary", theme["primary"]); // theme["primary"] is the same as theme.primary
         setCssVar("secondary", theme["secondary"]);
         setCssVar("accent", theme["accent"]);
 

@@ -227,7 +227,7 @@ Bijvoorbeeld `setCssVar("primary", "#FF0000");` zou een variabele genaamd `--q-p
       const applyTheme = (theme) => {
         $q.dark.set(theme.isDark);
 
-        setCssVar("primary", "primary"); // theme["primary"] is the same as theme.primary
+        setCssVar("primary", theme["primary"]); // theme["primary"] is the same as theme.primary
         setCssVar("secondary", theme["secondary"]);
         setCssVar("accent", theme["accent"]);
 
