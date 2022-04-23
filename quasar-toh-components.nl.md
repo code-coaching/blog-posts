@@ -10,7 +10,7 @@ categories:
   - Frontend
 ---
 
-In dit artikel wordt vertrokken vanuit de situatie waar de layout opgezet is en de verschillende pagina's toegevoegd zijn aan de Tour of Heroes-applicatie. De beginsituatie is een bestaande Quasar-project met een layout componentent en placeholder pagina's. De eindsituatie is een Quasar-project waarin de pagina's voorzien zijn van componenten.
+In dit artikel wordt vertrokken vanuit de situatie waar de layout opgezet is en de verschillende pagina's toegevoegd zijn aan de Tour of Heroes-applicatie. De beginsituatie is een bestaande Quasar-project met een layout componenten en placeholder pagina's. De eindsituatie is een Quasar-project waarin de pagina's voorzien zijn van componenten.
 
 De code kan bekomen worden door een `zip` van de `Source code` te downloaden.
 
