@@ -8,6 +8,8 @@ tags:
 categories:
   - Frontend
 youtubeIds:
+  - Cx17BydHwR0
+  - D_9EDtdi4kc
   - za63BYvldIA
 ---
 
