@@ -950,7 +950,7 @@ Waarbij `:id` de `_id` van de hero is.
 Bij het voorbeeld dat aangemaakt wordt bij de `POST` hieronder, is dit:
 `HTTP GET https://api.code-coaching.dev/heroes/62882f786f3b143ad3a37558`
 
-De response:
+De respons:
 
 ```json
 {
@@ -1036,8 +1036,7 @@ Met PATCH is het mogelijk om specifieke properties te wijzigen.
 
 `HTTP PATCH https://api.code-coaching.dev/heroes/:id`
 
-Waarbij `:id` de `_id` van de hero is die gewijzigd moet worden., bijvoorbeeld
-Ervan uitgaande dat de naam van de hero die aangemaakt is in de POST call gewijzigd moet worden:
+Waarbij `:id` de `_id` van de hero is die gewijzigd moet worden., bijvoorbeeld ervan uitgaande dat de naam van de hero die aangemaakt is in de POST call gewijzigd moet worden:
 `HTTP PATCH https://api.code-coaching.dev/heroes/62882f786f3b143ad3a37558`
 
 De body die meegestuurd wordt:
@@ -1048,7 +1047,7 @@ De body die meegestuurd wordt:
 }
 ```
 
-De response:
+De respons:
 
 ```json
 {
@@ -1068,11 +1067,10 @@ Merk op: De `name` is gewijzigd naar `Superwoman` en automatisch is `updatedAt` 
 
 `HTTP DELETE https://api.code-coaching.dev/heroes/:id`
 
-Waarbij `:id` de `_id` van de hero is die gewijzigd moet worden., bijvoorbeeld
-Ervan uitgaande dat de naam van de hero die aangemaakt is in de POST call gewijzigd moet worden:
+Waarbij `:id` de `_id` van de hero is die gewijzigd moet worden., bijvoorbeeld ervan uitgaande dat de naam van de hero die aangemaakt is in de POST call gewijzigd moet worden:
 `HTTP DELETE https://api.code-coaching.dev/heroes/62882f786f3b143ad3a37558`
 
-De response:
+De respons:
 
 ```json
 {
@@ -1204,7 +1202,7 @@ Resultaat in de netwerktab van de `/heroes` call.
 
 #### Authorization header toevoegen
 
-De `getHeroes`-functie heeft de `accessToken` uit Local Storage nodig om de API te kunnen doen met authentificatie.
+De `getHeroes`-functie heeft de `accessToken` uit Local Storage nodig om de API te kunnen aanroepen met authentificatie.
 
 ```ts
 const getHeroes = async () => {
@@ -1828,7 +1826,7 @@ watch(isAuthenticated, (newValue) => {
 });
 ```
 
-De `watch` functie zal de property `isAuthenticated` variabele in de gaten houden (`watchen`). Wanneer deze wijzigt wordt de `callback`-functie worden uitgevoerd, hier wordt de nieuwe waarde van de variabele doorgegeven als parameter.
+De `watch` functie zal de property `isAuthenticated` in de gaten houden (`watchen`). Wanneer deze wijzigt wordt de `callback`-functie worden uitgevoerd, hier wordt de nieuwe waarde van de variabele doorgegeven als parameter.
 
 Bij het uittesten van de applicatie kan opgemerkt worden dat na de redirect van het dashboard, de top heroes niet getoond worden. Om dit op te lossen is een `computed` property nodig.
 
@@ -1939,12 +1937,12 @@ const editHero = (hero: Hero) => {
 };
 ```
 
-De les die hier uit geleerd kan worden, is dat het uiterst belangrijk is om elke functionaliteit te testen na implementeren. Het is ook belangrijk om te begrijpen dat mensen fouten maken, bugs zijn onderdeel van development. In dit geval kwam de bug naar voren tijdens de `QA` (**Q**uality **A**ssurance).
+De les die hier uit geleerd kan worden, is dat het uiterst belangrijk is om elke functionaliteit te testen na implementeren. Het is ook belangrijk om te begrijpen dat mensen fouten maken, bugs zijn onderdeel van development. In dit geval kwam de bug naar voren tijdens `QA` (**Q**uality **A**ssurance).
 
 Alle wijzigingen: [GitHub](https://github.com/code-coaching/quasar-tour-of-heroes/commit/92e3f6614601db5bd23bb60cdf3397aede6c9aff)
 
 ## Conclusie
 
-Er komt meer bij kijken wanneer de data beheerd wordt op een externe locatie. In deze tutorial wordt aangeleerd hoe een API gekoppeld kan worden aan een Quasar-applicatie met Axios. Doordat de externe locatie ook authenticatie nodig heeft, is er gekeken naar de mogelijkheid om de een gebruiker in te loggen.
+Er komt meer bij kijken wanneer de data beheerd wordt op een externe locatie. In deze tutorial wordt aangeleerd hoe een API gekoppeld kan worden aan een Quasar-applicatie met Axios. Doordat de externe locatie ook authenticatie nodig heeft, is er gekeken naar de mogelijkheid om een gebruiker in te loggen.
 
 Composables/Services verzamelen alle functionaliteit rondom bepaalde data. Bijvoorbeeld, alle acties die een gebruiker kan uitvoeren op Hero data steekt in de `hero.service.ts`-file. Doordat deze functionaliteit in de `hero.service.ts`-file staat, is het relatief makkelijk om de implementatie te wijzigen. In deze tutorial is zijn de functies gewijzigd naar functies die de wijzigingen doen via de API. Er is ook gekeken naar `naïve updates` om de data direct te wijzigen voor de gebruiker.
