@@ -10,56 +10,56 @@ categories:
   - Frontend
 ---
 
-Om deze tutorial te kunnen volgen is een gratis [Code Coaching](https://code-coaching.dev/) account nodig.
+A free [Code Coaching](https://code-coaching.dev/) account is required to follow this tutorial.
 
-In dit artikel wordt vertrokken vanuit de situatie waar de layout opgezet is en de verschillende pagina's toegevoegd zijn aan de Tour of Heroes-applicatie. De pagina's zijn voorzien van elementen, data en componenten. De data is overgehuisd naar een composable/service. Een API met authentificatie is gekoppeld om de Hero data te beheren. De eindsituatie is een Quasar-project waarin de functionaliteit identiek is, maar er wordt gebruik gemaakt van Quasar-componenten en -plugins.
+This article will start from the situation where the layout is set up and the different pages are added to the Tour of Heroes application. The pages have been provided with elements, data and components. The data has been moved to a composable/service. An API with authentication is linked to manage the Hero data. The final situation is a Quasar project where the functionality is identical, but Quasar components and plugins are used.
 
-De code kan bekomen worden door een `zip` van de `Source code` te downloaden.
+The code can be obtained by downloading a `zip` from the `Source code`.
 
-De situatie waar van vertrokken wordt ziet er als volgt uit:
+The situation that is used as a starting point is as follows:
 
-![beginsituatie](/img/blog/quasar-toh-service-functions.gif)
+![begin situation](/img/blog/quasar-toh-service-functions.gif)
 
-Beginsituatie: [Source code](https://github.com/code-coaching/quasar-tour-of-heroes/releases/tag/quasar-toh-api)
+Begin situation: [Source code](https://github.com/code-coaching/quasar-tour-of-heroes/releases/tag/quasar-toh-api)
 
 De eindsituatie waar naartoe gewerkt wordt ziet er als volgt uit:
 
-![eindsituatie](/img/blog/quasar-toh-quasarify.gif)
+![end situation](/img/blog/quasar-toh-quasarify.gif)
 
-Eindsituatie: [Source code](https://github.com/code-coaching/quasar-tour-of-heroes/releases/tag/quasar-toh-quasarify)
+End situation: [Source code](https://github.com/code-coaching/quasar-tour-of-heroes/releases/tag/quasar-toh-quasarify)
 
 ## QInput
 
-Momenteel wordt er gebruik gemaakt van gewone HTML-inputs. Quasar voorziet een QInput component. Hierop bestaand verschillende attributen die gebruikt kunnen worden, zo wordt er in deze tutorial gekozen voor `outlined` en `dense`. De component accepteert ook een `label` als prop.
+Currently, plain HTML inputs are used. Quasar provides a QInput component. On it exist different attributes that can be used, for example in this tutorial `outlined` and `dense` are chosen. The component also accepts a `label` as a prop.
 
-### Voor
+### Before
 
 ![input](/img/blog/quasar-toh-default-inputs-1.png)
 ![input](/img/blog/quasar-toh-default-inputs-2.png)
 ![input](/img/blog/quasar-toh-default-inputs-3.png)
 
-### Na
+### After
 
 ![input](/img/blog/quasar-toh-qinputs-1.png)
 ![input](/img/blog/quasar-toh-qinputs-2.png)
 ![input](/img/blog/quasar-toh-qinputs-3.png)
 
-Door het standaard gedrag van QInput, komt deze te breed over. Om dit te limiteren wordt er een `width` op de container gezet (zoals al gedaan wordt op de inlogpagina).
+Due to the default behavior of QInput, it appears too wide. To limit this, a `width` is set on the container (as is already done on the login page).
 
 ![input](/img/blog/quasar-toh-qinputs-width-1.png)
 ![input](/img/blog/quasar-toh-qinputs-width-2.png)
 
-Alle wijzigingen: [GitHub](https://github.com/code-coaching/quasar-tour-of-heroes/commit/2d5ee808234d8aefe9827490cbf6f1f20aad8575)
+All changes: [GitHub](https://github.com/code-coaching/quasar-tour-of-heroes/commit/2d5ee808234d8aefe9827490cbf6f1f20aad8575)
 
-### Validatie
+### Validation
 
-Quasar voorziet functionaliteit om validatie te voorzien op inputvelden.
+Quasar provides functionality to add validation on input fields.
 
-Wijzig de div rondom de inputs naar een `q-form`. Voorzien een `ref`-variabele waarin een object geplaatst wordt van het type `QForm`. Koppel de `formRef` aan `q-form`.
+Change the div around the inputs to a `q-form`. Provide a `ref` variable in which to place an object of type `QForm`. Link the `formRef` to `q-form`.
 
-Plaats vervolgens `rules` op de `<q-input>`-elementen. Dit is een prop waaraan een array van validatieregels wordt meegegeven.
+Then place `rules` on the `<q-input>` elements. This is a prop to which an array of validation rules is passed.
 
-Voor gebruiksgemak is `greedy` toegevoegd aan de `<q-form>`. Dit zorgt ervoor dat als `.validate()` wordt aangeroepen op de form, alle velden in één keer worden gevalideerd. Ook is er gekozen om `lazy-rules` toe te voegen aan `<q-input>`, dit zorgt ervoor dat een veld pas wordt gevalideerd nadat het veld focus verliest.
+For ease of use, `greedy` is added to the `<q-form>`. This ensures that when `.validate()` is called on the form, all fields are validated at once. We also chose to add `lazy-rules` to `<q-input>`, this ensures that a field is validated only after the field loses focus.
 
 ![input validation](/img/blog/quasar-toh-qinput-validation.gif)
 
@@ -172,21 +172,21 @@ Voor gebruiksgemak is `greedy` toegevoegd aan de `<q-form>`. Dit zorgt ervoor da
 </style>
 ```
 
-Alle wijzigingen: [GitHub](https://github.com/code-coaching/quasar-tour-of-heroes/commit/d2012bfc70a8dc28061922794133ff5fe6103915)
+All changes: [GitHub](https://github.com/code-coaching/quasar-tour-of-heroes/commit/d2012bfc70a8dc28061922794133ff5fe6103915)
 
-## Composable voor validatie
+## Composable for validation
 
-Momenteel is er enkel in de loginpagina validatie toegevoegd. Maar validatie kan (en zal) op meerdere plaatsen voorkomen. Het is dus een goed idee om deze validatiemethoden meteen in een composable te plaatsen.
+Currently, validation has been added only in the login page. But validation can (and will) occur in multiple places. So it's a good idea to put these validation methods in a composable right away.
 
-Ter herhaling, composable/service bevat `reusable code` (Nederlands: `herbruikbare code`). Binnen deze tutorialreeks worden composables met globale state, services genoemd. Composables zonder globale state, worden composables genoemd. Hierdoor is het mogelijk door simpelweg naar de extensie te kijken van een bestand om te weten of het gaat om een composable met globale state of een composable zonder globale state.
+To repeat, composable/service contains `reusable code'. Within this tutorial series, composables with global state are called services. Composables without global state are called composables. This makes it possible, simply by looking at the extension of a file, to know whether it is a composable with global state or a composable without global state.
 
-`src/services/auth.service.ts`: bevat globale state
-`src/services/hero.service.ts`: bevat globale state
-`src/services/validator.composable.ts`: bevat géén globale state
+`src/services/auth.service.ts`: contains global state
+`src/services/hero.service.ts`: contains global state
+`src/services/validator.composable.ts`: contains no global state
 
-Globale state zijn de variabelen die boven de functie staan. In deze voorbeelden dus boven `useAuth` en `useHero`.
+Global state is the variable above the function. So in these examples above `useAuth` and `useHero`.
 
-Maak het bestand `src/services/validator.composable.ts` aan.
+Create the file `src/services/validator.composable.ts`.
 
 ```ts
 const useValidators = () => {
@@ -220,9 +220,9 @@ const useValidators = () => {
 export { useValidators };
 ```
 
-Zowel de validatiefuncties als de array met validatiefuncties voor specifieke types van velden worden teruggegeven. Er wordt van uitgegaan dat elk e-mailveld dezelfde validatie heeft, dat elk wachtwoordveld dezelfde validatie heeft. Indien er toch afwijkende velden zouden zijn, kan een nieuwe array met aparte waarden worden opgesteld met de juiste validatiefuncties voor deze velden in de component. Deze aanpak wordt gebruik voor de twee andere inputs.
+Both the validation functions and the array of validation functions for specific types of fields are returned. It is assumed that every email field has the same validation, that every password field has the same validation. If there were any differing fields, a new array of separate values can be created with the appropriate validation functions for these fields in the component. This approach is used for the other two inputs.
 
-Gebruik deze composable in de loginpagina.
+Use this composable in the login page.
 
 `src/pages/login.vue`
 
@@ -275,7 +275,7 @@ export default defineComponent({
 });
 ```
 
-Gebruik deze composable ook in de pagina's met de andere inputs. Zorg opnieuw voor een `<q-form>` met een ref en het attribuut `greedy`. Plaats `rules` op de `<q-input>` en plaats het attribuut `lazy-rules` op de `<q-input>`.
+Use this composable in the pages with the other inputs as well. Again, provide a `<q-form>` with a ref and the attribute `greedy`. Place `rules` on the `<q-input>` and place the attribute `lazy-rules` on the `<q-input>`.
 
 `src/pages/HeroAdd.vue`
 
@@ -460,19 +460,19 @@ Gebruik deze composable ook in de pagina's met de andere inputs. Zorg opnieuw vo
 </style>
 ```
 
-Alle wijzigingen: [GitHub](https://github.com/code-coaching/quasar-tour-of-heroes/commit/90e991e46aafb67dd821356a9e87d1a93b36b17e)
+All changes: [GitHub](https://github.com/code-coaching/quasar-tour-of-heroes/commit/90e991e46aafb67dd821356a9e87d1a93b36b17e)
 
 ## QBtn
 
-Momenteel wordt er gebruikgemaakt van een `StyledButton`-component, hierin is een gewoon `<button>`-element gebruikt. Wijzig dit naar een `<q-btn>` en zie wat er nu gebeurt.
+Currently a `StyledButton` component is used, in this a regular `<button>` element is used. Change this to a `<q-btn>` and see what happens next.
 
 ![QBtn](/img/blog/quasar-toh-qbtn.gif)
 
-In het eerste deel is de `button` te zien, er wordt op geklikt maar dit is niet te merken. Na het wijzigen naar `q-btn` is er plots een klikanimatie en extra styling zoals een schaduw. Allemaal door simpelweg `button` te wijzigen in `q-btn`.
+In the first part, the `button` can be seen, it is clicked but this is not noticeable. After changing to `q-btn` suddenly there is a click animation and additional styling such as a shadow. All by simply changing `button` to `q-btn`.
 
 `src/components/StyledButton.vue`
 
-Voor wijziging:
+Before changes:
 
 ```html
 <button
@@ -485,7 +485,7 @@ Voor wijziging:
 </button>
 ```
 
-Na wijziging:
+After changes:
 
 ```html
 <q-btn
@@ -498,7 +498,7 @@ Na wijziging:
 </q-btn>
 ```
 
-Vervolgens kunnen de heroes in de `HeroList.vue` gezien worden als knoppen, ook al zijn het momenteel gewoon `div`-elementen. Maak hier een `q-btn`-component van en wijzig wat aan de styling zodat de knop er terug correct uitziet.
+Next, the heroes in the `HeroList.vue` can be seen as buttons, even though they are currently just `div` elements. Make this a `q-btn` component and change some styling so that the button looks correct again.
 
 `src/pages/HeroList.vue`
 
@@ -581,13 +581,13 @@ Vervolgens kunnen de heroes in de `HeroList.vue` gezien worden als knoppen, ook 
 
 ![QBtn Hero List](/img/blog/quasar-toh-qbtn-hero-list.gif)
 
-Alle wijzigingen: [GitHub](https://github.com/code-coaching/quasar-tour-of-heroes/commit/f0b6b18d6d8f5cf2a5ded566f5e86ff2dc1ef62d)
+All changes: [GitHub](https://github.com/code-coaching/quasar-tour-of-heroes/commit/f0b6b18d6d8f5cf2a5ded566f5e86ff2dc1ef62d)
 
 ## QNotify Plugin
 
-Momenteel wordt er gebruik gemaakt van een alert om feedback te geven aan de gebruiker wanneer er iets misgaat. Dit zal gewijzigd worden naar de `QNotify`-component. Ook zullen er notificaties toegevoegd worden aan de succesvolle acties.
+Currently, an alert is used to provide feedback to the user when something goes wrong. This will be changed to the `QNotify` component. Notifications will also be added to successful actions.
 
-### Toevoegen in quasar.conf.js
+### Add in quasar.conf.js
 
 ```js
 {
@@ -607,9 +607,9 @@ Momenteel wordt er gebruik gemaakt van een alert om feedback te geven aan de geb
 }
 ```
 
-Door het `notify`-object toe te voegen aan het `config`-object, worden de default waarden gewijzigd. In dit voorbeeld wordt de default timeout van 5000ms (5 seconden) gewijzigd naar 3000ms (3 seconden).
+Adding the `notify` object to the `config` object changes the default values. In this example, the default timeout is changed from 5000ms (5 seconds) to 3000ms (3 seconds).
 
-Om de gebruiker van betere feedback te voorzien bij het aanmaken, wijzigen of verwijderen van een hero, wordt er een notificatie getoond. Zowel als de call succesvol is (`.then`) als wanneer er een fout is (`.catch`), wordt er een notificatie getoond.
+To provide the user with better feedback when creating, modifying or deleting a hero, a notification is displayed. Both when the call is successful (`.then`) and when there is an error (`.catch`), a notification is shown.
 
 `src/services/hero.service.ts`
 
@@ -753,12 +753,12 @@ export { useHeroes };
 
 ![QNotify](/img/blog/quasar-toh-notify.gif)
 
-Doe hetzelfde voor de auth service.
+Do the same for the auth service.
 
-Alle wijzigingen: [GitHub](https://github.com/code-coaching/quasar-tour-of-heroes/commit/605526c48d074c812d0a677abaa4c573b71a47e5)
+All changes: [GitHub](https://github.com/code-coaching/quasar-tour-of-heroes/commit/605526c48d074c812d0a677abaa4c573b71a47e5)
 
-## Conclusie
+## Conclusion
 
-Door componenten en plugins te gebruiken die aanwezig zijn in Quasar, is het makkelijk om snel een goed uitziende applicatie te krijgen met subtiele klikanimaties, goede styling en makkelijk te gebruiken notificaties.
+By using components and plugins present in Quasar, it is easy to quickly get a good looking application with subtle click animations, good styling and easy to use notifications.
 
-Vind nog meer componenten en plugins aangeleverd door Quasar in de [Quasar Docs](https://quasar.dev/). Wil je een gedetailleerd voorbeeld in videoformaat? Bezoek de site gemaakt door de altijd vrolijke, altijd enthousiaste Luke Diebold [Quasar Component Videos](https://quasarcomponents.com/).
+Find even more components and plugins provided by Quasar in the [Quasar Docs](https://quasar.dev/). Want a detailed example in video format? Visit the site created by the always cheerful, always enthusiastic Luke Diebold [Quasar Component Videos](https://quasarcomponents.com/).
