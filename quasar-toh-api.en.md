@@ -57,7 +57,7 @@ Create a file in the `src/boot` directory, the name used in this tutorial is `ax
 ```ts
 import axios, { AxiosInstance } from "axios";
 
-const serverUrl = "https://code-coaching.dev/api";
+const serverUrl = "https://api.code-coaching.dev";
 const api = axios.create({ baseURL: serverUrl });
 
 export { api };
