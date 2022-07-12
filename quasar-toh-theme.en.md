@@ -24,9 +24,9 @@ Starting situation: [Source code](https://github.com/code-coaching/quasar-tour-o
 
 The final situation being worked towards is as follows:
 
-![end situation]()
+![end situation](/img/blog/quasar-toh-theme-example-page.gif)
 
-End situation: [Source code]()
+End situation: [Source code](https://github.com/code-coaching/quasar-tour-of-heroes/releases/tag/quasar-toh-theme)
 
 ## Example page with dark mode toggle
 

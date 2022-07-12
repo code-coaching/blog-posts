@@ -24,9 +24,9 @@ Beginsituatie: [Source code](https://github.com/code-coaching/quasar-tour-of-her
 
 De eindsituatie waar naartoe gewerkt wordt ziet er als volgt uit:
 
-![eindsituatie]()
+![eindsituatie](/img/blog/quasar-toh-theme-example-page.gif)
 
-Eindsituatie: [Source code]()
+Eindsituatie: [Source code](https://github.com/code-coaching/quasar-tour-of-heroes/releases/tag/quasar-toh-theme)
 
 ## Voorbeeldpagina met dark mode toggle
 
