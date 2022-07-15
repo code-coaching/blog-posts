@@ -1285,8 +1285,24 @@ To ensure that a component uses the chosen default properties, each component wi
 
 A route to get to the settings/example page has also been added.
 
+On the example page, components are dynamically rendered. This is done using:
+
+```html
+<component is="QBtn"></component>
+```
+
+In the code, the component name is used to load the component.
+
+```html
+<component :is="componentName"></component>
+```
+
 All changes:
 [GitHub](https://github.com/code-coaching/quasar-tour-of-heroes/commit/d660166880690aa52273742b21aef9a51fab111e)
+
+Because no `QInput` component is present on the page, it will not be rendered via the dynamic components. To solve this, a `<q-input />` component can be placed in comments on the page.
+
+[GitHub](https://github.com/code-coaching/quasar-tour-of-heroes/commit/dc210526d06ee719be6f198417cef7fba21e13f4)
 
 ## API Extractor
 

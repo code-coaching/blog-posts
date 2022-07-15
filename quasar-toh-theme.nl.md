@@ -1286,8 +1286,24 @@ Om te zorgen dat een component de gekozen default properties gebruikt, zal elke 
 
 Er is ook een route toegevoegd om naar de settings/example page te gaan.
 
+Op de example pagina worden componenten dynamisch gerenderd. Dit wordt gedaan aan de hand van:
+
+```html
+<component is="QBtn"></component>
+```
+
+In de code wordt de componentnaam gebruikt om de component te laden.
+
+```html
+<component :is="componentName"></component>
+```
+
 Alle wijzigingen:
 [GitHub](https://github.com/code-coaching/quasar-tour-of-heroes/commit/d660166880690aa52273742b21aef9a51fab111e)
+
+Doordat er geen enkele `QInput`-component aanwezig is op de pagina, zal deze niet gerenderd worden via de dynamische componenten. Om dit op te lossen kan er een `<q-input />` component in commentaar geplaatst worden op de pagina.
+
+[GitHub](https://github.com/code-coaching/quasar-tour-of-heroes/commit/dc210526d06ee719be6f198417cef7fba21e13f4)
 
 ## API Extractor
 
