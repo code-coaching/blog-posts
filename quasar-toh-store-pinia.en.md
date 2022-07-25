@@ -117,7 +117,7 @@ The `defineStore` function accepts two parameters. The first parameter is the na
 
 ## Migrate Hero service to Pinia store
 
-`src/stores/hero.store.ts``
+`src/stores/hero.store.ts`
 
 ```ts
 import { AxiosRequestConfig } from "axios";
@@ -295,36 +295,36 @@ All changes: [GitHub](https://github.com/code-coaching/quasar-tour-of-heroes/com
 
 ## Vue Devtools
 
-Installeer de [Vue Devtools](https://devtools.vuejs.org/guide/installation.html) voor de browser naar keuze.
+Install the [Vue Devtools](https://devtools.vuejs.org/guide/installation.html) for the browser of your choice.
 
-Pinia stores zijn te bekijken in de `Vue Devtools`-tab.
+Pinia stores can be viewed in the `Vue Devtools` tab.
 
-Na het installeren is de `Vue Devtools` als tab beschikbaar op dezelfde locatie waar de `console` en de `netwerktab` te vinden zijn.
+After installing, the `Vue Devtools` is available as a tab in the same location where the `console` and the `network` tab are found.
 
 ![Vue Devtools](/img/blog/quasar-toh-vue-devtools-pinia.png)
-Ga in de `Vue Devtools` naar de `Pinia`-tab.
+In the `Vue Devtools`, go to the `Pinia` tab.
 
 ![Vue Devtools heroes](/img/blog/quasar-toh-vue-devtools-store.png)
-De gekozen naam van de store, `heroes`, is in het rood omcirkeld. Aangezien de store zelf `heroes` noemt en er ook een property in de state is met dezelfde naam, kan dit voor verwarring zorgen.
+The chosen name of the store, `heroes`, is circled in red. Since the store itself is called `heroes` and there is also a property in the state with the same name, this can cause confusion.
 
-Refactor de store naar een nieuwe naam.
+Refactor the store to a new name.
 
-De wijziging: [GitHub](https://github.com/code-coaching/quasar-tour-of-heroes/commit/8d21c8575602de8eca77cf89e237ad43c05c587e)
+The change: [GitHub](https://github.com/code-coaching/quasar-tour-of-heroes/commit/8d21c8575602de8eca77cf89e237ad43c05c587e)
 
-Dit wijzigt niks functioneel, maar helpt bij het herkennen van de store in de `Vue Devtools`.
+This does not change anything functionally, but it helps to recognize the store in the `Vue Devtools`.
 ![Vue Devtools heroStore](/img/blog/quasar-toh-vue-devtools-hero-store.png)
 
-Bij het bekijken van de `heroStore` kunnen alle details van de store bekeken worden. Zowel de `state` als de `getters` zijn te bekijken.
+When viewing the `heroStore`, all the details of the store can be viewed. Both the `state` and the `getters` can be viewed.
 ![Vue Devtools heroes store](/img/blog/quasar-toh-vue-devtools-hero-store-details.png)
 
-Bij het aanklikken van een hero, waardoor de `selectedHero` gewijzigd wordt, kan de wijziging bekeken worden in de `Vue Devtools`.
+When clicking on a hero, which changes the `selectedHero`, the change can be viewed in the `Vue Devtools`.
 
 ![Vue Devtools selected hero](/img/blog/quasar-toh-vue-devtools-selected-hero.png)
 ![Vue Devtools selected hero 2](/img/blog/quasar-toh-vue-devtools-selected-hero-2.png)
 
-`time travel`, bij het selecteren van `Timeline` is het mogelijk om de wijzigingen van de store (en andere Vue acties) doorheen de tijd te bekijken.
+`time travel`, when selecting `Timeline` it is possible to view the changes of the store (and other Vue actions) through time.
 
-## Auth service migreren naar Pinia store
+## Migrate Auth service to Pinia store
 
 ```ts
 import { defineStore } from "pinia";
@@ -414,16 +414,16 @@ export const useAuthStore = defineStore("authStore", {
 });
 ```
 
-Overal waar de `Auth Service` gebruikt wordt, zal nu de `Auth Store` gebruikt worden.
+Wherever the `Auth Service` is used, the `Auth Store` will now be used.
 
 `src/layouts/MainLayout.vue`: [GitHub](https://github.com/code-coaching/quasar-tour-of-heroes/commit/4cf0b5b99ae36b7236dd5a21d2a7eb97e2babc03#diff-22686b16c14b601ef5e6e4de40acc8234bf4f4ccbe2d5856e3bb7a0b77da6afc)
-Merk op dat de `getter` doorgegeven wordt aan de template via een `computed`.
-Merk op dat de `action` doorgegeven wordt aan de template via een anonieme arrow-functie.
+Note that the `getter` is passed to the template via a `computed`.
+Note that the `action` is passed to the template via an anonymous arrow function.
 
 `src/pages/Login.vue`: [GitHub](https://github.com/code-coaching/quasar-tour-of-heroes/commit/4cf0b5b99ae36b7236dd5a21d2a7eb97e2babc03#diff-78ff024242ee805990cc729c4b0fe76e134328f5387bf1c8b383c1eb4d4c986d)
-Merk op dat er eerst een rename gebeurde van de functie `login` naar `authenticate` vanuit de Auth Service. Dit is niet langer het geval, de `login`-functie van de `authStore` wordt direct op de `authStore` aangeroepen.
+Note that first there was a rename of the `login` function to `authenticate` from the Auth Service. This is no longer the case, the `login` function from the `authStore` is called directly on the `authStore`.
 
-In de `devtools` zijn nu twee stores te zien: de `authStore` en de `heroStore`.
+In the `devtools` you can now see two stores: the `authStore` and the `heroStore`.
 
 ![Auth Store](/img/blog/quasar-toh-vue-devtools-auth-store.gif)
 

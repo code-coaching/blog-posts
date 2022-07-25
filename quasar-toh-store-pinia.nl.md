@@ -115,7 +115,7 @@ De `defineStore`-functie accepteert twee parameters. De eerste parameter is de n
 
 ## Hero service migreren naar Pinia store
 
-`src/stores/hero.store.ts``
+`src/stores/hero.store.ts`
 
 ```ts
 import { AxiosRequestConfig } from "axios";
