@@ -135,14 +135,19 @@ Inductive assertions show that a conclusion is likely, but not certain, to be tr
 
 ### Deductive examples
 
+Example 1
+
 - Assertion 1: All humans are mammels.
 - Assertion 2: All mammels are animals.
 - Conclusion: All humans are animals.
-  <br/>
-  <br/>
+
+Example 2
+
 - Assertion 1: The food this evening will be either wok or french fries.
 - Assertion 2: The food this evening will not be french fries..
 - Conclusion: The food this evening will be wok.
+
+Example 3
   <br/>
   <br/>
 - Assertion 1: If water is leaking through the roof, water is leaking through the ceiling.
@@ -151,10 +156,13 @@ Inductive assertions show that a conclusion is likely, but not certain, to be tr
 
 ### Inductive examples
 
+Example 1
+
 - Assertion 1: It has never happened in history that a student has not passed.
 - Conclusion: It is highly likely, but not certain, that all students will succeed this year.
-  <br/>
-  <br/>
+
+Example 2
+
 - Assertion 1: Every morning for the past ten days, the neighbor's rooster has been crowing.
 - Conclusion: Probably the cock crows tomorrow morning.
 
@@ -212,7 +220,7 @@ A Venn diagram with three categories.
 - The light blue circle are all animals with black fur.
 - The overlapping red section are all dogs that are also pets.
 - The overlapping blue section are all dogs with black fur.
-- The overlapping green section are all pets with black fur.
+- The overlapping green section are all pets that are not a dog with black fur.
 - The overlapping black section are all dogs that are also pets and have black fur.
 
 Combinations are also possible:

@@ -134,26 +134,33 @@ Inductieve beweringen tonen aan dat een conclusie waarschijnlijk, maar niet met 
 
 ### Deductieve voorbeelden
 
+Voorbeeld 1
+
 - Bewering 1: Alle mensen zijn zoogdieren.
 - Bewering 2: Alle zoogdieren zijn dieren.
 - Conclusie: Alle mensen zijn dieren.
-  <br/>
-  <br/>
+
+Voorbeeld 2
+
 - Bewering 1: Het eten vanavond zal wok of frieten zijn.
 - Bewering 2: Het eten vanavond zijn geen frieten.
 - Conclusie: Het eten vanavond is wok.
-  <br/>
-  <br/>
+
+Voorbeeld 3
+
 - Bewering 1: Als er water door het dak komt, komt er water door het plafond.
 - Bewering 2: Als er water door het plafond komt, wordt de vloer nat.
 - Conclusie: Wanneer er water door het dak komt, wordt de vloer nat.
 
 ### Inductieve voorbeelden
 
+Voorbeeld 1
+
 - Bewering 1: Het is in de geschiedenis nooit voorgekomen dat er een leerling niet geslaagd is.
 - Conclusie: Het is hoogstwaarschijnlijk, maar niet zeker, dat alle leerlingen dit jaar zullen slagen.
-  <br/>
-  <br/>
+
+Voorbeeld 2
+
 - Bewering 1: Elke ochtend van de afgelopen tien dagen kraait de haan van de buren.
 - Conclusie: Waarschijnlijk kraait de haan morgenvroeg.
 
@@ -211,7 +218,7 @@ Een Venn-diagram met drie categorieën.
 - De lichtblauwe cirkel zijn alle dieren met een zwarte vacht.
 - Het overlappende rode gedeelte zijn alle honden die ook een huisdier zijn.
 - Het overlappende blauwe gedeelte zijn alle honden met een zwarte vacht.
-- Het overlappende groene gedeelte zijn alle huisdieren met een zwarte vacht.
+- Het overlappende groene gedeelte zijn alle huisdieren die geen hond zijn, met een zwarte vacht.
 - Het overlappende zwarte gedeelte zijn alle honden die ook een huisdier zijn en een zwarte vacht hebben.
 
 Combinaties zijn ook mogelijk:
