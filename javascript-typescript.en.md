@@ -298,6 +298,213 @@ console.log(result);
 
 Compiling no longer gives any errors.
 
+## TypeScript basics
+
+### Explicit types
+
+When we as developers create a variable, it is useful to know what type the variable is. This can be declared explicitly with TypeScript. This can be done with the `: type` syntax.
+
+```ts
+let fullName: string;
+fullName = "John Duck.";
+```
+
+Here we explicitly state that the variable `fullName` is a `string`.
+
+### Implicit types
+
+However, it is not always necessary to explicitly indicate what type a variable is. TypeScript can also determine this for itself. We call these implicit types.
+
+```js
+const fullName = "John Duck.";
+```
+
+Because the variable `fullName` is assigned a value, TypeScript itself can determine that the type of this variable, is the type of the value assigned to it. In this case, the type is `string`.
+
+This concept is also called `type inference`.
+
+### Multiple types
+
+It may happen that a variable can have multiple types. For example, this may be the case when a variable can have a value that is a `string` or a `number`. In this case, only `explicit types` is an option.
+
+```js
+let fullName: string | number = "John Duck";
+fullName = 30;
+```
+
+In general, it is not recommended to assign multiple types to a variable.
+
+### Type any
+
+When a variable is declared with no value assigned, the variable is of type `any`. This is a type that can contain any type. Also called an `implicit any`.
+
+```js
+let fullName; // implicit any
+```
+
+```js
+let fullName: any; // explicit any
+```
+
+Both implicit and explicit any typing is not recommended. It is better to specify explicitly what type a variable is.
+
+### Interface
+
+```js
+const person = {
+  firstName: "John"
+  lastName: "Duck",
+  age: 30,
+};
+```
+
+In the above example, implicit typing is assigned to the variable `person`. This is an object with the properties `firstName`, `lastName` and `age`. These properties each have an implicit typing. This is a `string` for `firstName` and `lastName` and a `number` for `age`.
+
+If explicit typing is used here, it looks like this:
+
+```js
+const person: {
+  firstName: string,
+  lastName: string,
+  age: number,
+} = {
+  firstName: "John"
+  lastName: "Duck",
+  age: 30,
+};
+```
+
+This is not readable. To solve this, an `interface` can be used.
+
+```js
+interface Person {
+  firstName: string;
+  lastName: string;
+  age: number;
+}
+
+const person: Person = {
+  firstName: "John"
+  lastName: "Duck",
+  age: 30,
+};
+```
+
+### Optional properties
+
+It may happen that a property is not always present. In this case a `?` can be used after the property name.
+
+```js
+interface Person {
+  firstName: string;
+  lastName: string;
+  age: number;
+}
+
+const person: Person = {
+  firstName: "John"
+  lastName: "Duck",
+  age: 30,
+};
+
+const person2: Person = {
+  firstName: "Janine"
+  lastName: "Duck",
+};
+```
+
+If age were not optional, an error would be displayed because person2 has no age. Because this property is optional, it is possible with one interface, to support both use cases.
+
+### Optional chaining
+
+```js
+interface Toy {
+  name: string;
+}
+
+interface Pet {
+  name: string;
+  age: number;
+  toy: Toy;
+}
+
+interface Person {
+  firstName: string;
+  lastName: string;
+  age?: number;
+  pet: Pet;
+}
+
+const ball = {
+  name: "ball",
+};
+
+const laika = {
+  name: "Laika",
+  age: 3,
+  toy: ball,
+};
+
+const person: Person = {
+  firstName: "John",
+  lastName: "Duck",
+  age: 30,
+  pet: laika,
+};
+
+if (person.pet && person.pet.toy) {
+  console.log(person.pet.toy.name);
+}
+
+if (person.pet?.toy) {
+  console.log(person.pet.toy.name);
+}
+```
+
+The first if-statement checks to see if `person.pet` exists. If it does not, then the if-statement is ignored. The second if-statement uses `optional chaining`. This is a shorter, more readable variant. Both if-statements have the same functionality.
+
+### Return type
+
+Not only variables have a certain type, functions also have a type. This type is determined by the value that is returned.
+
+```js
+function getFullName(firstName: string, lastName: string) {
+  return `${firstName} ${lastName}`;
+}
+
+const returnFullName = (firstName: string, lastName: string) => {
+  return `${firstName} ${lastName}`;
+};
+```
+
+In the above functions, a string is returned. Because of this, the return type is implicitly a string. One function is defined with the `function keyword` and one with an `anonymous arrow function`.
+
+This can also be specified explicitly.
+
+```js
+function getFullName(firstName: string, lastName: string): string {
+  return `${firstName} ${lastName}`;
+}
+
+const returnFullName = (firstName: string, lastName: string): string => {
+  return `${firstName} ${lastName}`;
+};
+```
+
+This is done in both cases by adding `: type` after the last round bracket.
+
+If a function returns nothing, then the type is `void`.
+
+```js
+function printName(firstName: string, lastName: string): void {
+  console.log(`${firstName} ${lastName}`);
+}
+
+const logName = (firstName: string, lastName: string): void => {
+  console.log(`${firstName} ${lastName}`);
+};
+```
+
 ## Conclusion
 
 All JavaScript is valid TypeScript. TypeScript adds extra functionality to make the life of developers easier, mistakes like passing wrong types are detected at compile time. Since browsers only support JavaScript, not TypeScript, it is necessary to compile TypeScript to JavaScript.
