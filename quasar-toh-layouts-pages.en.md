@@ -43,10 +43,10 @@ The purpose of this article is to add the layout and get the pages ready, withou
 
 ## Add the layout
 
-Create a file called `MainLayout.vue` in `src/layouts/`. Add this file manually or use the command below in the root of the project.
+Create a file called `MainLayout.vue` in `src/layouts/`. Add the directory `layouts` and the file manually or use the command below in the root of the project.
 
 ```sh
-touch src/layouts/MainLayout.vue
+mkdir src/layouts && touch src/layouts/MainLayout.vue
 ```
 
 The content of this file is:
@@ -70,8 +70,7 @@ The navigation diagram shows that there are three different pages.
 In order for these pages to be linked to the router, they must first be created. In the `src/pages` folder, the pages are added. Add them manually or use the command below in the root of the project to create the pages.
 
 ```sh
-touch src/pages/Dashboard.vue && touch src/pages/HeroList.vue
-&& touch src/pages/HeroDetails.vue
+touch src/pages/Dashboard.vue && touch src/pages/HeroList.vue && touch src/pages/HeroDetails.vue
 ```
 
 The content of `src/pages/Dashboard.vue`:

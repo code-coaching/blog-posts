@@ -43,10 +43,10 @@ Het doel van dit artikel is om de layout toe te voegen en de pagina's klaar te z
 
 ## Layout toevoegen
 
-Maak een bestand genaamd `MainLayout.vue` aan in `src/layouts/`. Voeg dit bestand manueel toe of gebruik onderstaand commando in de root van het project.
+Maak een bestand genaamd `MainLayout.vue` aan in `src/layouts/`. Voeg de directory `layouts` en dit bestand manueel toe of gebruik onderstaand commando in de root van het project.
 
 ```sh
-touch src/layouts/MainLayout.vue
+mkdir src/layouts && touch src/layouts/MainLayout.vue
 ```
 
 De inhoud van dit bestand is:
@@ -70,8 +70,7 @@ In het navigatiediagram is te zien dat er drie verschillende pagina's zijn.
 Om te zorgen dat deze pagina's gekoppeld kunnen worden aan de router, moeten deze eerst aangemaakt worden. In de map `src/pages` worden de pagina's toegevoegd. Voeg ze manueel toe of gebruik het onderstaande commando in de root van het project om de pagina's te maken.
 
 ```sh
-touch src/pages/Dashboard.vue && touch src/pages/HeroList.vue
-&& touch src/pages/HeroDetails.vue
+touch src/pages/Dashboard.vue && touch src/pages/HeroList.vue && touch src/pages/HeroDetails.vue
 ```
 
 De inhoud van `src/pages/Dashboard.vue` is:
