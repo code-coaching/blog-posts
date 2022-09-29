@@ -237,7 +237,7 @@ Step 4: Make the function usable in the template by adding it to the return stat
 ```html
 <template>
   <div>Tour of Heroes</div>
-  <button @click="navigate('/dashboard')">Dashboard</button>
+  <button @click="navigate('/')">Dashboard</button>
   <button @click="navigate('/heroes')">Heroes</button>
 
   <router-view></router-view>

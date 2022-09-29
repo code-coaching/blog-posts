@@ -237,7 +237,7 @@ Stap 4: Maak de functie bruikbaar in de template door het toe te voegen aan de r
 ```html
 <template>
   <div>Tour of Heroes</div>
-  <button @click="navigate('/dashboard')">Dashboard</button>
+  <button @click="navigate('/')">Dashboard</button>
   <button @click="navigate('/heroes')">Heroes</button>
 
   <router-view></router-view>
