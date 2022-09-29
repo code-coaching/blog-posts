@@ -437,7 +437,7 @@ De applicatie doet functioneel nog exact hetzelfde. Dit kan geverifieerd worden 
 
 Er is nog een verbetering mogelijk, niet qua onderhoud, maar om bugs door middel van typfouten te voorkomen. Momenteel wordt `Dashboard` en `HeroList` manueel toegevoegd op elke locatie waar er verwezen wordt naar deze `named route`. De laatste verbetering die toegevoegd wordt in dit artikel, is het toevoegen van een object dat alle `named routes` bevat.
 
-Bovenaan in `src/router/routes.ts` staat nu:
+Bovenaan in `src/router/routes.ts` wordt het volgende toegevoegd:
 
 ```js
 export const ROUTE_NAMES = {
