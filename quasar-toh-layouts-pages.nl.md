@@ -357,7 +357,7 @@ Alle wijzigingen: [GitHub](https://github.com/code-coaching/quasar-tour-of-heroe
 
 De code werkt, prima! Maar het is niet makkelijk om de code te onderhouden. De navigatie is afhankelijk van de route die gedefinieerd is in de `src/router/routes.ts`-bestand. Stel dat de route voor de lijst van Heroes plots gewijzigd moet naar `/hero-list`. Wat voor impact heeft dit op de code?
 
-De wijziging zou doorgevoord moeten worden in `src/router/routes.ts` en op elke locatie in de code waar er rechtstreeks genavigeerd wordt naar de route. In de code van dit artikel, is dit enkel in `MainLayout.vue`. Maar stel dat het project al wat uitgebreider is, dan kan dit ook op tien locaties voorkomen.
+De wijziging zou doorgevoerd moeten worden in `src/router/routes.ts` en op elke locatie in de code waar er rechtstreeks genavigeerd wordt naar de route. In de code van dit artikel, is dit enkel in `MainLayout.vue`. Maar stel dat het project al wat uitgebreider is, dan kan dit ook op tien locaties voorkomen.
 
 Om dit aan te pakken, gaat er gebruikgemaakt worden van `named routes` (Nederlands: routes met een naam).
 
