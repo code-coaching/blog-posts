@@ -144,9 +144,9 @@ The console displays the URL that the application is running on. By default, the
 
 Visit the following routes by changing the URL in the address bar:
 
-- `http://localhost:8080/` (Dashboard)
-- `http://localhost:8080/heroes` (HeroList)
-- `http://localhost:8080/heroes/1` (HeroDetails)
+- `http://localhost:8080/#/` (Dashboard)
+- `http://localhost:8080/#/heroes` (HeroList)
+- `http://localhost:8080/#/heroes/1` (HeroDetails)
 
 What?! The content of the pages is not shown! This can be fixed by adding one more line to `src/layouts/MainLayout.vue`:
 

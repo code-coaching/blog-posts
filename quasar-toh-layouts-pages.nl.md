@@ -140,13 +140,13 @@ Start de applicatie op om te weten hoe het resultaat eruitziet:
 npm run dev
 ```
 
-In de console wordt de URL getoond waar de applicatie op draait. Standaard is de URL `http://localhost:8080`.
+In de console wordt de URL getoond waar de applicatie op draait. Standaard is de URL `http://localhost:8080/#/`.
 
 Bezoek de volgende routes door de URL in de adresbalk te wijzigen:
 
-- `http://localhost:8080/` (Dashboard)
-- `http://localhost:8080/heroes` (HeroList)
-- `http://localhost:8080/heroes/1` (HeroDetails)
+- `http://localhost:8080/#/` (Dashboard)
+- `http://localhost:8080/#/heroes` (HeroList)
+- `http://localhost:8080/#/heroes/1` (HeroDetails)
 
 Wat valt er op? De inhoud van de pagina's wordt niet getoond! Dit kan opgelost worden door één extra lijn toe te voegen aan `src/layouts/MainLayout.vue`:
 
