@@ -18,6 +18,10 @@ Beginsituatie: [Source code](https://github.com/code-coaching/quasar-tour-of-her
 
 Eindsituatie: [Source code](https://github.com/code-coaching/quasar-tour-of-heroes/releases/tag/quasar-toh-layouts-and-pages)
 
+Heb je onderstaande error in de template?
+![jsx error](/img/blog/jsx-error.png)
+Dit is doordat het project met een oude versie van `Volar` is opgezet. Dit kan opgelost worden door deze [korte blog te volgen](https://code-coaching.dev/#/blog/volar-cannot-use-jsx).
+
 ## Layouts en Pagina's
 
 Binnen Quasar wordt er gesproken over Layouts en Pagina's. In feite is er geen verschil, het zijn beide Vue-componentent. Waarom dan het onderscheid? Dit is om een duidelijk onderscheid te maken tussen een component die elementen bevat die zichtbaar moeten zijn op elke pagina en componenten die specifiek zijn aan een pagina.

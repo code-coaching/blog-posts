@@ -18,6 +18,10 @@ Begin situation: [Source code](https://github.com/code-coaching/quasar-tour-of-h
 
 Final situation: [Source code](https://github.com/code-coaching/quasar-tour-of-heroes/releases/tag/quasar-toh-layouts-and-pages)
 
+Do you have the following error in the template?
+![jsx error](/img/blog/jsx-error.png)
+This is because the project was set up with an old version of `Volar`. This can be fixed by following this [short blog](https://code-coaching.dev/#/blog/volar-cannot-use-jsx).
+
 ## Layouts and pages
 
 Within Quasar, they talk about Layouts and Pages. In fact there is no difference, they are both Vue components. So why the distinction? This is to make a clear distinction between a component that contains elements that should be visible on every page and components that are specific to a page.
