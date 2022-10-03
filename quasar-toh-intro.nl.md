@@ -8,9 +8,12 @@ tags:
   - Tour of Heroes
 categories:
   - Frontend
+youtubeIds:
+  - t1kjCY1c3Bg
 ---
 
 Verwachte voorkennis:
+
 - Basis JavaScript
 - Basis HTML
 - Basis CSS
@@ -22,14 +25,16 @@ Deze module gaat over het Quasar Framework en dus Vue. Meer specifiek Vue3. In v
 Angular, een van de andere moderne frameworks, heeft een zeer goede tutorial genaamd Tour of Heroes om de functionaliteiten van het framework te tonen en om basisconcepten aan te leren. Deze tutorial neemt de [Tour of Heroes](https://angular.io/tutorial/) als basis met Quasar als framework. Vervolgens zal de tutorial uitgebreid worden om ook de functionaliteiten van een productiewaardige Vue3-applicatie te tonen.
 
 De basisconcepten zijn:
+
 - routing (de navigatie)
-- layouts 
+- layouts
 - pagina's
 - slimme/domme componenten
 - data koppelen in de HTML
 - services om data te verzamelen
 
 De extra concepten zijn:
+
 - i18n (internationalization) - vertalingen
 - koppelen van de data in de services met een API (zowel met fetch als met axios)
 - koppelen van een store (zowel Vuex als Pinia)
