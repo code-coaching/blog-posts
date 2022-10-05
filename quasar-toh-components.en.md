@@ -212,7 +212,6 @@ Style the elements, add additional elements as needed to achieve the desired res
     display: flex;
     max-width: 10rem;
     background-color: darken(#eeeeee, 10%);
-    background-color: #eeeeee;
     cursor: pointer;
     color: #8d8d8d;
     border-radius: 0.5rem;
@@ -656,7 +655,6 @@ The modified SCSS class `hero--active`:
   display: flex;
   max-width: 10rem;
   background-color: darken(#eeeeee, 10%);
-  background-color: #eeeeee;
   cursor: pointer;
   color: #8d8d8d;
   border-radius: 0.5rem;

@@ -8,6 +8,9 @@ tags:
   - Tour of Heroes
 categories:
   - Frontend
+youtubeIds:
+  - t1kjCY1c3Bg
+  - x_YWM7jfJqc
 ---
 
 In dit artikel wordt vertrokken vanuit de situatie waar de layout opgezet is en de verschillende pagina's toegevoegd zijn aan de Tour of Heroes-applicatie. De beginsituatie is een bestaande Quasar-project met een layout component en placeholder pagina's. De eindsituatie is een Quasar-project waarin de pagina's voorzien zijn van componenten.
@@ -212,7 +215,6 @@ Style de elementen, voeg waar nodig extra elementen toe om het gewenste resultaa
     display: flex;
     max-width: 10rem;
     background-color: darken(#eeeeee, 10%);
-    background-color: #eeeeee;
     cursor: pointer;
     color: #8d8d8d;
     border-radius: 0.5rem;
@@ -656,7 +658,6 @@ De gewijzigde SCSS-class `hero--active`:
   display: flex;
   max-width: 10rem;
   background-color: darken(#eeeeee, 10%);
-  background-color: #eeeeee;
   cursor: pointer;
   color: #8d8d8d;
   border-radius: 0.5rem;
