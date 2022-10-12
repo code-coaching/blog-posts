@@ -26,6 +26,10 @@ The final situation being worked towards is as follows:
 
 End situation: [Source code](https://github.com/code-coaching/quasar-tour-of-heroes/releases/tag/quasar-toh-components)
 
+Do you have the following error in the template?
+![jsx error](/img/blog/jsx-error.png)
+This is because the project was set up with an old version of `Volar`. This can be fixed by following this [short blog](https://code-coaching.dev/#/blog/volar-cannot-use-jsx).
+
 ## Components
 
 Everything within Vue is a component. Since Quasar is a Vue framework, all components are also Vue components. In the application, you can already see a component for the layout, called `MainLayout.vue`. There are also already components for the different pages.
