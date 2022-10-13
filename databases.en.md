@@ -300,10 +300,8 @@ The `SQL Database` section of the exercises is not part of the subject matter.
 
 ## API
 
-API staat voor Application Programming Interface, dit is een manier om applicaties
-met elkaar te laten communiceren. Het meest voorkomende type API bij het
-ontwikkelen van webapplicaties is een RESTful API.
-Een ander type dat meer en meer voorkomt tegenwoordig, is een GraphQL API.
+API stands for Application Programming Interface, this is a way for applications to communicate with each other. The most common type of API when developing web applications is a RESTful API.
+Another type that is becoming more and more common these days is a GraphQL API.
 
 ### Protocollen
 
