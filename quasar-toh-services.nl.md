@@ -8,6 +8,9 @@ tags:
   - Tour of Heroes
 categories:
   - Frontend
+youtubeIds:
+  - t1kjCY1c3Bg
+  - a2RsTjycKYg
 ---
 
 In dit artikel wordt vertrokken vanuit de situatie waar de layout opgezet is en de verschillende pagina's toegevoegd zijn aan de Tour of Heroes-applicatie. De pagina's zijn voorzien van elementen, data en componenten. De beginsituatie is een bestaande Quasar-project met een layout componenent en werkende pagina's. De eindsituatie is een Quasar-project waarin de data verplaatst is naar services.
@@ -393,7 +396,7 @@ Alle wijzigingen: [GitHub](https://github.com/code-coaching/quasar-tour-of-heroe
 
 De gewenste functionaliteit is dat er een `save`-knop is die de wijzigingen in de hero opslaat op de detailpagina.
 
-Één van de mogelijkheden is dat de globale `heroes`-variabele wordt aangepast in de `HeroDetails`-pagina`. In plaats van dit te doen, gaat de funtionaliteit rechtstreeks in de service geïmplementeerd worden.
+Één van de mogelijkheden is dat de globale `heroes`-variabele wordt aangepast in de `HeroDetails`-pagina. In plaats van dit te doen, gaat de funtionaliteit rechtstreeks in de service geïmplementeerd worden.
 
 Het idee is dat de globale `ref`-variabelen gebruikt worden om de waarden uit te lezen. Het wijzigen van deze globale `ref`-variabelen wordt gedaan via functies in de service.
 
