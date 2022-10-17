@@ -202,7 +202,7 @@ export { useHeroes };
 
 Hierbij is het belangrijk om te beslissen of de variabele globaal of scoped is. Indien de variabele scoped is in de functie, zal er per component waar de service gebruikt wordt een unieke `selectedHero` zijn. Indien de variabele globaal is, zal overal dezelfde `selectedHero` worden gebruikt.
 
-Met de keuze die hierboven gemaakt wordt, zal er dus één selectedHero zijn voor het hele project. Overal waas `useHeroes()` gebruikt wordt, waaruit vervolgens de `selectedHero` wordt gehaald, zal deze dezelfde waarde hebben.
+Met de keuze die hierboven gemaakt wordt, zal er dus één selectedHero zijn voor het hele project. Overal waar `useHeroes()` gebruikt wordt, waaruit vervolgens de `selectedHero` wordt gehaald, zal deze dezelfde waarde hebben.
 
 In de `HeroList.vue` wordt de `selectedHero` geïmporteerd vanuit de service:
 
