@@ -8,6 +8,8 @@ tags:
   - JS
 categories:
   - Frontend
+youtubeIds:
+  - mpdD_V3RUSM
 ---
 
 Om in een programmeertaal een werkend programma te coderen, moet de `syntax` van de programmeertaal gevolgd worden. Dit zijn alle regeltjes die gevolgd moeten worden om een werkend programma te schrijven.
