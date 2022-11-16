@@ -8,6 +8,8 @@ tags:
   - Vue Router
 categories:
   - Frontend
+youtubeIds:
+  - aKf6V_Yz6yg
 ---
 
 Zet een nieuw Quasar-project op om stap voor stap mee te volgen.
