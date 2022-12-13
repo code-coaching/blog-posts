@@ -8,6 +8,9 @@ tags:
   - Tour of Heroes
 categories:
   - Frontend
+youtubeIds:
+  - FnoMmbL9wGo
+  - oBRbrYbrBLY
 ---
 
 In dit artikel wordt vertrokken vanuit de situatie waar de layout opgezet is en de verschillende pagina's toegevoegd zijn aan de Tour of Heroes-applicatie. De pagina's zijn voorzien van elementen, data en componenten. De data is overgehuisd naar een composable/service. De eindsituatie is een Quasar-project waarin de data gekoppeld zit aan een API en waar authenticatie nodig is.
