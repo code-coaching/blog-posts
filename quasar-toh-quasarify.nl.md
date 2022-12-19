@@ -8,6 +8,8 @@ tags:
   - Tour of Heroes
 categories:
   - Frontend
+youtubeIds:
+  - 4_qJpxI-Fmk
 ---
 
 Om deze tutorial te kunnen volgen is een gratis [Code Coaching](https://code-coaching.dev/) account nodig.
@@ -30,7 +32,7 @@ Eindsituatie: [Source code](https://github.com/code-coaching/quasar-tour-of-hero
 
 ## QInput
 
-Momenteel wordt er gebruik gemaakt van gewone HTML-inputs. Quasar voorziet een QInput component. Hierop bestaand verschillende attributen die gebruikt kunnen worden, zo wordt er in deze tutorial gekozen voor `outlined` en `dense`. De component accepteert ook een `label` als prop.
+Momenteel wordt er gebruik gemaakt van gewone HTML-inputs. Quasar voorziet een QInput component. Hierop bestaan verschillende attributen die gebruikt kunnen worden, zo wordt er in deze tutorial gekozen voor `outlined` en `dense`. De component accepteert ook een `label` als prop.
 
 ### Voor
 
@@ -220,7 +222,7 @@ const useValidators = () => {
 export { useValidators };
 ```
 
-Zowel de validatiefuncties als de array met validatiefuncties voor specifieke types van velden worden teruggegeven. Er wordt van uitgegaan dat elk e-mailveld dezelfde validatie heeft, dat elk wachtwoordveld dezelfde validatie heeft. Indien er toch afwijkende velden zouden zijn, kan een nieuwe array met aparte waarden worden opgesteld met de juiste validatiefuncties voor deze velden in de component. Deze aanpak wordt gebruik voor de twee andere inputs.
+Zowel de validatiefuncties als de array met validatiefuncties voor specifieke types van velden worden teruggegeven. Er wordt van uitgegaan dat elk e-mailveld dezelfde validatie heeft, dat elk wachtwoordveld dezelfde validatie heeft. Indien er toch afwijkende velden zouden zijn, kan een nieuwe array met aparte waarden worden opgesteld met de juiste validatiefuncties voor deze velden in de component. Deze aanpak wordt gebruikt voor de twee andere inputs.
 
 Gebruik deze composable in de loginpagina.
 
