@@ -254,7 +254,7 @@ Er wordt een heel groot object teruggestuurd, het belangrijke om hier uit te beg
 
 Merk op: Er is data verwijderd om het object overzichterlijker te maken.
 
-Deze `accessToken` is 24 uur geldig en kan gebruikt worden om verzoeken te sturen naar de API met de ingelogde gebruiker. Aangezien deze token jouw persoonlijke gebruiker voorstelt, is het dus belangrijker om deze **niet** te delen met anderen.
+Deze `accessToken` is 1 week geldig en kan gebruikt worden om verzoeken te sturen naar de API met de ingelogde gebruiker. Aangezien deze token jouw persoonlijke gebruiker voorstelt, is het dus belangrijker om deze **niet** te delen met anderen.
 
 Dit soort token is een **JWT** token. Dit staat voor **J**SON **W**eb **T**oken, het is een standaard die veel gebruikt wordt om authenticatie te voorzien.
 
