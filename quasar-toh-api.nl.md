@@ -1800,7 +1800,7 @@ const login = (email: string, password: string): Promise<void> => {
 };
 ```
 
-Voeg de redirect toe in `MainLayout.vue`:
+Voeg de redirect toe in `Login.vue`:
 
 ```ts
 const login = () => {
@@ -1833,7 +1833,7 @@ De `watch` functie zal de property `isAuthenticated` in de gaten houden (`watche
 
 Bij het uittesten van de applicatie kan opgemerkt worden dat na de redirect van het dashboard, de top heroes niet getoond worden. Om dit op te lossen is een `computed` property nodig.
 
-In `auth.service.ts`:
+In `hero.service.ts`:
 
 Voor de wijziging:
 
