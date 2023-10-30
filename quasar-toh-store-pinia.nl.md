@@ -1,5 +1,5 @@
 ---
-postUuid: 74ee7748-5459-49b0-b5b9-9d0f7b9c861a
+postUuid: c8147e86-aa6d-488a-864a-b7a45701b67f
 title: Quasar Tour of Heroes - Store (Pinia)
 slug: quasar-toh-store-pinia
 tags:

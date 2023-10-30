@@ -1,5 +1,5 @@
 ---
-postUuid: b01db0b2-ec19-4650-8ac8-cbdab35ad7e3
+postUuid: 42162bb1-7ed1-4c91-b4a3-855c5b4753be
 title: Quasar CLI 1.3.0 - een nieuw Quasar-project aanmaken
 slug: quasar-cli-1-3-0-een-nieuw-quasar-project-aanmaken
 tags:

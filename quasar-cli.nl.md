@@ -41,7 +41,7 @@ Opmerking: Indien het nummer `1.3.0` of hoger is, bekijk dan de blogpost `Quasar
 
 ## Een nieuw Quasar project aanmaken
 
-In dit blog wordt er vanuit de `home directory`. Hier kan heen genavigeerd worden via onderstaand commando.
+In dit blog wordt er vanuit de `home directory` gewerkt. Hier kan heen genavigeerd worden via onderstaand commando.
 
 ```sh
 cd ~
