@@ -396,7 +396,6 @@ function grootsteGetal(a, b) {
 
 let a = 3;
 let b = 4;
-let grootsteGetal;
 
 console.log(`Het grootste getal is: ${grootsteGetal(a, b)}`);
 

@@ -389,7 +389,6 @@ function largestNumber(a, b) {
 
 let a = 3;
 let b = 4;
-let largestNumber;
 
 console.log(`The largest number is: ${largestNumber(a, b)}`);
 
