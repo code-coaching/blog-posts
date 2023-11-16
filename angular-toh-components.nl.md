@@ -891,7 +891,7 @@ Ook de class `.title` wordt ondertussen meerdere keren gebruikt.
 }
 ```
 
-`src/pages/HeroList.vue`
+`src/app/pages/hero-list/hero-list.component.css`
 
 ```css
 .title {
@@ -907,6 +907,12 @@ Ook de class `.title` wordt ondertussen meerdere keren gebruikt.
 De gemeenschappelijke properties van deze class kunnen verplaatst worden naar de globale stylesheet `src/app/app.component.css`.
 
 Alle wijzigingen: [GitHub](https://github.com/code-coaching/angular-tour-of-heroes/compare/696ffbd5f74f779a44a683cd3e2fd9d835e9d1ad..5aaf76a62010e097569f52baf9da6eed51df40cc)
+
+Merk op: Dit werkt **niet**. Angular werkt met `View Encapsulation`, dit wil zeggen dat de stylesheets van de componenten enkel van toepassing zijn op de component zelf, niet op de componenten die in de template van deze component gebruikt worden. Als er eerdere ervaring is met andere frameworks, zoals bijvoorbeeld Vue, dan ben je waarschijnlijk gewoon dat de css van een component van toepassing is op de component zelf én op de componenten die in de template van deze component gebruikt worden.
+
+Om dit op te lossen, moet er gebruik gemaakt worden van `src/styles.css`, deze css is globaal en wordt toegepast op alle componenten.
+
+Alle wijzigingen: [GitHub](https://github.com/code-coaching/angular-tour-of-heroes/commit/bef8f9370dd4df8aad8fe9a6e005ccbc1666bf49)
 
 ### Heroes - onBeforeMount - url parameter useRoute
 
