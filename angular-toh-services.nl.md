@@ -1153,6 +1153,90 @@ Wijzig `click.emit()` naar `onClick.emit()`.
 
 Alle wijzigingen: [GitHub](https://github.com/code-coaching/angular-tour-of-heroes/commit/bc0152bc40d9273fc91ea8c84145edfd06da1208)
 
+## Local Storage
+
+Om te zorgen dat de data nier verloren gaat wanneer de pagina wordt herladen, kunnen we gebruik maken van `localStorage`.
+
+Aangezien de service de locatie is waar de data beheerd wordt, is dit de plaats waar we de data zullen opslaan en laden.
+
+`hero.service.ts`
+
+```ts
+import { Injectable } from "@angular/core";
+import { Hero } from "../components/models";
+
+@Injectable({
+  providedIn: "root",
+})
+export class HeroService {
+  // hier nog code
+
+  updateHero(hero: Hero) {
+    const index = this.heroes.findIndex((h) => h.number === hero.number);
+    if (index !== -1) {
+      this.heroes[index] = structuredClone(hero);
+    }
+    this.saveHeroes(); // sla de heroes op in localStorage
+  }
+
+  deleteHero(hero: Hero) {
+    this.heroes = this.heroes.filter((h) => h.number !== hero.number);
+    if (this.selectedHero?.number === hero.number) {
+      this.selectedHero = null;
+    }
+    this.saveHeroes(); // sla de heroes op in localStorage
+  }
+
+  addHero(name: string) {
+    const maxNumber = Math.max(...this.heroes.map((h) => h.number));
+    const newHero = { number: maxNumber + 1, name } satisfies Hero;
+    this.heroes.push(newHero);
+    this.saveHeroes(); // sla de heroes op in localStorage
+  }
+
+  // Voeg de saveHeroes-functie toe, private, omdat deze enkel gebruikt wordt in de service, nooit vanuit een andere component
+  private saveHeroes() {
+    localStorage.setItem("heroes", JSON.stringify(this.heroes));
+  }
+
+  // Voeg de loadHeroes-functie toe, public (default), omdat deze aangeroepen wordt vanuit de app.component.ts
+  loadHeroes() {
+    const heroes = localStorage.getItem("heroes");
+    if (heroes) {
+      this.heroes = JSON.parse(heroes);
+    }
+  }
+}
+```
+
+Deze wijzigingen zorgen ervoor dat alle wijzigingen ook opgeslagen worden in `localStorage`. Om te zorgen dat we de laatste toestand terug ingeladen wordt bij het herladen van de pagina, moeten we de `loadHeroes`-functie aanroepen bij het initialiseren van de applicatie.
+
+`app.component.ts`
+
+```ts
+import { Component, OnInit } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { RouterOutlet } from "@angular/router";
+import { HeroService } from "./services/hero.service";
+
+@Component({
+  selector: "app-root",
+  standalone: true,
+  imports: [CommonModule, RouterOutlet],
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.css"],
+})
+export class AppComponent implements OnInit {
+  constructor(private heroService: HeroService) {}
+
+  ngOnInit(): void {
+    this.heroService.loadHeroes();
+  }
+}
+```
+
+Alle wijzigingen: [GitHub](https://github.com/code-coaching/angular-tour-of-heroes/commit/c5eba83079b7960f453c0ea0d9c104a326b6d58d)
+
 ## Conclusie
 
 Een service wordt gebruikt om data te beheren. Deze data kan gebruikt worden als `global state` in de applicatie.
