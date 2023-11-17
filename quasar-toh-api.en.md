@@ -30,7 +30,7 @@ End situation: [Source code](https://github.com/code-coaching/quasar-tour-of-her
 
 An `API` (Application Programming Interface) is an interface that allows an application to communicate with another application. In this case, the front end application will communicate with the back end application.
 
-The back-end application is provided by Code Coaching. Register a free account at [https://code-coaching.dev](https://code-coaching.dev/#/sign-up), this account will be used to log in and manage the heroes' data on the server.
+The back-end application is provided by Code Coaching. Register a free account at [https://code-coaching.dev](https://code-coaching.dev/registreren), this account will be used to log in and manage the heroes' data on the server.
 
 ## Axios
 
@@ -216,7 +216,7 @@ const login = () => {
 };
 ```
 
-Change `here@your-email.com` to the email address you used to register an account at [Code Coaching](https://code-coaching.dev/#/sign-up).
+Change `here@your-email.com` to the email address you used to register an account at [Code Coaching](https://code-coaching.dev/registreren).
 
 Change `HERE_THE_PASSWORD` to the password used to register the account.
 

@@ -223,7 +223,7 @@ The `README.md` file is a file that can be found in most projects. The extension
 De content of `index.html` is:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title><%= productName %></title>
@@ -301,7 +301,7 @@ The directories `components`, `layouts` and `pages` all contain `.vue` files. Ev
 
 The directory `css` contains global styling.
 
-The directory `router` contains files related to `vue-router`. This makes it such that different pages can be loaded on different `routes`. E.g. `https://code-coaching.dev/#/` will load the home page and `https://code-coaching.dev/#/blog` will load the blog page.
+The directory `router` contains files related to `vue-router`. This makes it such that different pages can be loaded on different `routes`. E.g. `https://code-coaching.dev/` will load the home page and `https://code-coaching.dev/blogs` will load the blog page.
 
 That leaves the `App.vue` file. This is the main component of the application, where `Vue router` is linked to load all the other components.
 

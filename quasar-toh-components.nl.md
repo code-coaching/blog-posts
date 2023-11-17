@@ -33,7 +33,7 @@ Eindsituatie: [Source code](https://github.com/code-coaching/quasar-tour-of-hero
 
 Heb je onderstaande error in de template?
 ![jsx error](/img/blog/jsx-error.png)
-Dit is doordat het project met een oude versie van `Volar` is opgezet. Dit kan opgelost worden door deze [korte blog te volgen](https://code-coaching.dev/#/blog/volar-cannot-use-jsx).
+Dit is doordat het project met een oude versie van `Volar` is opgezet. Dit kan opgelost worden door deze [korte blog te volgen](https://code-coaching.dev/blogs/volar-cannot-use-jsx).
 
 ## Componenten
 

@@ -225,7 +225,7 @@ De `README.md` is een bestand dat teruggevonden wordt in bijna alle projecten. D
 De inhoud van `index.html` is:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title><%= productName %></title>
@@ -303,7 +303,7 @@ In de mappen `components`, `layouts` en `pages` zitten allemaal `.vue`-bestanden
 
 De map `css` bevat globale styling.
 
-De map `router` bevat bestanden gerelateerd aan `vue-router`. Dit zorgt ervoor dat er verschillende pagina's ingeladen kunnen worden op verschillend `routes`. Bijvoorbeeld `https://code-coaching.dev/#/` voor de hoofdpagina en `https://code-coaching.dev/#/blog` voor de blogpagina.
+De map `router` bevat bestanden gerelateerd aan `vue-router`. Dit zorgt ervoor dat er verschillende pagina's ingeladen kunnen worden op verschillend `routes`. Bijvoorbeeld `https://code-coaching.dev/` voor de hoofdpagina en `https://code-coaching.dev/blogs` voor de blogpagina.
 
 Dan blijft er nog het `App.vue`-bestand over. Dit is het hoofdcomponent van de applicatie, waarin `Vue router` gekoppeld zit om alle andere componenten in te laden.
 

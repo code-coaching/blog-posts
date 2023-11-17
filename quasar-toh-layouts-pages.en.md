@@ -20,7 +20,7 @@ Final situation: [Source code](https://github.com/code-coaching/quasar-tour-of-h
 
 Do you have the following error in the template?
 ![jsx error](/img/blog/jsx-error.png)
-This is because the project was set up with an old version of `Volar`. This can be fixed by following this [short blog](https://code-coaching.dev/#/blog/volar-cannot-use-jsx).
+This is because the project was set up with an old version of `Volar`. This can be fixed by following this [short blog](https://code-coaching.dev/blogs/volar-cannot-use-jsx).
 
 ## Layouts and pages
 

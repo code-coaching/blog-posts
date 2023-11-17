@@ -288,14 +288,14 @@ The directories `components`, `layouts` and `pages` all contain `.vue` files. Ev
 
 The directory `css` contains global styling.
 
-The directory `router` contains files related to `vue-router`. This makes it such that different pages can be loaded on different `routes`. E.g. `https://code-coaching.dev/#/` will load the home page and `https://code-coaching.dev/#/blog` will load the blog page.
+The directory `router` contains files related to `vue-router`. This makes it such that different pages can be loaded on different `routes`. E.g. `https://code-coaching.dev/` will load the home page and `https://code-coaching.dev/blogs` will load the blog page.
 
 All that is left, is the `App.vue` file. and the `index.template.html` file. The `App.vue` file is the main component.
 
 The content of `index.template.html` is:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title><%= productName %></title>

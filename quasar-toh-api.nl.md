@@ -33,7 +33,7 @@ Eindsituatie: [Source code](https://github.com/code-coaching/quasar-tour-of-hero
 
 Een `API` (Application Programming Interface) is een interface waarmee een applicatie kan communiceren met een andere applicatie. In dit geval, zal de frontendapplicatie communiceren met de backendapplicatie.
 
-De backendapplicatie wordt voorzien door Code Coaching. Registreer een gratis account op [https://code-coaching.dev](https://code-coaching.dev/#/sign-up), deze account zal gebruikt worden om in te loggen en om de data van de heroes te beheren op de server.
+De backendapplicatie wordt voorzien door Code Coaching. Registreer een gratis account op [https://code-coaching.dev](https://code-coaching.dev/registreren), deze account zal gebruikt worden om in te loggen en om de data van de heroes te beheren op de server.
 
 ## Axios
 
@@ -219,7 +219,7 @@ const login = () => {
 };
 ```
 
-Wijzig `here@your-email.com` naar het e-mailadres waarmee je een account geregistreerd hebt op [Code Coaching](https://code-coaching.dev/#/sign-up).
+Wijzig `here@your-email.com` naar het e-mailadres waarmee je een account geregistreerd hebt op [Code Coaching](https://code-coaching.dev/registreren).
 
 Wijzig `HERE_THE_PASSWORD` naar het wachtwoord dat gebruikt is om de account te registreren.
 
