@@ -23,8 +23,7 @@ De eindsituatie waar naartoe gewerin ikt wordt ziet er als volgt uit:
 
 ![eindsituatie](/img/blog/quasar-toh-service-functions.gif)
 
-TODO: update url
-Eindsituatie: [Source code]()
+Eindsituatie: [Source code](https://github.com/code-coaching/angular-tour-of-heroes/releases/tag/angular-toh-services)
 
 ## Services
 
@@ -1152,7 +1151,7 @@ export class StyledButtonComponent {
 
 Wijzig `click.emit()` naar `onClick.emit()`.
 
-Alle wijzigingen: [GitHub]()
+Alle wijzigingen: [GitHub](https://github.com/code-coaching/angular-tour-of-heroes/commit/bc0152bc40d9273fc91ea8c84145edfd06da1208)
 
 ## Conclusie
 
