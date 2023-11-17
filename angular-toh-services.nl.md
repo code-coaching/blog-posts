@@ -1,7 +1,7 @@
 ---
 postUuid: a582b6e0-8f3b-4d8b-aa2e-e0a5890812f8
 title: Angular Tour of Heroes - Services
-slug: quasar-toh-services
+slug: angular-toh-services
 tags:
   - Angular
   - Tour of Heroes
