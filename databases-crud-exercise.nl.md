@@ -135,7 +135,6 @@ Vraag opnieuw de hero op met het id dat je verwijderd hebt. Je krijgt een `404 N
 Maak een lijst van heroes aan. Gebruik de bovenstaande endpoints om de heroes aan te maken, op te halen, aan te passen en te verwijderen.
 
 - Maak minstens 5 heroes aan
-- Geef elke hero een andere naam
 - Pas de naam van één hero aan
 - Verwijder één hero
 - Haal de lijst van heroes op
