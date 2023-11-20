@@ -26,7 +26,7 @@ De screenshots zijn van het programma [Postman](https://www.postman.com/). Dit i
 
 Om de HTTP-verzoeken te kunnen sturen, zal je jouw token moeten meesturen met elk verzoek.
 
-![Authorization](./img/blog/crud-heroes/authorization.png)
+![Authorization](/img/blog/crud-heroes/authorization.png)
 
 Dit kan gedaan worden door:
 
@@ -43,7 +43,7 @@ GET https://api.code-coaching.dev/heroes
 
 Dit endpoint geeft een array/lijst van alle heroes terug. Indien er nog geen heroes aangemaakt zijn via jouw gebruiker (token), dan zie je een lege array.
 
-![GET heroes](./img/blog/crud-heroes/get-heroes.png)
+![GET heroes](/img/blog/crud-heroes/get-heroes.png)
 
 ## POST
 
@@ -56,7 +56,7 @@ POST https://api.code-coaching.dev/heroes
 
 Dit endpoint maakt een nieuwe hero aan. De naam van de hero wordt meegegeven in de body van de request. De response bevat de aangemaakte hero.
 
-![POST heroes](./img/blog/crud-heroes/post-heroes.png)
+![POST heroes](/img/blog/crud-heroes/post-heroes.png)
 
 1. Geef de HTTP-methode aan `POST` en de URL `https://api.code-coaching.dev/heroes`
 2. Klik op de tab `Body`
@@ -83,7 +83,7 @@ Doe opnieuw een GET op `/heroes` en je ziet de aangemaakte hero in de array staa
 GET https://api.code-coaching.dev/heroes
 ```
 
-![GET heroes](./img/blog/crud-heroes/get-heroes-result.png)
+![GET heroes](/img/blog/crud-heroes/get-heroes-result.png)
 
 Merk op dat dit een array teruggeeft met alle heroes. Op dit moment is er maar één hero aangemaakt, dus de array bevat maar één element.
 
@@ -95,7 +95,7 @@ GET https://api.code-coaching.dev/heroes/:id
 
 Vervang `:id` door het id van de hero die je wilt ophalen.
 
-![GET hero](./img/blog/crud-heroes/get-heroes-id.png)
+![GET hero](/img/blog/crud-heroes/get-heroes-id.png)
 
 Merk op dat dit één object teruggeeft, niet een array. Dit is omdat je een specifieke hero hebt opgevraagd.
 
@@ -114,7 +114,7 @@ PATCH https://api.code-coaching.dev/heroes/:id
 
 Vervang `:id` door de id van de hero die je wilt aanpassen. De wijziging wordt meegegeven in de body van de request. De response bevat de aangepaste hero.
 
-![PATCH hero](./img/blog/crud-heroes/patch-heroes-id.png)
+![PATCH hero](/img/blog/crud-heroes/patch-heroes-id.png)
 
 ## DELETE
 
@@ -124,11 +124,11 @@ DELETE https://api.code-coaching.dev/heroes/:id
 
 Vervang `:id` door de id van de hero die je wilt verwijderen. De response bevat het object dat verwijderd is.
 
-![DELETE hero](./img/blog/crud-heroes/delete-heroes-id.png)
+![DELETE hero](/img/blog/crud-heroes/delete-heroes-id.png)
 
 Vraag opnieuw de hero op met het id dat je verwijderd hebt. Je krijgt een `404 Not Found` terug.
 
-![GET hero 404](./img/blog/crud-heroes/get-heroes-unknown-id.png)
+![GET hero 404](/img/blog/crud-heroes/get-heroes-unknown-id.png)
 
 ## Oefening
 
