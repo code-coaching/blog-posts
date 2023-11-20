@@ -38,7 +38,7 @@ Dit kan gedaan worden door:
 ## GET
 
 ```sh
-GET https://api.code-coaching.dev/api/heroes
+GET https://code-coaching.dev/api/heroes
 ```
 
 Dit endpoint geeft een array/lijst van alle heroes terug. Indien er nog geen heroes aangemaakt zijn via jouw gebruiker (token), dan zie je een lege array.
@@ -48,7 +48,7 @@ Dit endpoint geeft een array/lijst van alle heroes terug. Indien er nog geen her
 ## POST
 
 ```sh
-POST https://api.code-coaching.dev/api/heroes
+POST https://code-coaching.dev/api/heroes
 {
   "name": "John Duck"
 }
@@ -58,7 +58,7 @@ Dit endpoint maakt een nieuwe hero aan. De naam van de hero wordt meegegeven in 
 
 ![POST heroes](/img/blog/crud-heroes/post-heroes.png)
 
-1. Geef de HTTP-methode aan `POST` en de URL `https://api.code-coaching.dev/api/heroes`
+1. Geef de HTTP-methode aan `POST` en de URL `https://code-coaching.dev/api/heroes`
 2. Klik op de tab `Body`
 3. Kies voor `raw`
 4. Kies voor `JSON`
@@ -80,7 +80,7 @@ Merk op dat de hero een `id` heeft gekregen. Deze wordt automatisch gegenereerd 
 Doe opnieuw een GET op `/heroes` en je ziet de aangemaakte hero in de array staan.
 
 ```sh
-GET https://api.code-coaching.dev/api/heroes
+GET https://code-coaching.dev/api/heroes
 ```
 
 ![GET heroes](/img/blog/crud-heroes/get-heroes-result.png)
@@ -90,7 +90,7 @@ Merk op dat dit een array teruggeeft met alle heroes. Op dit moment is er maar �
 Doe een GET op een specifieke hero door het id van de hero mee te geven in de URL.
 
 ```sh
-GET https://api.code-coaching.dev/api/heroes/:id
+GET https://code-coaching.dev/api/heroes/:id
 ```
 
 Vervang `:id` door het id van de hero die je wilt ophalen.
@@ -106,7 +106,7 @@ Merk op dat dit één object teruggeeft, niet een array. Dit is omdat je een spe
 De Code Coaching API heeft enkel een `PATCH` endpoint.
 
 ```sh
-PATCH https://api.code-coaching.dev/api/heroes/:id
+PATCH https://code-coaching.dev/api/heroes/:id
 {
   "name": "John Doe"
 }
@@ -119,7 +119,7 @@ Vervang `:id` door de id van de hero die je wilt aanpassen. De wijziging wordt m
 ## DELETE
 
 ```sh
-DELETE https://api.code-coaching.dev/api/heroes/:id
+DELETE https://code-coaching.dev/api/heroes/:id
 ```
 
 Vervang `:id` door de id van de hero die je wilt verwijderen. De response bevat het object dat verwijderd is.
