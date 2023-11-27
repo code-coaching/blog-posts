@@ -683,7 +683,7 @@ Het probleem met de huidige `app-styled-button`, is dat het hardcoded de tekst `
 
 Een normaal `button`-element in html toont de tekst tussen een begin- en end-tag. Om dit te bekomen in de custom component, kan er gebruik gemaakt worden van `content projection`. Dit doen we door een `ng-content`-element toe te voegen aan de template van de custom component.
 
-`components/styled-button/styled-button.html`
+`components/styled-button/styled-button.component.html`
 
 ```html
 <button>
@@ -703,7 +703,7 @@ Wanneer op de `Details`-knop geklikt wordt, moet er genavigeerd worden naar de r
 
 Om te kunnen navigeren, moeten we eerst zorgen dat er een `click` event wordt uitgestuurd als er op de knop wordt geklikt.
 
-`hero-list.component.ts`
+`styled-button.component.ts`
 
 ```ts
 import { CommonModule } from "@angular/common";
@@ -721,7 +721,7 @@ export class StyledButtonComponent {
 }
 ```
 
-`hero-list.component.html`
+`styled-button.component.html`
 
 ```html
 <button (click)="click.emit()">
