@@ -1079,7 +1079,7 @@ Alle wijzigingen: [GitHub](https://github.com/code-coaching/angular-tour-of-hero
 
 ### Hero niet gevonden
 
-Om de gebruiker van betere feedback te voorzien bij het invoeren van een hero die niet bestaat, zal een `Hero not found!` (hero niet gevonden!)-melding getoond worden als de `hero` null is. Dit wordt gedaan door gebruik te maken van de `@else`-control flow. Een alternatief is om de `v-if`-directive te gebruiken met de `!`-operator.
+Om de gebruiker van betere feedback te voorzien bij het invoeren van een hero die niet bestaat, zal een `Hero not found!` (hero niet gevonden!)-melding getoond worden als de `hero` null is. Dit wordt gedaan door gebruik te maken van de `@else`-control flow. Een alternatief is om de `@if`-control flow te gebruiken met de `!`-operator.
 
 ```html
 @if(hero) {
@@ -1089,7 +1089,7 @@ Om de gebruiker van betere feedback te voorzien bij het invoeren van een hero di
 }
 ```
 
-Alternatief met v-if:
+Alternatief met @if:
 
 ```html
 <!-- hero bestaat -->
