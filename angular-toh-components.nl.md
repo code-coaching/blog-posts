@@ -750,8 +750,9 @@ Voorzie een property om de hero in op te slaan. Importeer de `StyledButton`-comp
 `src/app/pages/hero-details/hero-details.component.ts`
 
 ```ts
-import { Component } from "@angular/core";
-import { CommonModule } from "@angular/common";
+import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
+import { StyledButtonComponent } from '../../components/styled-button/styled-button.component';
 
 interface Hero {
   number: number;
@@ -759,14 +760,14 @@ interface Hero {
 }
 
 @Component({
-  selector: "app-hero-details",
+  selector: 'app-hero-details',
   standalone: true,
-  imports: [CommonModule],
-  templateUrl: "./hero-details.component.html",
-  styleUrl: "./hero-details.component.css",
+  imports: [CommonModule, StyledButtonComponent],
+  templateUrl: './hero-details.component.html',
+  styleUrl: './hero-details.component.css',
 })
 export class HeroDetailsComponent {
-  hero: null | Hero = null;
+  hero: null | Hero = { number: 15, name: 'Magneta' };
 }
 ```
 
