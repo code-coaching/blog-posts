@@ -683,7 +683,7 @@ Het probleem met de huidige `app-styled-button`, is dat het hardcoded de tekst `
 
 Een normaal `button`-element in html toont de tekst tussen een begin- en end-tag. Om dit te bekomen in de custom component, kan er gebruik gemaakt worden van `content projection`. Dit doen we door een `ng-content`-element toe te voegen aan de template van de custom component.
 
-`components/StyledButton.vue`
+`components/styled-button/styled-button.html`
 
 ```html
 <button>
@@ -693,7 +693,7 @@ Een normaal `button`-element in html toont de tekst tussen een begin- en end-tag
 
 Alle wijzigingen: [GitHub](https://github.com/code-coaching/angular-tour-of-heroes/compare/47ecd1c58e69e761aaf79a4102f5a599a9b21817..5ada2b7babbfab93bfb4009f32e421e7de073c34)
 
-Bij de wijziging is te zien `background-color: darken(#eeeeee, 10%);`, dit moet eigenlijk `background-color: darken(#eeeeee, 10%);` zijn. In de tekst van deze blogpost is het aangepast.
+Bij de wijziging is te zien `background-color: darken(#eeeeee, 10%);`, dit moet eigenlijk `background-color: #e6e6e6` zijn. In de tekst van deze blogpost is het aangepast.
 
 Het is nu mogelijk om de knop ook te gebruiken in `main-layout.component.html`. De styling van de `button` kan uit `main-layout.component.css` verwijdert worden.
 
@@ -774,7 +774,7 @@ Aangezien het opnieuw een complex object is, voorzien we een interface.
 
 Voorzie elementen in de template om de details van een hero te tonen.
 
-`src/app/pages/hero-details/hero-details.component.ts`
+`src/app/pages/hero-details/hero-details.component.html`
 
 ```html
 @if(hero) {
