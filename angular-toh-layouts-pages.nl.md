@@ -139,13 +139,11 @@ Bezoek de volgende routes door de URL in de adresbalk te wijzigen:
 Wat valt er op? De inhoud van de pagina's wordt niet getoond! Dit kan opgelost worden door één extra lijn toe te voegen aan `src/app/layouts/main-layout.component.html`:
 
 ```html
-<template>
-  <div>Tour of Heroes</div>
-  <button>Dashboard</button>
-  <button>Heroes</button>
+<div>Tour of Heroes</div>
+<button>Dashboard</button>
+<button>Heroes</button>
 
-  <router-outlet></router-outlet>
-</template>
+<router-outlet></router-outlet>
 ```
 
 `<router-outlet></router-outlet>` is nieuw. Dit is een slot in de layout waarin de gekoppelde component van de router ingeladen wordt.
