@@ -19,7 +19,7 @@ De situatie waar van vertrokken wordt ziet er als volgt uit:
 
 Beginsituatie: [Source code](https://github.com/code-coaching/angular-tour-of-heroes/releases/tag/angular-toh-components)
 
-De eindsituatie waar naartoe gewerin ikt wordt ziet er als volgt uit:
+De eindsituatie waar naartoe gewerkt wordt ziet er als volgt uit:
 
 ![eindsituatie](/img/blog/quasar-toh-service-functions.gif)
 
