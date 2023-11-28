@@ -139,7 +139,7 @@ export class HeroListComponent {
 }
 ```
 
-`src/app/pages/hero-list/hero-list.component.ts`
+`src/app/pages/hero-list/hero-list.component.html`
 
 ```html
 <!-- hier nog code -->
