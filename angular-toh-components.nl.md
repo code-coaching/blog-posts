@@ -1207,7 +1207,7 @@ export class HeroDetailsComponent implements OnInit {
 
 `src/app/pages/hero-details/hero-details.component.html`
 ```html
-<div>name: <input v-model="hero.name" /></div>
+<div>name: <input [(ngModel)]="hero.name" /></div>
 ```
 
 ![Two way binding](/img/blog/quasar-toh-two-way-binding.gif)
