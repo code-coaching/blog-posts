@@ -1176,7 +1176,7 @@ Alle wijzigingen: [GitHub](https://github.com/code-coaching/angular-tour-of-hero
 
 Momenteel wordt er gebruik gemaakt van `[value]` om een waarde toe te kennen aan de input. Dit is `one way binding`, de input krijgt een waarde toegekend, maar indien de waarde gewijzigd wordt, wordt dit niet doorgevoerd naar de `hero`-property. Om `two way binding` te bekomen, moet gebruik gemaakt worden van `ngModel`.
 
-`v-model` kent de waarde van de `hero`-ref toe aan de input, maar zal ook de waarde van `hero`-ref updaten wanneer de inputwaarde gewijzigd wordt.
+`ngModel` kent de waarde van de `hero`-ref toe aan de input, maar zal ook de waarde van `hero`-ref updaten wanneer de inputwaarde gewijzigd wordt.
 
 One way binding `:value`
 
@@ -1186,7 +1186,7 @@ One way binding `:value`
 
 ![One way binding](/img/blog/quasar-toh-one-way-binding.gif)
 
-Two way binding `v-model`
+Two way binding `ngModel`
 
 `src/app/pages/hero-details/hero-details.component.ts`
 ```ts
