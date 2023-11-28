@@ -1018,6 +1018,8 @@ export class HeroService {
 import { CommonModule, Location } from "@angular/common";
 import { Component } from "@angular/core";
 import { HeroService } from "../../services/hero.service";
+import { FormsModule } from '@angular/forms';
+import { StyledButtonComponent } from '../../components/styled-button/styled-button.component';
 
 @Component({
   selector: "app-hero-add",
