@@ -7,6 +7,8 @@ tags:
   - Tour of Heroes
 categories:
   - Frontend
+youtubeIds:
+  - W9sQBhHWZUc
 ---
 
 Verwachte voorkennis:
@@ -29,12 +31,7 @@ De basisconcepten zijn:
 - slimme/domme componenten
 - data koppelen in de HTML
 - services om data te verzamelen
-
-De extra concepten zijn:
-
-- i18n (internationalization) - vertalingen
-- koppelen van de data in de services met een API (zowel met fetch als met axios)
-- koppelen van een store (zowel Vuex als Pinia)
+- koppelen van de data in de services met een API (HttpClient)
 
 Er zal met TypeScript gewerkt worden.
 
