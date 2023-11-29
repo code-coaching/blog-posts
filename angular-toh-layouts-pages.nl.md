@@ -229,6 +229,8 @@ Merk op dat het voorbeeld er een `#` aanwezig is in de URL. Dit kan bekomen word
 
 Om de `HashLocationStrategy` te gebruiken, moet deze toegevoegd worden aan de configuratie van de router.
 
+`src/app/app.config.ts`
+
 ```ts
 import { ApplicationConfig } from "@angular/core";
 import { provideRouter, withHashLocation } from "@angular/router"; // Import withHashLocation
