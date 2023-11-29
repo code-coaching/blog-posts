@@ -1157,7 +1157,7 @@ Alle wijzigingen: [GitHub](https://github.com/code-coaching/angular-tour-of-hero
 
 ## Local Storage
 
-Om te zorgen dat de data nier verloren gaat wanneer de pagina wordt herladen, kunnen we gebruik maken van `localStorage`.
+Om te zorgen dat de data niet verloren gaat wanneer de pagina wordt herladen, kunnen we gebruik maken van `localStorage`.
 
 Aangezien de service de locatie is waar de data beheerd wordt, is dit de plaats waar we de data zullen opslaan en laden.
 
