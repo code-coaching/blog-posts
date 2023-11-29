@@ -219,7 +219,7 @@ Stap 2: Gebruik de `Router` in de template om te navigeren.
 <router-outlet></router-outlet>
 ```
 
-![Routing demo](img/blog/quasar-toh-routing.gif)
+![Routing demo](/img/blog/quasar-toh-routing.gif)
 
 De huidige versie in de browser zal verschillen van hetgeen je ziet in de afbeelding, het belangrijkste is dat de navigatie werkt. De styling wordt later toegevoegd.
 
