@@ -508,15 +508,15 @@ Toevoegen van een dynamische class:
 
 ```html
 <div
-  :class="{
+  [ngClass]="{
     'hero--active': hero.number === selectedHero?.number,
   }"
 ></div>
 ```
 
-Merk op dat er een `v-bind`-directive gebruikt wordt om variabelen te kunnen gebruiken in het toekennen van de class `v-bind:class` of de korte syntax `:class`. Dit kan gelezen worden als "de class `hero--active` wordt toegevoegd aan dit element als de statement `truthy` is.
+Merk op dat er een `[ngClass]` gebruikt wordt om variabelen te kunnen gebruiken in het toekennen van een class. Dit kan gelezen worden als "de class `hero--active` wordt toegevoegd aan dit element als de statement `truthy` is.
 
-De statement `hero.number === selectedHero?.number` evalueert naar `true` als de het nummer van de hero waarover geïtereerd wordt gelijk is aan het nummer van de geselecteerde hero.
+De statement `hero.number === selectedHero?.number` evalueert naar `true` als het nummer van de hero waarover geïtereerd wordt gelijk is aan het nummer van de geselecteerde hero.
 
 Merk op de `?.`-operator. Deze operator zorgt ervoor dat `.number` enkel gelezen wordt als `selectedHero` een waarde heeft. Indien `selectedHero` `undefined` is, wordt `.number` niet gelezen en evalueert de statement `hero.number === selectedHero?.number` naar `false`.
 
@@ -750,9 +750,9 @@ Voorzie een property om de hero in op te slaan. Importeer de `StyledButton`-comp
 `src/app/pages/hero-details/hero-details.component.ts`
 
 ```ts
-import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { StyledButtonComponent } from '../../components/styled-button/styled-button.component';
+import { CommonModule } from "@angular/common";
+import { Component } from "@angular/core";
+import { StyledButtonComponent } from "../../components/styled-button/styled-button.component";
 
 interface Hero {
   number: number;
@@ -760,14 +760,14 @@ interface Hero {
 }
 
 @Component({
-  selector: 'app-hero-details',
+  selector: "app-hero-details",
   standalone: true,
   imports: [CommonModule, StyledButtonComponent],
-  templateUrl: './hero-details.component.html',
-  styleUrl: './hero-details.component.css',
+  templateUrl: "./hero-details.component.html",
+  styleUrl: "./hero-details.component.css",
 })
 export class HeroDetailsComponent {
-  hero: null | Hero = { number: 15, name: 'Magneta' };
+  hero: null | Hero = { number: 15, name: "Magneta" };
 }
 ```
 
@@ -1132,7 +1132,10 @@ Om de knop correct te plaatsen wordt er een class toegevoegd aan de knop. Om te 
 // hier nog code
 export class HeroDetailsComponent implements OnInit {
   // hier nog code
-  constructor(private route: ActivatedRoute, public router: Router) {}
+  constructor(
+    private route: ActivatedRoute,
+    public router: Router
+  ) {}
   // hier nog code
 }
 ```
@@ -1189,6 +1192,7 @@ One way binding `:value`
 Two way binding `ngModel`
 
 `src/app/pages/hero-details/hero-details.component.ts`
+
 ```ts
 // hier nog imports
 import { FormsModule } from "@angular/forms";
@@ -1206,6 +1210,7 @@ export class HeroDetailsComponent implements OnInit {
 ```
 
 `src/app/pages/hero-details/hero-details.component.html`
+
 ```html
 <div>name: <input [(ngModel)]="hero.name" /></div>
 ```
