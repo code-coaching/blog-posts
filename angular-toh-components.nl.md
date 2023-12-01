@@ -915,7 +915,7 @@ Om dit op te lossen, moet er gebruik gemaakt worden van `src/styles.css`, deze c
 
 Alle wijzigingen: [GitHub](https://github.com/code-coaching/angular-tour-of-heroes/commit/bef8f9370dd4df8aad8fe9a6e005ccbc1666bf49)
 
-### Heroes - onBeforeMount - url parameter useRoute
+### Heroes - url parameter ActivatedRoute
 
 Om te zorgen dat de correcte hero getoond kan worden, gaat er gekeken worden naar de url parameter genaamd `id`. Vervolgens zal de hero gefilterd worden uit de lijst van heroes, die in dit artikel gekopieerd zal worden vanuit de `hero-list`-pagina, in een later artikel zal de lijst van heroes verplaatst worden naar een `service` zodat er maar één unieke lijst van heroes bestaat.
 
