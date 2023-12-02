@@ -7,6 +7,8 @@ tags:
   - Tour of Heroes
 categories:
   - Frontend
+youtubeIds:
+  - meol_XEnSJo
 ---
 
 In dit artikel wordt vertrokken vanuit de situatie waar de layout opgezet is en de verschillende pagina's toegevoegd zijn aan de Tour of Heroes-applicatie. De beginsituatie is een bestaand Angular-project met een layoutcomponent en placeholderpagina's. De eindsituatie is een Angular-project waarin de pagina's voorzien zijn van componenten.
