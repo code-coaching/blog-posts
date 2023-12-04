@@ -381,7 +381,7 @@ Alle wijzigingen: [GitHub](https://github.com/code-coaching/angular-tour-of-hero
 
 Voeg een functie toe die naar de detailpagina navigeert wanneer er op een hero wordt geklikt.
 
-In de `dashboard`-pagina wordt de outer geïnjecteerd:
+In de `dashboard`-pagina wordt de router geïnjecteerd:
 
 `dashboard.component.ts`
 
