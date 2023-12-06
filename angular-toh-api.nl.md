@@ -319,8 +319,8 @@ export class LoginComponent {
 
 ```html
 <!-- Two way binding met [(ngModel)] -->
-<input type="email" [ngModel]="email" />
-<input type="password" [ngModel]="password" />
+<input type="email" [(ngModel)]="email" />
+<input type="password" [(ngModel)]="password" />
 <button (click)="login()">Login</button>
 ```
 
