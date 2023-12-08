@@ -458,6 +458,16 @@ export class HeroDetailsComponent implements OnInit {
 }
 ```
 
+```html
+<!-- hier nog code -->
+<app-styled-button class="back-button" (click)="location.back()">
+  Back
+</app-styled-button>
+<!-- hier nog code -->
+```
+
+Vervang `router.navigate` door `location.back()`.
+
 Probeer opnieuw zowel vanuit de `HeroList` als de `dashboard`-pagina naar de `HeroDetails`-pagina te navigeren en vervolgens op de `back`-knop te klikken.
 
 Alle wijzigingen: [GitHub](https://github.com/code-coaching/angular-tour-of-heroes/commit/f9553ca8aaca2bd19e742aee8dbd42dac253dcc4)
@@ -1018,13 +1028,13 @@ export class HeroService {
 import { CommonModule, Location } from "@angular/common";
 import { Component } from "@angular/core";
 import { HeroService } from "../../services/hero.service";
-import { FormsModule } from '@angular/forms';
-import { StyledButtonComponent } from '../../components/styled-button/styled-button.component';
+import { FormsModule } from "@angular/forms";
+import { StyledButtonComponent } from "../../components/styled-button/styled-button.component";
 
 @Component({
   selector: "app-hero-add",
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule, StyledButtonComponent],
   templateUrl: "./hero-add.component.html",
   styleUrl: "./hero-add.component.css",
 })
