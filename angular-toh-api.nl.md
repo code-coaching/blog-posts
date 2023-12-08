@@ -7,6 +7,8 @@ tags:
   - Tour of Heroes
 categories:
   - Frontend
+youtubeIds:
+  - SR_ep6Ogf0o
 ---
 
 In dit artikel wordt vertrokken vanuit de situatie waar de layout opgezet is en de verschillende pagina's toegevoegd zijn aan de Tour of Heroes-applicatie. De pagina's zijn voorzien van elementen, data en componenten. De data is overgehuisd naar een service. De eindsituatie is een Angular-project waarin de data gekoppeld zit aan een API en waar authenticatie nodig is.
@@ -1671,7 +1673,6 @@ export class HeroService {
       .pipe(
         tap(() => {
           this.selectedHero = null;
-          this.loadHeroes();
         })
       );
   }
@@ -1861,6 +1862,39 @@ export class HeroDetailsComponent implements OnInit {
   // verwijder deze functie
   private saveHeroes() {
     localStorage.setItem("heroes", JSON.stringify(this.heroes));
+  }
+
+  // hier nog code
+}
+```
+
+`hero-details.component.ts`
+
+```ts
+// hier de imports
+
+@Component({
+  selector: "app-hero-details",
+  standalone: true,
+  imports: [CommonModule, StyledButtonComponent, FormsModule],
+  templateUrl: "./hero-details.component.html",
+  styleUrl: "./hero-details.component.css",
+})
+export class HeroDetailsComponent implements OnInit {
+  hero: undefined | Hero;
+
+  constructor(
+    private route: ActivatedRoute,
+    public location: Location,
+    private heroService: HeroService
+  ) {}
+
+  // hier nog code
+
+  saveHero(hero: Hero) {
+    this.heroService.updateHero(hero).subscribe(() => {
+      this.location.back();
+    });
   }
 
   // hier nog code
@@ -2073,6 +2107,7 @@ export class HeroDetailsComponent implements OnInit {
             // we gebruiken de rxjs catchError-operator om de error te onderscheppen
             catchError((err) => {
               this.hero = null; // we zetten de hero op null indien er een error is
+              return throwError(err); // we geven de error door
             })
           )
           .subscribe((hero) => {
