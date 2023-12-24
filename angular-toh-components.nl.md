@@ -478,6 +478,8 @@ Alle wijzigingen: [GitHub](https://github.com/code-coaching/angular-tour-of-hero
 
 ### Stylen van selectedHero
 
+`src/app/pages/hero-list/hero-list.component.ts`
+
 ```html
 <div class="title">My Heroes</div>
 
@@ -520,7 +522,7 @@ Merk op dat er een `[ngClass]` gebruikt wordt om variabelen te kunnen gebruiken 
 
 De statement `hero.number === selectedHero?.number` evalueert naar `true` als het nummer van de hero waarover geïtereerd wordt gelijk is aan het nummer van de geselecteerde hero.
 
-Merk op de `?.`-operator. Deze operator zorgt ervoor dat `.number` enkel gelezen wordt als `selectedHero` een waarde heeft. Indien `selectedHero` `undefined` is, wordt `.number` niet gelezen en evalueert de statement `hero.number === selectedHero?.number` naar `false`.
+Er wordt gebruik gemaakt van de `?.`-operator. Deze operator zorgt ervoor dat `.number` enkel gelezen wordt als `selectedHero` een waarde heeft. Indien `selectedHero` `undefined` is, wordt `.number` niet gelezen en evalueert de statement `hero.number === selectedHero?.number` naar `false`.
 
 De volledige template:
 
@@ -697,7 +699,7 @@ Alle wijzigingen: [GitHub](https://github.com/code-coaching/angular-tour-of-hero
 
 Bij de wijziging is te zien `background-color: darken(#eeeeee, 10%);`, dit moet eigenlijk `background-color: #e6e6e6` zijn. In de tekst van deze blogpost is het aangepast.
 
-Het is nu mogelijk om de knop ook te gebruiken in `main-layout.component.html`. De styling van de `button` kan uit `main-layout.component.css` verwijdert worden.
+Het is nu mogelijk om de knop ook te gebruiken in `main-layout.component.html`. De styling van de `button` kan uit `main-layout.component.css` verwijderd worden.
 
 Alle wijzigingen: [GitHub](https://github.com/code-coaching/angular-tour-of-heroes/compare/5ada2b7babbfab93bfb4009f32e421e7de073c34..8604b5a2d0659cc948241b69fef2898f796d671a)
 
