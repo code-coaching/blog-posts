@@ -308,7 +308,7 @@ Alle wijzigingen: [GitHub](https://github.com/code-coaching/angular-tour-of-hero
 
 ## Top Heroes
 
-Momenteel worden de top heroes getoond in de `dashboard`-pagina. Dit is momenteel enkel hard-coded data in de template van de `dashboard`-pagina. Maar, dit zijn de namen van `hero`-objecten die in de lijst staan in de service.
+Momenteel worden de top heroes getoond in de `dashboard`-pagina. Dit is momenteel enkel hard-coded data in de template van de `dashboard`-pagina. Maar, dit moeten de namen zijn van de `hero`-objecten die in de lijst staan in de service.
 
 Voorzie een manier om de "top heroes" te tonen in de `dashboard`-pagina. We zullen de laatste 4 heroes tonen als "top heroes". Voeg een functie toe aan de service die de laatste 4 heroes teruggeeft.
 
@@ -383,7 +383,7 @@ Alle wijzigingen: [GitHub](https://github.com/code-coaching/angular-tour-of-hero
 
 Voeg een functie toe die naar de detailpagina navigeert wanneer er op een hero wordt geklikt.
 
-In de `dashboard`-pagina wordt de outer geïnjecteerd:
+In de `dashboard`-pagina wordt de router geïnjecteerd:
 
 `dashboard.component.ts`
 
@@ -845,7 +845,7 @@ Alle wijzigingen: [GitHub](https://github.com/code-coaching/angular-tour-of-hero
 
 ## UX verbeteren - navigatie
 
-Op de `hero-details`-pagina, wanneer een hero verwijdert of opgeslagen wordt, willen we dat de gebruiker terug naar de vorige pagina genavigeerd wordt.
+Op de `hero-details`-pagina, wanneer een hero verwijderd of opgeslagen wordt, willen we dat de gebruiker terug naar de vorige pagina genavigeerd wordt.
 
 `hero-details.component.html`
 
