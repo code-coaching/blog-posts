@@ -1,5 +1,5 @@
 ---
-postUuid:
+postUuid: 59df7c59-2dda-4d33-99f1-e463ac520bca
 title: Vue Tour of Heroes - Componenten
 slug: vue-toh-componenten
 tags:
