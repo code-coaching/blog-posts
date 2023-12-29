@@ -89,26 +89,6 @@ Voor de oplettende lezer, bij het bezoeken van `http://localhost` werd er een we
 
 Wijzig de bestandsnaam van `index.html` naar `index.php`.
 
-```html
-<?php
-  $name = "John Duck";
-?>
-
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <h1>This works!</h1>
-    <p><?php echo 'This works!' ?></p>
-    <p>My name is <?php echo $name; ?></p>
-  </body>
-</html>
-```
-
 ```php
 <?php
   $name = "John Duck";
