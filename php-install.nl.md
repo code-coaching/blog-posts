@@ -115,6 +115,40 @@ Bij het bekijken van de broncode van de pagina in de browser, zien we dat de PHP
 
 ![PHP code in browser](/img/blog/php/xampp-example.png)
 
+## Errors tonen
+
+Als er een fout in de PHP-code zit, wordt deze niet getoond in de browser. Om deze fouten te tonen, moeten we de instellingen van php.ini aanpassen.
+
+Om de locatie van php.ini te vinden, kan je `phpinfo()` gebruiken. In de `index.php` kan je deze functie toevoegen.
+
+```php
+<?php
+  phpinfo();
+```
+
+Bezoek nu `http://localhost/php-test` in een webbrowser. Je zou een pagina moeten zien met alle PHP-instellingen.
+
+Bij `Loaded Configuration File` kan je de locatie van php.ini terugvinden.
+
+Bijvoorbeeld `/Applications/XAMPP/xamppfiles/etc/php.ini`.
+Of `C:\xampp\php\php.ini`.
+
+Open dit bestand in een teksteditor. En zoek naar de regel:
+
+```sh
+; E_ALL             - All errors and warnings (includes E_STRICT as of PHP 5.4.0)
+```
+
+Verwijder de `;` aan het begin van de regel.
+
+```sh
+E_ALL             - All errors and warnings (includes E_STRICT as of PHP 5.4.0)
+```
+
+Sla het bestand op en herstart de Apache service in XAMPP.
+
+Vanaf nu zullen fouten in de PHP-code getoond worden in de browser.
+
 ## Conclusie
 
 Je hebt nu een werkende PHP-omgeving. XAMPP is een tool die je kan gebruiken om lokaal een webserver te draaien die PHP ondersteunt.
