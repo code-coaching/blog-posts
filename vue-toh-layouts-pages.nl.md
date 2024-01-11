@@ -7,6 +7,8 @@ tags:
   - Tour of Heroes
 categories:
   - Frontend
+youtubeIds:
+  - ool_PAuG3RQ
 ---
 
 In dit artikel wordt de layout opgezet en gaan de verschillende pagina's toegevoegd worden van de Tour of Heroes-applicatie. De beginsituatie is een nieuw Vue-project. De eindsituatie is een Vue-project waarin de layout is opgezet en waar er pagina's toegevoegd zijn.
