@@ -1068,6 +1068,7 @@ Alle wijzigingen: [GitHub](https://github.com/code-coaching/vue-tour-of-heroes/c
 
 Om te zorgen dat de correcte hero getoond kan worden, gaat er gekeken worden naar de url parameter genaamd `id`. Vervolgens zal de hero gefilterd worden uit de lijst van heroes, die in dit artikel gekopieerd zal worden vanuit de `hero-list`-pagina, in een later artikel zal de lijst van heroes verplaatst worden naar een `service` zodat er maar één unieke lijst van heroes bestaat.
 
+`src/views/HeroDetailsView.vue`
 ```html
 <script setup lang="ts">
   import StyledButton from "@/components/StyledButton.vue";
