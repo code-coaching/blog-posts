@@ -330,4 +330,4 @@ Alle wijzigingen: [GitHub](https://github.com/code-coaching/vue-tour-of-heroes/c
 
 Een layout bevat elementen die op elke route/pagina zichtbaar zijn.
 
-Een pagina wordt gekoppeld via de `children`-property van de layout in het `src/app.routes.ts`-bestand. Een `child` wordt ingeladen in het `<RouterView />`-element.
+Een pagina wordt gekoppeld via de `children`-property van de layout in het `src/router/index.ts`-bestand. Een `child` wordt ingeladen in het `<RouterView />`-element.
