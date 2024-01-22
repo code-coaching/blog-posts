@@ -8,6 +8,7 @@ tags:
 categories:
 youtubeIds: 
   - kMyiY70nzRg
+  - -lujJCCpigQ
 ---
 
 Git is een versiebeheersysteem (Engels: VCS - Version Control System). Leuk, maar wat betekent versiebeheersysteem? Een systeem om versies te beheren. Ook grappig, maar wat betekent een systeem om versies te beheren? Om dit uit te leggen, is het makkelijker om het uit te proberen!
