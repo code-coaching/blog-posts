@@ -2000,10 +2000,10 @@ Alle wijzigingen: [GitHub](https://github.com/code-coaching/vue-tour-of-heroes/c
 
 ## API calls refactoren
 
-Er zijn verschillende dingen die keer op keer terugkomen in elke API call. We kunnen dit refactoren naar een basis instanatie van Axios en interceptors. Een interceptor (Nederlands: onderschepper) is een functie die uitgevoerd wordt voor elke API call, waarbij de request en response onderschept kan worden.
+Er zijn verschillende dingen die keer op keer terugkomen in elke API call. We kunnen dit refactoren naar een basis instantie van Axios en interceptors. Een interceptor (Nederlands: onderschepper) is een functie die uitgevoerd wordt voor elke API call, waarbij de request en response onderschept kan worden.
 
 We zullen één instantie van Axios voorzien in de applicatie waarbij een `baseURL` wordt toegevoegd.
-We zullen één interceptor toevoegen aan de Axios requestsn voor het toevoegen van de authorization token aan de header van de request.
+We zullen één interceptor toevoegen aan de Axios requests voor het toevoegen van de authorization token aan de header van de request.
 
 ### API service - Axios instantie
 
