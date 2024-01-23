@@ -7,6 +7,8 @@ tags:
   - Tour of Heroes
 categories:
   - Frontend
+youtubeIds:
+  - gehx4a_3LRk
 ---
 
 In dit artikel wordt vertrokken vanuit de situatie waar de layout opgezet is en de verschillende pagina's toegevoegd zijn aan de Tour of Heroes-applicatie. De beginsituatie is een bestaand Vue-project met een layoutcomponent en placeholderpagina's. De eindsituatie is een Vue-project waarin de pagina's voorzien zijn van componenten.
