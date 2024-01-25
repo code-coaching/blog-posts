@@ -298,7 +298,7 @@ export class HeroListComponent {
 </div>
 ```
 
-Hier wordt gebruikgemaakt van een `@for`-loop. Dit is onderdeel van de Angular `Control Flow`. Om te zorgen dat `change detection` optimaal werkt, moet er een `track` gebruikt worden. Dit zorgt ervoor dat elk element uniek geïdentificeerd wordt. Hier wordt gekozen voor het unieke nummer van de horo.
+Hier wordt gebruikgemaakt van een `@for`-loop. Dit is onderdeel van de Angular `Control Flow`. Om te zorgen dat `change detection` optimaal werkt, moet er een `track` gebruikt worden. Dit zorgt ervoor dat elk element uniek geïdentificeerd wordt. Hier wordt gekozen voor het unieke nummer van de hero.
 
 In de `class` wordt de `heroes`-lijst gedefinieerd, deze array bevat objecten met de properties `number` en `name`. Elk object stelt een hero voor.
 
