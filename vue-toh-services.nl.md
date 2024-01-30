@@ -503,16 +503,16 @@ const selectedHero: Ref<null | Hero> = ref(null);
 
 const useHeroes = () => {
   const topHeroes = computed(() => {
-    return heroes.slice(-4);
+    return heroes.value.slice(-4);
   });
 
   const findHero = (heroId: number) => {
-    const matchingHero = heroes.find((hero) => hero.number === heroId) ?? null;
+    const matchingHero = heroes.value.find((hero) => hero.number === heroId) ?? null;
     return structuredClone(toRaw(matchingHero));
   };
 
   const updateHero = (hero: Hero) => {
-    const index = heroes.findIndex((h) => h.number === hero.number);
+    const index = heroes.value.findIndex((h) => h.number === hero.number);
     if (index !== -1) {
       heroes[index] = structuredClone(toRaw(hero));
     }
