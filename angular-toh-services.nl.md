@@ -1117,7 +1117,7 @@ Alle wijzigingen: [GitHub](https://github.com/code-coaching/angular-tour-of-hero
 /* hier nog code */
 
 .new-hero-button {
-  display: block; // Angular gebruikt standaard display: inline-block voor custom components
+  display: block; /* Angular gebruikt standaard display: inline-block voor custom components */
   margin-top: 1rem;
 }
 ```

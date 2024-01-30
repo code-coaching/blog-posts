@@ -27,7 +27,7 @@ Eindsituatie: [Source code](https://github.com/code-coaching/vue-tour-of-heroes/
 
 ## Services
 
-Een service is een manier om data te delen tussen verschillende componenten. Om te zorgen dat de data overal hetzelfde is, wordt er gewerkt met het concept van een `singleton`. Dit is data die slechts één keer bestaat in de applicatie. Een service service kan verwijzen naar globaal beschikbare variabelen, deze variabelen zijn allemaal `singletons`. Een service wordt binnen Vue ook wel een `composable` genoemd.
+Een service is een manier om data te delen tussen verschillende componenten. Om te zorgen dat de data overal hetzelfde is, wordt er gewerkt met het concept van een `singleton`. Dit is data die slechts één keer bestaat in de applicatie. Een service kan verwijzen naar globaal beschikbare variabelen, deze variabelen zijn allemaal `singletons`. Een service wordt binnen Vue ook wel een `composable` genoemd.
 
 Momenteel is er een "probleem" met de `hero`-data. De lijst met `hero`-objecten wordt meerdere keren gedefinieerd in verschillende componenten.
 
