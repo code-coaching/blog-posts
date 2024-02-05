@@ -1,5 +1,5 @@
 ---
-postUuid:
+postUuid: d998d0d1-1011-4068-8283-8ed246772c47
 title: PHP - OOP
 slug: php-oop
 tags:
