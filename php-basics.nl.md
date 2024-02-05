@@ -2055,7 +2055,7 @@ if (isset($_POST['submit'])) {
 </html>
 ```
 
-Merk op dat `encrypte="multipart/form-data"` toegevoegd is aan het formulier. Dit is nodig om bestanden te kunnen uploaden.
+Merk op dat `enctype="multipart/form-data"` toegevoegd is aan het formulier. Dit is nodig om bestanden te kunnen uploaden.
 
 Op Firefox krijg je na het uploaden van een bestand een popup - klik hier op 'Cancel'. Dit is niet het geval in Chrome. In een echte situatie zou het verwerken (uploaden) van het bestand gebeuren in een aparte file, bijvoorbeeld `upload.php` - momenteel zit het uploadproces in dezelfde file als de HTML, wat voor de popup zorgt.
 
