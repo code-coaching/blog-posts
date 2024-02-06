@@ -2030,7 +2030,7 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body>
-  <?php if ($message) : ?>
+  <?php if (isset($message)) : ?>
     <p style="color: red;"><?php echo $message; ?></p>
   <?php endif; ?>
 
@@ -2040,12 +2040,12 @@ if (isset($_POST['submit'])) {
     <input type="submit" value="Submit" name="submit"><br>
   </form>
 
-  <?php if ($success) : ?>
+  <?php if (isset($success)) : ?>
     <p style="color: green;">Afbeelding is geüpload!</p>
     <img src="<?php echo $target_dir; ?>" alt="Uploaded image">
   <?php endif; ?>
 
-  <?php if ($too_large) : ?>
+  <?php if (isset($too_large)) : ?>
     <p style="color: red;">Afbeelding is te groot!</p>
   <?php endif; ?>
 
