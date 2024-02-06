@@ -838,18 +838,12 @@ echo '<br>';
 registerUser('Janine'); // Registratie gelukt! Welkom, Janine.
 echo '<br>';
 echo var_dump($username); // NULL - $username bestaat niet in de globale scope
-/*
-* Indien hier geen Warning getoond wordt in de browser
-* Ga dan terug naar `PHP Installeren` en volg de stappen om `display_errors` en `error_reporting` in te stellen
-*/
 echo '<br>';
 ```
 
 ### Functie met return statement
 
 ```php
-<?php
-
 $existing_users = ['John', 'Janine'];
 
 function register_new_user($username)
@@ -933,7 +927,6 @@ echo '<br>';
 
 ```php
 <?php
-
 /**
  * Er zijn veel functies beschikbaar om met arrays te werken
  * https://www.php.net/manual/en/ref.array.php
@@ -1035,11 +1028,11 @@ echo '<br>';
 /**
  * Filter een array
  */
-$less_than_10 = array_filter($numbers_doubled, function ($number) {
+$less_than_10 = array_filter($numbersDoubled, function ($number) {
   return $number < 10;
 });
 
-$less_than_10_arrow = array_filter($numbers_doubled, fn ($number) => $number < 10);
+$less_than_10_arrow = array_filter($numbersDoubled, fn ($number) => $number < 10);
 
 print_r($less_than_10); // Array ( [0] => 2 [1] => 4 [2] => 6 [3] => 8 )
 echo '<br>';
@@ -1183,6 +1176,7 @@ $title = 'Super Globals';
   <ul>
     <li>Host: <?php echo $_SERVER['HTTP_HOST']; ?></li>
     <li>Document Root: <?php echo $_SERVER['DOCUMENT_ROOT']; ?></li>
+    <li>System Root: <?php echo $_SERVER['SystemRoot']; ?></li>
     <li>Server Name: <?php echo $_SERVER['SERVER_NAME']; ?></li>
     <li>Server Port: <?php echo $_SERVER['SERVER_PORT']; ?></li>
     <li>Current File Dir: <?php echo $_SERVER['PHP_SELF']; ?></li>
@@ -1208,7 +1202,6 @@ We kunnen gegevens doorgeven van de client naar de server met behulp van `query 
 ```php
 <?php
 
-// Dit zal een warning geven indien de query parameter niet bestaat
 if ($_GET['username']) {
   echo 'Dit is de username die binnenkomt via de query parameter: ' . $_GET['username'];
   echo '<br>';
@@ -1219,25 +1212,14 @@ Bezoek manueel de URL `http://localhost/php-basis/10_get_post.php?username=John`
 
 Bezoek opnieuw manueel de URL `http://localhost/php-basis/10_get_post.php?username=Janine` en je zal zien dat de username getoond wordt in de browser.
 
-Bezoek de url zonder query parameter `http://localhost/php-basis/10_get_post.php` en je zal niks uitgeprint zien. Er wordt wel een warning getoond. Dit is omdat we proberen een index te gebruiken die niet bestaat in de array `$_GET`.
-
-Om deze warning te vermijden, kan er gebruik gemaakt worden van `isset()`, dit controleert of een property aanwezig is. 
-
-```php
-<?php
-
-if (isset($_GET['username'])) {
-  echo 'Dit is de username die binnenkomt via de query parameter: ' . $_GET['username'];
-  echo '<br>';
-}
-```
+Bezoek de url zonder query parameter `http://localhost/php-basis/10_get_post.php` en je zal niks uitgeprint zien.
 
 We kunnen ook via een HTML-pagina linken naar een PHP-pagina met een query parameter.
 
 ```php
 <?php
 
-if (isset($_GET['username'])) {
+if ($_GET['username']) {
   echo 'Dit is de username die binnenkomt via de query parameter: ' . $_GET['username'];
   echo '<br>';
 }
@@ -1270,10 +1252,7 @@ De if statement verplaatsen we naar de HTML-pagina.
 ```php
 <?php
 
-// $username = $_GET['username']; // Dit zou een warning geven indien de query parameter niet bestaat
-// $username = isset($_GET['username']) ? $_GET['username'] : null; // Dit zou geen warning geven
-$username = $_GET['username'] ?? null; // Dit is een kortere manier om hetzelfde als de vorige regel te bekomen
-// Dit kan je lezen als: als $_GET['username'] bestaat, gebruik dan $_GET['username'], anders gebruik null
+$username = $_GET['username'];
 
 ?>
 
@@ -1307,7 +1286,7 @@ We kunnen data doorgeven van de client naar de server door middel van een formul
 ```php
 <?php
 
-$username_post = $_POST['username'] ?? null;
+$username_post = $_POST['username'];
 
 ?>
 
@@ -1353,10 +1332,10 @@ We kunnen data doorgeven van de client naar de server door middel van een formul
 ```php
 <?php
 
-$username = $_GET['username'] ?? null;
-$username_post = $_POST['username'] ?? null;
+$username = $_GET['username'];
+$username_post = $_POST['username'];
 
-$username_request = $_REQUEST['username'] ?? null;
+$username_request = $_REQUEST['username'];
 ?>
 
 <!DOCTYPE html>
@@ -1397,10 +1376,10 @@ $username_request = $_REQUEST['username'] ?? null;
 ```php
 <?php
 
-$username = $_GET['username'] ?? null;
-$username_post = $_POST['username'] ?? null;
+$username = $_GET['username'];
+$username_post = $_POST['username'];
 
-$username_request = $_REQUEST['username'] ?? null;
+$username_request = $_REQUEST['username'];
 ?>
 
 <!DOCTYPE html>
@@ -1446,12 +1425,12 @@ $username_request = $_REQUEST['username'] ?? null;
 
 ## Sanitization
 
-Maak een nieuw bestand aan in de map `php-basis`, genaamd `11_sanitizing_inputs`. Dit bestand kan getoond worden in de browser door te navigeren naar `http://localhost/php-basis/11_sanitizing_inputs.php`. Er zal momenteel nog niks te zien zijn.
+Maak een nieuw bestand aan in de map `php-basis`, genaamd `11_sanitizing_inputs.php`. Dit bestand kan getoond worden in de browser door te navigeren naar `http://localhost/php-basis/11_sanitizing_inputs.php`. Er zal momenteel nog niks te zien zijn.
 
 ```php
 <?php
 
-$username = $_REQUEST['username'] ?? null;
+$username = $_REQUEST['username'];
 
 echo $username; // de input van de gebruiker wordt getoond én uitgevoerd
 
@@ -1497,7 +1476,7 @@ Dit kunnen we doen met de functie `htmlspecialchars()`.
 ```php
 <?php
 
-$username = htmlspecialchars($_REQUEST['username'] ?? null);
+$username = htmlspecialchars($_REQUEST['username']);
 
 echo $username;
 
@@ -1715,7 +1694,7 @@ Wanneer de gebruiker inloggegevens invult en op de submitknop klikt, dan worden 
 
 session_start(); // nodig op elke pagina waar je de sessie wilt gebruiken
 
-$username = $_SESSION['username'] ?? null;
+$username = $_SESSION['username'];
 
 if ($username) {
   echo 'Welcome, ' . $username . '.';
@@ -1737,7 +1716,7 @@ We kunnen het dashboard uitbreiden met HTML.
 
 session_start(); // nodig op elke pagina waar je de sessie wilt gebruiken
 
-$username = $_SESSION['username'] ?? null;
+$username = $_SESSION['username'];
 
 ?>
 
@@ -1772,7 +1751,7 @@ Wanneer de gebruiker ingelogd is, dan tonen we een link om uit te loggen en een 
 session_start(); // nodig op elke pagina waar je de sessie wilt gebruiken
 
 session_destroy(); // vernietig de sessie
-header('Location: /php-basis/13_sessions.php'); // redirect naar 13_sessions.php
+header('Location: /php-crash/13_sessions.php'); // redirect naar 13_sessions.php
 ```
 
 Wanneer de gebruiker op de link klikt om uit te loggen, dan wordt de gebruiker doorgestuurd naar de logoutpagina. De sessie wordt vernietigd en de gebruiker wordt doorgestuurd naar de loginpagina.
@@ -1814,7 +1793,7 @@ In dit bestand plaatsen we een JSON object met vrienden.
 }
 ```
 
-PHP heeft ingebouwde functionaliteit om te werken met bestanden. We kunnen bestanden openen, lezen, schrijven, bewerken en sluiten. We gaan er in deze post vanuit dat het bestand bestaat én geldige data bevat.
+PHP heeft ingebouwde functionaliteit om te werken met bestanden. We kunnen bestanden openen, lezen, schrijven, bewerken en sluiten.
 
 ```php
 <?php
@@ -1992,7 +1971,7 @@ Indien het bestand niet wordt aangemaakt, dan kan het zijn de de map `extras` ni
 In de map `php-basis` open je een terminal en voer je volgende commando uit:
 
 ```sh
-chmod 777 extras
+chmod -R 777 extras
 ```
 
 ## File upload
@@ -2076,11 +2055,7 @@ if (isset($_POST['submit'])) {
 
 Merk op dat `enctype="multipart/form-data"` toegevoegd is aan het formulier. Dit is nodig om bestanden te kunnen uploaden.
 
-Indien er een error getoond wordt i.v.m. `permissions`, dan kan je de rechten van de map `uploads` aanpassen. Dit doe je vanuit de root van de map `php-basis` in een terminal.
-
-```sh
-chmod 777 uploads
-```
+Op Firefox krijg je na het uploaden van een bestand een popup - klik hier op 'Cancel'. Dit is niet het geval in Chrome. In een echte situatie zou het verwerken (uploaden) van het bestand gebeuren in een aparte file, bijvoorbeeld `upload.php` - momenteel zit het uploadproces in dezelfde file als de HTML, wat voor de popup zorgt.
 
 ## Exceptions
 
