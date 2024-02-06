@@ -1446,7 +1446,7 @@ $username_request = $_REQUEST['username'] ?? null;
 
 ## Sanitization
 
-Maak een nieuw bestand aan in de map `php-basis`, genaamd `11_sanitizing_inputs`. Dit bestand kan getoond worden in de browser door te navigeren naar `http://localhost/php-basis/11_sanitizing_inputs.php`. Er zal momenteel nog niks te zien zijn.
+Maak een nieuw bestand aan in de map `php-basis`, genaamd `11_sanitizing_inputs.php`. Dit bestand kan getoond worden in de browser door te navigeren naar `http://localhost/php-basis/11_sanitizing_inputs.php`. Er zal momenteel nog niks te zien zijn.
 
 ```php
 <?php
