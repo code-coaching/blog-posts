@@ -133,17 +133,26 @@ Bij `Loaded Configuration File` kan je de locatie van php.ini terugvinden.
 Bijvoorbeeld `/Applications/XAMPP/xamppfiles/etc/php.ini`.
 Of `C:\xampp\php\php.ini`.
 
-Open dit bestand in een teksteditor. En zoek naar de regel:
+Open dit bestand in een teksteditor.
+
+Zoek naar de regel die begint met `display_errors=`.
 
 ```sh
-; E_ALL             - All errors and warnings (includes E_STRICT as of PHP 5.4.0)
+display_errors=On
 ```
 
-Verwijder de `;` aan het begin van de regel.
+Indien er een `;` aan het begin van de regel staat, betekent dit dat de regel uitgeschakeld is, verwijder de `;` om de regel in te schakelen.
+
+Indien er `display_errors=Off` staat, verander dit naar `display_errors=On`.
+
+Zoek naar de regel die begint met `error_reporting=`.
 
 ```sh
-E_ALL             - All errors and warnings (includes E_STRICT as of PHP 5.4.0)
+error_reporting=E_ALL
 ```
+Indien er een `;` aan het begin van de regel staat, betekent dit dat de regel uitgeschakeld is, verwijder de `;` om de regel in te schakelen.
+
+Indien er `error_reporting=E_ALL & ~E_DEPRECATED & ~E_STRICT` of iets anders staat, verander dit naar `error_reporting=E_ALL`.
 
 Sla het bestand op en herstart de Apache service in XAMPP.
 
