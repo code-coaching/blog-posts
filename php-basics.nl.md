@@ -1983,6 +1983,9 @@ Maak een nieuwe map aan in de map `php-basis`, genaamd `uploads`. Deze map zal g
 ```php
 <?php
 
+$message = '';
+$success = false;
+
 $allowed_extensions = array('png', 'jpg', 'jpeg', 'gif');
 
 // Controleer of er een formulier gesubmit is
@@ -2044,11 +2047,6 @@ if (isset($_POST['submit'])) {
     <p style="color: green;">Afbeelding is geüpload!</p>
     <img src="<?php echo $target_dir; ?>" alt="Uploaded image">
   <?php endif; ?>
-
-  <?php if ($too_large) : ?>
-    <p style="color: red;">Afbeelding is te groot!</p>
-  <?php endif; ?>
-
 
 </body>
 
