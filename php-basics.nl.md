@@ -1751,7 +1751,7 @@ Wanneer de gebruiker ingelogd is, dan tonen we een link om uit te loggen en een 
 session_start(); // nodig op elke pagina waar je de sessie wilt gebruiken
 
 session_destroy(); // vernietig de sessie
-header('Location: /php-crash/13_sessions.php'); // redirect naar 13_sessions.php
+header('Location: /php-basis/13_sessions.php'); // redirect naar 13_sessions.php
 ```
 
 Wanneer de gebruiker op de link klikt om uit te loggen, dan wordt de gebruiker doorgestuurd naar de logoutpagina. De sessie wordt vernietigd en de gebruiker wordt doorgestuurd naar de loginpagina.
