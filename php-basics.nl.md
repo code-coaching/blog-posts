@@ -312,15 +312,15 @@ Een array is een lijst van waarden. Een array kan meerdere waarden bevatten van 
 <?php
 // Array van getallen
 $numbers = [1, 2, 3, 4, 5];
-$numbersAlternative = array(1, 2, 3, 4, 5);
+$numbers_alternative = array(1, 2, 3, 4, 5);
 
 // Array van strings
 $names = ['Kwik', 'Kwek', 'Kwak'];
-$namesAlternative = array('Kwik', 'Kwek', 'Kwak');
+$names_alternative = array('Kwik', 'Kwek', 'Kwak');
 
 // Array van mixed types
 $things = ['Kwik', 2, true, 3.141592653];
-$thingsAlternative = array('Kwik', 2, true, 3.141592653);
+$things_alternative = array('Kwik', 2, true, 3.141592653);
 ```
 
 Een array kan aangemaakt worden met `[]` of met `array()`.
@@ -552,10 +552,10 @@ Stel dat we de JSON hebben opgehaald en deze in stringformaat hebben. Dan kunnen
 
 ```php
 <?php
-$jsonData = '{"name":"John Duck","age":32,"nephews":[{"name":"Kwik","age":16,"hobbies":["Gamen","Voetbal"]},{"name":"Kwek","age":16,"hobbies":["Gamen"]},{"name":"Kwak","age":16,"hobbies":[]}]}';
+$json_data = '{"name":"John Duck","age":32,"nephews":[{"name":"Kwik","age":16,"hobbies":["Gamen","Voetbal"]},{"name":"Kwek","age":16,"hobbies":["Gamen"]},{"name":"Kwak","age":16,"hobbies":[]}]}';
 
-$parsedData = json_decode($jsonData, true); // true zorgt ervoor dat de data als associative array wordt teruggegeven
-var_dump($parsedData);
+$parsed_data = json_decode($json_data, true); // true zorgt ervoor dat de data als associative array wordt teruggegeven
+var_dump($parsed_data);
 echo '<br>';
 ```
 
@@ -844,24 +844,24 @@ echo '<br>';
 ### Functie met return statement
 
 ```php
-$existingUsers = ['John', 'Janine'];
+$existing_users = ['John', 'Janine'];
 
-function registerNewUser($username)
+function register_new_user($username)
 {
-  global $existingUsers; // global keyword om toegang te krijgen tot de globale variabele $existingUsers
-  if (in_array($username, $existingUsers)) {
+  global $existing_users; // global keyword om toegang te krijgen tot de globale variabele $existingUsers
+  if (in_array($username, $existing_users)) {
     return 'Gebruikersnaam bestaat al.';
   } else {
-    $existingUsers[] = $username; // Voeg de nieuwe gebruiker toe aan de array met bestaande gebruikers
+    $existing_users[] = $username; // Voeg de nieuwe gebruiker toe aan de array met bestaande gebruikers
     return 'Registratie gelukt! Welkom, ' . $username . '.';
   }
 }
 
-echo registerNewUser('John'); // Gebruikersnaam bestaat al.
+echo register_new_user('John'); // Gebruikersnaam bestaat al.
 echo '<br>';
-echo registerNewUser('Janine'); // Gebruikersnaam bestaat al.
+echo register_new_user('Janine'); // Gebruikersnaam bestaat al.
 echo '<br>';
-echo registerNewUser('Laika'); // Registratie gelukt! Welkom, Laika.
+echo register_new_user('Laika'); // Registratie gelukt! Welkom, Laika.
 echo '<br>';
 ```
 
@@ -876,28 +876,28 @@ Merk ook op dat de waarde teruggegeven wordt met `return`. Als we het resultaat 
 ```php
 <?php
 
-$existingUsers = ['John', 'Janine'];
+$existing_users = ['John', 'Janine'];
 
-function addUser($username, $existingMessage = 'Gebruikersnaam bestaat al.')
+function add_user($username, $existing_message = 'Gebruikersnaam bestaat al.')
 {
-  global $existingUsers;
-  if (in_array($username, $existingUsers)) {
-    return $existingMessage;
+  global $existing_users;
+  if (in_array($username, $existing_users)) {
+    return $existing_message;
   } else {
     $users[] = $username;
     return 'Registratie gelukt! Welkom, ' . $username . '.';
   }
 }
 
-echo addUser('John'); // Gebruikersnaam bestaat al.
+echo add_user('John'); // Gebruikersnaam bestaat al.
 echo '<br>';
-echo addUser('Janine', "Mee joh, dees is al bezet!"); // Mee joh, dees is al bezet!
+echo add_user('Janine', "Mee joh, dees is al bezet!"); // Mee joh, dees is al bezet!
 echo '<br>';
-echo addUser('Kwik'); // Gebruikersnaam bestaat al.
+echo add_user('Kwik'); // Gebruikersnaam bestaat al.
 echo '<br>';
 ```
 
-De `$existingMessage` parameter heeft een default waarde van `'Gebruikersnaam bestaat al.'`. Wanneer er geen waarde meegegeven wordt voor deze parameter, dan zal de default waarde gebruikt worden.
+De `$existing_message` parameter heeft een default waarde van `'Gebruikersnaam bestaat al.'`. Wanneer er geen waarde meegegeven wordt voor deze parameter, dan zal de default waarde gebruikt worden.
 
 ### Alternatieve syntax
 
@@ -907,19 +907,19 @@ De `$existingMessage` parameter heeft een default waarde van `'Gebruikersnaam be
 /**
  * Anonieme functie toekennen aan een variabele
  */
-$newUser = function ($username) {
+$new_user = function ($username) {
   return 'Registratie gelukt! Welkom, ' . $username . '.';
 };
 
-echo $newUser('John'); // Registratie gelukt! Welkom, John.
+echo $new_user('John'); // Registratie gelukt! Welkom, John.
 echo '<br>';
 
 /**
  * Anonieme arrow functie toekennen aan een variabele
  */
-$addNewUser = fn ($username) => 'Registratie gelukt! Welkom, ' . $username . '.';
+$add_new_user = fn ($username) => 'Registratie gelukt! Welkom, ' . $username . '.';
 
-echo $addNewUser('John'); // Registratie gelukt! Welkom, John.
+echo $add_new_user('John'); // Registratie gelukt! Welkom, John.
 echo '<br>';
 ```
 
@@ -1014,29 +1014,29 @@ echo '<br>';
 /**
  * Wijzig elk element van een array
  */
-$numbersDoubled = array_map(function ($number) {
+$numbers_doubled = array_map(function ($number) {
   return $number * 2;
 }, $numbers);
 
-$numbersDoubledArrow = array_map(fn ($number) => $number * 2, $numbers);
+$numbers_doubled_arrow = array_map(fn ($number) => $number * 2, $numbers);
 
-print_r($numbersDoubled); // Array ( [0] => 2 [1] => 4 [2] => 6 [3] => 8 [4] => 10 )
+print_r($numbers_doubled); // Array ( [0] => 2 [1] => 4 [2] => 6 [3] => 8 [4] => 10 )
 echo '<br>';
-print_r($numbersDoubledArrow); // Array ( [0] => 2 [1] => 4 [2] => 6 [3] => 8 [4] => 10 )
+print_r($numbers_doubled_arrow); // Array ( [0] => 2 [1] => 4 [2] => 6 [3] => 8 [4] => 10 )
 echo '<br>';
 
 /**
  * Filter een array
  */
-$lessThan10 = array_filter($numbersDoubled, function ($number) {
+$less_than_10 = array_filter($numbersDoubled, function ($number) {
   return $number < 10;
 });
 
-$lessThan10Arrow = array_filter($numbersDoubled, fn ($number) => $number < 10);
+$less_than_10_arrow = array_filter($numbersDoubled, fn ($number) => $number < 10);
 
-print_r($lessThan10); // Array ( [0] => 2 [1] => 4 [2] => 6 [3] => 8 )
+print_r($less_than_10); // Array ( [0] => 2 [1] => 4 [2] => 6 [3] => 8 )
 echo '<br>';
-print_r($lessThan10Arrow); // Array ( [0] => 2 [1] => 4 [2] => 6 [3] => 8 )
+print_r($less_than_10_arrow); // Array ( [0] => 2 [1] => 4 [2] => 6 [3] => 8 )
 echo '<br>';
 ```
 
@@ -1110,11 +1110,11 @@ var_dump(str_ends_with($string, 'world')); // bool(false)
 echo '<br>';
 
 // html entities
-$htmlString = '<h1>Hello World</h1>';
+$html_string = '<h1>Hello World</h1>';
 // &lt;h1&gt;Hello World&lt;/h1&gt; - de html tags worden geconverteerd naar html entities
 // dit zorgt ervoor dat de browser de html tags niet zal interpreteren
 // het zal de html tags tonen als tekst in de browser: <h1>Hello World</h1>
-echo htmlentities($htmlString);
+echo htmlentities($html_string);
 echo '<br>';
 
 // string formatting
@@ -1286,7 +1286,7 @@ We kunnen data doorgeven van de client naar de server door middel van een formul
 ```php
 <?php
 
-$usernamePost = $_POST['username'];
+$username_post = $_POST['username'];
 
 ?>
 
@@ -1300,8 +1300,8 @@ $usernamePost = $_POST['username'];
 </head>
 
 <body>
-  <?php if ($usernamePost) : ?>
-    <h1>Hallo <?php echo $usernamePost ?></h1>
+  <?php if ($username_post) : ?>
+    <h1>Hallo <?php echo $username_post ?></h1>
     <p>De username komt uit het formulier.</p>
   <?php else : ?>
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
@@ -1333,9 +1333,9 @@ We kunnen data doorgeven van de client naar de server door middel van een formul
 <?php
 
 $username = $_GET['username'];
-$usernamePost = $_POST['username'];
+$username_post = $_POST['username'];
 
-$usernameRequest = $_REQUEST['username'];
+$username_request = $_REQUEST['username'];
 ?>
 
 <!DOCTYPE html>
@@ -1348,8 +1348,8 @@ $usernameRequest = $_REQUEST['username'];
 </head>
 
 <body>
-  <?php if ($usernameRequest) : ?>
-    <h2>REQUEST: <?php echo $usernameRequest ?></h2>
+  <?php if ($username_request) : ?>
+    <h2>REQUEST: <?php echo $username_request ?></h2>
     <p>Deze variabele komt ofwel uit de url ofwel uit het formulier.</p>
   <?php else : ?>
     GET <br>
@@ -1377,9 +1377,9 @@ $usernameRequest = $_REQUEST['username'];
 <?php
 
 $username = $_GET['username'];
-$usernamePost = $_POST['username'];
+$username_post = $_POST['username'];
 
-$usernameRequest = $_REQUEST['username'];
+$username_request = $_REQUEST['username'];
 ?>
 
 <!DOCTYPE html>
@@ -1392,8 +1392,8 @@ $usernameRequest = $_REQUEST['username'];
 </head>
 
 <body>
-  <?php if ($usernameRequest) : ?>
-    <h2>REQUEST: <?php echo $usernameRequest ?></h2>
+  <?php if ($username_request) : ?>
+    <h2>REQUEST: <?php echo $username_request ?></h2>
     <p>Deze variabele komt ofwel uit de url ofwel uit het formulier.</p>
   <?php endif; ?>
 
@@ -1404,8 +1404,8 @@ $usernameRequest = $_REQUEST['username'];
     <a href="<?php echo $_SERVER['PHP_SELF'] ?>?username=John">Query Parameter</a>
   <?php endif; ?>
 
-  <?php if ($usernamePost) : ?>
-    <h2>POST: <?php echo $usernamePost ?></h2>
+  <?php if ($username_post) : ?>
+    <h2>POST: <?php echo $username_post ?></h2>
     <p>De username komt uit het formulier.</p>
   <?php else : ?>
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
