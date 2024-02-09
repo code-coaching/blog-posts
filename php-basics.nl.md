@@ -890,7 +890,7 @@ function add_user($username, $existing_message = 'Gebruikersnaam bestaat al.')
   if (in_array($username, $existing_users)) {
     return $existing_message;
   } else {
-    $users[] = $username;
+    $existing_users[] = $username;
     return 'Registratie gelukt! Welkom, ' . $username . '.';
   }
 }
