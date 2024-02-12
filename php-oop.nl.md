@@ -13,7 +13,7 @@ Verwachte voorkennis: PHP Basis
 
 Object Oriented Programming (Nederlands: Objectgeoriënteerd Programmeren) is een programmeerparadigma dat in veel moderne programmeertalen terug te vinden is. Het is een manier om variabelen en functies te groeperen.
 
-We werken met XAMPP, maak in de map `htdocs` een nieuwe map aan, genaamd `php-oop`. Start de Apache-server via XAMPP en navigeer naar `http://localhost/php-basis`.
+We werken met XAMPP, maak in de map `htdocs` een nieuwe map aan, genaamd `php-oop`. Start de Apache-server via XAMPP en navigeer naar `http://localhost/php-oop`.
 
 ## Niet OOP
 
