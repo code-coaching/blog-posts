@@ -1,7 +1,7 @@
 ---
 postUuid: 079ba08a-fd55-4db8-8be7-123a8dd27040
 title: Laravel - Installatie
-slug: laravel-installatie
+slug: laravel-bestandsstructuur
 tags:
   - PHP
   - Laravel
