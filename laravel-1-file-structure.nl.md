@@ -63,9 +63,9 @@ Bekijk `app/Models/User.php` als voorbeeld.
 
 Laravel gebruikt de `Blade`-templating engine om Views te genereren. Een View is een HTML-bestand dat de gebruiker te zien krijgt. Een View kan bijvoorbeeld een `home`-pagina zijn, of een `login`-pagina.
 
-Views zijn terug te vinden in de map `app/resources/views`. Een View is een bestand met de extensie `.blade.php`. Met PHP is het al mogelijk om PHP-code te schrijven in een HTML-bestand, maar met de `Blade Templating Engine` is het mogelijk om nog meer te doen. Zo is het bijvoorbeeld mogelijk om conditionele en iteratieve statements te gebruiken, om de inhoud van een variabele te tonen, om componenten te gebruiken, enzovoort.
+Views zijn terug te vinden in de map `resources/views`. Een View is een bestand met de extensie `.blade.php`. Met PHP is het al mogelijk om PHP-code te schrijven in een HTML-bestand, maar met de `Blade Templating Engine` is het mogelijk om nog meer te doen. Zo is het bijvoorbeeld mogelijk om conditionele en iteratieve statements te gebruiken, om de inhoud van een variabele te tonen, om componenten te gebruiken, enzovoort.
 
-Bekijk `app/resources/views/welcome.blade.php` als voorbeeld.
+Bekijk `resources/views/welcome.blade.php` als voorbeeld.
 
 Hier vallen enkele dingen op:
 
@@ -85,7 +85,7 @@ Laravel gebruikt routes om te bepalen welke code er moet uitgevoerd worden wanne
 
 Later wordt er gekeken naar de routes in `api.php`, deze routes worden gebruikt om data op te halen of te versturen naar de applicatie via een API. Een route in `api.php` zal dus altijd (JSON) data teruggeven.
 
-Bekijk `app/routes/web.php` als voorbeeld.
+Bekijk `routes/web.php` als voorbeeld.
 
 ```php
 Route::get('/', function () {
@@ -93,7 +93,7 @@ Route::get('/', function () {
 });
 ```
 
-Hierin staat dus: wanneer de gebruiker de URL `/` bezoekt, geef dan de View `welcome` terug. Dit verwijst naar `welcome.blade.php` in de map `app/resources/views`. Het rechtstreeks teruggeven van een View is mogelijk, maar later wordt er gekeken naar het gebruik van een Controller om de View terug te geven.
+Hierin staat dus: wanneer de gebruiker de URL `/` bezoekt, geef dan de View `welcome` terug. Dit verwijst naar `welcome.blade.php` in de map `resources/views`. Het rechtstreeks teruggeven van een View is mogelijk, maar later wordt er gekeken naar het gebruik van een Controller om de View terug te geven.
 
 ### Middleware
 
@@ -107,9 +107,9 @@ De `handle`-functie wordt uitgevoerd wanneer een route wordt uitgevoerd. In dit 
 
 ## Migraties
 
-Een migratie is een PHP-bestand dat zich bevindt in de map `app/database/migrations`. Een migratie wordt gebruikt om de structuur van de database te definiëren. Een migratie bevat de code om een tabel aan te maken, om een kolom toe te voegen aan een tabel, om een kolom te verwijderen van een tabel, enzovoort.
+Een migratie is een PHP-bestand dat zich bevindt in de map `database/migrations`. Een migratie wordt gebruikt om de structuur van de database te definiëren. Een migratie bevat de code om een tabel aan te maken, om een kolom toe te voegen aan een tabel, om een kolom te verwijderen van een tabel, enzovoort.
 
-Bekijk `app/database/migrations/2014_10_12_000000_create_users_table.php` als voorbeeld.
+Bekijk `database/migrations/2014_10_12_000000_create_users_table.php` als voorbeeld.
 
 Wanneer we `php artisan migrate` uitvoeren, zal Laravel alle nog niet uitgevoerde migraties uitvoeren. Dit betekent dat de code in de `up()`-methode wordt uitgevoerd. Wanneer we `php artisan migrate:rollback` uitvoeren, zal Laravel de laatst uitgevoerde migratie ongedaan maken. Dit betekent dat de code in de `down()`-methode wordt uitgevoerd.
 
@@ -117,6 +117,6 @@ Momenteel kan je nog geen migraties uitvoeren, omdat er nog geen database is. In
 
 ## Conclusie
 
-Dit is een overzicht van enkele belangrijke mappen en bestanden in Laravel. Één van de doelen van deze cursus is om je vertrouwd te maken met het toevoegen van nieuwe functionaliteit aan een Laravel-applicatie. Dit betekent dat je niet alle bestanden en mappen van buiten moet kennen, maar dat je wel moet weten waar je nieuwe code moet toevoegen: MVC - Model in `app/Models`, View in `app/resources/views`, Controller in `app/Http/Controllers`. Routes in `app/routes/web.php` (of `app/routes/api.php` indien een RESTful API gemaakt wordt). Migraties in `app/database/migrations`.
+Dit is een overzicht van enkele belangrijke mappen en bestanden in Laravel. Één van de doelen van deze cursus is om je vertrouwd te maken met het toevoegen van nieuwe functionaliteit aan een Laravel-applicatie. Dit betekent dat je niet alle bestanden en mappen van buiten moet kennen, maar dat je wel moet weten waar je nieuwe code moet toevoegen: MVC - Model in `app/Models`, View in `resources/views`, Controller in `app/Http/Controllers`. Routes in `routes/web.php` (of `routes/api.php` indien een RESTful API gemaakt wordt). Migraties in `database/migrations`.
 
 Meer informatie over de bestandsstructuur is terug te vinden in de [documentatie](https://laravel.com/docs/10.x/structure).
