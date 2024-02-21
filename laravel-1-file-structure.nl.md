@@ -63,7 +63,7 @@ Bekijk `app/Models/User.php` als voorbeeld.
 
 Laravel gebruikt de `Blade`-templating engine om Views te genereren. Een View is een HTML-bestand dat de gebruiker te zien krijgt. Een View kan bijvoorbeeld een `home`-pagina zijn, of een `login`-pagina.
 
-Views zijn terug te vinden in de map `app/resources/views`. Een View is een bestand met de extensie `.blade.php`. Met PHP is het al mogelijk om PHP-code te schrijven in een HTML-bestand, maar met de `Blade Templating Engine` is het mogelijk om nog meer te doen. Zo is het bijvoorbeeld mogelijk om conditionele en iteratieve statements te gebruiken, om de inhoud van een variabele te tonen, om componenten te gebruiken, enzovoort.
+Views zijn terug te vinden in de map `resources/views`. Een View is een bestand met de extensie `.blade.php`. Met PHP is het al mogelijk om PHP-code te schrijven in een HTML-bestand, maar met de `Blade Templating Engine` is het mogelijk om nog meer te doen. Zo is het bijvoorbeeld mogelijk om conditionele en iteratieve statements te gebruiken, om de inhoud van een variabele te tonen, om componenten te gebruiken, enzovoort.
 
 Bekijk `app/resources/views/welcome.blade.php` als voorbeeld.
 
