@@ -372,7 +372,7 @@ Om te zorgen dat de hero niet meer verwijst (by reference) naar het object in de
   import type { Hero } from "@/components/models";
   import StyledButton from "@/components/StyledButton.vue";
   import { useHeroes } from "@/services/hero.service";
-  import { computed, ref, toRaw, type Ref } from "vue";
+  import { ref, toRaw, type Ref } from "vue";
   import { useRoute, useRouter } from "vue-router";
 
   const route = useRoute();
@@ -514,10 +514,10 @@ const useHeroes = () => {
   const updateHero = (hero: Hero) => {
     const index = heroes.value.findIndex((h) => h.number === hero.number);
     if (index !== -1) {
-      heroes[index] = structuredClone(toRaw(hero));
+      heroes.value[index] = structuredClone(toRaw(hero));
     }
   };
-
+ 
   return {
     heroes,
     selectedHero,
