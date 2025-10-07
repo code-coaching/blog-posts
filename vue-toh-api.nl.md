@@ -954,7 +954,7 @@ const useHeroes = () => {
 export { useHeroes };
 ```
 
-De `loadHeroes()`-functie zal een HTTP call doen naar de API. De API zal een lijst van heroes teruggeven. Deze lijst van heroes zal in de console gelogd worden. Merk ook op dat we het type van het resultaat van de call meegeven aan de `get`-functie van `axios` (`axios.get<Array<Hero>>()`), hierdoor zal `axios` weten dat het resultaat van de call een array van `HeroBackend`-objecten is.
+De `loadHeroes()`-functie zal een HTTP call doen naar de API. De API zal een lijst van heroes teruggeven. Deze lijst van heroes zal in de console gelogd worden. Merk ook op dat we het type van het resultaat van de call meegeven aan de `get`-functie van `axios` (`axios.get<Array<HeroBackend>>()`), hierdoor zal `axios` weten dat het resultaat van de call een array van `HeroBackend`-objecten is.
 
 Herinner dat `loadHeroes` wordt aangeroepen in `App.vue`, zodra de applicatie opstart zal de lijst van heroes opgehaald worden. Bekijk de console in de browser en merk op dat er een `401 Unauthorized` error is. We zullen de token uit Local Storage moeten toevoegen aan de `Authorization` header van de call, zodat de API weet welke gebruiker de call doet.
 
