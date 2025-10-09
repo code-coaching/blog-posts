@@ -393,7 +393,7 @@ Alle wijzigingen: [GitHub](https://github.com/code-coaching/vue-tour-of-heroes/c
 
 De gewenste situatie is dat de velden enkel resetten als het inloggen gelukt is. Om dit te doen, zullen we de `login()`-functie van de `AuthService` aanpassen.
 
-`LoginView.vue`
+`auth.service.ts`
 
 ```ts
 import axios from "axios";
